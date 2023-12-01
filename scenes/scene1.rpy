@@ -8,7 +8,7 @@ define e = Character("Eileen", color="#7aabe3")
 
 # The game starts here.
 
-label start:
+label scene1_start:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
