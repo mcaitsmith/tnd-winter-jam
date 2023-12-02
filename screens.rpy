@@ -160,6 +160,8 @@ style say_dialogue:
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
 
+    line_spacing 15
+
     adjust_spacing False
 
 ## Input screen ################################################################
@@ -247,7 +249,7 @@ screen quick_menu():
             style_prefix "quick"
 
             xalign 0.5
-            yalign 1.0
+            yalign 0.95
 
             textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')
