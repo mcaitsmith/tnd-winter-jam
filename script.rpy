@@ -23,6 +23,9 @@ label start:
     show eileen happy
 
     # These display lines of dialogue.
+    define n = Character("NVL", kind=nvl)
+    n "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    n "Some more"
 
     e "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
 
