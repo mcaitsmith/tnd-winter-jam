@@ -16,7 +16,7 @@ label scene8:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show freddy neutral at left
 
     # These display lines of dialogue.
 
@@ -24,9 +24,13 @@ label scene8:
 
     ######### SCENE 8A: ENDING 1 (best ending, if get 5-6/6 choices right)
 
+    show chrome neutral at center
+
     chrome "This is Scene 8A."
 
     ######### SCENE 8B: ENDING 2 (average ending, if get 3-4/6 choices right)
+
+    show mariah neutral at right
 
     mariah "This is Scene 8B."
 

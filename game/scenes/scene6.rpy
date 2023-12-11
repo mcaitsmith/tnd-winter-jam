@@ -16,13 +16,17 @@ label scene6:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show santa
 
     # These display lines of dialogue.
 
     santa "Welcome to Scene 6."
 
+    hide santa
+
     ######### SCENE 6A: GLITCH 6
+
+    show chrome neutral
 
     chrome "GLITCH GLITCH GLITCH"
 

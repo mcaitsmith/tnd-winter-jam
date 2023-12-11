@@ -16,7 +16,7 @@ label scene10:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show chrome neutral
 
     # These display lines of dialogue.
 

@@ -13,6 +13,16 @@ define cop = Character("Generic Cop", color="#2d30d9")
 define santa = Character("Robot Santa", color="#ff0000")
 define narration = Character("Narration", kind=nvl)
 
+# define images for each character
+image larry = "larry.jpg"
+image chrome neutral = "chrome neutral.jpg"
+image bianca neutral = "bianca neutral.jpg"
+image jack neutral = "jack neutral.jpg"
+image mariah neutral = "mariah neutral.jpg"
+image cop neutral = "cop neutral.jpg"
+image santa = "santa.jpg"
+image freddy neutral = "freddy neutral.jpg"
+
 # The game starts here.
 
 label start:

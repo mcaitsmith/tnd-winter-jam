@@ -16,7 +16,7 @@ label scene1:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show larry
 
     # These display lines of dialogue.
 

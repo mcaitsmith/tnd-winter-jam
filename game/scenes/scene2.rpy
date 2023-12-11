@@ -16,7 +16,7 @@ label scene2:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show chrome neutral at left
 
     # These display lines of dialogue.
 
@@ -27,6 +27,8 @@ label scene2:
     chrome "GLITCH GLITCH GLITCH"
 
     ######### back to SCENE 2
+
+    show bianca neutral at right
 
     bianca "Now we're going to Scene 3."
 

@@ -16,7 +16,7 @@ label scene4:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show chrome neutral at left
 
     # These display lines of dialogue.
 
@@ -26,9 +26,15 @@ label scene4:
 
     ######### SCENE 4A: MARIAH FOWLER
 
+    show mariah neutral at right
+
     mariah "This is Scene 4A."
 
+    hide mariah
+
     ######### SCENE 4A-1: GLITCH 3
+
+    show chrome neutral
 
     chrome "GLITCH GLITCH GLITCH"
 
@@ -38,9 +44,15 @@ label scene4:
 
     ######### SCENE 4B: COP
 
+    show cop neutral at right
+
     cop "This is Scene 4B."
 
+    hide cop
+
     ######### SCENE 4B-1: GLITCH 4
+
+    show chrome neutral
 
     chrome "GLITCH GLITCH GLITCH"
 

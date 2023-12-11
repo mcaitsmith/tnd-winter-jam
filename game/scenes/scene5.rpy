@@ -16,7 +16,7 @@ label scene5:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show chrome neutral
 
     # These display lines of dialogue.
 
@@ -26,9 +26,15 @@ label scene5:
 
     ######### SCENE 5A: BIANCA
 
+    show bianca neutral
+
     bianca "This is Scene 5A."
 
+    hide bianca
+
     ######### SCENE 5A-1: GLITCH 5
+
+    show chrome neutral
 
     chrome "GLITCH GLITCH GLITCH"
 

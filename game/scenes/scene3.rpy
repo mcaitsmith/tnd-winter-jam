@@ -16,13 +16,17 @@ label scene3:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show jack neutral
 
     # These display lines of dialogue.
 
     jack "Welcome to Scene 3."
 
+    hide jack
+
     ######### SCENE 3A: GLITCH 2
+
+    show chrome neutral
 
     chrome "GLITCH GLITCH GLITCH"
 
