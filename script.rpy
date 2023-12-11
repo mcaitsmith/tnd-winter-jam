@@ -1,36 +1,22 @@
-﻿# The script of the game goes in this file.
+﻿# The main script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen", color="#7aabe3")
-
+define larry = Character("Larry Moss", color="#2fb525")
+define chrome = Character("Chrome Steele", color="#a5a5a5")
+define bianca = Character("Bianca Fontaine", color="#45b7f0")
+define freddy = Character("Freddy Fontaine", color="#f07635")
+define jack = Character("Jack Scanlon", color="#dbd839")
+define mariah = Character("Mariah Fowler", color="#d339db")
+define cop = Character("Generic Cop", color="#2d30d9")
+define santa = Character("Robot Santa", color="#ff0000")
+define narration = Character("Narration", kind=nvl)
 
 # The game starts here.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    # jump to the first scene
 
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-    define n = Character("NVL", kind=nvl)
-    n "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    n "Some more"
-
-    e "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
-
-    return
+    jump scene1

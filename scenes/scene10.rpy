@@ -1,10 +1,10 @@
 ﻿# The script of the scene goes in this file.
 
-######### SCENE 1: "THE TEASE" (crime scene: bg of dept store, Larry dead)
+######### SCENE 10: SECRET ENDING (if get 6/6 choices right - closure of Steele's backstory)
 
 # The scene starts here.
 
-label scene1:
+label scene10:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -20,10 +20,10 @@ label scene1:
 
     # These display lines of dialogue.
 
-    larry "Welcome to Scene 1."
+    chrome "Welcome to Scene 10."
 
-    larry "Now we're going to Scene 2."
+    chrome "This is the end!"
 
-    # jump to the next scene
+    # This ends the game.
 
-    jump scene2
+    return

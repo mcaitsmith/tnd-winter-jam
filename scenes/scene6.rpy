@@ -1,10 +1,10 @@
 ﻿# The script of the scene goes in this file.
 
-######### SCENE 1: "THE TEASE" (crime scene: bg of dept store, Larry dead)
+######### SCENE 6: FOWLER'S DEPARTMENT STORE 2 (same scene but Mariah not there anymore - talk to robot Santa)
 
 # The scene starts here.
 
-label scene1:
+label scene6:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -20,10 +20,18 @@ label scene1:
 
     # These display lines of dialogue.
 
-    larry "Welcome to Scene 1."
+    santa "Welcome to Scene 6."
 
-    larry "Now we're going to Scene 2."
+    ######### SCENE 6A: GLITCH 6
 
-    # jump to the next scene
+    chrome "GLITCH GLITCH GLITCH"
 
-    jump scene2
+    ######### back to SCENE 6
+
+    chrome "Woah that was weird"
+
+    chrome "Now we're going to Scene 7."
+
+    # jump to next scene
+
+    jump scene7
