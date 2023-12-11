@@ -81,7 +81,7 @@ define gui.label_text_size = 38
 define gui.notify_text_size = 22
 
 ## The size of the game's title.
-define gui.title_text_size = 90
+define gui.title_text_size = 250
 
 
 ## Main and Game Menus #########################################################
@@ -260,7 +260,7 @@ define gui.notify_ypos = 68
 define gui.choice_spacing = 33
 
 ## Buttons in the navigation section of the main and game menus.
-define gui.navigation_spacing = 6
+define gui.navigation_spacing = 180
 
 ## Controls the amount of spacing between preferences.
 define gui.pref_spacing = 15
