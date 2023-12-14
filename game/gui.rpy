@@ -65,6 +65,9 @@ define gui.name_text_font = "fonts/SpecialElite-Regular.ttf"
 ## The font used for out-of-game text.
 define gui.interface_text_font = "fonts/SpecialElite-Regular.ttf"
 
+## The font used for title
+define gui.title_text_font = "fonts/Righteous-Regular.ttf"
+
 ## The size of normal dialogue text.
 define gui.text_size = 35
 
