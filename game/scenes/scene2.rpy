@@ -10,13 +10,14 @@ label scene2:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene bg office
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show chrome neutral at left
+    show chrome neutral at left:
+        xzoom -1 # this flips the image so he is facing toward the right
 
     # These display lines of dialogue.
 
@@ -24,9 +25,15 @@ label scene2:
 
     ######### SCENE 2A: GLITCH 1 (flashback with glitching animation on Steele & bg grayed out)
 
+    show bg office blur # blurs the background
+    call start_glitch # shows Chrome glitching and grays out the background
+
     chrome "GLITCH GLITCH GLITCH"
 
     ######### back to SCENE 2
+
+    show bg office # unblur the background
+    call end_glitch # return to normal Chrome and normal background
 
     show bianca neutral at right
 
