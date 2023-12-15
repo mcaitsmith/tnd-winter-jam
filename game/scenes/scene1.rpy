@@ -10,17 +10,27 @@ label scene1:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene bg office
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show chrome at left
+    show dialogue_box at center
+
+    show chrome neutral at left:
+        xzoom -1
+    show bianca neutral at right
 
     # These display lines of dialogue.
 
     chrome "Welcome to Scene 1."
+
+    bianca_right "This is some dialogue. This is some more dialogue."
+
+    chrome "And even more dialogue for good measure."
+
+    hide dialogue_box # return to ADV mode
 
     larry "Now we're going to Scene 2."
 

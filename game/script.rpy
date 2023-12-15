@@ -14,6 +14,11 @@ define cop = Character("Generic Cop", color="#2d30d9")
 define santa = Character("Robot Santa", color="#ff0000")
 define narration = Character("Narration", kind=nvl)
 
+image bg office = "bg office.png"
+image chrome neutral = "chrome neutral.png"
+image bianca neutral = "bianca neutral.png"
+image dialogue_box = "gui/nvl_box.png"
+
 # The game starts here.
 
 label start:

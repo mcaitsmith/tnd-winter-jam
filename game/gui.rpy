@@ -382,13 +382,13 @@ define gui.nvl_spacing = 15
 
 ## The position, width, and alignment of the label giving the name of the
 ## speaking character.
-define gui.nvl_name_xpos = 600
+define gui.nvl_name_xpos = 565
 define gui.nvl_name_ypos = 0
 define gui.nvl_name_width = 785
 define gui.nvl_name_xalign = 0.0
 
 ## The position, width, and alignment of the dialogue text.
-define gui.nvl_text_xpos = 600
+define gui.nvl_text_xpos = 565
 define gui.nvl_text_ypos = 60
 define gui.nvl_text_width = 785
 define gui.nvl_text_xalign = 0.0
