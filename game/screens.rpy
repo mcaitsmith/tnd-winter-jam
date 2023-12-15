@@ -364,6 +364,10 @@ screen main_menu():
     tag menu
 
     add gui.main_menu_background
+    add "gui/title.png":
+        xalign 0.5
+        xoffset 25
+        yalign 0.1
 
     ## This empty frame darkens the main menu.
     frame:
