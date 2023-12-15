@@ -16,11 +16,11 @@ label scene1:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show chrome at left
 
     # These display lines of dialogue.
 
-    larry "Welcome to Scene 1."
+    chrome "Welcome to Scene 1."
 
     larry "Now we're going to Scene 2."
 
