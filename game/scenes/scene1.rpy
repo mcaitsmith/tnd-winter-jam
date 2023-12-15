@@ -24,11 +24,19 @@ label scene1:
 
     # These display lines of dialogue.
 
-    chrome "Welcome to Scene 1."
+    # chrome "Welcome to Scene 1."
 
-    bianca_right "This is some dialogue. This is some more dialogue."
+    bianca_right "Hey, you listening to me? It’s.. it’s my dad, Freddy…"
 
-    chrome "And even more dialogue for good measure."
+    bianca_right "He’s gone missing."
+
+    chrome "Have you gone to the authorities?"
+
+    bianca_right "Pff, the cops have no time for me and my dad."
+
+    bianca_right "They just told me to wait ‘til he comes home from whatever bender he’s on."
+
+    chrome "Perhaps they’re right."
 
     hide dialogue_box # return to ADV mode
 
