@@ -115,7 +115,7 @@ label scene9:
 
             bianca angry "I don’t know what kind of lies you’ve been feasting on, but if my dad’s hiding, he’s got a good reason to."
 
-            chrome logical "One would argue that anyone who hides has a good reason to. But what level of good it has hinges on the personal value it has to the reasoner. Hence, if Freddy’s "\good reason\" is that it would spare him from conviction, that’s righteous to him, but unfounded to me."
+            chrome logical "One would argue that anyone who hides has a good reason to. But what level of good it has hinges on the personal value it has to the reasoner. Hence, if Freddy’s \"good reason\" is that it would spare him from conviction, that’s righteous to him, but unfounded to me."
 
             bianca angry "Look, my dad’s no murderer. And besides, Larry was his friend. It doesn’t add up."
 
@@ -147,7 +147,7 @@ label lookaround:
     bianca neutral "Please, look around. See if there’s anything else here that’s helpful."
     hide bianca neutral with moveoutright
     menu helpful:
-    chrome "Let's see..."
+        chrome "Let's see..."
         "Cigarettes":
             show chrome neutral left
             "My aromatic sensors are picking something up."
@@ -222,15 +222,15 @@ label lookaround:
 
             show chrome thinking left
 
-            "Hmm. ‘Card Reader Schematics’. ‘Install on all registers’. These credit card readers are programmed to redirect sales to a private bank account!"
+            chrome "Hmm. ‘Card Reader Schematics.’ ‘Install on all registers’. These credit card readers are programmed to redirect sales to a private bank account!"
 
             show chrome neutral left
 
-            "I wanted to believe Bianca. But it looks like I’ve discovered Santa’s secret - Freddy’s been embezzling cash over at the department store." 
+            chrome "I wanted to believe Bianca. But it looks like I’ve discovered Santa’s secret - Freddy’s been embezzling cash over at the department store." 
 
             show chrome confused left
 
-            "Was Larry in on it? Is that why he’s dead? I must be missing something over at Fowler’s Department Store. One stone left unturned…"
+            chrome "Was Larry in on it? Is that why he’s dead? I must be missing something over at Fowler’s Department Store. One stone left unturned…"
 
             show chrome neutral left
 
