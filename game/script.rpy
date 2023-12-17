@@ -14,7 +14,7 @@ define santa = Character("Robot Santa", color="#ff0000")
 define narration = Character("Narration", kind=nvl)
 
 # define images for each character
-image larry = "larry.jpg"
+image larry dead = "larry dead.jpg"
 image chrome neutral = "chrome neutral.png"
 image chrome neutral glitch = Glitch("chrome neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image bianca neutral = "bianca neutral.jpg"
@@ -27,6 +27,8 @@ image freddy neutral = "freddy neutral.jpg"
 # define location images
 image bg office = "bg office.png"
 image bg office blur = im.Blur("bg office.png", 1.5) # blurred version
+# image bg extstore = "bg extstore.png" # placeholder until we get asset
+# image bg extstore blur = im.Blur("bg extstore.png", 1.5) # blurred version - placeholder until we get asset
 
 # call this label when you want a glitch scene to start
 label start_glitch():

@@ -11,6 +11,8 @@ label scene2:
     # images directory to show it.
 
     scene bg office
+    # fades to black for 1 second then fades in
+    with Fade(0.5, 1.0, 0.5)
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
