@@ -11,6 +11,7 @@ label scene9:
     #SOUND - Door opening
 
     show chrome neutral left flip
+    
 
     chrome "{i}The Fontaine digs. Three rooms and a toilet chamber. One of hundreds packing this block, nestled between an old-school bodega and a shabby, second-hand pawn shop.{/i}"
 
