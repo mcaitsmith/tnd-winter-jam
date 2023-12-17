@@ -39,6 +39,7 @@ label scene2:
 
     bianca "Now we're going to Scene 3."
 
-    # jump to next scene
+    # jump to the next scene - Commented out for Scene Selector
 
-    jump scene3
+    # jump scene3
+    return

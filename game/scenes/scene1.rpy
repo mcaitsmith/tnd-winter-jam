@@ -24,6 +24,7 @@ label scene1:
 
     larry "Now we're going to Scene 2."
 
-    # jump to the next scene
+    # jump to the next scene - Commented out for Scene Selector
+    #jump scene2
 
-    jump scene2
+    return

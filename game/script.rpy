@@ -46,6 +46,39 @@ label end_glitch:
 
 label start:
 
-    # jump to the first scene
+    menu:
+        "Which Scene?"
 
-    jump scene1
+        "One":
+            call scene1
+
+        "Two":
+            call scene2
+
+        "Three":
+            call scene3
+
+        "Four":
+            call scene4
+
+        "Five":
+            call scene5
+
+        "Six":
+            call scene6
+
+        "Seven":
+            call scene7
+
+        "Eight":
+            call scene8
+
+        "Nine":
+            call scene9
+
+        "Ten":
+            call scene10
+
+    jump start
+    return
+
