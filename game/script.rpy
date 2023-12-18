@@ -14,7 +14,7 @@ define santa = Character("Robot Santa", color="#ff0000")
 define narration = Character("Narration", kind=nvl)
 
 # define images for each character
-image larry dead = "larry dead.jpg"
+image larry dead = "larry dead.png"
 image chrome neutral = "chrome neutral.png"
 image chrome neutral glitch = Glitch("chrome neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome shocked = "chrome shocked.png"
