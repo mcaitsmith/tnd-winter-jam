@@ -28,7 +28,8 @@ label scene1:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show larry dead at center # VISUAL: fade-in Larry. He is clearly dead. Some red blood accents.
+    # VISUAL: fade-in Larry. He is clearly dead. Some red blood accents.
+    show larry dead at center 
 
     # add pause after showing larry
     pause 2.0
@@ -38,7 +39,6 @@ label scene1:
 
     # Optional – should we have a woman scream next, like he is discovered?
     # Either way, we should fade-out and into the next scene, which is Chrome brooding in his dark office.
-
 
     # jump to the next scene - Commented out for Scene Selector
     jump scene2 # added fade transition to show scene in scene2 script
