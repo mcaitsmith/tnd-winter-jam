@@ -24,7 +24,11 @@ image chrome angry = "chrome angry.png"
 image bianca neutral = "bianca neutral.png"
 image bianca angry = "bianca angry.png"
 image bianca sad = "bianca sad.png"
-image jack neutral = "jack neutral.jpg"
+image jack neutral = "jack neutral.png"
+image jack happy = "jack happy.png"
+image jack sad = "jack sad.png"
+image jack shocked = "jack shocked.png"
+image jack angry = "jack angry.png"
 image mariah neutral = "mariah neutral.jpg"
 image cop neutral = "cop neutral.jpg"
 image santa = "santa.jpg"
@@ -34,7 +38,8 @@ image freddy neutral = "freddy neutral.jpg"
 image bg office = "bg office.png"
 image bg office blur = im.Blur("bg office.png", 1.5) # blurred version
 # image bg extstore = "bg extstore.png" # placeholder until we get asset
-# image bg extstore blur = im.Blur("bg extstore.png", 1.5) # blurred version - placeholder until we get asset
+# image bg bar = "bg bar.png" # placeholder until we get asset
+# image bg bar blur = im.Blur("bg bar.png", 1.5) # blurred version - placeholder until we get asset
 
 # call this label when you want a glitch scene to start
 label start_glitch():

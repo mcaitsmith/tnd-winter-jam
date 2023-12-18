@@ -137,7 +137,7 @@ label scene2:
 
     bianca "Word on the street is that you were trained by Forrest Cane."
 
-    ######### SCENE 2A: GLITCH 1 (flashback with glitching animation on Steele & bg grayed out)
+    ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
     hide bianca # hide Bianca for glitch
     show bg office blur # blurs the background
