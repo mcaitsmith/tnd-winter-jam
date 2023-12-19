@@ -83,8 +83,8 @@ label searchMenu:
         "Can’t believe she left the window open…" if pickedThree == False:
             $pickedThree = True
             chrome "Can’t believe she left the window open…"
-            chrome "Organics are susceptible to cold." 
-            # [LABEL: Close window]
+            chrome "Organics are susceptible to cold."
+            # Close Window?
             chrome thinking "My sensors are detecting a scent blowing in from outside."
             chrome thinking "Smoke- no, cloves. Clove cigarettes?"
             chrome shocked "Smells… clove-y. And familiar."
