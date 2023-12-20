@@ -12,6 +12,12 @@ label scene2:
 
     scene bg office
 
+    # start Chrome music
+
+    $ chrome_on = True
+    $ update_layers()
+    $ start_layers(5)
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
@@ -34,6 +40,9 @@ label scene2:
 
     show bg office # unblur the background
     call end_glitch # return to normal Chrome and normal background
+
+    $ bianca_on = True
+    $ update_layers()
 
     show bianca neutral at right
 

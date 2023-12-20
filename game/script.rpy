@@ -28,6 +28,47 @@ image freddy neutral = "freddy neutral.jpg"
 image bg office = "bg office.png"
 image bg office blur = im.Blur("bg office.png", 1.5) # blurred version
 
+init python:
+    # define music channels
+    renpy.music.register_channel("layer_chrome", "music")
+    renpy.music.register_channel("layer_bianca", "music")
+    renpy.music.register_channel("layer_freddy", "music")
+    renpy.music.register_channel("layer_mariah", "music")
+    renpy.music.register_channel("layer_larry_santa", "music")
+
+    # function to start playing layers
+    def start_layers(delay=3):
+        renpy.music.play("audio/Dept Store Main Chrom.wav", channel='layer_chrome', loop=True, synchro_start=True, fadein=delay)
+        renpy.music.play("audio/Dept Store Main Bianca.wav", channel='layer_bianca', loop=True, synchro_start=True, fadein=delay)
+        renpy.music.play("audio/Dept Store Main Freddy.wav", channel='layer_freddy', loop=True, synchro_start=True, fadein=delay)
+        renpy.music.play("audio/Dept Store Main Mariah.wav", channel='layer_mariah', loop=True, synchro_start=True, fadein=delay)
+        renpy.music.play("audio/Dept Store Main Larry_Santa.wav", channel='layer_larry_santa', loop=True, synchro_start=True, fadein=delay)
+
+    # function to stop playing layers
+    def stop_layers(delay=None):
+        renpy.music.stop(channel='layer_chrome', fadeout=delay)
+        renpy.music.stop(channel='layer_bianca', fadeout=delay)
+        renpy.music.stop(channel='layer_freddy', fadeout=delay)
+        renpy.music.stop(channel='layer_mariah', fadeout=delay)
+        renpy.music.stop(channel='layer_larry_santa', fadeout=delay)
+
+    # function to update layers
+    def update_layers(delay=1):
+        if chrome_on:
+            layer_chrome = 0.5
+        else:
+            layer_chrome = 0
+        if bianca_on:
+            layer_bianca = 1
+        else:
+            layer_bianca = 0
+        
+        renpy.music.set_volume(layer_chrome, delay=delay, channel='layer_chrome')
+        renpy.music.set_volume(layer_bianca, delay=delay, channel='layer_bianca')
+        renpy.music.set_volume(layer_freddy, delay=delay, channel='layer_freddy')
+        renpy.music.set_volume(layer_mariah, delay=delay, channel='layer_mariah')
+        renpy.music.set_volume(layer_larry_santa, delay=delay, channel='layer_larry_santa')
+
 # call this label when you want a glitch scene to start
 label start_glitch():
     show chrome neutral glitch
@@ -45,6 +86,13 @@ label end_glitch:
 # The game starts here.
 
 label start:
+
+    # fadeout intro music
+    stop music fadeout 3.0
+
+    # initialize music layers
+    $ chrome_on = False
+    $ bianca_on = False
 
     # jump to the first scene
 
