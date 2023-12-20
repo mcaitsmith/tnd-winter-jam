@@ -12,6 +12,9 @@ label scene3:
 
     scene bg bar
 
+    # play music
+    play music "audio/AUDIO-2023-12-19-18-56-38.mp3" fadeout 3.0
+
     # placeholder until we get asset
     # play sound door_open
 
@@ -118,6 +121,9 @@ label scene3:
     chrome "{i}I take a minute to message Bianca that I'm taking the case.{/i}"
 
     chrome "{i}For now.{/i}"
+
+    # stop music
+    stop music fadeout 3.0
 
     # jump to the next scene - Commented out for Scene Selector
 
@@ -310,6 +316,9 @@ label scene3_hardboiled:
     pause 1.0
 
     ######### back to SCENE 3
+
+    # resume music
+    play music "audio/AUDIO-2023-12-19-18-56-38.mp3" fadeout 1.0
 
     $ glitch_counter +=1 # increment glitch counter
 
