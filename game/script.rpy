@@ -40,7 +40,7 @@ init python:
     def start_layers(delay=3):
         renpy.music.play("audio/Dept Store Main Chrom.wav", channel='layer_chrome', loop=True, synchro_start=True, fadein=delay)
         renpy.music.play("audio/Dept Store Main Bianca.wav", channel='layer_bianca', loop=True, synchro_start=True, fadein=delay)
-        renpy.music.play("audio/Dept Store Main Freddy.wav", channel='layer_freddy', loop=True, synchro_start=True, fadein=delay)
+        renpy.music.play("audio/Dept Store Main Freddie.wav", channel='layer_freddy', loop=True, synchro_start=True, fadein=delay)
         renpy.music.play("audio/Dept Store Main Mariah.wav", channel='layer_mariah', loop=True, synchro_start=True, fadein=delay)
         renpy.music.play("audio/Dept Store Main Larry_Santa.wav", channel='layer_larry_santa', loop=True, synchro_start=True, fadein=delay)
 
@@ -54,14 +54,11 @@ init python:
 
     # function to update layers
     def update_layers(delay=1):
-        if chrome_on:
-            layer_chrome = 0.5
-        else:
-            layer_chrome = 0
-        if bianca_on:
-            layer_bianca = 1
-        else:
-            layer_bianca = 0
+        layer_chrome = 0.2 if chrome_on else 0
+        layer_bianca = 1 if bianca_on else 0
+        layer_freddy = 1 if freddy_on else 0
+        layer_mariah = 1 if mariah_on else 0
+        layer_larry_santa = 1 if larry_santa_on else 0
         
         renpy.music.set_volume(layer_chrome, delay=delay, channel='layer_chrome')
         renpy.music.set_volume(layer_bianca, delay=delay, channel='layer_bianca')
@@ -93,6 +90,9 @@ label start:
     # initialize music layers
     $ chrome_on = False
     $ bianca_on = False
+    $ freddy_on = False
+    $ mariah_on = False
+    $ larry_santa_on = False
 
     # jump to the first scene
 

@@ -15,8 +15,8 @@ label scene2:
     # start Chrome music
 
     $ chrome_on = True
-    $ update_layers()
-    $ start_layers(5)
+    $ update_layers() # turn on Chrome layer
+    $ start_layers(3) # start playing layers
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -41,12 +41,23 @@ label scene2:
     show bg office # unblur the background
     call end_glitch # return to normal Chrome and normal background
 
-    $ bianca_on = True
-    $ update_layers()
+    $ bianca_on = True # turn on Bianca layer
+    $ update_layers(0) # update layers
 
     show bianca neutral at right
 
     bianca "Now we're going to Scene 3."
+
+    $ mariah_on = True # turn on Bianca layer
+    $ update_layers(0) # update layers
+
+    show mariah neutral at center
+
+    mariah "TEST"
+
+    $ stop_layers(3) # stop playing layers
+
+    bianca "test"
 
     # jump to next scene
 
