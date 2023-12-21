@@ -26,7 +26,7 @@ label scene12:
 
     #Freddy has a CIGARETTE- not sure if the asset needs to be called out? Or it’s just part of his character portrait
 
-    freddy shocked "Who’s that– what do you want? I’m armed!"
+    freddy shocked "{i}Quién es ese{/i}– what do you want? I’m armed!"
 
     chrome unassuming "Hey Freddy. Thought I might find you up here."
 
@@ -42,7 +42,7 @@ label scene12:
 
     freddy sad "I didn’t know where else to go."
 
-    freddy angry "God. This town. This job. What the hell else was I supposed to do?"
+    freddy angry "God. This town. This job. {i}El mundo entero{/i}. What the hell else was I supposed to do?"
 
     #Narration
     "I size him up. He looks exhausted."
@@ -75,10 +75,11 @@ label scene12:
 
     return
 
+# 012 ROO B
 label hardboiled12:
     chrome neutral "Freddy. You’re OK."
 
-    freddy angry "I don’t know you. But I know cops. And {i}fuck cops{/i}."
+    freddy angry "I don’t know you. But I know cops. And {i}fuck cops. Todos ellos{/i}."
 
     chrome neutral "I’m not a cop. Just an android who gets things done. Let me help you."
 
@@ -124,6 +125,7 @@ label hardboiled12:
 
     return
 
+# 012 ROO C
 label logical12:
     chrome neutral "Freddy. No need to get worked up."
 
@@ -143,7 +145,7 @@ label logical12:
 
     chrome thinking "Do you really want to run, Freddy? Let’s look at the facts."
 
-    chrome logical "Larry is dead."
+    chrome logical "Larry is dead. Pobre bastardo{/i}."
 
     freddy sad "Yeah. No shit."
 
@@ -171,8 +173,9 @@ label logical12:
 
     return
 
+# 012 ROO D
 label unassuming12:
-    freddy angry "Seriously man. Don’t come any closer."
+    freddy angry "{i}En serio{/i} man. Don’t come any closer."
 
     chrome unassuming "Well, I actually came up here to ask a favor."
 
@@ -186,7 +189,7 @@ label unassuming12:
 
     chrome unassuming "Not exactly. But the smell tickled my sensors from a whole floor away."
 
-    chrome unassuming "I’d love a closer look."
+    chrome unassuming "I’d love a closer look. I like the sensation."
 
     freddy neutral "Well. Sure. Couldn’t hurt."
 
