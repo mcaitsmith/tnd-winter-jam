@@ -96,6 +96,7 @@ label end_glitch:
     show chrome neutral
     show bg:
         matrixcolor TintMatrix("#ffffff") * SaturationMatrix(1.0)
+    stop music
     return
 
 # The game starts here.

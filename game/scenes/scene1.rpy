@@ -32,7 +32,7 @@ label scene1:
     show larry dead at center 
 
     # add pause after showing larry
-    # pause 2.0
+    pause 2.0
 
     # placeholder until we get asset
     # play sound footsteps # feet shuffling and trailing off

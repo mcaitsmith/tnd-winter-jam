@@ -125,6 +125,8 @@ label scene3:
     # stop music
     stop music fadeout 3.0
 
+    $ start_layers(3) # start playing layers
+
     # jump to the next scene
 
     jump scene4
@@ -295,6 +297,9 @@ label scene3_hardboiled:
 
     jack "He would never do that to her again, not if he could help it. That's a fact!"
 
+    $ music_pos = renpy.music.get_pos('music') # get current time position of music
+    $ music_pos_str = str(music_pos) # convert to string
+
     ######### SCENE 3A: GLITCH 001
 
     hide jack # hide Jack for glitch
@@ -317,7 +322,7 @@ label scene3_hardboiled:
     ######### back to SCENE 3
 
     # resume music
-    play music "audio/AUDIO-2023-12-19-18-56-38.mp3" fadeout 1.0
+    play music "<from " + music_pos_str + ">audio/AUDIO-2023-12-19-18-56-38.mp3" fadeout 1.0
 
     $ glitch_counter +=1 # increment glitch counter
 
