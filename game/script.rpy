@@ -44,6 +44,18 @@ image bg office blur = im.Blur("bg office.png", 1.5) # blurred version
 # image bg bar = "bg bar.png" # placeholder until we get asset
 # image bg bar blur = im.Blur("bg bar.png", 1.5) # blurred version - placeholder until we get asset
 
+# define sound effects
+define sfx_clatter = "audio/sfx/Clatter_SantaSecret_SFX.wav"
+define sfx_door = "audio/sfx/Door_SantaSecret_SFX.wav"
+define sfx_footsteps = "audio/sfx/FootSteps_SantaSecret_SFX.wav"
+define sfx_gunshots = "audio/sfx/Gunshots_SantaSecret_SFX.wav"
+define sfx_impactmetal = "audio/sfx/ImpactMetal_SantaSecret_SFX.wav"
+define sfx_mariahclap = "audio/sfx/MariahClap_SantaSecret_SFX.wav"
+define sfx_punch = "audio/sfx/Punch_SantaSecret_SFX.wav"
+define sfx_rattle = "audio/sfx/Rattle_SantaSecret_SFX.wav"
+define sfx_santabeepscan = "audio/sfx/SantaBeepScan_SantaSecret_SFX.wav"
+
+
 init python:
     # define music channels
     renpy.music.register_channel("layer_chrome", "music")

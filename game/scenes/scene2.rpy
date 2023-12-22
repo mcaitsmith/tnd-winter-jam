@@ -69,11 +69,10 @@ label scene2:
     # add pause to let sound effect play
     # pause 1.0
 
-    # placeholder until we get asset
-    # play sound door_open
+    play sound sfx_door
 
     # add pause to let sound effect play
-    # pause 1.0
+    pause 2.0
     
     $ bianca_on = True # turn on Bianca layer
     $ update_layers(0) # update layers
@@ -149,7 +148,8 @@ label scene2:
     ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
     hide bianca # hide Bianca for glitch
-    $ stop_layers() # stop playing layers
+    $ chrome_on = False # turn off Chrome layer for glitch
+    $ update_layers(0) # update layers
     show bg office blur # blurs the background
     call start_glitch # shows Chrome glitching and grays out the background
 
@@ -163,7 +163,8 @@ label scene2:
 
     show bg office # unblur the background
     call end_glitch # return to normal Chrome and normal background
-    $ start_layers() # start playing layers
+    $ chrome_on = True # turn on Chrome layer
+    $ update_layers(0) # update layers
     # show Bianca again
     show bianca neutral at left
 

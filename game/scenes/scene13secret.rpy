@@ -8,6 +8,8 @@ label secret_ending:
 #INSERT GLITCH COUNTER 6/6?
 ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
     show office night blur # blurs the background
+    $ chrome_on = False # turn off Chrome layer for glitch
+    $ update_layers(0) # update layers
     call start_glitch # shows Chrome glitching and grays out the background
 
     # pause for transition

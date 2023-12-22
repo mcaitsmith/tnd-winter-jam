@@ -15,11 +15,10 @@ label scene3:
     # play music
     play music "audio/AUDIO-2023-12-19-18-56-38.mp3" fadeout 3.0
 
-    # placeholder until we get asset
-    # play sound door_open
+    play sound sfx_door
 
     # add pause to let sound effect play
-    # pause 1.0
+    pause 1.0
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images

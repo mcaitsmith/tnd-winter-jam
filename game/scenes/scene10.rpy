@@ -205,7 +205,8 @@ label scene10:
 
         #VISUAL- Add background blur aka show fowlers department background blur 
 
-        $ stop_layers() # stop playing layers
+        $ chrome_on = False # turn off Chrome layer for glitch
+        $ update_layers(0) # update layers
 
         call start_glitch
 
@@ -256,7 +257,8 @@ label scene10:
         chrome "{i}I will improve.{/i}"
 
         call end_glitch
-        $ start_layers() # start playing layers
+        $ chrome_on = True # turn on Chrome layer
+        $ update_layers(0) # update layers
 
         show santa at right with dissolve
 

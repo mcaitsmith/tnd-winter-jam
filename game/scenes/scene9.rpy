@@ -112,7 +112,8 @@ label scene9:
 
             hide bianca # hide Bianca for glitch
             show freddyoffice night blur # blurs the background
-            $ stop_layers() # stop playing layers
+            $ chrome_on = False # turn off Chrome layer for glitch
+            $ update_layers(0) # update layers
             call start_glitch # shows Chrome glitching and grays out the background
 
             # pause for transition
@@ -160,7 +161,8 @@ label scene9:
 
             show freddyoffice night # unblur the background
             call end_glitch # return to normal Chrome and normal background
-            $ start_layers() # start playing layers
+            $ chrome_on = True # turn on Chrome layer
+            $ update_layers(0) # update layers
             # show Bianca again
             show bianca neutral at left
 

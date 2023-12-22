@@ -18,6 +18,10 @@ label scene1:
     # add pause at beginning of scene
     # pause 3.0
 
+    $ larry_santa_on = True
+    $ update_layers() # turn on Larry layer
+    $ start_layers() # start playing layers
+
     # placeholder until we get asset
     # play sound bell # a hand bell typically used by street santa’s rings periodically in the distance
 
@@ -32,14 +36,18 @@ label scene1:
     show larry dead at center 
 
     # add pause after showing larry
-    pause 2.0
+    pause 1.0
 
-    # placeholder until we get asset
-    # play sound footsteps # feet shuffling and trailing off
+    play sound sfx_footsteps # feet shuffling and trailing off
+
+    # add pause to let sfx play
+    pause 2.0
 
     # Optional – should we have a woman scream next, like he is discovered?
     # Either way, we should fade-out and into the next scene, which is Chrome brooding in his dark office.
 
+    $ larry_santa_on = False
+    $ update_layers(1) # turn off Larry layer
     # jump to the next scene - Commented out for Scene Selector
     jump scene2 # added fade transition to show scene in scene2 script
 
