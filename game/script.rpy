@@ -3,14 +3,14 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define larry = Character("Larry Moss", color="#2fb525")
-define chrome = Character("Chrome Steele", color="#a5a5a5")
-define bianca = Character("Bianca Fontaine", color="#45b7f0")
-define freddy = Character("Freddy Fontaine", color="#f07635")
-define jack = Character("Jack Scanlon", color="#dbd839")
-define mariah = Character("Mariah Fowler", color="#d339db")
-define cop = Character("Generic Cop", color="#2d30d9")
-define santa = Character("Robot Santa", color="#ff0000")
+define larry = Character("Larry Moss", color="#2fb525", image="larry")
+define chrome = Character("Chrome Steele", color="#a5a5a5", image="chrome")
+define bianca = Character("Bianca Fontaine", color="#45b7f0", image="bianca")
+define freddy = Character("Freddy Fontaine", color="#f07635", image="freddy")
+define jack = Character("Jack Scanlon", color="#dbd839", image="jack")
+define mariah = Character("Mariah Fowler", color="#d339db", image="mariah")
+define cop = Character("Generic Cop", color="#2d30d9", image="cop")
+define santa = Character("Robot Santa", color="#ff0000", image="santa")
 define narration = Character("Narration", kind=nvl)
 
 # define images for each character
