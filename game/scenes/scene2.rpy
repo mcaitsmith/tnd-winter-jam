@@ -18,6 +18,12 @@ label scene2:
     # fades to black for 1 second then fades in
     with Fade(0.5, 1.0, 0.5)
 
+    # start Chrome music
+
+    $ chrome_on = True
+    $ update_layers() # turn on Chrome layer
+    $ start_layers(3) # start playing layers
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
@@ -68,6 +74,9 @@ label scene2:
 
     # add pause to let sound effect play
     # pause 1.0
+    
+    $ bianca_on = True # turn on Bianca layer
+    $ update_layers(0) # update layers
 
     show bianca angry at left
     
@@ -184,6 +193,9 @@ label scene2:
     bianca "If anyone knows anything, that would be a good place to start."
 
     hide bianca # bianca leaves scene
+    
+    $ bianca_on = False # turn off Bianca layer
+    $ update_layers(0) # update layers
 
     # placeholder until we get asset
     # play sound door_slam
@@ -197,6 +209,8 @@ label scene2:
 
     chrome "{i}I could use some jazz to clear my mind...{/i}"
 
-    # jump to the next scene
+    $ stop_layers(3) # stop playing layers
+
+    # jump to next scene
 
     jump scene3
