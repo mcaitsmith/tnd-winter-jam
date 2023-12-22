@@ -30,11 +30,12 @@ label scene8:
             # show #blood?
             chrome "On closer inspection, that seems to be blood droplets in the snow."
             call cellcell
-            return
+    return
 
 label cellcell:
     chrome thinking "Hm. What's on this phone?"
     show phone at center
     chrome shocked "Leave me alone, Larry. After tonight, you're dead to me."
     chrome neutral "This looks bad for Freddy. How quickly a missing persons case can become murder. Better tell the kid in person."
-    jump scene9
+    # jump scene9
+    jump start

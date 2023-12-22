@@ -8,7 +8,7 @@ label scene7:
 
     scene bg alley
 
-    show chrome at right    
+    show chrome neutral at right    
 
     show cop at left   
 
@@ -90,4 +90,5 @@ label scene7:
             cop angry  "Fine. Go through"
 
 
-    jump scene8
+    # jump scene8
+    return

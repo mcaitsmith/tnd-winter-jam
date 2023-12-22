@@ -301,4 +301,6 @@ label lookaround:
             bianca neutral "Share with the class, Mr. Steele! Did that Santa droid give you everything you asked for this year?"
 
             chrome thinking "Not everything. Not yet. But there’s another Santa out there who may just do exactly that…"
-            jump scene10
+            # jump scene10
+            jump start
+            return

@@ -127,7 +127,8 @@ label scene3:
 
     # jump to the next scene
 
-    jump scene4
+    # jump scene4
+    return
 
 label scene3_logical:
 

@@ -41,6 +41,6 @@ label scene1:
     # Either way, we should fade-out and into the next scene, which is Chrome brooding in his dark office.
 
     # jump to the next scene - Commented out for Scene Selector
-    jump scene2 # added fade transition to show scene in scene2 script
+    # jump scene2 # added fade transition to show scene in scene2 script
 
-    # return
+    return

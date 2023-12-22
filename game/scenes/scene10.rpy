@@ -386,4 +386,5 @@ label scene10:
 
         chrome "{i}Some snooping around was in order, and what better place than the bigwig’s office? {/i}"
 
-        jump scene11
+        # jump scene11
+        return

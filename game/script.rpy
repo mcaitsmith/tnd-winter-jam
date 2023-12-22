@@ -12,6 +12,7 @@ define mariah = Character("Mariah Fowler", color="#d339db", image="mariah")
 define cop = Character("Generic Cop", color="#2d30d9", image="cop")
 define santa = Character("Robot Santa", color="#ff0000", image="santa")
 define narration = Character("Narration", kind=nvl)
+define figure = Character("???", color="#a5a5a5")
 
 # define images for each character (need to be updated when we get assets)
 
@@ -63,6 +64,7 @@ label end_glitch:
 # The game starts here.
 
 label start:
+    scene bg default
 
     menu:
         "Which Scene?"
@@ -88,6 +90,16 @@ label start:
         "Seven":
             call scene7
 
+        "More->":
+            jump menuextend
+    jump start
+    return
+
+label menuextend:
+    menu:
+
+        "Which Scene?"
+        
         "Eight":
             call scene8
 
@@ -102,7 +114,10 @@ label start:
 
         "Twelve":
             call scene12
+        "Thirteen (secret)":
+            call secret_ending
+        "Go back":
+            jump start
 
-    jump start
     return
 

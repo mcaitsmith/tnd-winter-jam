@@ -26,4 +26,5 @@ label scene4:
 
     # jump to the next scene
 
-    jump scene5
+    # jump scene5
+    return

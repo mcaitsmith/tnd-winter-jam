@@ -199,4 +199,5 @@ label scene2:
 
     # jump to the next scene
 
-    jump scene3
+    # jump scene3
+    return
