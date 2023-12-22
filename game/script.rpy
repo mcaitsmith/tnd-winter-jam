@@ -16,7 +16,7 @@ define narration = Character("Narration", kind=nvl)
 # define images for each character (need to be updated when we get assets)
 
 image larry dead = "larry dead.png"
-image larry = "larry.jpg"
+image larry = "larry dead.jpg"
 image chrome neutral = "chrome neutral.png"
 image chrome neutral glitch = Glitch("chrome neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome shocked = "chrome shocked.png"

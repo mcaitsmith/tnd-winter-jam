@@ -16,13 +16,13 @@ label scene1:
     scene bg extstore # the sidewalk is snowy, random footprints
 
     # add pause at beginning of scene
-    pause 3.0
+    # pause 3.0
 
     # placeholder until we get asset
     # play sound bell # a hand bell typically used by street santa’s rings periodically in the distance
 
     # add pause to let sound effect play
-    pause 3.0
+    # pause 3.0
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -32,7 +32,7 @@ label scene1:
     show larry dead at center 
 
     # add pause after showing larry
-    pause 2.0
+    # pause 2.0
 
     # placeholder until we get asset
     # play sound footsteps # feet shuffling and trailing off

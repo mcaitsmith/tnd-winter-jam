@@ -143,13 +143,13 @@ label scene9:
 
             chrome "I miss Cane. If I ever had a father, it was him."
 
-            show chrome thinking left
+            show chrome thinking at left
 
             chrome"Bianca needs Freddy. They are each other’s reason to be."
 
             chrome "And, perhaps…"
 
-            show chrome happy left
+            show chrome happy at left
 
             chrome "They are my reason to be."
 

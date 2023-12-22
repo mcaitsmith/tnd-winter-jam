@@ -19,7 +19,7 @@ label scene3:
     # play sound door_open
 
     # add pause to let sound effect play
-    pause 1.0
+    # pause 1.0
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -47,7 +47,7 @@ label scene3:
     show jack neutral at right
 
     # pause to show jack
-    pause 1.0
+    # pause 1.0
 
     chrome "Can I buy you another drink?"
 
@@ -112,7 +112,7 @@ label scene3:
     with dissolve
 
     # pause after Jack leaves
-    pause 1.0
+    # pause 1.0
 
     chrome "{i}Seems like Freddy had some secret business at Fowler's Department Store, of all places.{/i}"
 
@@ -125,10 +125,9 @@ label scene3:
     # stop music
     stop music fadeout 3.0
 
-    # jump to the next scene - Commented out for Scene Selector
+    # jump to the next scene
 
-    # jump scene4
-    return
+    jump scene4
 
 label scene3_logical:
 

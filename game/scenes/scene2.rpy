@@ -38,7 +38,7 @@ label scene2:
     # play sound knocking volume 0.5 # more like banging, when you use the side of your fist instead of your knuckles
 
     # add pause to let sound effect play
-    pause 3.0
+    # pause 3.0
 
     show chrome shocked
 
@@ -48,7 +48,7 @@ label scene2:
     # play sound knocking volume 1.0 # same banging, maybe even a bit louder
 
     # add pause to let sound effect play
-    pause 3.0
+    # pause 3.0
 
     # Do we want to say Unknown at first instead of bianca? The character art shouldn’t show yet.
     "Detective Steele! You in there?! C'mon, lemme in!"
@@ -61,13 +61,13 @@ label scene2:
     # play sound buzz
 
     # add pause to let sound effect play
-    pause 1.0
+    # pause 1.0
 
     # placeholder until we get asset
     # play sound door_open
 
     # add pause to let sound effect play
-    pause 1.0
+    # pause 1.0
 
     show bianca angry at left
     
@@ -82,7 +82,7 @@ label scene2:
     bianca "That's what you do, no? Help people?!"
 
     # pause to switch to narration
-    pause 1.0
+    # pause 1.0
 
     chrome "{i}There she stood. Bianca Fontaine. Human girl, approximately 16, projecting confidence and determination. Clearly resourceful, yet clearly in need.{/i}"
 
@@ -189,7 +189,7 @@ label scene2:
     # play sound door_slam
 
     # add pause to let sound effect play
-    pause 1.0
+    # pause 1.0
 
     chrome "{i}I try to ease back into the old routine, but Bianca's words keep percolating to the top of my stack.{/i}"
 
@@ -197,7 +197,6 @@ label scene2:
 
     chrome "{i}I could use some jazz to clear my mind...{/i}"
 
-    # jump to the next scene - Commented out for Scene Selector
+    # jump to the next scene
 
-    # jump scene3
-    return
+    jump scene3
