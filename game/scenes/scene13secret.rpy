@@ -53,6 +53,10 @@ label secret_ending:
     figure "Now pay attention, Chrome Steele. We have much to discuss about Forrest Cane."
 
     # fade to black or credits
-    jump credits
+
+    # CALL CREDITS
+    $ quick_menu = False # hide quick menu
+    call screen credits ## Show credits screen.
     with fade
+    return ## return to main menu
 

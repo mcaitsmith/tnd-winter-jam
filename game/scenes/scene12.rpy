@@ -247,4 +247,8 @@ label unassuming12:
 
     $ stop_layers() # stop playing layers
 
-    return
+    # CALL CREDITS
+    $ quick_menu = False # hide quick menu
+    call screen credits ## Show credits screen.
+    with fade
+    return ## return to main menu
