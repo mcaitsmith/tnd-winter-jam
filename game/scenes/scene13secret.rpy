@@ -34,11 +34,11 @@ label secret_ending:
     
     chrome "Wait a minute. This…."
 
-    show chrome shocked left
+    show chrome shocked at left
 
     chrome "This isn’t my glitch!"
 
-    show figure
+    show figure at right
 
     figure "No. It’s MINE."
 
@@ -48,7 +48,7 @@ label secret_ending:
 
     figure "More like a copy of your consciousness."
 
-    show chrome hardboiled left
+    show chrome hardboiled at left
 
     figure "Now pay attention, Chrome Steele. We have much to discuss about Forrest Cane."
 
