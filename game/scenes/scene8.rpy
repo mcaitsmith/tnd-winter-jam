@@ -1,45 +1,40 @@
 ﻿# The script of the scene goes in this file.
 
-######### SCENE 8: ROOFTOP (find Freddy, dialogue with Freddy, then Mariah appears for climax, then cop & Jack Scanlon)
-
-# The scene starts here.
+######### SCENE 8
 
 label scene8:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    scene extstore
 
-    scene bg room
+    show chrome neutral at left:
+        xzoom -1.0 
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    show larry dead at right
 
-    show freddy neutral at left
+    chrome "Poor Schmuck."
 
-    # These display lines of dialogue.
+    menu scene8_choices:
+        chrome "Strange, I wonder if this has something to do with Freddy? There's got to be some evidence lurking around here somewhere." 
+        "What's that in the snow bank?":
+            hide larry dead with moveoutright
+            show cookietin at right
+            chrome "Hm. A cookie tin filled with freshly baked Christmas cookies. Is this involved somehow?"
+            jump scene8_choices
+        "Footprints in the snow?":
+            hide larry dead with moveoutright
+            show santaboots
+            chrome "These look like santa boots."
+            jump scene8_choices
+        "What are those red speckles?":
+            hide larry dead with moveoutright
+            # show #blood?
+            chrome "On closer inspection, that seems to be blood droplets in the snow."
+            call cellcell
+            return
 
-    freddy "Welcome to Scene 8."
-
-    ######### SCENE 8A: ENDING 1 (best ending, if get 5-6/6 choices right)
-
-    show chrome neutral at center
-
-    chrome "This is Scene 8A."
-
-    ######### SCENE 8B: ENDING 2 (average ending, if get 3-4/6 choices right)
-
-    show mariah neutral at right
-
-    mariah "This is Scene 8B."
-
-    ######### SCENE 8C: ENDING 3 (worst ending, if get 0-2/6 choices right)
-
-    freddy "This is Scene 8C."
-
-    chrome "Now we're going to Scene 9."
-
-    # jump to next scene
-
+label cellcell:
+    chrome thinking "Hm. What's on this phone?"
+    show phone at center
+    chrome shocked "Leave me alone, Larry. After tonight, you're dead to me."
+    chrome neutral "This looks bad for Freddy. How quickly a missing persons case can become murder. Better tell the kid in person."
     jump scene9

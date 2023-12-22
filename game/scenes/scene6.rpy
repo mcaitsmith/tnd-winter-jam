@@ -20,22 +20,8 @@ label scene6:
 
     # These display lines of dialogue.
 
-    santa "Welcome to Scene 6."
+    santa "Welcome to Scene 6. (This scene not implemented yet)"
 
-    hide santa
-
-    ######### SCENE 6A: GLITCH 6
-
-    show chrome neutral
-
-    chrome "GLITCH GLITCH GLITCH"
-
-    ######### back to SCENE 6
-
-    chrome "Woah that was weird"
-
-    chrome "Now we're going to Scene 7."
-
-    # jump to next scene
+    # jump to the next scene
 
     jump scene7
