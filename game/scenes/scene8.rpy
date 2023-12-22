@@ -6,7 +6,7 @@ label scene8:
     scene extstore
 
     show chrome neutral at left:
-    xzoom -1.0 
+        xzoom -1.0 
 
     show larry dead at right
 
@@ -26,7 +26,7 @@ label scene8:
             jump scene8_choices
         "What are those red speckles?":
             hide larry dead with moveoutright
-            show #blood?
+            # show #blood?
             chrome "On closer inspection, that seems to be blood droplets in the snow."
             call cellcell
             return
@@ -36,6 +36,6 @@ label cellcell:
     show phone at center
     chrome shocked "Leave me alone, Larry. After tonight, you're dead to me."
     chrome neutral "This looks bad for Freddy. How quickly a missing persons case can become murder. Better tell the kid in person."
-    jump scene 9
+    jump scene9
 
     

@@ -145,7 +145,7 @@ label logical12:
 
     chrome thinking "Do you really want to run, Freddy? Let’s look at the facts."
 
-    chrome logical "Larry is dead. Pobre bastardo{/i}."
+    chrome logical "{i}Larry is dead. Pobre bastardo{/i}."
 
     freddy sad "Yeah. No shit."
 
