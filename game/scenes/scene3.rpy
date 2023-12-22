@@ -59,7 +59,7 @@ label scene3:
 
     chrome "Chrome. Chrome Steele. I'm a friend of Freddy's - Freddy Fontaine. You know him?"
 
-    jack "Good ole Freddy. Bianca too - that's his daughter, you see. Lovely girl."
+    jack "Good ole Freddy. Salt of the earth. His daughter too, um... Bianca! Lovely girl..."
 
     jack "Fine gin this, ain't it?"
 
