@@ -68,6 +68,8 @@ label scene4:
 
     chrome "Now we're going to Scene 5."
 
-    # jump to next scene
+    # jump to the next scene - Commented out for Scene Selector
 
-    jump scene5
+    # jump scene5
+
+    return

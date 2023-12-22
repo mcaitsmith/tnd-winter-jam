@@ -36,6 +36,8 @@ label scene6:
 
     chrome "Now we're going to Scene 7."
 
-    # jump to next scene
+    # jump to the next scene - Commented out for Scene Selector
 
-    jump scene7
+    # jump scene7
+
+    return

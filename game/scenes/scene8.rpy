@@ -3,6 +3,7 @@
 ######### SCENE 8
 
 label scene8:
+
     scene extstore
 
     show chrome neutral at left:
@@ -37,5 +38,3 @@ label cellcell:
     chrome shocked "Leave me alone, Larry. After tonight, you're dead to me."
     chrome neutral "This looks bad for Freddy. How quickly a missing persons case can become murder. Better tell the kid in person."
     jump scene9
-
-    
