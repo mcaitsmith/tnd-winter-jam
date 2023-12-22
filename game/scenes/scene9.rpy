@@ -20,6 +20,8 @@ label scene9:
     "{i}Cozy, if not erroneously kept. I’m one to talk. I suppose Bianca’s doing her best with Freddy on the lamb.{/i}"
 
     show bianca sad at right
+    $ bianca_on = True
+    $ update_layers() # turn on Bianca layer
 
     chrome "And speaking of Bianca…"
 
@@ -110,6 +112,7 @@ label scene9:
 
             hide bianca # hide Bianca for glitch
             show freddyoffice night blur # blurs the background
+            $ stop_layers() # stop playing layers
             call start_glitch # shows Chrome glitching and grays out the background
 
             # pause for transition
@@ -157,6 +160,7 @@ label scene9:
 
             show freddyoffice night # unblur the background
             call end_glitch # return to normal Chrome and normal background
+            $ start_layers() # start playing layers
             # show Bianca again
             show bianca neutral at left
 
@@ -301,4 +305,7 @@ label lookaround:
             bianca neutral "Share with the class, Mr. Steele! Did that Santa droid give you everything you asked for this year?"
 
             chrome thinking "Not everything. Not yet. But there’s another Santa out there who may just do exactly that…"
+            
+            $ bianca_on = False
+            $ update_layers() # turn off Larry layer
             jump scene10

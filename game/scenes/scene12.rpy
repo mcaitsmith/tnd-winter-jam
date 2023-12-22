@@ -24,6 +24,9 @@ label scene12:
 
     show freddy shocked at right
 
+    $ freddy_on = True
+    $ update_layers() # turn on Freddy layer
+
     #Freddy has a CIGARETTE- not sure if the asset needs to be called out? Or it’s just part of his character portrait
 
     freddy shocked "{i}Quién es ese{/i}– what do you want? I’m armed!"
@@ -238,5 +241,10 @@ label unassuming12:
     chrome unassuming "And I believe I’ll try and smoke this cigarette. Got a light?"
 
     freddy happy "Sure."
+
+    $ freddy_on = False
+    $ update_layers() # turn off Freddy layer
+
+    $ stop_layers() # stop playing layers
 
     return

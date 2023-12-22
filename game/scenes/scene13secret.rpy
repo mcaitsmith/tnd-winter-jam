@@ -53,4 +53,6 @@ label secret_ending:
     figure "Now pay attention, Chrome Steele. We have much to discuss about Forrest Cane."
 
     # fade to black or credits
+    jump credits
+    with fade
 

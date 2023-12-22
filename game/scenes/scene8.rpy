@@ -11,6 +11,9 @@ label scene8:
 
     show larry dead at right
 
+    $ larry_santa_on = True
+    $ update_layers() # turn on Larry layer
+
     chrome "Poor Schmuck."
 
     menu scene8_choices:
@@ -37,4 +40,8 @@ label cellcell:
     show phone at center
     chrome shocked "Leave me alone, Larry. After tonight, you're dead to me."
     chrome neutral "This looks bad for Freddy. How quickly a missing persons case can become murder. Better tell the kid in person."
+
+    $ larry_santa_on = False
+    $ update_layers() # turn off Larry layer
+    
     jump scene9

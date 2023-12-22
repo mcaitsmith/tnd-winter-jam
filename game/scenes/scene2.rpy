@@ -149,6 +149,7 @@ label scene2:
     ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
     hide bianca # hide Bianca for glitch
+    $ stop_layers() # stop playing layers
     show bg office blur # blurs the background
     call start_glitch # shows Chrome glitching and grays out the background
 
@@ -162,6 +163,7 @@ label scene2:
 
     show bg office # unblur the background
     call end_glitch # return to normal Chrome and normal background
+    $ start_layers() # start playing layers
     # show Bianca again
     show bianca neutral at left
 
