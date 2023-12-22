@@ -10,16 +10,16 @@ label scene9:
 
     #SOUND - Door opening
 
-    show chrome neutral left flip
+    show chrome neutral at left:
+        xzoom -1.0 
     
-
     chrome "{i}The Fontaine digs. Three rooms and a toilet chamber. One of hundreds packing this block, nestled between an old-school bodega and a shabby, second-hand pawn shop.{/i}"
 
     "{i}Exactly 738 square feet if you count the entry vestibule. Which I do.{/i}"
 
     "{i}Cozy, if not erroneously kept. I’m one to talk. I suppose Bianca’s doing her best with Freddy on the lamb.{/i}"
 
-    show bianca sad right
+    show bianca sad at right
 
     chrome "And speaking of Bianca…"
 
@@ -105,6 +105,65 @@ label scene9:
             bianca sad "Turns out, he did it for me. Moved us to keep me safe and left me the rest of his cash for food. If he had paid up, I would’ve starved. But a full belly didn’t stop me from feeling scared and empty."
 
             bianca neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
+
+            ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
+
+            hide bianca # hide Bianca for glitch
+            show freddyoffice night blur # blurs the background
+            call start_glitch # shows Chrome glitching and grays out the background
+
+            # pause for transition
+            pause 1.0
+
+            ### GLITCH SCENE #004
+
+            show chrome shocked at left
+
+            chrome "This one stings. Like I’ve blown a fuse. Bianca and I are more similar than she knows."
+
+            show chrome unassuming at left
+
+            chrome "As young beings, we adopt the lives of our parents. Our mentors. We learn from them, grow with them, explore the world under their wing. Our physical functionality may be independent but our programming is synced."
+
+            chrome "We live so naturally together that we forget it is temporary. Expectations are created. Dependencies installed. And when the moment comes - when separate for good - we are forced to reevaluate our entire way of being."
+
+            show chrome thinking at left
+
+            chrome "That’s why they thought I did it. That’s why I was the number one suspect in Cane’s disappearance."
+
+            chrome "I knew him the best. Lived with him in my infancy. He did not make a move that I couldn’t calculate. Until his final move, that is."
+
+            show chrome sad left
+
+            chrome "It was only after losing Cane that I understood his gift to me. The culmination of his guidance and care: purpose."
+
+            chrome "Cane gave me reason to be. At a certain point, without realizing it, I became the one guiding and caring for him."
+
+            chrome "Without him, purpose is lost on me. I have no expectations, nothing to uphold. Nobody to share my existence with."
+
+            chrome "I miss Cane. If I ever had a father, it was him."
+
+            show chrome thinking left
+
+            chrome"Bianca needs Freddy. They are each other’s reason to be."
+
+            chrome "And, perhaps…"
+
+            show chrome happy left
+
+            chrome "They are my reason to be."
+
+            #INSERT COUNTER HERE?
+
+            show freddyoffice night # unblur the background
+            call end_glitch # return to normal Chrome and normal background
+            # show Bianca again
+            show bianca neutral at left
+
+            # pause for transition
+            pause 1.0
+
+            ######### back to SCENE 9
         "My Dear...":
             show chrome logical "My dear, you still operate under the assumption that I am indeed searching. Which is what I was hired for, true, but is no longer indicative of the job."
             
@@ -150,19 +209,19 @@ label lookaround:
     menu helpful:
         chrome "Let's see..."
         "Cigarettes":
-            show chrome neutral left
+            show chrome neutral at left
             "My aromatic sensors are picking something up."
-            show cigarettes right
+            show cigarettes at right
             "Ah, clove cigarettes. Just like Jack mentioned. Supply looks low. Maybe Freddy took one for the road."
             jump helpful
         "Boxing Gloves":
-            show chrome neutral left
-            show gloves right
+            show chrome neutral at left
+            show gloves at right
             chrome "{i}My database highlighted Freddy’s days as an amateur boxer. Seems like he’s hung up the gloves for now.{/i}"
 
             hide gloves with moveoutright
 
-            show bianca neutral right
+            show bianca neutral at right
 
             bianca neutral "Ever been in a fight?"
 
@@ -183,9 +242,9 @@ label lookaround:
             chrome neutral "I see. At least you’ve still got all your teeth."
             jump helpful
         "Santa Toy": 
-            show chrome thinking left
+            show chrome thinking at left
 
-            show santa toy right
+            show santa toy at right
 
             chrome "Some kind of toy model. Like one of those Santa androids at the department store. Typical. Milking androidkind for commercial value while giving us the societal cold shoulder."
 
@@ -195,7 +254,7 @@ label lookaround:
 
             hide santa toy with moveoutright
 
-            show bianca neutral right
+            show bianca neutral at right
 
             chrome thinking "Where did this come from? Is it new?"
 
@@ -207,9 +266,9 @@ label lookaround:
 
             hide bianca neutral right with moveoutright
 
-            show memory stick right
+            show memory stick at right
 
-            show chrome shocked left
+            show chrome shocked at left
 
             chrome "Aha! It was hiding a memory stick! Now let me just plug into it…"
 
@@ -219,25 +278,25 @@ label lookaround:
 
             hide memory stick right with moveoutright
 
-            show credit card schematics right
+            show credit card schematics at right
 
-            show chrome thinking left
+            show chrome thinking at left
 
             chrome "Hmm. ‘Card Reader Schematics.’ ‘Install on all registers’. These credit card readers are programmed to redirect sales to a private bank account!"
 
-            show chrome neutral left
+            show chrome neutral at left
 
             chrome "I wanted to believe Bianca. But it looks like I’ve discovered Santa’s secret - Freddy’s been embezzling cash over at the department store." 
 
-            show chrome confused left
+            show chrome confused at left
 
             chrome "Was Larry in on it? Is that why he’s dead? I must be missing something over at Fowler’s Department Store. One stone left unturned…"
 
-            show chrome neutral left
+            show chrome neutral at left
 
             hide credit card schematics right with moveoutright
 
-            show bianca neutral right
+            show bianca neutral at right
 
             bianca neutral "Share with the class, Mr. Steele! Did that Santa droid give you everything you asked for this year?"
 
