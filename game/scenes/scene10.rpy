@@ -22,8 +22,12 @@ label scene10:
 
     chrome "Welcome to Scene 10."
 
-    chrome "This is the end!"
+    chrome "Now going to next scene"
+
+    # jump to next scene
+
+    jump scene11
 
     # This ends the game.
 
-    return
+    # return
