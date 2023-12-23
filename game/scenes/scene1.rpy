@@ -33,7 +33,7 @@ label scene1:
     # directory.
 
     # VISUAL: fade-in Larry. He is clearly dead. Some red blood accents.
-    show larry dead at center 
+    show larry dead at center
 
     # add pause after showing larry
     pause 1.0

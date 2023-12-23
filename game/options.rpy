@@ -12,13 +12,13 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("TND Winter Jam")
+define config.name = _("Santa's Secret")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
@@ -38,7 +38,7 @@ A game by Small Loan Studios.
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "TNDWinterJam"
+define build.name = "SantasSecret"
 
 
 ## Sounds and music ############################################################
@@ -121,7 +121,8 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+# default preferences.text_cps = 0
+default preferences.text_cps = 35
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0

@@ -289,11 +289,12 @@ style quick_button_text:
 
 screen navigation():
 
-    vbox:
+    hbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        # xpos gui.navigation_xpos
+        xalign 0.5
+        yalign 0.9
 
         spacing gui.navigation_spacing
 
@@ -309,7 +310,12 @@ screen navigation():
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        if main_menu:
+
+            textbutton _("Options") action ShowMenu("preferences")
+        else:
+
+            textbutton _("Options") action Return()
 
         if _in_replay:
 
@@ -319,12 +325,12 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        # textbutton _("About") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+        #     ## Help isn't necessary or relevant to mobile devices.
+        #     textbutton _("Help") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -342,6 +348,8 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
+    size 80
+    xalign 0.5
 
 
 ## Main Menu screen ############################################################
@@ -356,6 +364,10 @@ screen main_menu():
     tag menu
 
     add gui.main_menu_background
+    add "gui/title.png":
+        xalign 0.5
+        xoffset 25
+        yalign 0.1
 
     ## This empty frame darkens the main menu.
     frame:
@@ -370,11 +382,13 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
+            text "{i}[config.name!t]{/i}":
+                # xalign 0.5
+                # text-align 0.5
                 style "main_menu_title"
 
-            text "[config.version]":
-                style "main_menu_version"
+            # text "[config.version]":
+            #     style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -387,20 +401,22 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    # background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
-    xalign 1.0
-    xoffset -30
+    xalign 0.5
+    # xoffset -30
     xmaximum 1200
-    yalign 1.0
-    yoffset -30
+    yalign 0.35
+    # yoffset -30
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
 
 style main_menu_title:
     properties gui.text_properties("title")
+    textalign 0.5
+    outlines [ (absolute(1), "#000", absolute(0), absolute(0)) ]
 
 style main_menu_version:
     properties gui.text_properties("version")
@@ -430,8 +446,8 @@ screen game_menu(title, scroll=None, yinitial=0.0):
         hbox:
 
             ## Reserve space for the navigation section.
-            frame:
-                style "game_menu_navigation_frame"
+            # frame:
+            #     style "game_menu_navigation_frame"
 
             frame:
                 style "game_menu_content_frame"
@@ -469,7 +485,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
                     transclude
 
-    use navigation
+    # use navigation
 
     textbutton _("Return"):
         style "return_button"
@@ -497,12 +513,12 @@ style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:
     bottom_padding 45
-    top_padding 180
+    top_padding 150
 
     background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
-    xsize 420
+    xsize 220
     yfill True
 
 style game_menu_content_frame:
@@ -511,7 +527,8 @@ style game_menu_content_frame:
     top_margin 15
 
 style game_menu_viewport:
-    xsize 1380
+    # xsize 1380
+    xsize 1500
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
@@ -521,17 +538,22 @@ style game_menu_side:
 
 style game_menu_label:
     xpos 75
-    ysize 180
+    ysize 200
 
 style game_menu_label_text:
-    size gui.title_text_size
+    size gui.title_text_size*0.5
     color gui.accent_color
     yalign 0.5
 
 style return_button:
-    xpos gui.navigation_xpos
+    # xpos gui.navigation_xpos
+    xalign 0.5
     yalign 1.0
-    yoffset -45
+    yoffset -100
+
+style return_button_text:
+    color "#f00"
+    hover_color gui.hover_color
 
 
 ## About screen ################################################################
@@ -610,6 +632,7 @@ screen file_slots(title):
             ## The page name, which can be edited by clicking on a button.
             button:
                 style "page_label"
+                yoffset -40
 
                 key_events True
                 xalign 0.5
@@ -621,6 +644,7 @@ screen file_slots(title):
 
             ## The grid of file slots.
             grid gui.file_slot_cols gui.file_slot_rows:
+
                 style_prefix "slot"
 
                 xalign 0.5
@@ -653,6 +677,7 @@ screen file_slots(title):
 
                 xalign 0.5
                 yalign 1.0
+                yoffset -760
 
                 hbox:
                     xalign 0.5
@@ -682,7 +707,7 @@ screen file_slots(title):
                         textbutton _("Download Sync"):
                             action DownloadSync()
                             xalign 0.5
-
+    # use navigation
 
 style page_label is gui_label
 style page_label_text is gui_label_text
@@ -730,8 +755,10 @@ screen preferences():
     use game_menu(_("Preferences"), scroll="viewport"):
 
         vbox:
+            xpos 0.2
 
             hbox:
+
                 box_wrap True
 
                 if renpy.variant("pc") or renpy.variant("web"):
@@ -802,6 +829,8 @@ screen preferences():
                         textbutton _("Mute All"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
+
+    # use navigation
 
 
 style pref_label is gui_label
@@ -1366,7 +1395,7 @@ style nvl_window:
     xfill True
     yfill True
 
-    background "gui/nvl.png"
+    # background "gui/nvl.png"
     padding gui.nvl_borders.padding
 
 style nvl_entry:
