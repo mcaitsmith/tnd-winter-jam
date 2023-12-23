@@ -5,13 +5,24 @@
 
 define larry = Character("Larry Moss", color="#2fb525", image="larry")
 define chrome = Character("Chrome Steele", color="#a5a5a5", image="chrome")
+define chrome_nvl_left = Character("Chrome Steele", color="#a5a5a5", image="chrome", kind=nvl)
+define chrome_nvl_right = Character("Chrome Steele", color="#a5a5a5", image="chrome", kind=nvl, what_text_align=1, who_text_align=1)
 define bianca = Character("Bianca Fontaine", color="#45b7f0", image="bianca")
+define bianca_nvl_left = Character("Bianca Fontaine", color="#45b7f0", image="bianca", kind=nvl)
+define bianca_nvl_right = Character("Bianca Fontaine", color="#45b7f0", image="bianca", kind=nvl, what_text_align=1, who_text_align=1)
 define freddy = Character("Freddy Fontaine", color="#f07635", image="freddy")
 define jack = Character("Jack Scanlon", color="#dbd839", image="jack")
+define jack_nvl_left = Character("Jack Scanlon", color="#dbd839", image="jack", kind=nvl)
+define jack_nvl_right = Character("Jack Scanlon", color="#dbd839", image="jack", kind=nvl, what_text_align=1, who_text_align=1)
 define mariah = Character("Mariah Fowler", color="#d339db", image="mariah")
 define cop = Character("Generic Cop", color="#2d30d9", image="cop")
 define santa = Character("Robot Santa", color="#ff0000", image="santa")
 define narration = Character("Narration", kind=nvl)
+
+image bg office = "bg office.png"
+image chrome neutral = "chrome neutral.png"
+image bianca neutral = "bianca neutral.png"
+image dialogue_box = "gui/nvl_box.png"
 
 # define images for each character (need to be updated when we get assets)
 
@@ -54,7 +65,7 @@ define sfx_mariahclap = "audio/sfx/MariahClap_SantaSecret_SFX.wav"
 define sfx_punch = "audio/sfx/Punch_SantaSecret_SFX.wav"
 define sfx_rattle = "audio/sfx/Rattle_SantaSecret_SFX.wav"
 define sfx_santabeepscan = "audio/sfx/SantaBeepScan_SantaSecret_SFX.wav"
-
+define sfx_breakmetaltoy = "audio/sfx/BreakMetalToy_SantaSecret_SFX.wav"
 
 init python:
     # define music channels
@@ -100,7 +111,8 @@ label start_glitch():
     show bg:
         matrixcolor TintMatrix("#ffffff") * SaturationMatrix(0.0)
     # play glitch music
-    play music "GlitchSequence_127BPM_CMaj.wav"
+    # play music "GlitchSequence_127BPM_CMaj.wav"
+    play music "GlitchSequence.wav"
     return
 
 # call this label when you want a glitch scene to end
