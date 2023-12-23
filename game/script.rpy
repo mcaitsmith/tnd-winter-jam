@@ -65,6 +65,7 @@ define sfx_mariahclap = "audio/sfx/MariahClap_SantaSecret_SFX.wav"
 define sfx_punch = "audio/sfx/Punch_SantaSecret_SFX.wav"
 define sfx_rattle = "audio/sfx/Rattle_SantaSecret_SFX.wav"
 define sfx_santabeepscan = "audio/sfx/SantaBeepScan_SantaSecret_SFX.wav"
+define sfx_breakmetaltoy = "audio/sfx/BreakMetal_SantaSecret_SFX.wav"
 
 
 init python:
