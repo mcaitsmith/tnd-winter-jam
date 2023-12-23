@@ -134,9 +134,9 @@ label scene3:
 
     $ start_layers(3) # start playing layers
 
-    # jump to the next scene
+    # jump to the next scene (skip scene 4)
 
-    jump scene4
+    jump scene5
 
 label scene3_logical:
 
