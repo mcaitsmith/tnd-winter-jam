@@ -50,43 +50,8 @@ label scene5:
     show chrome thinking at left with moveinleft: 
         xzoom -1.0
 
-    chrome "Having seen enough, I consider my next step..."
+    chrome "{i}Having seen enough, I consider my next steps...{/i}"
 
-    menu: 
-     
-        "Talk to the owner of the department store.":
-            jump scene5_owner 
-     
-        "Investigate the crime scene.":
-            jump scene5_crimescene 
-
-        "Talk to the cop on the scene.":
-            jump scene5_cops
-
-
-    label scene5_owner: 
-
-        chrome "This menu choice wasn't written yet by the time of implementation."
-
-        jump scene5_postchoice 
-
-    label scene5_crimescene:
-
-        chrome "This menu choice wasn't written yet by the time of implementation."
-
-        jump scene5_postchoice
-
-
-    label scene5_cops:
-
-        chrome "This menu choice wasn't written yet by the time of implementation."
-
-        jump scene5_postchoice
-
-    label scene5_postchoice: 
-
-        chrome "Now we're going to Scene 6."
-
-        # jump to the next scene
-
-        jump scene6
+    chrome "{i}I should talk to he owner of the department store. They’ll know the store better than anyone. If Freddy has been here, they’ll know.{/i}"
+    
+    jump scene6
