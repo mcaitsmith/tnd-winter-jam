@@ -100,7 +100,8 @@ label start_glitch():
     show bg:
         matrixcolor TintMatrix("#ffffff") * SaturationMatrix(0.0)
     # play glitch music
-    play music "GlitchSequence_127BPM_CMaj.wav"
+    # play music "GlitchSequence_127BPM_CMaj.wav"
+    play music "GlitchSequence.wav"
     return
 
 # call this label when you want a glitch scene to end
