@@ -27,6 +27,8 @@ label scene10:
     chrome "{i}One other person still remained, one I didn’t think much of earlier. Faded into the background, maybe by design.{/i}"
 
     show santa at right 
+    $ larry_santa_on = True
+    $ update_layers() # turn on Santa layer
 
     # Insert Santa happy sprite 
 
@@ -203,6 +205,9 @@ label scene10:
 
         #VISUAL- Add background blur aka show fowlers department background blur 
 
+        $ chrome_on = False # turn off Chrome layer for glitch
+        $ update_layers(0) # update layers
+
         call start_glitch
 
         #pause for transistion 
@@ -252,6 +257,8 @@ label scene10:
         chrome "{i}I will improve.{/i}"
 
         call end_glitch
+        $ chrome_on = True # turn on Chrome layer
+        $ update_layers(0) # update layers
 
         show santa at right with dissolve
 
@@ -386,4 +393,6 @@ label scene10:
 
         chrome "{i}Some snooping around was in order, and what better place than the bigwig’s office? {/i}"
 
-        jump scene 11
+        $ larry_santa_on = False
+        $ update_layers() # turn off Santa layer
+        jump scene11

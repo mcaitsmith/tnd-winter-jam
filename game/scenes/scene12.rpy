@@ -24,6 +24,9 @@ label scene12:
 
     show freddy shocked at right
 
+    $ freddy_on = True
+    $ update_layers() # turn on Freddy layer
+
     #Freddy has a CIGARETTE- not sure if the asset needs to be called out? Or it’s just part of his character portrait
 
     freddy shocked "{i}Quién es ese{/i}– what do you want? I’m armed!"
@@ -145,7 +148,7 @@ label logical12:
 
     chrome thinking "Do you really want to run, Freddy? Let’s look at the facts."
 
-    chrome logical "Larry is dead. Pobre bastardo{/i}."
+    chrome logical "{i}Larry is dead. Pobre bastardo{/i}."
 
     freddy sad "Yeah. No shit."
 
@@ -239,4 +242,13 @@ label unassuming12:
 
     freddy happy "Sure."
 
-    return
+    $ freddy_on = False
+    $ update_layers() # turn off Freddy layer
+
+    $ stop_layers() # stop playing layers
+
+    # CALL CREDITS
+    $ quick_menu = False # hide quick menu
+    call screen credits ## Show credits screen.
+    with fade
+    return ## return to main menu

@@ -98,7 +98,3 @@ label scene5:
         # jump to the next scene
 
         jump scene6
-
-
-
-

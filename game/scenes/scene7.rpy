@@ -91,5 +91,3 @@ label scene7:
 
 
     jump scene8
-
-    return
