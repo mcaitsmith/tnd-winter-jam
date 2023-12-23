@@ -33,8 +33,7 @@ label scene1:
     # directory.
 
     # VISUAL: fade-in Larry. He is clearly dead. Some red blood accents.
-    show larry dead at center 
-    show dialogue_box at center
+    show larry dead at center
 
     # add pause after showing larry
     pause 1.0
@@ -46,7 +45,6 @@ label scene1:
 
     # Optional – should we have a woman scream next, like he is discovered?
     # Either way, we should fade-out and into the next scene, which is Chrome brooding in his dark office.
-    hide dialogue_box # return to ADV mode
 
     $ larry_santa_on = False
     $ update_layers(1) # turn off Larry layer

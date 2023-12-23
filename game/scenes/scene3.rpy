@@ -43,32 +43,37 @@ label scene3:
 
     chrome "{i}If anyone's seen Freddy, it's him.{/i}"
 
+    show dialogue_box at center
+
+    hide chrome
+    show chrome neutral at left:
+        xzoom -1.0 # make him face right
     show jack neutral at right
 
     # pause to show jack
     # pause 1.0
 
-    chrome "Can I buy you another drink?"
+    chrome_nvl_left "Can I buy you another drink?"
 
     show jack happy
 
-    jack "Ahh, beggars can't be choosers, my mama used to say. Rest her soul."
+    jack_nvl_right "Ahh, beggars can't be choosers, my mama used to say. Rest her soul."
 
-    jack "Jack Scanlon's the name. To whom do I owe this honor?"
+    jack_nvl_right "Jack Scanlon's the name. To whom do I owe this honor?"
 
-    chrome "Chrome. Chrome Steele. I'm a friend of Freddy's - Freddy Fontaine. You know him?"
+    chrome_nvl_left "Chrome. Chrome Steele. I'm a friend of Freddy's - Freddy Fontaine. You know him?"
 
-    jack "Good ole Freddy. Salt of the earth. His daughter too, um... Bianca! Lovely girl..."
+    jack_nvl_right "Good ole Freddy. Salt of the earth. His daughter too, um... Bianca! Lovely girl..."
 
-    jack "Fine gin this, ain't it?"
+    jack_nvl_right "Fine gin this, ain't it?"
 
     show jack shocked
 
-    jack "Ahh, I suppose you wouldn't know! Shame..."
+    jack_nvl_right "Ahh, I suppose you wouldn't know! Shame..."
 
     show jack neutral
 
-    jack "Hey, you look like the kind sort. Can I ask for a small loan? Something to get on my feet? I'm good for it..."
+    jack_nvl_right "Hey, you look like the kind sort. Can I ask for a small loan? Something to get on my feet? I'm good for it..."
 
     chrome "{i}Jack seemed like the friendly sort. Gregarious. Unfocused. Meandering. His attention wavering like a mercurial jazz riff. I'm sure it had nothing to do with synthahol bombarding my aromatic sensors.{/i}"
 
@@ -78,7 +83,7 @@ label scene3:
     # CHOICE
 
     menu:
-        chrome "This guy's all over the place. I've got to get through to him..."
+        chrome "{i}This guy's all over the place. I've got to get through to him...{/i}"
         "Logical":
             call scene3_logical
         "Unassuming":
@@ -88,23 +93,26 @@ label scene3:
 
     show chrome neutral
 
-    chrome "Thanks for your time, Jack. It's been..."
+    chrome_nvl_left "Thanks for your time, Jack. It's been..."
 
     # This variable check is just for this one subtle line of dialogue
     if glitch_counter == 0:
-        chrome "...interesting."
+        chrome_nvl_left "...interesting."
     elif glitch_counter == 1:
-        chrome "...very helpful."
+        chrome_nvl_left "...very helpful."
 
     show jack happy
 
-    jack "Think nothing of it."
+    jack_nvl_right "Think nothing of it."
 
     show jack neutral
 
-    jack "Excuse me now lad, time for a piss and a smoke. I'd ask you to join me, but, y'know..."
+    jack_nvl_right "Excuse me now lad, time for a piss and a smoke. I'd ask you to join me, but, y'know..."
 
-    chrome "See you around, Jack."
+    chrome_nvl_left "See you around, Jack."
+
+    hide dialogue_box # end convo
+    nvl clear # clear NVL dialogue
 
     #VISUAL: fade-out. Jack leaves scene.
     hide jack
@@ -134,65 +142,65 @@ label scene3_logical:
 
     show chrome thinking
 
-    chrome "I'm curious as to the whereabouts of Freddy."
+    chrome_nvl_left "I'm curious as to the whereabouts of Freddy."
 
-    jack "Oh really, why's that?"
+    jack_nvl_right "Oh really, why's that?"
 
-    chrome "According to Bianca, he vanished without a trace."
-
-    show jack happy
-
-    jack "Did you say Bianca? Good kid, right??"
-
-    chrome "Please my man, just tell me how you know Freddy!"
-
-    show jack neutral
-
-    jack "Oh, me and Freddy?  We go waaay back."
-
-    jack "We used to work together at the docks - after his boxing career fizzled."
-
-    jack "He went through some rough times. In and out of trouble for a while."
-
-    jack "But he straightened himself out."
-
-    chrome "Is there anything else worth note? Think!"
-
-    jack "He used to get his hands on all these fancy cigarettes."
-
-    jack "European shit, right off the boats. Hand-rolled, clove, you name it!"
+    chrome_nvl_left "According to Bianca, he vanished without a trace."
 
     show jack happy
 
-    jack "We used to bag off and take smoke breaks all the time..."
+    jack_nvl_right "Did you say Bianca? Good kid, right??"
 
-    chrome "Sounds... lovely. Can you tell me anything more recent?"
-
-    chrome "And just the facts!"
+    chrome_nvl_left "Please my man, just tell me how you know Freddy!"
 
     show jack neutral
 
-    jack "Eh, sure. Lemme, think..."
+    jack_nvl_right "Oh, me and Freddy?  We go waaay back."
 
-    jack "..."
+    jack_nvl_right "We used to work together at the docks - after his boxing career fizzled."
 
-    jack "..."
+    jack_nvl_right "He went through some rough times. In and out of trouble for a while."
+
+    jack_nvl_right "But he straightened himself out."
+
+    chrome_nvl_left "Is there anything else worth note? Think!"
+
+    jack_nvl_right "He used to get his hands on all these fancy cigarettes."
+
+    jack_nvl_right "European shit, right off the boats. Hand-rolled, clove, you name it!"
 
     show jack happy
 
-    jack "Oh yeah!! He mentioned something about a gig at the Department Store."
+    jack_nvl_right "We used to bag off and take smoke breaks all the time..."
 
-    chrome "Fowler's?"
+    chrome_nvl_left "Sounds... lovely. Can you tell me anything more recent?"
+
+    chrome_nvl_left "And just the facts!"
 
     show jack neutral
 
-    jack "Yeah, that dump!! Didn't really want to talk about it though. Was about a week ago."
+    jack_nvl_right "Eh, sure. Lemme, think..."
 
-    chrome "I see. Is there {i}{b}anything{/b}{/i} else? Anything you forgot to mention?"
+    jack_nvl_right "..."
+
+    jack_nvl_right "..."
+
+    show jack happy
+
+    jack_nvl_right "Oh yeah!! He mentioned something about a gig at the Department Store."
+
+    chrome_nvl_left "Fowler's?"
+
+    show jack neutral
+
+    jack_nvl_right "Yeah, that dump!! Didn't really want to talk about it though. Was about a week ago."
+
+    chrome_nvl_left "I see. Is there {i}{b}anything{/b}{/i} else? Anything you forgot to mention?"
 
     show jack sad
 
-    jack "Well, would you look at this? My glass is empty."
+    jack_nvl_right "Well, would you look at this? My glass is empty."
 
     return
 
@@ -200,55 +208,55 @@ label scene3_unassuming:
 
     show chrome timid
 
-    chrome "So, about Freddy. Nice guy, huh?"
+    chrome_nvl_left "So, about Freddy. Nice guy, huh?"
 
-    jack "Oh, me and Freddy? We go waaay back."
+    jack_nvl_right "Oh, me and Freddy? We go waaay back."
 
-    jack "We used to work together at the docks - after his boxing career fizzled."
+    jack_nvl_right "We used to work together at the docks - after his boxing career fizzled."
 
-    jack "He went through some rough times. In and out of trouble for a while."
+    jack_nvl_right "He went through some rough times. In and out of trouble for a while."
 
-    jack "But he straightened himself out, Freddy did."
+    jack_nvl_right "But he straightened himself out, Freddy did."
 
-    chrome "Good for him. Still, he's a real character, huh?"
+    chrome_nvl_left "Good for him. Still, he's a real character, huh?"
 
-    jack "I'll say. He used to get his hands on all these fancy cigarettes."
+    jack_nvl_right "I'll say. He used to get his hands on all these fancy cigarettes."
 
-    jack "European shit, right off the boats. Hand-rolled, clove, you name it!"
+    jack_nvl_right "European shit, right off the boats. Hand-rolled, clove, you name it!"
 
     show jack happy
 
-    jack "We used to bag off and take smoke breaks all the time..."
+    jack_nvl_right "We used to bag off and take smoke breaks all the time..."
 
-    chrome "Ahh, good times. So, listen..."
+    chrome_nvl_left "Ahh, good times. So, listen..."
 
-    chrome "I hear Bianca's been looking for her old man."
+    chrome_nvl_left "I hear Bianca's been looking for her old man."
 
-    chrome "Any idea what he's been up to? So's I can pass it along?"
+    chrome_nvl_left "Any idea what he's been up to? So's I can pass it along?"
 
     show jack neutral
 
-    jack "Eh, sure. Lemme, think..."
+    jack_nvl_right "Eh, sure. Lemme, think..."
 
-    jack "..."
+    jack_nvl_right "..."
 
-    jack "..."
+    jack_nvl_right "..."
 
     show jack happy
     
-    jack "Oh, yeah! He mentioned something about a gig at the Department Store."
+    jack_nvl_right "Oh, yeah! He mentioned something about a gig at the Department Store."
 
-    chrome "Fowler's?"
+    chrome_nvl_left "Fowler's?"
 
     show jack neutral
 
-    jack "Yeah, that dump!! Didn't really want to talk about it though. Was about a week ago."
+    jack_nvl_right "Yeah, that dump!! Didn't really want to talk about it though. Was about a week ago."
 
-    chrome "That's great! Boy, that's wonderful. I see. Anything else?"
+    chrome_nvl_left "That's great! Boy, that's wonderful. I see. Anything else?"
 
     show jack sad
 
-    jack "Well, would you look at this? My glass is empty."
+    jack_nvl_right "Well, would you look at this? My glass is empty."
 
     return
 
@@ -256,45 +264,45 @@ label scene3_hardboiled:
 
     show chrome angry
 
-    chrome "Let's cut to the chase. Freddy's missing."
+    chrome_nvl_left "Let's cut to the chase. Freddy's missing."
 
-    chrome "And Bianca's real worried. Thinks he might be in danger."
+    chrome_nvl_left "And Bianca's real worried. Thinks he might be in danger."
 
     show jack shocked
 
-    jack "Danger, you say?"
+    jack_nvl_right "Danger, you say?"
 
-    chrome "Tell me, how do you know Freddy?"
+    chrome_nvl_left "Tell me, how do you know Freddy?"
 
-    chrome "And don't leave anything out."
+    chrome_nvl_left "And don't leave anything out."
 
     show jack neutral
 
-    jack "Oh! Me and Freddy? We go waaay back."
+    jack_nvl_right "Oh! Me and Freddy? We go waaay back."
 
-    jack "We used to work together at the docks - after his boxing career fizzled."
+    jack_nvl_right "We used to work together at the docks - after his boxing career fizzled."
 
-    jack "He went through some rough times. In and out of trouble for a while."
+    jack_nvl_right "He went through some rough times. In and out of trouble for a while."
 
-    jack "But he straightened himself out, Freddy did."
+    jack_nvl_right "But he straightened himself out, Freddy did."
 
-    chrome "Are you sure about that?"
+    chrome_nvl_left "Are you sure about that?"
 
     show jack angry
 
-    jack "I swear on a stack of bibles. I mean... as far as I know."
+    jack_nvl_right "I swear on a stack of bibles. I mean... as far as I know."
 
     show jack neutral
 
-    jack "What I mean to say is... Freddy went dark once before, long time ago."
+    jack_nvl_right "What I mean to say is... Freddy went dark once before, long time ago."
 
     show jack sad
 
-    jack "It was real rough for Bianca, and Freddy felt terrible about it."
+    jack_nvl_right "It was real rough for Bianca, and Freddy felt terrible about it."
 
     show jack angry
 
-    jack "He would never do that to her again, not if he could help it. That's a fact!"
+    jack_nvl_right "He would never do that to her again, not if he could help it. That's a fact!"
 
     $ music_pos = renpy.music.get_pos('music') # get current time position of music
     $ music_pos_str = str(music_pos) # convert to string
@@ -302,6 +310,9 @@ label scene3_hardboiled:
     ######### SCENE 3A: GLITCH 001
 
     hide jack # hide Jack for glitch
+    hide dialogue_box # temporarily end convo
+    nvl hide # hide NVL dialogue
+
     # show bg bar blur # blurs the background - placeholder until we get asset
     call start_glitch # shows Chrome glitching and grays out the background
 
@@ -312,8 +323,6 @@ label scene3_hardboiled:
 
     show bg bar # unblur the background
     call end_glitch # return to normal Chrome and normal background
-    # show Jack again
-    show jack neutral at right
 
     # pause for transition
     pause 1.0
@@ -325,44 +334,50 @@ label scene3_hardboiled:
 
     $ glitch_counter +=1 # increment glitch counter
 
-    show chrome angry
+    show dialogue_box at center # return to convo
+    nvl show # show NVL dialogue
 
-    chrome "Anything else you leaving out? Spill the beans. All of 'em."
+    hide chrome
+    show chrome angry at left:
+        xzoom -1.0 # make him face right
+    show jack neutral at right
 
-    jack "He used to get his hands on all these fancy cigarettes."
+    chrome_nvl_left "Anything else you leaving out? Spill the beans. All of 'em."
 
-    jack "European shit, right off the boats. Hand-rolled, clove, you name it!"
+    jack_nvl_right "He used to get his hands on all these fancy cigarettes."
 
-    show jack happy
-
-    jack "We used to bag off and take smoke breaks all the time..."
-
-    chrome "Okay, that's enough. Focus, man! This is serious."
-
-    chrome "Tell me about the last time you spoke."
-
-    show jack neutral
-
-    jack "Eh, sure. Lemme, think..."
-
-    jack "..."
-
-    jack "..."
+    jack_nvl_right "European shit, right off the boats. Hand-rolled, clove, you name it!"
 
     show jack happy
 
-    jack "Oh yeah!! He mentioned something about a gig at the Department Store."
+    jack_nvl_right "We used to bag off and take smoke breaks all the time..."
 
-    chrome "Fowler's?"
+    chrome_nvl_left "Okay, that's enough. Focus, man! This is serious."
+
+    chrome_nvl_left "Tell me about the last time you spoke."
 
     show jack neutral
 
-    jack "Yeah, that dump!! Didn't really want to talk about it though. Was about a week ago."
+    jack_nvl_right "Eh, sure. Lemme, think..."
 
-    chrome "I see. Is there {i}{b}anything{/b}{/i} else? Anything at all?"
+    jack_nvl_right "..."
+
+    jack_nvl_right "..."
+
+    show jack happy
+
+    jack_nvl_right "Oh yeah!! He mentioned something about a gig at the Department Store."
+
+    chrome_nvl_left "Fowler's?"
+
+    show jack neutral
+
+    jack_nvl_right "Yeah, that dump!! Didn't really want to talk about it though. Was about a week ago."
+
+    chrome_nvl_left "I see. Is there {i}{b}anything{/b}{/i} else? Anything at all?"
 
     show jack sad
 
-    jack "Well, would you look at this? My glass is empty."
+    jack_nvl_right "Well, would you look at this? My glass is empty."
 
     return

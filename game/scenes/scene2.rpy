@@ -77,17 +77,21 @@ label scene2:
     $ bianca_on = True # turn on Bianca layer
     $ update_layers(0) # update layers
 
+    show dialogue_box at center
+
+    hide chrome
+    show chrome neutral at right
     show bianca angry at left
     
-    bianca "Finally. What took you so long?"
+    bianca_nvl_left "Finally. What took you so long?"
     
-    chrome "And your name is?"
+    chrome_nvl_right "And your name is?"
 
     show bianca neutral
 
-    bianca "BIANCA. Bianca Fontaine. I {i}{b}need{/b}{/i} your help."
+    bianca_nvl_left "BIANCA. Bianca Fontaine. I {i}{b}need{/b}{/i} your help."
 
-    bianca "That's what you do, no? Help people?!"
+    bianca_nvl_left "That's what you do, no? Help people?!"
 
     # pause to switch to narration
     # pause 1.0
@@ -115,39 +119,42 @@ label scene2:
     show bianca angry
     show chrome neutral # return to normal when Bianca talks
 
-    bianca "Hey, you listening to me? It's.. it's my dad, Freddy..."
+    bianca_nvl_left "Hey, you listening to me? It's.. it's my dad, Freddy..."
 
     show bianca sad
 
-    bianca "...he's gone missing."
+    bianca_nvl_left "...he's gone missing."
 
-    chrome "Have you gone to the authorities?"
+    chrome_nvl_right "Have you gone to the authorities?"
 
-    bianca "Pff, the cops have no time for me and my dad."
+    bianca_nvl_left "Pff, the cops have no time for me and my dad."
 
-    bianca "They just told me to wait 'til he comes home from whatever bender he's on."
+    bianca_nvl_left "They just told me to wait 'til he comes home from whatever bender he's on."
 
-    chrome "Perhaps they're right."
+    chrome_nvl_right "Perhaps they're right."
 
     show bianca angry
 
-    bianca "Look, my dad's been down on his luck since his boxer days, but he's no drunk."
+    bianca_nvl_left "Look, my dad's been down on his luck since his boxer days, but he's no drunk."
 
     show bianca neutral
 
-    bianca "He... He's been going out a lot lately. He won't tell me where, but..."
+    bianca_nvl_left "He... He's been going out a lot lately. He won't tell me where, but..."
 
     show chrome thinking
 
-    chrome "I am curious. Why come to me?"
+    chrome_nvl_right "I am curious. Why come to me?"
 
-    bianca "..."
+    bianca_nvl_left "..."
 
-    bianca "Word on the street is that you were trained by Forrest Cane."
+    bianca_nvl_left "Word on the street is that you were trained by Forrest Cane."
 
     ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
     hide bianca # hide Bianca for glitch
+    hide dialogue_box # temporarily end convo
+    nvl hide # hide NVL dialogue
+
     $ chrome_on = False # turn off Chrome layer for glitch
     $ update_layers(0) # update layers
     show bg office blur # blurs the background
@@ -165,35 +172,41 @@ label scene2:
     call end_glitch # return to normal Chrome and normal background
     $ chrome_on = True # turn on Chrome layer
     $ update_layers(0) # update layers
-    # show Bianca again
-    show bianca neutral at left
 
     # pause for transition
     pause 1.0
 
     ######### back to SCENE 2
 
-    show chrome angry
+    show dialogue_box at center # return to convo
+    nvl show # show NVL dialogue
 
-    chrome "Then you should know that I'm not the guy for the job."
+    hide chrome
+    show chrome angry at right
+    show bianca neutral at left
+
+    chrome_nvl_right "Then you should know that I'm not the guy for the job."
 
     show bianca sad
 
-    bianca "Please. I don't know where else to turn..."
+    bianca_nvl_left "Please. I don't know where else to turn..."
 
     show chrome neutral
 
-    chrome "Scram, kid."
+    chrome_nvl_right "Scram, kid."
 
     show bianca angry
 
-    bianca "You saying the rumors are true? That you're just deprecated goods?!"
+    bianca_nvl_left "You saying the rumors are true? That you're just deprecated goods?!"
 
-    bianca "Yeah, well - they say the same stuff about my dad. That he's a loser. A deadbeat. But it {i}{b}ain't{/b}{/i} true."
+    bianca_nvl_left "Yeah, well - they say the same stuff about my dad. That he's a loser. A deadbeat. But it {i}{b}ain't{/b}{/i} true."
 
-    bianca "Here's my info. My dad's been known to hang out at the Silver Cat. {i}{b}A lot.{/i}{/b}"
+    bianca_nvl_left "Here's my info. My dad's been known to hang out at the Silver Cat. {i}{b}A lot.{/i}{/b}"
 
-    bianca "If anyone knows anything, that would be a good place to start."
+    bianca_nvl_left "If anyone knows anything, that would be a good place to start."
+
+    hide dialogue_box # end convo
+    nvl clear # clear NVL dialogue
 
     hide bianca # bianca leaves scene
     
