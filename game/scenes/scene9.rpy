@@ -8,7 +8,7 @@ label scene9:
 
     scene freddyoffice night
 
-    #SOUND - Door opening
+    play sound sfx_door
 
     show chrome neutral at left:
         xzoom -1.0 
@@ -147,24 +147,24 @@ label scene9:
 
             chrome "I miss Cane. If I ever had a father, it was him."
 
-            show chrome thinking at left
+            show chrome thinking left
 
             chrome"Bianca needs Freddy. They are each other’s reason to be."
 
             chrome "And, perhaps…"
 
-            show chrome happy at left
+            show chrome happy left
 
             chrome "They are my reason to be."
 
-            #INSERT COUNTER HERE?
+            $ glitch_counter += 1
 
             show freddyoffice night # unblur the background
             call end_glitch # return to normal Chrome and normal background
             $ chrome_on = True # turn on Chrome layer
             $ update_layers(0) # update layers
             # show Bianca again
-            show bianca neutral at left
+            show bianca neutral at right
 
             # pause for transition
             pause 1.0
@@ -254,7 +254,7 @@ label lookaround:
 
             chrome "Some kind of toy model. Like one of those Santa androids at the department store. Typical. Milking androidkind for commercial value while giving us the societal cold shoulder."
 
-            # SOUND - the rattle of the usb stick inside the toy
+            play sound sfx_rattle
 
             chrome "Wait a second - is this Santa droid hiding something?"
 
@@ -268,7 +268,7 @@ label lookaround:
 
             chrome happy "Oh it’s a gift, alright. A gift for me. And with any luck, I’ve been a real good boy this year."
 
-            #SOUND - the toy breaks open, snapped in half by chrome
+            play sound sfx_breakmetaltoy
 
             hide bianca neutral right with moveoutright
 
@@ -278,7 +278,7 @@ label lookaround:
 
             chrome "Aha! It was hiding a memory stick! Now let me just plug into it…"
 
-            #SOUND - bzzt!
+            play sound sfx_santabeepscan
 
             chrome "Damn. It’s corrupted. I can only see one file…"
 
@@ -307,7 +307,7 @@ label lookaround:
             bianca neutral "Share with the class, Mr. Steele! Did that Santa droid give you everything you asked for this year?"
 
             chrome thinking "Not everything. Not yet. But there’s another Santa out there who may just do exactly that…"
-            
+
             $ bianca_on = False
             $ update_layers() # turn off Larry layer
             jump scene10
