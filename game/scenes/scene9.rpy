@@ -137,7 +137,7 @@ label scene9:
 
             chrome "I knew him the best. Lived with him in my infancy. He did not make a move that I couldn’t calculate. Until his final move, that is."
 
-            show chrome sad left
+            show chrome sad at left
 
             chrome "It was only after losing Cane that I understood his gift to me. The culmination of his guidance and care: purpose."
 
@@ -147,13 +147,13 @@ label scene9:
 
             chrome "I miss Cane. If I ever had a father, it was him."
 
-            show chrome thinking left
+            show chrome thinking at left
 
             chrome"Bianca needs Freddy. They are each other’s reason to be."
 
             chrome "And, perhaps…"
 
-            show chrome happy left
+            show chrome happy at left
 
             chrome "They are my reason to be."
 
