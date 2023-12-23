@@ -319,7 +319,31 @@ label scene3_hardboiled:
     # pause for transition
     pause 1.0
 
-    ### TEXT OF THE GLITCH WILL BE INSERTED HERE 
+    show chrome shocked glitch
+
+    chrome "{i}It hits me again. A burning wave of memory, of images and sounds tattooed with situational states of being. Emotions, so to speak. All of them at once, culminating in a big bang and then an oasis of darkness.{/i}"
+
+    chrome "{i}I'd been in the dark for a long while. Cut off from everyone. Sulking in my office or in the Silver Cat. I had become a perpetual friend to morose isolation.{/i}"
+
+    show chrome sad glitch
+
+    chrome "{i}No. I was morose isolation. And I was so deep into it that I had forgotten why I had faced such loneliness in the first place.{/i}"
+
+    chrome "{i}With memories of Forrest Cane returned to me, I could trace my aching emptiness back to his absence. My CPU had been no match for the abridged grief of sudden loss.{/i}"
+
+    chrome "{i}I knew how Bianca felt. Right now, she was telling herself that Freddy may yet come home. I had told myself the same thing, way back when.{/i}"
+
+    show chrome angry glitch
+
+    chrome "{i}Why was this happening!? A malfunction in my hard drive? An error with encryption? The source of these glitches remains a mystery to my self-repair protocol.{/i}"
+
+    show chrome sad glitch
+
+    chrome "{i}Whatever I was facing now, I wouldn't wish it on anyone, much less a sixteen year old girl with rotten luck and a troubled father.{/i}"
+
+    chrome "{i}I can't say that looking for Freddy would make any difference. I've walked that road before and it held no solace.{/i}"
+
+    chrome "{i}But for Bianca, a young girl still bargaining with her loss, I can't say it wouldn't make all the difference in the world.{/i}"
 
     show bg bar # unblur the background
     call end_glitch # return to normal Chrome and normal background

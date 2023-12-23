@@ -31,9 +31,15 @@ image larry = "larry dead.jpg"
 image chrome neutral = "chrome neutral.png"
 image chrome neutral glitch = Glitch("chrome neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome shocked = "chrome shocked.png"
+image chrome shocked glitch = Glitch("chrome shocked.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome confused = "chrome confused.png"
+image chrome confused glitch = Glitch("chrome confused.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome sad = "chrome sad.png"
+image chrome sad glitch = Glitch("chrome sad.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome thinking = "chrome thinking.png"
 image chrome timid = "chrome timid.png"
 image chrome angry = "chrome angry.png"
+image chrome angry glitch = Glitch("chrome angry.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image bianca neutral = "bianca neutral.png"
 image bianca angry = "bianca angry.png"
 image bianca sad = "bianca sad.png"

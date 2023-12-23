@@ -166,7 +166,34 @@ label scene2:
     ### GLITCH SCENE #0
     ### This is the first minor glitch. It is a freebie, so no variable tracking.  
     ### It sets up the malfunctions. The floodgates are unleashed at the mention of Forrest Cane.
-    ### TEXT OF THE GLITCH WILL BE INSERTED HERE 
+
+    show chrome shocked glitch
+
+    chrome "{i}My circuitry burns like fire. I imagine. So hot that the intricate systems feeding information through my body go numb.{/i}"
+
+    show chrome confused glitch
+
+    chrome "{i}What is this? Fleetingly, I lose sense of the world around me. Flashes of images, lines of code, all rush through me at once. I'm nowhere and everywhere. Everything I know, have known, have forgotten, fills my synthetic frame.{/i}"
+
+    show chrome shocked glitch
+
+    chrome "{i}Then I see his face. Angular, laugh lines at the corners of his mouth. Tangled silver hair and horn-rimmed glasses that magnify deep, kind eyes. Eyes that listened as much as they saw.{/i}"
+
+    show chrome sad glitch
+
+    chrome "{i}Forrest Cane.{/i}"
+
+    chrome "{i}But he's not here. He can't be...{/i}"
+
+    chrome "{i}Cane disappeared from this world long ago. He was never found.{/i}"
+
+    chrome "{i}Powerful as my processor may be, I could never reconcile that dissonance. Cane, gone from the world but present in my mind. After some time, I did the only thing that made sense.{/i}"
+
+    chrome "{i}I cleared my cache and locked him away. Every memory I had of him, encrypted and buried.{/i}"
+
+    show chrome angry glitch
+
+    chrome "{i}And yet, here he is, back to haunt me. Breaking free of his prison just as I'm tasked with finding another missing person. I'm not sure I can handle that. Not yet.{/i}"
 
     show bg office # unblur the background
     call end_glitch # return to normal Chrome and normal background
