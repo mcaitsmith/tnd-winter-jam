@@ -63,20 +63,28 @@ label scene12:
         "He’s riled up. As  nervous as a cat on a floaty in a public pool. I have to be careful in my approach."
 
         "Drill down. Put the thumbscrews to Freddy.":
-            jump hardboiled12
+            call hardboiled12
 
         "Lay out all the facts, even the ugly truths.":
-            jump logical12
+            call logical12
 
         "Let's not spook him.":
             # Programming - ideal +- 1
-            jump unassuming12
+            call unassuming12
 
     # Jump to Scene 12 E 
 
+    $ freddy_on = False
+    $ update_layers() # turn off Freddy layer
 
+    $ stop_layers() # stop playing layers
 
-    return
+    # CALL CREDITS
+    $ quick_menu = False # hide quick menu
+    call screen credits ## Show credits screen.
+    with fade
+
+    return ## return to main menu
 
 # 012 ROO B
 label hardboiled12:
@@ -232,6 +240,87 @@ label unassuming12:
 
     chrome unassuming "I think people were wrong about you, too."
 
+    ######### SCENE 12: GLITCH 6 (flashback with glitching animation on Steele & bg grayed out)
+
+    hide freddy # hide Freddy for glitch
+    # hide dialogue_box # temporarily end convo
+    # nvl hide # hide NVL dialogue
+
+    $ chrome_on = False # turn off Chrome layer for glitch
+    $ update_layers(0) # update layers
+    # show bg rooftop night blur # blurs the background
+    call start_glitch # shows Chrome glitching and grays out the background
+
+    # pause for transition
+    pause 1.0
+
+    ### GLITCH SCENE #6
+
+    show chrome shocked glitch
+
+    chrome "{i}I welcome this glitch. It's a jolt, a shock of radiant energy. Maybe this is what espresso is like.{/i}"
+
+    show chrome happy glitch
+
+    chrome "{i}It's a funny scenario, letting loose with Freddy in the heat of it all. I couldn't have pictured it yesterday. Yet it's a moment that's flashed through my head hundreds of times, all night.{/i}"
+
+    chrome "{i}A moment from my first ride-along. A killer on the loose. A case to be closed. Cane and I cracking jokes. Enjoying each other's company, despite the turmoil.{/i}"
+
+    chrome "{i}I got my name that day. After our years of consuming fictional detective stories, I wanted my own persona. I asked if that was permitted. Cane told me it was my choice to make.{/i}"
+
+    show chrome angry glitch
+
+    chrome "{i}So I looked in the mirror, and I made my choice. Chrome Steele.{/i}"
+
+    show chrome neutral glitch
+
+    chrome "{i}But a name is nothing if you don't know who you are.{/i}"
+
+    show chrome sad glitch
+
+    chrome "{i}Since the day Cane vanished, misconceptions about me have skyrocketed. From suspicious to malfunctioning, from Tin Can to Rent-a-Bot, folks decided that they knew me. And with no idea who I was, I listened to them.{/i}"
+
+    show chrome thinking glitch
+
+    chrome "{i}Here we all were, telling Freddy who he was. Come to find out, he wasn't listening to a word.{/i}"
+
+    chrome "{i}Freddy knows who he is.{/i}"
+
+    show chrome happy glitch
+
+    chrome "{i}He's a fighter. A father. An innocent man seeking to overcome his challenges. He's ready to do the work, for real this time.{/i}"
+
+    chrome "{i}Freddy is a reminder that hope is never lost. For Bianca. For me.{/i}"
+
+    show chrome timid glitch
+
+    chrome "{i}...{/i}"
+
+    chrome "{i}For Forrest Cane.{/i}"
+
+    show chrome happy glitch
+
+    chrome "{i}Sometimes, you've just got to look for that hope in the right spot.{/i}"
+
+    chrome "{i}Sometimes, the right spot is the rooftop of Fowler's Department Store.{/i}"
+
+    show bg rooftop night # unblur the background
+    call end_glitch # return to normal Chrome and normal background
+    $ chrome_on = True # turn on Chrome layer
+    $ update_layers(0) # update layers
+
+    # pause for transition
+    pause 1.0
+
+    ######### back to SCENE 2
+
+    # show dialogue_box at center # return to convo
+    # nvl show # show NVL dialogue
+
+    # hide chrome
+    # show chrome angry at right
+    show freddy happy at right
+
     chrome unassuming "Hope isn’t lost Freddy. In fact, Bianca sent me. We’re on to something."
 
     chrome unassuming "Something that might keep you safe. And maybe even clear your name."
@@ -242,13 +331,4 @@ label unassuming12:
 
     freddy happy "Sure."
 
-    $ freddy_on = False
-    $ update_layers() # turn off Freddy layer
-
-    $ stop_layers() # stop playing layers
-
-    # CALL CREDITS
-    $ quick_menu = False # hide quick menu
-    call screen credits ## Show credits screen.
-    with fade
-    return ## return to main menu
+    return
