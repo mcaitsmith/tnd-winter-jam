@@ -15,6 +15,8 @@ define jack = Character("Jack Scanlon", color="#dbd839", image="jack")
 define jack_nvl_left = Character("Jack Scanlon", color="#dbd839", image="jack", kind=nvl)
 define jack_nvl_right = Character("Jack Scanlon", color="#dbd839", image="jack", kind=nvl, what_text_align=1, who_text_align=1)
 define mariah = Character("Mariah Fowler", color="#d339db", image="mariah")
+define mariah_nvl_left = Character("Mariah Fowler", color="#dbd839", image="mariah", kind=nvl)
+define mariah_nvl_right = Character("Mariah Fowler", color="#dbd839", image="mariah", kind=nvl, what_text_align=1, who_text_align=1)
 define cop = Character("Generic Cop", color="#2d30d9", image="cop")
 define santa = Character("Robot Santa", color="#ff0000", image="santa")
 define narration = Character("Narration", kind=nvl)
@@ -55,6 +57,8 @@ image jack angry = "jack angry.png"
 image mariah neutral = "mariah neutral.jpg"
 image cop neutral = "cop neutral.jpg"
 image santa = "santa.jpg"
+image santa1 = "santa.jpg"
+image santa2 = "santa.jpg"
 image freddy neutral = "freddy neutral.jpg"
 image santa toy = "santa.jpg"
 
