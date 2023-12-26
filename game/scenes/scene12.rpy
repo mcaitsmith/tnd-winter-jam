@@ -298,6 +298,8 @@ label unassuming12:
     $ chrome_on = True # turn on Chrome layer
     $ update_layers(0) # update layers
 
+    $ glitch_counter +=1 # increment glitch counter
+
     # pause for transition
     pause 1.0
 
@@ -520,7 +522,7 @@ label scene12_f: # good ending
 
     chrome "Use your ears, Ms. Fowler."
 
-    play sfx_footsteps
+    play sound sfx_footsteps
 
     #narration
     chrome "{i}Only treacherous adrenaline can hide the rubbing of rushed strides against the rooftop.{/i}"
@@ -581,7 +583,7 @@ label scene12_f: # good ending
 
     chrome angry "{i}A claw shoots ahead, minus the festive glove. Sharp, aged, rusty - the ugly secret behind the fatherly figure.{/i}"
 
-    chrome angry "{i}Iron and 4th Grade Aluminum. 24% Ferric Oxide. Thickness: 232 nm. Estimated body weight: 78 kilograms.{/i}"
+    chrome angry "{i}Iron and 4th Grade Aluminum. 24%% Ferric Oxide. Thickness: 232 nm. Estimated body weight: 78 kilograms.{/i}"
 
     play sound sfx_impactmetal
     with hpunch
@@ -639,8 +641,14 @@ label scene12_f: # good ending
 
     chrome hardboiled "OUT OF THE WAY, BRAT."
 
-    play sfx_gunshots
+    play sound sfx_gunshots
     with hpunch
+
+    $ chrome_on = False
+    $ freddy_on = False
+    $ larry_santa_on = False
+    $ mariah_on = False
+    $ update_layers(1) # temporarily stop bg music
 
     scene black
     with fade
@@ -683,11 +691,18 @@ label scene12_f: # good ending
 
     chrome "{i}Rebooting.{/i}"
 
-    hide mariah
-    show jack at center
+    # show jack at center
 
     scene bg rooftop night
     with fade
+
+    show jack at center
+
+    $ chrome_on = True
+    $ freddy_on = True
+    $ larry_santa_on = True
+    $ mariah_on = True
+    $ update_layers(1) # resume bg music
 
     jack shocked "Dude, you're alive?"
 

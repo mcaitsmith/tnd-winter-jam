@@ -19,6 +19,8 @@ define mariah_nvl_left = Character("Mariah Fowler", color="#dbd839", image="mari
 define mariah_nvl_right = Character("Mariah Fowler", color="#dbd839", image="mariah", kind=nvl, what_text_align=1, who_text_align=1)
 define cop = Character("Generic Cop", color="#2d30d9", image="cop")
 define santa = Character("Robot Santa", color="#ff0000", image="santa")
+define santa1 = Character("Robot Santa", color="#ff0000", image="santa")
+define santa2 = Character("Robot Santa", color="#ff0000", image="santa")
 define narration = Character("Narration", kind=nvl)
 
 image bg office = "bg office.png"
@@ -121,6 +123,7 @@ init python:
 
 # call this label when you want a glitch scene to start
 label start_glitch():
+    $ stop_layers(0) # stop bg music
     show chrome neutral glitch
     show bg:
         matrixcolor TintMatrix("#ffffff") * SaturationMatrix(0.0)
@@ -135,6 +138,7 @@ label end_glitch:
     show bg:
         matrixcolor TintMatrix("#ffffff") * SaturationMatrix(1.0)
     stop music
+    $ start_layers(0) # resume bg music
     return
 
 # The game starts here.
@@ -150,6 +154,9 @@ label start:
     $ freddy_on = False
     $ mariah_on = False
     $ larry_santa_on = False
+
+    # VARIABLE: Create a glitch counter and set it to 0
+    $ glitch_counter = 0
 
     # jump to the first scene
 

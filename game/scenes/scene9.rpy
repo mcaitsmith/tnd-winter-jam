@@ -25,7 +25,7 @@ label scene9:
 
     chrome "And speaking of Bianca…"
 
-    show bianca shocked "Mr. Steele!¡Ay, casi me matas!"
+    bianca shocked "Mr. Steele!¡Ay, casi me matas!"
 
     chrome "{i}Almost scared her to death, eh? The irony of human idioms. I don’t need another body tonight.{/i}"
 
@@ -34,11 +34,11 @@ label scene9:
     menu detective_choices9:
         bianca "Did you find my Dad yet?"
         "Not the Only One...":
-            show chrome hardboiled "I’m not the only one looking, kiddo. But I just might be the first to jump ship."
+            chrome angry "I’m not the only one looking, kiddo. But I just might be the first to jump ship."
 
-            show bianca angry "Why? Who else wants to find him?"
+            bianca angry "Why? Who else wants to find him?"
 
-            chrome hardboiled "Oh little lady, who doesn’t? He’s more than missing. He’s the prime suspect in the murder of one Larry Moss. And I wasn’t hired for no murders."
+            chrome angry "Oh little lady, who doesn’t? He’s more than missing. He’s the prime suspect in the murder of one Larry Moss. And I wasn’t hired for no murders."
 
             bianca shocked "No! ¡No te creo!"
 
@@ -46,35 +46,35 @@ label scene9:
 
             bianca sad "Everyone’s judging him, all the time. Turning him into something he ain’t. You know how much harder he has to try because of it?"
 
-            chrome hardboiled "Well, being an android… I’ve got some idea."
+            chrome angry "Well, being an android… I’ve got some idea."
 
             bianca neutral "Look, my dad’s no murderer. And besides, Larry was his friend. It doesn’t add up."
 
             bianca neutral "Now, I paid you to find my dad. Are you gonna do that or not?"
 
-            chrome hardboiled "You expect me to uphold my end of this deal, and all the while you’re hiding a cow in a chicken coop?"
+            chrome angry "You expect me to uphold my end of this deal, and all the while you’re hiding a cow in a chicken coop?"
 
-            chrome hardboiled "You can’t contain that cow, Miss Fontaine. The coop’s just not big enough. So stop pretending like this is the first time Daddy’s been in trouble."
+            chrome angry "You can’t contain that cow, Miss Fontaine. The coop’s just not big enough. So stop pretending like this is the first time Daddy’s been in trouble."
 
             bianca angry "Fine! He’s had his issues. The worst of it was a year or so ago. He had to skip town, lay low. Left me alone for over a month."
 
             bianca shocked "I swear, he never hurt nobody! Just fell into some debt, that’s all."
 
-            chrome hardboiled "Didn’t think to mention this before I wasted my time?"
+            chrome angry "Didn’t think to mention this before I wasted my time?"
 
             bianca sad "I don’t mention it to anyone, most of all, myself."
 
             bianca sad "Dad’s been so good since. It ain’t fair for people to taint who he is with the shadow of who he was."
 
-            chrome hardboiled "Way I see it, you don’t step into a light without casting a shadow."
+            chrome angry "Way I see it, you don’t step into a light without casting a shadow."
 
             bianca neutral "Well, it’s better to try, ain’t it?"
 
-            chrome hardboiled "Sure, kid. So just to be certain, I’ll give it a try. But first, I oughta learn a bit more about ol’ Freddy Fontaine."
+            chrome angry "Sure, kid. So just to be certain, I’ll give it a try. But first, I oughta learn a bit more about ol’ Freddy Fontaine."
         "Unfortunately...":
-            show chrome unassuming "Unfortunately, I haven’t. But I do have a rather distressing lead…"
+            chrome timid "Unfortunately, I haven’t. But I do have a rather distressing lead…"
 
-            chrome unassuming "The police want him for murder. A man named Larry Moss is dead."
+            chrome timid "The police want him for murder. A man named Larry Moss is dead."
 
             bianca shocked "No! ¡No te creo!"
 
@@ -82,25 +82,25 @@ label scene9:
 
             bianca sad "Everyone’s judging him, all the time. Turning him into something he ain’t. You know how much harder he has to try because of it?"
 
-            chrome unassuming "Too much, I take it?"
+            chrome timid "Too much, I take it?"
 
             bianca sad "Way too much. Look, my dad’s no killer - he’s just missing, that’s all!"
 
             chrome neutral "Hmph. If only he had a history of going missing. Strangely, it would make for a stronger alibi."
 
-            chrome unassuming "Think of a bird migrating for the winter. If this migration were to only happen once in a lifetime, it would be very curious. But as it occurs in pattern, we accept it as a common behavior."
+            chrome timid "Think of a bird migrating for the winter. If this migration were to only happen once in a lifetime, it would be very curious. But as it occurs in pattern, we accept it as a common behavior."
 
-            chrome unassuming "Disappearing for the first time, just as he’s implicated for murder - I could understand the curiosity surrounding your father…"
+            chrome timid "Disappearing for the first time, just as he’s implicated for murder - I could understand the curiosity surrounding your father…"
 
             bianca neutral "So you’re saying it would help if..."
 
             bianca sad "...if this wasn’t the first time he’d gone missing?"
 
-            chrome unassuming "Certainly. But isn’t it?"
+            chrome timid "Certainly. But isn’t it?"
 
             bianca sad "Mr. Steele, you ever just want to forget something? Leave it in the past?"
 
-            chrome unassuming "Of course. Luckily, I can simply encrypt my memory files. Though that is proving faulty these days..."
+            chrome timid "Of course. Luckily, I can simply encrypt my memory files. Though that is proving faulty these days..."
 
             bianca sad "Well, I try my best to forget the last time Dad left. He moved us here and suddenly, I was alone for weeks, maybe months. He fled the city. Apparently, he owed someone money."
 
@@ -121,23 +121,23 @@ label scene9:
 
             ### GLITCH SCENE #004
 
-            show chrome shocked at left
+            show chrome shocked glitch
 
             chrome "This one stings. Like I’ve blown a fuse. Bianca and I are more similar than she knows."
 
-            show chrome unassuming at left
+            show chrome timid glitch
 
             chrome "As young beings, we adopt the lives of our parents. Our mentors. We learn from them, grow with them, explore the world under their wing. Our physical functionality may be independent but our programming is synced."
 
             chrome "We live so naturally together that we forget it is temporary. Expectations are created. Dependencies installed. And when the moment comes - when separate for good - we are forced to reevaluate our entire way of being."
 
-            show chrome thinking at left
+            show chrome thinking glitch
 
             chrome "That’s why they thought I did it. That’s why I was the number one suspect in Cane’s disappearance."
 
             chrome "I knew him the best. Lived with him in my infancy. He did not make a move that I couldn’t calculate. Until his final move, that is."
 
-            show chrome sad at left
+            show chrome sad glitch
 
             chrome "It was only after losing Cane that I understood his gift to me. The culmination of his guidance and care: purpose."
 
@@ -147,13 +147,13 @@ label scene9:
 
             chrome "I miss Cane. If I ever had a father, it was him."
 
-            show chrome thinking at left
+            show chrome thinking glitch
 
             chrome"Bianca needs Freddy. They are each other’s reason to be."
 
             chrome "And, perhaps…"
 
-            show chrome happy at left
+            show chrome happy glitch
 
             chrome "They are my reason to be."
 
@@ -171,9 +171,9 @@ label scene9:
 
             ######### back to SCENE 9
         "My Dear...":
-            show chrome logical "My dear, you still operate under the assumption that I am indeed searching. Which is what I was hired for, true, but is no longer indicative of the job."
+            chrome thinking "My dear, you still operate under the assumption that I am indeed searching. Which is what I was hired for, true, but is no longer indicative of the job."
             
-            chrome logical "Thanks to new evidence suggesting your father’s involvement in the murder of Larry Moss, this case is no longer that of a missing person, but that of a murder."
+            chrome thinking "Thanks to new evidence suggesting your father’s involvement in the murder of Larry Moss, this case is no longer that of a missing person, but that of a murder."
 
             chrome neutral "Which is to say: this is no longer a search, but a hunt. Your father is not missing. He is hiding!" 
 
@@ -181,25 +181,25 @@ label scene9:
 
             bianca angry "I don’t know what kind of lies you’ve been feasting on, but if my dad’s hiding, he’s got a good reason to."
 
-            chrome logical "One would argue that anyone who hides has a good reason to. But what level of good it has hinges on the personal value it has to the reasoner. Hence, if Freddy’s \"good reason\" is that it would spare him from conviction, that’s righteous to him, but unfounded to me."
+            chrome thinking "One would argue that anyone who hides has a good reason to. But what level of good it has hinges on the personal value it has to the reasoner. Hence, if Freddy’s \"good reason\" is that it would spare him from conviction, that’s righteous to him, but unfounded to me."
 
             bianca angry "Look, my dad’s no murderer. And besides, Larry was his friend. It doesn’t add up."
 
             bianca angry "Now, I paid you to find my dad. Are you gonna do that or not?"
 
-            chrome logical "It would be irresponsible of me to continue this investigation without all of the facts. Namely, your father’s history of criminal activity."
+            chrome thinking "It would be irresponsible of me to continue this investigation without all of the facts. Namely, your father’s history of criminal activity."
 
             bianca angry "Fine! He’s had his issues. The worst of it was a year or so ago. He had to skip town, lay low. Left me alone for over a month."
 
             bianca shocked "I swear, he never hurt nobody! Just fell into some debt, that’s all."
 
-            chrome logical "Never hurt nobody is a double negative. Meaning he always hurts somebody."
+            chrome thinking "Never hurt nobody is a double negative. Meaning he always hurts somebody."
 
             bianca angry "¡Ay dios mío! You know what I’m trying to say."
 
             bianca neutral "Dad’s been so good since. It ain’t fair for people to taint who he is with the shadow of who he was."
 
-            chrome logical "Fascinating. Innocent until proven guilty, even in the wake of guilt."
+            chrome thinking "Fascinating. Innocent until proven guilty, even in the wake of guilt."
 
             bianca neutral "It’s called giving him another chance, Mr. Steele."
 

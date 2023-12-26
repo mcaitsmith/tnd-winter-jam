@@ -264,7 +264,7 @@ label scene10:
 
         pause 1.0
 
-        # $ glitch_counter = $ glitch_counter +1 I added this as a note so I don't break the code, I don't think glitches are fully added yet?
+        $ glitch_counter +=1 # increment glitch counter
 
         chrome "{i}EZMK-2512 pointed to his neck, hidden behind the sheets of white metal serving as his makeshift beard. I can just make out a small USB port hidden within.{/i}"
 

@@ -10,6 +10,9 @@ label scene6:
 
     show mariah neutral at right
 
+    $ mariah_on = True
+    $ update_layers() # start Mariah layer
+
     chrome "{i}Mariah Fowler, the owner of Fowler’s Department Store. Human female, she’s reaching the tail end of middle aged, looks visibly annoyed with everyone at the moment.{/i}"
 
     chrome "{i}There is an air of tension thrumming around her. She has the eyes of a predator, sharp and clear and ready to deliver violence if she sees any weakness.{/i}"
@@ -309,6 +312,8 @@ label scene6:
 
         call end_glitch
 
+        $ glitch_counter +=1 # increment glitch counter
+
         jump scene6_postchoice
 
 
@@ -317,6 +322,9 @@ label scene6:
         show chrome neutral 
 
         hide mariah neutral with moveoutright
+
+        $ mariah_on = False
+        $ update_layers() # stop Mariah layer
 
         chrome "{i}With that final suggestion, Mariah Fowler turned back to scowling at the cops that in her opinion were not leaving fast enough. I knew a dismissal when I saw one.{/i}"
 

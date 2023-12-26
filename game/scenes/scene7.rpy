@@ -118,6 +118,8 @@ label scene7:
             # pause for transition
             pause 1.0
 
+            $ glitch_counter +=1 # increment glitch counter
+
             ######### back to SCENE 2
 
             # show dialogue_box at center # return to convo

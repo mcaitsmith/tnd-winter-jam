@@ -77,9 +77,6 @@ label scene3:
 
     chrome "{i}Jack seemed like the friendly sort. Gregarious. Unfocused. Meandering. His attention wavering like a mercurial jazz riff. I'm sure it had nothing to do with synthahol bombarding my aromatic sensors.{/i}"
 
-    # VARIABLE: Create a glitch counter and set it to 0
-    $ glitch_counter = 0
-
     # CHOICE
 
     menu:
@@ -96,9 +93,9 @@ label scene3:
     chrome_nvl_left "Thanks for your time, Jack. It's been..."
 
     # This variable check is just for this one subtle line of dialogue
-    if glitch_counter == 0:
+    if glitch_counter == 1:
         chrome_nvl_left "...interesting."
-    elif glitch_counter == 1:
+    elif glitch_counter == 2:
         chrome_nvl_left "...very helpful."
 
     show jack happy
@@ -347,6 +344,7 @@ label scene3_hardboiled:
 
     show bg bar # unblur the background
     call end_glitch # return to normal Chrome and normal background
+    $ stop_layers() # stop playing layers (since layers start in end_glitch)
 
     # pause for transition
     pause 1.0

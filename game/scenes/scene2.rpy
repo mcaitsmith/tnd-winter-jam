@@ -205,6 +205,8 @@ label scene2:
 
     ######### back to SCENE 2
 
+    $ glitch_counter +=1 # increment glitch counter
+
     show dialogue_box at center # return to convo
     nvl show # show NVL dialogue
 

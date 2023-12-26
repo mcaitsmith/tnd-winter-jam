@@ -75,7 +75,7 @@ style credits_label:
     xalign 0.5
 
 style credits_label_text:
-    size gui.title_text_size
+    size gui.title_text_size*0.5
 
 style credits_text:
     xalign 0.5
