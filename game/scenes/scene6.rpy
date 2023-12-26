@@ -175,7 +175,7 @@ label scene6:
 
         chrome "Well, then I would like to expand my questioning to a person of interest. What can you tell me about Freddy?"
 
-        show mariah suprised 
+        show mariah shocked 
 
         mariah "Freddy?"
 
