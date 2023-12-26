@@ -26,7 +26,7 @@ label scene6:
 
     chrome "I think you’ve mistaken me for a lesser bot, ma’am. I’m Chrome Steele, private detective."
 
-    show mariah surprised
+    show mariah shocked
 
     pause 0.5
 
