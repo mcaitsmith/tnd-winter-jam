@@ -21,6 +21,7 @@ define cop = Character("Generic Cop", color="#2d30d9", image="cop")
 define santa = Character("Robot Santa", color="#ff0000", image="santa")
 define santa1 = Character("Robot Santa", color="#ff0000", image="santa")
 define santa2 = Character("Robot Santa", color="#ff0000", image="santa")
+define figure = Character("Figure", color="#a5a5a5", image="chrome")
 define narration = Character("Narration", kind=nvl)
 
 image bg office = "bg office.png"
@@ -30,43 +31,69 @@ image dialogue_box = "gui/nvl_box.png"
 
 # define images for each character (need to be updated when we get assets)
 
-image larry dead = "larry dead.png"
-image larry = "larry dead.jpg"
-image chrome neutral = "chrome neutral.png"
-image chrome neutral glitch = Glitch("chrome neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-image chrome shocked = "chrome shocked.png"
-image chrome shocked glitch = Glitch("chrome shocked.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-image chrome confused = "chrome confused.png"
-image chrome confused glitch = Glitch("chrome confused.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-image chrome happy = "chrome happy.png"
-image chrome happy glitch = Glitch("chrome happy.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-image chrome sad = "chrome sad.png"
-image chrome sad glitch = Glitch("chrome sad.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-image chrome thinking = "chrome thinking.png"
-image chrome thinking glitch = Glitch("chrome thinking.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-image chrome timid = "chrome timid.png"
-image chrome timid glitch = Glitch("chrome timid.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-image chrome angry = "chrome angry.png"
-image chrome angry glitch = Glitch("chrome angry.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-image bianca neutral = "bianca neutral.png"
-image bianca angry = "bianca angry.png"
-image bianca sad = "bianca sad.png"
-image jack neutral = "jack neutral.png"
-image jack happy = "jack happy.png"
-image jack sad = "jack sad.png"
-image jack shocked = "jack shocked.png"
-image jack angry = "jack angry.png"
-image mariah neutral = "mariah neutral.jpg"
-image cop neutral = "cop neutral.jpg"
-image santa = "santa.jpg"
-image santa1 = "santa.jpg"
-image santa2 = "santa.jpg"
-image freddy neutral = "freddy neutral.jpg"
-image santa toy = "santa.jpg"
+image larry dead = "characters/larry/larry dead.png"
+image larry neutral = "characters/larry/larry neutral.png"
+image larry ecstatic = "characters/larry/larry ecstatic.png"
+image larry enraged = "characters/larry/larry enraged.png"
+image larry mad = "characters/larry/larry mad.png"
+image larry sad = "characters/larry/larry sad.png"
+image chrome neutral = "characters/chrome/chrome neutral.png"
+image chrome neutral glitch = Glitch("characters/chrome/chrome neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome shocked = "characters/chrome/chrome shocked.png"
+image chrome shocked glitch = Glitch("characters/chrome/chrome shocked.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome confused = "characters/chrome/chrome confused.png"
+image chrome confused glitch = Glitch("characters/chrome/chrome confused.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome happy = "characters/chrome/chrome happy.png"
+image chrome happy glitch = Glitch("characters/chrome/chrome happy.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome sad = "characters/chrome/chrome sad.png"
+image chrome sad glitch = Glitch("characters/chrome/chrome sad.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome thinking = "characters/chrome/chrome thinking.png"
+image chrome thinking glitch = Glitch("characters/chrome/chrome thinking.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome timid = "characters/chrome/chrome timid.png"
+image chrome timid glitch = Glitch("characters/chrome/chrome timid.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome angry = "characters/chrome/chrome angry.png"
+image chrome angry glitch = Glitch("characters/chrome/chrome angry.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image bianca neutral = "characters/bianca/bianca neutral.png"
+image bianca angry = "characters/bianca/bianca angry.png"
+image bianca sad = "characters/bianca/bianca sad.png"
+image jack neutral = "characters/jack/jack neutral.png"
+image jack happy = "characters/jack/jack happy.png"
+image jack sad = "characters/jack/jack sad.png"
+image jack shocked = "characters/jack/jack shocked.png"
+image jack angry = "characters/jack/jack angry.png"
+image mariah neutral = "characters/mariah/mariah neutral.png"
+image cop neutral = "characters/cop/cop neutral.png"
+image cop angry = "characters/cop/cop neutral.png"
+image santa = "characters/santa/santa.png"
+image santa1 = "characters/santa/santa.png"
+image santa2 = "characters/santa/santa.png"
+image freddy neutral = "characters/freddy/freddy neutral.png"
+image freddy angry = "characters/freddy/freddy angry.png"
+image freddy shocked = "characters/freddy/freddy shocked.png"
+image freddy happy = "characters/freddy/freddy happy.png"
+image freddy sad = "characters/freddy/freddy sad.png"
+
+# Evidence & Props
+image bloodysnow = "props/bloodysnow.png"
+image cigarettes = "props/cigarettes.png"
+image cookies = "props/cookies.png"
+image cookietin = "props/cookietin.png"
+image creditcard = "props/creditcard.png"
+image documents = "props/documents.png"
+image eatencookie = "props/eatencookie.png"
+image emptytin = "props/emptytin.png"
+image gloves = "props/gloves.png"
+image memorystick = "props/memorystick.png"
+image phone = "props/phone.png"
+image santaboots = "props/santaclothes.png"
+image santaclothes = "props/santaclothes.png"
+image santa toy = "props/santatoy.png"
+
 
 # define location images
-image bg office = "bg office.png"
-image bg office blur = im.Blur("bg office.png", 1.5) # blurred version
+image bg office = "backgrounds/bg office.png"
+image bg office blur = im.Blur("backgrounds/bg office.png", 1.5) # blurred version
+image bg office night = "backgrounds/bg office night.png"
 # image bg extstore = "bg extstore.png" # placeholder until we get asset
 # image bg bar = "bg bar.png" # placeholder until we get asset
 # image bg bar blur = im.Blur("bg bar.png", 1.5) # blurred version - placeholder until we get asset

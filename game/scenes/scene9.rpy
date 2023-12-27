@@ -272,7 +272,7 @@ label lookaround:
 
             hide bianca neutral right with moveoutright
 
-            show memory stick at right
+            show memorystick at right
 
             show chrome shocked at left
 
@@ -282,9 +282,9 @@ label lookaround:
 
             chrome "Damn. It’s corrupted. I can only see one file…"
 
-            hide memory stick right with moveoutright
+            hide memorystick with moveoutright
 
-            show credit card schematics at right
+            show creditcard at right
 
             show chrome thinking at left
 
@@ -300,7 +300,7 @@ label lookaround:
 
             show chrome neutral at left
 
-            hide credit card schematics right with moveoutright
+            hide creditcard right with moveoutright
 
             show bianca neutral at right
 

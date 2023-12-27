@@ -8,9 +8,9 @@ label scene7:
 
     scene bg alley
 
-    show chrome at right    
+    show chrome neutral at right    
 
-    show cop at left   
+    show cop neutral at left   
 
     menu:
         "Hm. He seems like a \"no nonsense, just the facts ma’am\" kinda guy. I wonder what approach I should take?"

@@ -17,7 +17,7 @@ label scene11:
     scene bg mariahoffice night
 
 
-    show chrome at left
+    show chrome neutral at left
 
     chrome "Mariah’s office. It’s clean- meticulously so. Funny how the messiest people can also be the most fastidious."
 

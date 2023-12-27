@@ -493,18 +493,10 @@ label scene12_e:
         call scene12_h # bad ending
 
     $ mariah_on = False
-    $ freddy_on = False
     $ larry_santa_on = False
-    $ update_layers() # turn off Freddy/Mariah/Santa layer
+    $ update_layers() # turn off Mariah/Santa layer
 
-    $ stop_layers() # stop playing layers
-
-    # CALL CREDITS
-    $ quick_menu = False # hide quick menu
-    call screen credits ## Show credits screen.
-    with fade
-
-    return ## return to main menu
+    jump scene13 # jump to next scene
 
 label scene12_f: # good ending
 
@@ -732,8 +724,328 @@ label scene12_f: # good ending
 
 label scene12_g: # average ending
 
+    #swap to ADV mode
+    hide dialogue_box # end convo
+    nvl clear # clear NVL dialogue
+
+    play sound sfx_footsteps
+
+    hide chrome
+    hide mariah
+
+    show cop at left 
+    
+    cop shocked "Mariah Fowler! Stand down!!"
+
+    show jack at center
+
+    jack shocked "Freddy! He’s alive!"
+
+    show freddy at right
+
+    freddy shocked "Hmph."
+
+    jack happy "Can’t believe the tin detective got it right."
+
+    cop neutral "Quiet!"
+
+    hide cop
+
+    hide jack
+
+    hide freddy
+
+    show santa1 at left
+
+    show santa2 at right
+
+    show mariah at center
+
+    mariah neutral "Get me the android. NOW!"
+
+    mariah happy "Heh."
+
+    #narration
+    chrome "{i}...{/i}"
+
+    chrome "{i}The robots rush at me. I can hear their circuit boards straining. Their expressions are lifeless, their voiceboxes mute.{/i}"
+
+    chrome "{i}Can’t stop to think what she’d done to them.{/i}"
+
+    hide santa1
+    hide mariah
+    hide santa2
+    show santa1 at center
+
+    chrome "{i}I can't let them surround me.{/i}"
+
+    chrome "{i}There's not a lot of room to maneuver. I sweep sideways.{/i}"
+
+    hide santa1
+    show chrome at center
+
+    chrome angry "What are you waiting for? Hit me!"
+
+    hide chrome
+    show santa1 at center
+
+    chrome angry "{i}A claw shoots ahead, minus the festive glove. Sharp, aged, rusty - the ugly secret behind the fatherly figure.{/i}"
+
+    chrome angry "{i}Iron frame. Clear signs of Fe2O3. Also aluminum.{/i}"
+
+    play sound sfx_impactmetal
+    with hpunch
+
+    chrome angry "{i}My fist tears through its frame, like a baseball bat against an old beer can.{/i}"
+
+    chrome angry "{i}EZMK models may be big, but their frame is hollow, and the chassis thin.{/i}"
+
+    hide santa1
+    show mariah neutral at center
+
+    chrome angry "{i}Mariah's expression is relaxed. Her eyes are shooting in different directions. Her shoulders are tense.{/i}"
+
+    chrome angry "{i}Crap. What is she doing? And what’s the cop waiting for?{/i}"
+
+    hide mariah
+    show chrome shocked at left
+    show santa2 at right
+
+    santa2 "KILL!"
+
+    hide mariah
+    show freddy at center
+    
+    freddy happy "Over here, ugly tinfoil beardie."
+
+    play sound sfx_punch
+    with hpunch
+
+    freddy angry "I'm not going down without a fight."
+
+    hide freddy
+    hide santa2
+    show mariah happy at right
+    show cop shocked at left
+
+    chrome "{i}I have to stop her.{/i}"
+
+    chrome "{i}The cop is holding a gun in his hands. Standard electric discharge pistol. One round can knock any person of standard complexion. Unreliable against androids. Its aiming systems are mishandled.{/i}"
+
+    chrome "{i}I rush. She's about to...{/i}"
+
+    cop "I said stand-!"
+
+    hide cop
+    show jack at left
+
+    jack angry "If you won't stop her, I will!"
+
+    chrome "{i}She draws a pocket repeating pistol. Premium. Chevalier brand. 0.2 seconds are enough for 6 shots in a 75º angle barrage.{/i}"
+
+    chrome "{i}Enough to kill a poser kid and a lousy cop.{/i}"
+
+    show chrome at center
+
+    chrome shocked "Duck! Duck!"
+
+    hide jack
+    hide chrome
+
+    play sound sfx_gunshots
+    with hpunch
+    pause 1.0
+
+    hide mariah
+
+    play sound sfx_footsteps
+    pause 1.0
+    play sound sfx_gunshots
+
+    show chrome at left
+    chrome angry "Get to cover, dammit!"
+
+    play sound sfx_gunshots
+
+    #Narration
+    chrome "{i}...{/i}"
+    play sound sfx_footsteps
+    chrome "{i}She escaped.{/i}"
+
     return
 
 label scene12_h: # bad ending
+
+    #swap to ADV mode
+    hide dialogue_box # end convo
+    nvl clear # clear NVL dialogue
+
+    play sound sfx_footsteps
+
+    mariah neutral "Wait. What now?"
+
+    chrome "{i}She turns her gaze behind us.{/i}"
+    chrome "{i}Dammit. Someone’s coming.{/i}"
+
+    hide chrome
+    hide mariah
+
+    show cop at left
+
+    cop shocked "Mariah Fowler! Stand down!"
+
+    show jack at center
+
+    jack shocked "Freddy! He's alive!"
+
+    show freddy at right
+
+    freddy shocked "Hmph."
+
+    jack happy "Can't believe the tin detective got it right."
+
+    cop neutral "Quiet!"
+
+    hide cop
+    hide jack
+    hide freddy
+
+    show santa1 at left
+    show santa2 at right
+    show mariah at center
+
+    mariah neutral "Really? Is that all?"
+
+    mariah happy "Get me the android. NOW!"
+
+    chrome "{i}...{/i}"
+
+    chrome "{i}The robots rush at me. I can hear their circuit boards straining. Their expressions are lifeless, their voiceboxes mute.{/i}"
+
+    chrome "{i}What did she do to them?{/i}"
+
+    chrome "{i}It's horrifying.{/i}"
+
+    hide santa1
+    hide mariah
+    hide santa2
+    show santa1 at center
+
+    chrome "{i}I can't let them surround me.{/i}"
+
+    chrome "{i}There's not a lot of room to maneuver. I sweep sideways.{/i}"
+
+    hide santa1
+    show chrome at center
+
+    chrome confused "Foul play!"
+
+    hide chrome
+    show santa1 at center
+
+    chrome confused "{i}A claw shoots ahead, minus the festive glove. Sharp, aged, rusty - the ugly secret behind the fatherly figure.{/i}"
+
+    chrome confused "{i}Analysing… Dah, no time.{/i}"
+
+    play sound sfx_impactmetal
+    with hpunch
+
+    chrome "{i}I took a hit!{/i}"
+
+    chrome "{i}Minor damage.{/i}"
+
+    hide santa1
+    show chrome at center
+    chrome angry "Sorry, man!"
+
+    hide chrome
+    show santa1 at center
+
+    play sound sfx_impactmetal
+    with hpunch
+
+    chrome "{i}Huh?{/i}"
+    chrome "{i}My fist tears through its frame, like a baseball bat against an old beer can.{/i}"
+    chrome "{i}EZMK models may be big… How come they’re so light?{/i}"
+
+    hide santa1
+    show mariah neutral at center
+
+    mariah "*Laughter*"
+
+    chrome "{i}Crap. What is she doing? And what’s the cop waiting for?{/i}"
+
+    hide mariah
+    show chrome shocked at left
+    show santa2 at right
+
+    santa2 "KILL!"
+
+    hide mariah
+    show freddy at center
+    
+    freddy happy "Over here, ugly tinfoil beardie."
+
+    play sound sfx_punch
+    with hpunch
+
+    santa2 "..."
+    santa2 "KILL."
+
+    freddy angry "Fuck, this is bad."
+
+    hide freddy
+    hide santa2
+    show mariah happy at right
+    show cop shocked at left
+
+    chrome "{i}The cop’s gun is out.{/i}"
+
+    chrome "{i}Has this lousy pisspants ever even held one before?{/i}"
+
+    cop "I said stand-!"
+
+    hide cop
+    show jack at left
+
+    jack angry "If you won't stop her, I will!"
+
+    chrome "{i}She draws a pocket repeating pistol. Premium. Chevalier brand. 0.2 seconds are enough for 6 shots in a 75º angle barrage.{/i}"
+
+    chrome "{i}No, no, no.{/i}"
+
+    hide mariah
+    hide jack
+    show chrome at center
+
+    chrome shocked "WAIT!"
+
+    hide chrome
+    show mariah happy at right
+    show jack at left
+
+    jack scared "Wh-"
+
+    play sound sfx_gunshots
+    with hpunch
+
+    hide jack
+    hide mariah
+    pause 1.0
+    play sound sfx_footsteps
+
+    show cop at center
+    cop angry "Freeze, Fowler!"
+    cop angry "God."
+
+    show freddy at right
+    freddy shocked "Jack!"
+    freddy shocked "Come on, get up, buddy"
+
+    chrome "{i}Blood on the ground. He’s grown cold already. His spark… extinguished.{/i}"
+    chrome "{i}I don’t have the courage to assess the damage. There’s no heartbeat.{/i}"
+    show chrome at left
+    chrome neutral "He’s dead."
+    freddy sad "Why? Why you...?"
 
     return
