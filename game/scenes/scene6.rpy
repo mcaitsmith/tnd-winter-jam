@@ -26,7 +26,7 @@ label scene6:
 
     chrome "I think you’ve mistaken me for a lesser bot, ma’am. I’m Chrome Steele, private detective."
 
-    show mariah shocked
+    #show mariah shocked
 
     pause 0.5
 
@@ -83,7 +83,11 @@ label scene6:
 
         mariah "His name’s Larry. He’s an elf at Santa’s workshop."
 
-        #Visual show Larry as an elf (not too sure how to go about this)
+        show larry dead at center with dissolve
+        
+        pause 0.5
+        
+        hide larry dead at center with dissolve
 
         chrome "And what did Larry do that got him a permanent red slip."
 
@@ -99,7 +103,7 @@ label scene6:
 
         chrome "Then let’s ask about someone else. What do you know about a Freddy Fontaine."
 
-        show mariah shocked 
+        #show mariah shocked 
 
         mariah "Freddy?"
 
@@ -157,7 +161,11 @@ label scene6:
 
         mariah "His name is Larry Moss. He’s an elf that works at one of Santa’s workshop. Well, he was."
 
-        #Visual show Larry as an elf (not too sure how to go about this)
+        show larry dead at center with dissolve
+        
+        pause 0.5
+        
+        hide larry dead at center with dissolve
 
         chrome "Did he have any enemies that could have done this?"
 
@@ -175,7 +183,7 @@ label scene6:
 
         chrome "Well, then I would like to expand my questioning to a person of interest. What can you tell me about Freddy?"
 
-        show mariah shocked 
+        #show mariah shocked 
 
         mariah "Freddy?"
 
@@ -240,11 +248,15 @@ label scene6:
 
         mariah "We threw him in one of the elf costumes and put him in one of the Santa’s workshops."
 
-        #Visual show Larry 
+        show larry dead at center with dissolve
+        
+        pause 0.5
+        
+        hide larry dead at center with dissolve
 
         chrome "Geez, I knew that Santa ran a tight ship, but I didn’t think he ran it so tight that he’d off one of his elves."
 
-        show mariah shocked 
+        #show mariah shocked 
 
         mariah "You think one of the Santa’s killed him for talking?"
 
@@ -260,7 +272,7 @@ label scene6:
 
         chrome "Freddy? Is that someone that worked here?"
 
-        show mariah shocked 
+        #show mariah shocked 
 
         mariah "What? I mean, yes. Freddy did work here. But not anymore. Today was supposed to be his last day, but he’s gone now. Just left early."
 
@@ -280,13 +292,21 @@ label scene6:
 
         pause 1.0
 
+        show chrome shocked glitch 
+
         chrome "{i}Here we go again. Energy surges through me. My systems flood with information, trusting me to interpret the proper pieces. I suspect that I am trying to tell myself something.{/i}"
 
+        show chrome thinking glitch 
+        
         chrome "{i}Suspicion breeds blame. Blame then circles like a vulture, seeking a host.{/i}"
 
         chrome "{i}The victim needn’t be responsible. Blame is attracted far more to believability than responsibility.{/i}"
 
+        show chrome sad glitch
+        
         chrome "{i}I’ve been on both sides of such condemnation. {/i}"
+
+        show chrome neutral glitch 
 
         chrome "{i}Blame is a defense mechanism. When placed successfully, it brings security to the accuser.{/i}"
 
@@ -296,16 +316,22 @@ label scene6:
 
         chrome "{i}It would have been so much easier to shoulder the weight if I could have taken it freely.{/i}" 
 
+        show chrome angry glitch
+        
         chrome "{i}Instead, it was forced upon me. A crucifixion of my character.{/i}"
         
         chrome "{i} I denied it voraciously. So much so, that I began to wonder if somehow, indirectly, I was to blame after all. {/i}"
 
+        show chrome sad glitch 
+        
         chrome "{i}Eventually, I was acquitted. The plague of blame infected the android unit until it had eaten through all ten of us.{/i}"
 
         chrome "{i}All remaining threads of trust were severed. The Bureau shuttered the Android Program.{/i}"
 
         chrome "{i}The only thing that kept us from complete annihilation was Cane. He had installed a biometric kill switch - we couldn’t be shut down with him.{/i}"
 
+        show chrome neutral glitch 
+        
         chrome "{i}Naturally, it wasn’t long before the Bureau turned on their once great hero.{/i}"
 
         chrome "{i}That’s the nature of the beast. First, they blamed us androids for sowing Cane’s demise. Then they blamed Cane for extinguishing our own.{/i}"

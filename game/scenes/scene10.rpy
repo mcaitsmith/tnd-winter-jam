@@ -6,7 +6,7 @@
 
 label scene10:
 
-    scene bg room #Placeholder for flower department store entrance
+    scene bg Fowler Department
 
     show chrome neutral at left
 
@@ -30,12 +30,12 @@ label scene10:
     $ larry_santa_on = True
     $ update_layers() # turn on Santa layer
 
-    # Insert Santa happy sprite 
+    # show santa happy
 
     chrome "{i}He was alone, sitting down on a small metal bench across from the department store with a plastic smile stretched across his robotic features.{/i}"
     chrome "{i}He held a small bell limply, gently shaking it as people passed him by. As I approached, that smile quickly faded, replaced by a general air of annoyance.{/i}"
 
-    #insert santa angry sprite 
+    # show santa angry
 
     santa "I don’t have anything for you."
 
@@ -50,9 +50,9 @@ label scene10:
 
     chrome "Fine, here’s your donation."
 
-    # Insert SOUND BEEP
+    play sound sfx_santabeepscan
 
-    #insert santa neutral sprite here
+    show santa  
 
     santa "Was that so hard detective? Now whatever it is hurry up. I got a lot of sitting around doing nothin to do."
 
@@ -102,9 +102,9 @@ label scene10:
 
         chrome "That want to meet Robot Santa?"
 
-        santa "You act like there’s a better alternative than the shiny steel St. Nick."
+        # show santa happy
 
-        #insert robosanta happy 
+        santa "You act like there’s a better alternative than the shiny steel St. Nick."
 
         chrome "{i}This is going nowhere, But there is one other question I could ask… {/i}"
 
@@ -121,21 +121,23 @@ label scene10:
 
         chrome "Have you noticed any strange behaviors recently? Regulars acting out of character, more commotion at odd times of night, that sort of thing?"
 
+        # show santa happy 
+        
         santa "You kidding me? Humans are strange beings, detective. Not a day goes by where I don’t question why they do the things that they do."
 
-        #insert santa happy
+        show chrome neutral # was frowning unsure what this should be? 
         
         chrome "Sure, but you’ve been sitting on this block for how long? That’s normal everyday human activities."
-        
-        #insert chrome frowning
-
+    
         chrome "I’m talking about the truly strange, the {i}stuff{/i} that they try to hide."
 
+        # show santa neutral 
+        
         santa "A kid threw up on another kid. That was pretty odd."
-
-        #insert santa neutral
         
         chrome "Stop the presses, we got the story of the month."
+
+        #show santa angry 
 
         santa "Well then be more specific! What are you looking for detective?"
 
@@ -143,15 +145,13 @@ label scene10:
 
         chrome "Think man! What about the employees? The elf, Larry? Notice anything off about him?"
 
-        #insert chrome angry
+        #show santa neutral 
 
         santa "His arms were too short for his torso and his face was too long. I know he talked with Freddy sometimes, that’s it."
 
-        #insert santa neutral 
+        show chrome neutral 
 
         chrome "Were they good friends? Any arguments or anything?"
-
-        #insert chrome neutral 
 
         santa "I’m not familiar with the relationships of every human here at this department store detective. You’re not asking me the right question here."
 
@@ -175,17 +175,17 @@ label scene10:
 
         chrome "If you’re here that often, then it’s safe to assume you saw something, didn’t you?"
 
-        santa "Maybe I did. Could you be more specific?"
+        #show santa happy
 
-        #insert santa happy 
+        santa "Maybe I did. Could you be more specific?"
 
         chrome "When’s the last time you saw Mr. Fontaine?"
 
         santa "Well, I guess it’d be shortly before the murder happened"
 
-        chrome "Did you see it happen?"
+        show chrome shocked
 
-        #insert chrome shocked 
+        chrome "Did you see it happen?"
 
         santa "Not sure really, but I saw somethin’."
 
@@ -214,9 +214,7 @@ label scene10:
 
         pause 1.0
 
-        #show chrome thinking 
-
-        ### I took the liberty of cutting some of the lines so that it could fully fit on the box without making it seem dense
+        show chrome thinking glitch
 
         chrome "{i}I’m expecting this one. It comes on fast, but it’s more disorienting than painful.{/i}"
 
@@ -230,21 +228,21 @@ label scene10:
 
         chrome "{i}Few of us know the luxury of adaptive functionality. Not only self-learning tech, but the ability to upgrade key hardware systems internally.{/i}"
 
-        #show chrome angry 
+        show chrome angry glitch
 
         chrome "{i}Bottom line is, I’m better than this. How could I have overlooked this EZMK unit? To ignore one’s predecessors is a human error. And that error has cost me.{/i}"
 
-        #show chrome shocked 
+        show chrome shocked glitch 
 
         chrome "{i}But that’s just it. Thorough as Cane was, good as he was, my mentor was human. He had limited perspective and personal predispositions. He made mistakes. And now, so do I.{/i}"
 
         chrome "{i}That was his plan, of course. Though many in the Bureau couldn’t quite comprehend it.{/i}"
 
-        #show chrome unassuming 
+        show chrome neutral glitch
 
         chrome "{i}When Cane launched the Android Program, it was not meant to create perfect detectives. It was meant to create detectives who could constantly improve.{/i}"
 
-        #show chrome thinking 
+        show chrome thinking glitch
 
         chrome "{i}Cane once told me, ‘Mistakes allow for challenges. Challenges allow for growth. To recognize and rectify these errors allows for the betterment of any great detective’.{/i}"
 
@@ -252,7 +250,7 @@ label scene10:
 
         chrome "{i}I can no longer dismiss the challenges that stem from my mistakes.{/i}"
 
-        #show chrome happy 
+        show chrome happy glitch 
 
         chrome "{i}I will improve.{/i}"
 
@@ -270,7 +268,7 @@ label scene10:
 
         santa "Why {i}tell{/i} you about what I saw, when I can just show you?"
 
-        #insert santa happy
+        #show santa happy
 
         chrome "{i}It’s like a sudden ray of light parting the confusion in my mind. Of course, it's so obvious! How could I have overlooked it?{/i}"
 
@@ -302,29 +300,37 @@ label scene10:
 
         hide santa with dissolve 
 
-        show larry neutral at left with dissolve
+        show larry sad at left with dissolve 
 
-        show freddy neutral at right with dissolve
+        show freddy sad at right with dissolve
+
+        show cookietin at center with dissolve
 
         chrome "{i}Freddy and Larry walk out of the Department store, Freddy carrying a tin of what appears to be cookies between his arm and side.{/i}"
 
-        #show cooke in centre 
+        hide cookietin in center with dissolve
 
         chrome "{i}Things seem tense between them, uncertain. Some words are exchanged, and Freddy hands the cookies to Larry with a stiff shrug. He walks off to sit down on the curb.{/i}"
 
         hide freddy neutral with moveoutright
 
-        #show larry happy 
+        show cookies at center with dissolve
 
-        #show cookie in centre 
+        pause 0.5
+
+        hide cookies in center with dissolve
+
+        show larry ecstatic 
+
+        show eatencookie at center with dissolve 
 
         chrome "Larry moves to follow him, first taking out a cookie and taking a deep bite before walking over."
 
-        #hide cookie 
+        pause 0.5
 
-        show larry with hpunch 
+        hide eatencookie in center with dissolve 
 
-        #show larry scared at left 
+        show larry neutral with hpunch
 
         show freddy neutral at right with moveinright
 
@@ -332,35 +338,37 @@ label scene10:
 
         #VISUAL SCREEN SHAKE + AUDIO
 
-        #play audio "impact (metal)" with hpunch for now the hpunch will just be showing with larry like before
+        play sound sfx_impactmetal
 
-        show larry with hpunch
+        pause 0.5
+
+        show larry dead with hpunch
 
         chrome "{i}He falls to the ground, the tin slamming to the cold pavement.{/i}"
 
         chrome "{i}Larry convulses for a minute, one arm clutching at his throat, the other desperately flailing for Freddy. It isn’t long before he goes limp, the life slowly fading from his eyes. {/i}"
 
-        #show larry dead at left 
+        show freddy sad
 
         chrome "{i}Freddy looks around in panic, reaching in his pocket for something before pausing.{/i}"
-
-        #show freddy sad at right 
 
         chrome "{i}He looks over Larry’s body again, appearing to be in thought, before running down into the alleyway of the department store and disappearing.{/i}"
 
         hide freddy neutral with moveoutright
 
-        pause 1.5
+        pause 1.0
 
         show mariah neutral at right with moveinright 
 
         chrome "{i}Just as it seems there’s nothing left to see, Mariah comes out of the department store.{/i}"
 
-        #show cookie in centre 
+        show cookietin at center with dissolve
+
+        show mariah shocked
 
         chrome "{i}She seems surprised at Larry’s body but not horrified, looking around quickly before taking the cookie tin and hiding it deep within a thick snowbank.{/i}"
 
-        #hide cookie 
+        hide cookietin at center with dissolve
 
         chrome "{i}She then walks slowly over to the body, examining it. She pulls out her phone and begins to call someone before the video ends. {/i}"
 
@@ -375,7 +383,7 @@ label scene10:
 
         show santa at right with dissolve
 
-        chrome "{i}“If anything, this was the smoking gun, right? Clearly something was wrong with those cookies, and here was direct proof that Freddy had handed them over. But what was Mariah doing at the end? {/i}"
+        chrome "{i}If anything, this was the smoking gun, right? Clearly something was wrong with those cookies, and here was direct proof that Freddy had handed them over. But what was Mariah doing at the end? {/i}"
 
         chrome "{i}She didn’t seem that concerned with Larry, in fact it almost seemed like she was hiding evidence of the crime. But why?{/i}"
 
