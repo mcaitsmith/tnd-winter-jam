@@ -499,10 +499,12 @@ label scene12_e:
 
     $ stop_layers() # stop playing layers
 
+    scene black # fade to black
+
     # CALL CREDITS
     $ quick_menu = False # hide quick menu
-    call screen credits ## Show credits screen.
-    with fade
+    $ renpy.transition(dissolve)
+    call screen credits ## Fade to credits screen.
 
     return ## return to main menu
 
