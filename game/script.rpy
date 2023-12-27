@@ -21,6 +21,7 @@ define cop = Character("Generic Cop", color="#2d30d9", image="cop")
 define santa = Character("Robot Santa", color="#ff0000", image="santa")
 define santa1 = Character("Robot Santa", color="#ff0000", image="santa")
 define santa2 = Character("Robot Santa", color="#ff0000", image="santa")
+define figure = Character("Figure", color="#a5a5a5", image="chrome")
 define narration = Character("Narration", kind=nvl)
 
 image bg office = "bg office.png"
