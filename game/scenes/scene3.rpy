@@ -303,6 +303,9 @@ label scene3_hardboiled:
 
     $ music_pos = renpy.music.get_pos('music') # get current time position of music
     $ music_pos_str = str(music_pos) # convert to string
+    # If the user has all options muted, we'll set the current position to 0
+    if music_pos == None:
+        $ music_pos_str = "0"
 
     ######### SCENE 3A: GLITCH 001
 

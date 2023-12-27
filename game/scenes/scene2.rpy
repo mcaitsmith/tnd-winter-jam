@@ -14,7 +14,7 @@ label scene2:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg office
+    scene bg office night
     # fades to black for 1 second then fades in
     with Fade(0.5, 1.0, 0.5)
 
@@ -195,7 +195,7 @@ label scene2:
 
     chrome "{i}And yet, here he is, back to haunt me. Breaking free of his prison just as I'm tasked with finding another missing person. I'm not sure I can handle that. Not yet.{/i}"
 
-    show bg office # unblur the background
+    show bg office night # unblur the background
     call end_glitch # return to normal Chrome and normal background
     $ chrome_on = True # turn on Chrome layer
     $ update_layers(0) # update layers
@@ -230,7 +230,7 @@ label scene2:
 
     bianca_nvl_left "Yeah, well - they say the same stuff about my dad. That he's a loser. A deadbeat. But it {i}{b}ain't{/b}{/i} true."
 
-    bianca_nvl_left "Here's my info. My dad's been known to hang out at the Silver Cat. {i}{b}A lot.{/i}{/b}"
+    bianca_nvl_left "Here's my info. My dad's been known to hang out at the Silver Cat. {i}{b}A lot.{/b}{/i}"
 
     bianca_nvl_left "If anyone knows anything, that would be a good place to start."
 

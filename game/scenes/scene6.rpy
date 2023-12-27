@@ -26,7 +26,7 @@ label scene6:
 
     chrome "I think you’ve mistaken me for a lesser bot, ma’am. I’m Chrome Steele, private detective."
 
-    show mariah surprised
+    show mariah shocked
 
     pause 0.5
 
@@ -175,7 +175,7 @@ label scene6:
 
         chrome "Well, then I would like to expand my questioning to a person of interest. What can you tell me about Freddy?"
 
-        show mariah suprised 
+        show mariah shocked 
 
         mariah "Freddy?"
 

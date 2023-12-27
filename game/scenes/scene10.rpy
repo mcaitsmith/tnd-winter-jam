@@ -302,7 +302,7 @@ label scene10:
 
         hide santa with dissolve 
 
-        show larry at left with dissolve
+        show larry neutral at left with dissolve
 
         show freddy neutral at right with dissolve
 
