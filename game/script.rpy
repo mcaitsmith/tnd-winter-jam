@@ -55,6 +55,7 @@ image chrome timid = "characters/chrome/chrome timid.png"
 image chrome timid glitch = Glitch("characters/chrome/chrome timid.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome angry = "characters/chrome/chrome angry.png"
 image chrome angry glitch = Glitch("characters/chrome/chrome angry.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome hardboiled = "characters/chrome/chrome angry.png"
 image bianca neutral = "characters/bianca/bianca neutral.png"
 image bianca angry = "characters/bianca/bianca angry.png"
 image bianca sad = "characters/bianca/bianca sad.png"
@@ -94,7 +95,6 @@ image phone = "props/phone.png"
 image santaboots = "props/santaclothes.png"
 image santaclothes = "props/santaclothes.png"
 image santa toy = "props/santatoy.png"
-
 
 # define location images
 image bg office = "backgrounds/bg office.png"
