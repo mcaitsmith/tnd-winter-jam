@@ -219,15 +219,16 @@ label lookaround:
             "My aromatic sensors are picking something up."
             show cigarettes at right
             "Ah, clove cigarettes. Just like Jack mentioned. Supply looks low. Maybe Freddy took one for the road."
+            hide cigarettes
             jump helpful
         "Boxing Gloves":
             show chrome neutral at left
             show gloves at right
             chrome "{i}My database highlighted Freddy’s days as an amateur boxer. Seems like he’s hung up the gloves for now.{/i}"
 
-            hide gloves with moveoutright
+            hide gloves
 
-            show bianca neutral at right
+            show bianca neutral at right with moveinright
 
             bianca neutral "Ever been in a fight?"
 
@@ -245,6 +246,8 @@ label lookaround:
 
             bianca happy "Every minute he wasn’t off on some shady job was a minute he spent with me. That’s worth being stupid for."
 
+            hide bianca happy with moveoutright
+
             chrome neutral "I see. At least you’ve still got all your teeth."
             jump helpful
         "Santa Toy": 
@@ -258,9 +261,9 @@ label lookaround:
 
             chrome "Wait a second - is this Santa droid hiding something?"
 
-            hide santa toy with moveoutright
+            hide santa toy
 
-            show bianca neutral at right
+            show bianca neutral at right with moveinright
 
             chrome thinking "Where did this come from? Is it new?"
 
@@ -282,7 +285,7 @@ label lookaround:
 
             chrome "Damn. It’s corrupted. I can only see one file…"
 
-            hide memorystick with moveoutright
+            hide memorystick
 
             show creditcard at right
 
@@ -300,9 +303,9 @@ label lookaround:
 
             show chrome neutral at left
 
-            hide creditcard right with moveoutright
+            hide creditcard 
 
-            show bianca neutral at right
+            show bianca neutral at right with moveinright
 
             bianca neutral "Share with the class, Mr. Steele! Did that Santa droid give you everything you asked for this year?"
 
