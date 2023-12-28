@@ -332,7 +332,7 @@ label scene10:
 
         show larry neutral with hpunch
 
-        show freddy neutral at right with moveinright
+        show freddy shocked at right with moveinright
 
         chrome "{i}Before he can make it however, his eyes practically bulge out of his skull. He begins coughing like mad, choking on his own spit as Freddy watches in horror. {/i}"
 
@@ -348,9 +348,11 @@ label scene10:
 
         chrome "{i}Larry convulses for a minute, one arm clutching at his throat, the other desperately flailing for Freddy. It isn’t long before he goes limp, the life slowly fading from his eyes. {/i}"
 
-        show freddy sad
+        show freddy angry
 
         chrome "{i}Freddy looks around in panic, reaching in his pocket for something before pausing.{/i}"
+
+        show freddy sad
 
         chrome "{i}He looks over Larry’s body again, appearing to be in thought, before running down into the alleyway of the department store and disappearing.{/i}"
 
