@@ -7,7 +7,7 @@
 label secret_ending:
 #INSERT GLITCH COUNTER 6/6?
 ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
-    show bg office blur # blurs the background
+    scene bg office blur # blurs the background
     $ chrome_on = False # turn off Chrome layer for glitch
     $ update_layers(0) # update layers
     call start_glitch # shows Chrome glitching and grays out the background
@@ -27,7 +27,9 @@ label secret_ending:
     chrome happy glitch "I’m finally at home in my own steel. I know who I am and why I am. I feel good and hopeful about that case I let slip to Freddy…"
     
     chrome happy glitch "I’m ready to find Forrest Cane."
-    # EFFECT - screen shake
+
+    # screen shake
+    show bg office blur with hpunch
 
     chrome confused glitch "What’s going on?!"
     
