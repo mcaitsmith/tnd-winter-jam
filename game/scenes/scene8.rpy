@@ -30,7 +30,7 @@ label scene8:
             jump scene8_choices
         "What are those red speckles?":
             hide larry dead with moveoutright
-            # show #blood?
+            show bloodysnow
             chrome "On closer inspection, that seems to be blood droplets in the snow."
             call cellcell
             return
