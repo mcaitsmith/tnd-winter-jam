@@ -111,7 +111,7 @@ label hardboiled12:
 
     chrome hardboiled "Testify."
 
-    freddy scared "They won’t believe me, Mariah’s protected-"
+    freddy sad "They won’t believe me, Mariah’s protected-"
 
     chrome hardboiled "I’ve got all the evidence we need to clear your name."
 
@@ -1024,7 +1024,7 @@ label scene12_h: # bad ending
     show mariah happy at right
     show jack at left
 
-    jack scared "Wh-"
+    jack shocked "Wh-"
 
     play sound sfx_gunshots
     with hpunch

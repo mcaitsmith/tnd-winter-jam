@@ -364,7 +364,7 @@ label scene10:
 
         show cookietin at center with dissolve
 
-        show mariah shocked
+        show mariah confused
 
         chrome "{i}She seems surprised at Larry’s body but not horrified, looking around quickly before taking the cookie tin and hiding it deep within a thick snowbank.{/i}"
 
