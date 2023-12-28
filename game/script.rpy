@@ -115,7 +115,7 @@ image bg freddyoffice = "backgrounds/bg freddyoffice.png"
 image bg freddyoffice blur = im.Blur("backgrounds/bg freddyoffice.png", 1.5) # blurred version
 image bg mariahoffice = "backgrounds/bg mariahoffice.png"
 
-# define sound effects
+# define sound effects & music
 define sfx_clatter = "audio/sfx/Clatter_SantaSecret_SFX.wav"
 define sfx_door = "audio/sfx/Door_SantaSecret_SFX.wav"
 define sfx_footsteps = "audio/sfx/FootSteps_SantaSecret_SFX.wav"
@@ -126,6 +126,7 @@ define sfx_punch = "audio/sfx/Punch_SantaSecret_SFX.wav"
 define sfx_rattle = "audio/sfx/Rattle_SantaSecret_SFX.wav"
 define sfx_santabeepscan = "audio/sfx/SantaBeepScan_SantaSecret_SFX.wav"
 define sfx_breakmetaltoy = "audio/sfx/BreakMetalToy_SantaSecret_SFX.wav"
+define bar_music = "audio/jazz_for_andrea_2.wav"
 
 init python:
     # define music channels

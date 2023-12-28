@@ -13,7 +13,7 @@ label scene3:
     scene bg bar
 
     # play music
-    play music "audio/AUDIO-2023-12-19-18-56-38.mp3" fadeout 3.0
+    play music bar_music fadeout 3.0
 
     play sound sfx_door
 
@@ -355,7 +355,7 @@ label scene3_hardboiled:
     ######### back to SCENE 3
 
     # resume music
-    play music "<from " + music_pos_str + ">audio/AUDIO-2023-12-19-18-56-38.mp3" fadeout 1.0
+    play music "<from " + music_pos_str + ">" + bar_music fadeout 1.0
 
     $ glitch_counter +=1 # increment glitch counter
 
