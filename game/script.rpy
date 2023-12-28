@@ -100,9 +100,20 @@ image santa toy = "props/santatoy.png"
 image bg office = "backgrounds/bg office.png"
 image bg office blur = im.Blur("backgrounds/bg office.png", 1.5) # blurred version
 image bg office night = "backgrounds/bg office night.png"
-# image bg extstore = "bg extstore.png" # placeholder until we get asset
-# image bg bar = "bg bar.png" # placeholder until we get asset
-# image bg bar blur = im.Blur("bg bar.png", 1.5) # blurred version - placeholder until we get asset
+image bg office night blur = im.Blur("backgrounds/bg office night.png", 1.5) # blurred version
+image bg alley = "backgrounds/bg alley.png"
+image bg alley blur = im.Blur("backgrounds/bg alley.png", 1.5) # blurred version
+image bg bar = "backgrounds/bg bar.png"
+image bg bar blur = im.Blur("backgrounds/bg bar.png", 1.5) # blurred version
+image bg rooftop night = "backgrounds/bg rooftop night.png"
+image bg rooftop night blur = im.Blur("backgrounds/bg rooftop night.png", 1.5) # blurred version
+image bg extstore = "backgrounds/bg extstore.png"
+image bg extstore blur = im.Blur("backgrounds/bg extstore.png", 1.5) # blurred version
+image bg extstore night = "backgrounds/bg extstore night.png"
+image bg extstore night blur = im.Blur("backgrounds/bg extstore night.png", 1.5) # blurred version
+image bg freddyoffice = "backgrounds/bg freddyoffice.png"
+image bg freddyoffice blur = im.Blur("backgrounds/bg freddyoffice.png", 1.5) # blurred version
+image bg mariahoffice = "backgrounds/bg mariahoffice.png"
 
 # define sound effects
 define sfx_clatter = "audio/sfx/Clatter_SantaSecret_SFX.wav"

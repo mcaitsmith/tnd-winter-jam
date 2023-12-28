@@ -6,7 +6,7 @@
 
 label scene9:
 
-    scene freddyoffice night
+    scene bg freddyoffice
 
     play sound sfx_door
 
@@ -111,7 +111,7 @@ label scene9:
             ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
             hide bianca # hide Bianca for glitch
-            show freddyoffice night blur # blurs the background
+            show bg freddyoffice blur # blurs the background
             $ chrome_on = False # turn off Chrome layer for glitch
             $ update_layers(0) # update layers
             call start_glitch # shows Chrome glitching and grays out the background
@@ -159,7 +159,7 @@ label scene9:
 
             $ glitch_counter += 1
 
-            show freddyoffice night # unblur the background
+            show bg freddyoffice # unblur the background
             call end_glitch # return to normal Chrome and normal background
             $ chrome_on = True # turn on Chrome layer
             $ update_layers(0) # update layers

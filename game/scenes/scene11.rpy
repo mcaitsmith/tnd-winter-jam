@@ -14,7 +14,7 @@ default pickedFive = False
 label scene11:
 
 
-    scene bg mariahoffice night
+    scene bg mariahoffice
 
 
     show chrome neutral at left
