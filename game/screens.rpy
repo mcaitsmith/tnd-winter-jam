@@ -295,7 +295,7 @@ screen navigation():
 
         # xpos gui.navigation_xpos
         xalign 0.5
-        yalign 0.9
+        yalign 0.95
 
         spacing gui.navigation_spacing
 
@@ -365,10 +365,10 @@ screen main_menu():
     tag menu
 
     add gui.main_menu_background
-    add "gui/title.png":
-        xalign 0.5
-        xoffset 25
-        yalign 0.1
+    # add "gui/title.png":
+        # xalign 0.5
+        # xoffset 25
+        # yalign 0.1
 
     ## This empty frame darkens the main menu.
     frame:
@@ -753,7 +753,7 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(_("Options"), scroll="viewport"):
 
         vbox:
             xpos 0.2
