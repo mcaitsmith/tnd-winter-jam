@@ -5,7 +5,7 @@
 # The scene starts here.
 
 label scene6:
-
+ 
     scene bg folwer department 
 
     show mariah neutral at right
@@ -26,7 +26,7 @@ label scene6:
 
     chrome "I think you’ve mistaken me for a lesser bot, ma’am. I’m Chrome Steele, private detective."
 
-    #show mariah shocked
+    show mariah confused
 
     pause 0.5
 
@@ -103,7 +103,7 @@ label scene6:
 
         chrome "Then let’s ask about someone else. What do you know about a Freddy Fontaine."
 
-        #show mariah shocked 
+        show mariah confused 
 
         mariah "Freddy?"
 
@@ -183,7 +183,7 @@ label scene6:
 
         chrome "Well, then I would like to expand my questioning to a person of interest. What can you tell me about Freddy?"
 
-        #show mariah shocked 
+        show mariah confused
 
         mariah "Freddy?"
 
@@ -256,7 +256,7 @@ label scene6:
 
         chrome "Geez, I knew that Santa ran a tight ship, but I didn’t think he ran it so tight that he’d off one of his elves."
 
-        #show mariah shocked 
+        show mariah confused
 
         mariah "You think one of the Santa’s killed him for talking?"
 
@@ -272,7 +272,7 @@ label scene6:
 
         chrome "Freddy? Is that someone that worked here?"
 
-        #show mariah shocked 
+        show mariah confused
 
         mariah "What? I mean, yes. Freddy did work here. But not anymore. Today was supposed to be his last day, but he’s gone now. Just left early."
 
