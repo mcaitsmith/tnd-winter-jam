@@ -19,6 +19,8 @@ define mariah_nvl_left = Character("Mariah Fowler", color="#dbd839", image="mari
 define mariah_nvl_right = Character("Mariah Fowler", color="#dbd839", image="mariah", kind=nvl, what_text_align=1, who_text_align=1)
 define cop = Character("Generic Cop", color="#2d30d9", image="cop")
 define santa = Character("Robot Santa", color="#ff0000", image="santa")
+define santa_nvl_left = Character("Robot Santa", color="#ff0000", image="santa", kind=nvl)
+define santa_nvl_right = Character("Robot Santa", color="#ff0000", image="santa", kind=nvl, what_text_align=1, who_text_align=1)
 define santa1 = Character("Robot Santa", color="#ff0000", image="santa")
 define santa2 = Character("Robot Santa", color="#ff0000", image="santa")
 define figure = Character("Figure", color="#a5a5a5", image="chrome")
