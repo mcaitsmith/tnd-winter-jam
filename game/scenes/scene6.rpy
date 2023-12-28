@@ -6,7 +6,7 @@
 
 label scene6:
  
-    scene bg folwer department 
+    scene bg extstore night
 
     show mariah neutral at right
 
@@ -286,6 +286,7 @@ label scene6:
 
         hide mariah neutral with dissolve
 
+        show bg extstore night blur # blurs the background
         call start_glitch
 
         #pause for transistion 
@@ -336,6 +337,7 @@ label scene6:
 
         chrome "{i}That’s the nature of the beast. First, they blamed us androids for sowing Cane’s demise. Then they blamed Cane for extinguishing our own.{/i}"
 
+        show bg extstore night # unblurs the background
         call end_glitch
 
         $ glitch_counter +=1 # increment glitch counter

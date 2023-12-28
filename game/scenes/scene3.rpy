@@ -313,7 +313,7 @@ label scene3_hardboiled:
     hide dialogue_box # temporarily end convo
     nvl hide # hide NVL dialogue
 
-    # show bg bar blur # blurs the background - placeholder until we get asset
+    show bg bar blur # blurs the background
     call start_glitch # shows Chrome glitching and grays out the background
 
     # pause for transition

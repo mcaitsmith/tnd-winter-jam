@@ -6,7 +6,7 @@
 
 label scene10:
 
-    scene bg Fowler Department
+    scene bg extstore
 
     show chrome neutral at left
 
@@ -208,6 +208,7 @@ label scene10:
         $ chrome_on = False # turn off Chrome layer for glitch
         $ update_layers(0) # update layers
 
+        show bg extstore blur # blurs the background
         call start_glitch
 
         #pause for transistion 
@@ -254,6 +255,7 @@ label scene10:
 
         chrome "{i}I will improve.{/i}"
 
+        show bg extstore # unblurs the background
         call end_glitch
         $ chrome_on = True # turn on Chrome layer
         $ update_layers(0) # update layers
