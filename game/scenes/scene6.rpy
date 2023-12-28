@@ -5,8 +5,8 @@
 # The scene starts here.
 
 label scene6:
- 
-    scene bg folwer department 
+
+    scene bg extstore night
 
     show mariah neutral at right
 
@@ -20,11 +20,16 @@ label scene6:
     show chrome neutral at left with moveinleft:
         xzoom -1.0
 
-    chrome "Hello, ma’am."
+    pause 1.0
 
-    mariah "Oh great. Another Rent-a-Bot cop. I’ll tell you what I told the other one. I already answered the cops' questions. So scram."
+    show dialogue_box at center 
+    nvl show # show NVL dialogue
 
-    chrome "I think you’ve mistaken me for a lesser bot, ma’am. I’m Chrome Steele, private detective."
+    chrome_nvl_left "Hello, ma’am."
+
+    mariah_nvl_right "Oh great. Another rent-a-Bot cop. I’ll tell you what I told the other one. I already answered the cops' questions. So scram."
+
+    chrome_nvl_left "I think you’ve mistaken me for a lesser bot, ma’am. I’m Chrome Steele, private detective."
 
     show mariah confused
 
@@ -32,27 +37,39 @@ label scene6:
 
     show mariah angry 
 
-    mariah "Wait a second, I’m pretty sure there aren’t any Rent-a-Bot detectives. Pretty sure that entire line got scrapped."
+    mariah_nvl_right "Wait a second, I’m pretty sure there aren’t any Rent-a-Bot detectives. Pretty sure that entire line got scrapped."
 
     show chrome angry 
 
-    chrome "Not all of us ma’am."
+    chrome_nvl_left "Not all of us ma’am."
 
-    mariah "Fine. Whatever. The more of you (insult to robots) working on this case the faster it’s done and out of my life."
+    mariah_nvl_right "Fine. Whatever."
+    
+    mariah_nvl_right "The more of you rent-a-bots working on this case the faster it’s done and out of my life."
+
+    pause 1.0
+
+    hide dialogue_box 
 
     show chrome neutral 
 
     chrome "{i}My initial plan had been to ask about Freddy. However, I couldn’t help my curiosity from getting to me.{/i}"
 
-    chrome "{i} was designed for solving crimes and one had dropped into my lap. I could always fit some questions about Freddy at the end.{/i}"
+    chrome "{i}I was designed for solving crimes and one had dropped into my lap. I could always fit some questions about Freddy at the end.{/i}"
 
     show chrome thinking 
 
-    chrome "Would you mind answering a few of my questions about what happened over here?"
+    show dialogue_box
+
+    chrome_nvl_left "Would you mind answering a few of my questions about what happened over here?"
 
     # show visual chalk outline of the body 
 
-    mariah "Tch. Just what I need. More questions. Fine, ask them. But afterwards I want all of you (insert robot insult here) to clear off my parking lot. You hear me?"
+    mariah_nvl_right "Tch. Just what I need. More questions. Fine, ask them."
+    
+    mariah_nvl_right "But afterwards I want all of you rent-a-bots to clear off my parking lot. You hear me?"
+
+    hide dialogue_box
 
     chrome "{i}The air around Mariah Fowler rises in tension. She’s clearly looking for a fight, ready to defend herself.{/i}"
 
@@ -71,71 +88,94 @@ label scene6:
 
     label scene6_hardboiled:
 
-        chrome "Yeah, because you’re doing a whole lot just standing out here glowering at everyone. Look lady, just answer a few of my questions and we both can get on with our day."
+        show dialogue_box
 
-        mariah "I don’t need to take that from a tin can."
+        chrome_nvl_left "Yeah, because you’re doing a whole lot just standing out here glowering at everyone."
+        
+        chrome_nvl_left "Look lady, just answer a few of my questions and we both can get on with our day."
+
+        mariah_nvl_right "I don’t need to take that from a tin can."
         
         show chrome angry
 
-        chrome "Sure, lady. Blah, blah, blah, Rent-a-cops. Just tell me about our victim. I don’t got all day, either."
+        chrome_nvl_left "Sure, lady. Blah, blah, blah, Rent-a-cops. Just tell me about our victim. I don’t got all day, either."
 
-        mariah "Tch, just what I need. A Tin Can with an attitude snooping around."
+        mariah_nvl_right "Tch, just what I need. A Tin Can with an attitude snooping around."
 
-        mariah "His name’s Larry. He’s an elf at Santa’s workshop."
+        mariah_nvl_right "His name’s Larry. He’s an elf at Santa’s workshop."
 
-        show larry dead at center with dissolve
+        #hide dialogue_box
+
+        #show larry dead at center with dissolve
         
-        pause 0.5
+        #pause 0.5
         
-        hide larry dead at center with dissolve
+        #hide larry dead at center with dissolve
 
-        chrome "And what did Larry do that got him a permanent red slip."
+        #show dialogue_box
 
-        mariah "Well, it’s not like I did it! I was in my office when I heard people shouting. When I ran out here, I found Larry dead on the ground."
+        chrome_nvl_left "And what did Larry do that got him a permanent red slip?"
 
-        mariah "You’d know all of this if you just asked one of the cops over there. Now stop wasting my time."
+        mariah_nvl_right "Well, it’s not like I did it! I was in my office when I heard people shouting."
+        
+        mariah_nvl_right "When I ran out here, I found Larry dead on the ground."
+
+        mariah_nvl_right "You’d know all of this if you just asked one of the cops over there. Now stop wasting my time."
+
+        hide dialogue_box
 
         chrome "{i} Well, it looks like Larry is a deadend. Fine, I shouldn’t be messing around with a crime scene, anyways. I’ll move on to my actual job.{/i}"
 
         show chrome thinking 
 
-        chrome "Well, that’s fine. No need to aggravate a lady with such a delicate physique."
+        show dialogue_box
 
-        chrome "Then let’s ask about someone else. What do you know about a Freddy Fontaine."
+        chrome_nvl_left "Well, that’s fine. No need to aggravate a lady with such a delicate physique."
+
+        chrome_nvl_left "Then let’s ask about someone else. What do you know about a Freddy Fontaine."
 
         show mariah confused 
 
-        mariah "Freddy?"
+        mariah_nvl_right "Freddy?"
 
         show mariah angry 
 
-        mariah "I can tell you that he’s a no show. Today was supposed to be his last day, but he hasn’t shown up for his shift."
+        mariah_nvl_right "I can tell you that he’s a no show."
+        
+        mariah_nvl_right "Today was supposed to be his last day, but he hasn’t shown up for his shift."
 
         show chrome neutral 
 
-        chrome "And what does Freddy do at Fowler’s?"
+        chrome_nvl_left "And what does Freddy do at Fowler’s?"
 
-        mariah "He’s a Santa. He does Santa stuff. Look it up in that fancy database in your head."
+        mariah_nvl_right "He’s a Santa. He does Santa stuff. Look it up in that fancy database in your head."
+
+        hide dialogue_box
 
         chrome "{i}A mall Santa. That’s Freddy’s secret. Well, that’s disappointing.{/i}"
 
         chrome "{i}All of this work, all of Bianca’s worry, all because Freddy was too prideful to tell his daughter he was working a dead-end job.{/i}"
 
         show mariah neutral 
+        
+        show dialogue_box
 
-        mariah "Actually, now that you bring him up. You should probably look for Freddy. Yeah, he’s probably the one that did this."
+        mariah_nvl_right "Actually, now that you bring him up. You should probably look for Freddy. Yeah, he’s probably the one that did this."
 
         show chrome thinking 
 
-        chrome "That’s a rather sudden jump in logic."
+        chrome_nvl_left "That’s a rather sudden jump in logic."
 
-        mariah "Maybe for a tin can like you. But Freddy and Larry were thick as thieves. Until this week, that is."
+        mariah_nvl_right "Maybe for a tin can like you. But Freddy and Larry were thick as thieves. Until this week, that is."
 
-        mariah "The two of them apparently had a falling out. Which probably led to poor Larry’s death."
+        mariah_nvl_right "The two of them apparently had a falling out. Which probably led to poor Larry’s death."
 
         show chrome neutral 
 
-        chrome "Well, I’ll look into it."
+        chrome_nvl_left "Well, I’ll look into it."
+
+        hide dialogue_box
+        nvl clear
 
         chrome "{i}What a twist. This was supposed to be a simple missing person’s case, but now I have a murder intertwined to it.{/i}"
 
@@ -143,83 +183,102 @@ label scene6:
 
         chrome "{i}I should take another look around and see if I can’t find more information.{/i}"
 
+
         jump scene6_postchoice
 
     label scene6_logical: 
 
-        chrome "The owner of the store standing in front of a crime scene. If this was just another crime there would be no need for your attention."
+        show dialogue_box
 
-        chrome "Which means this crime has to do with the store. An employee, perhaps?"
+        chrome_nvl_left "The owner of the store standing in front of a crime scene. If this was just another crime there would be no need for your attention."
+
+        chrome_nvl_left "Which means this crime has to do with the store. An employee, perhaps?"
 
         show mariah angry 
 
-        mariah "Well, no shit sherlock. I wouldn’t be standing out here in the cold if I wasn’t invested."
+        mariah_nvl_right "Well, no shit sherlock. I wouldn’t be standing out here in the cold if I wasn’t invested."
 
         show chrome neutral 
 
-        chrome "Yeah, yeah. Just tell me about our victim."
+        chrome_nvl_left "Yeah, yeah. Just tell me about our victim."
 
-        mariah "His name is Larry Moss. He’s an elf that works at one of Santa’s workshop. Well, he was."
+        mariah_nvl_right "His name is Larry Moss. He’s an elf that works at one of Santa’s workshop. Well, he was."
 
-        show larry dead at center with dissolve
+        #hide dialogue_box
+
+        #show larry dead at center with dissolve
         
-        pause 0.5
+        #pause 0.5
         
-        hide larry dead at center with dissolve
+        #hide larry dead at center with dissolve
 
-        chrome "Did he have any enemies that could have done this?"
+        #show dialogue_box
 
-        mariah "Yeah, Rudolph hated being picked on by an elf!"
+        chrome_nvl_left "Did he have any enemies that could have done this?"
 
-        mariah "I don’t keep track of my employees relationships. I have better things to do than micromanage every employee."
+        mariah_nvl_right "Yeah, Rudolph hated being picked on by an elf!"
 
-        mariah "All I know was that I heard shouting and when I came out here, Larry was lying dead on the ground."
+        mariah_nvl_right "I don’t keep track of my employees relationships. I have better things to do than micromanage every employee."
 
-        mariah "If you want to know more, just ask the other Rent-a-Bot cops. I’m done with this."
+        mariah_nvl_right "All I know was that I heard shouting and when I came out here, Larry was lying dead on the ground."
+
+        mariah_nvl_right "If you want to know more, just ask the other Rent-a-Bot cops. I’m done with this."
+
+        hide dialogue_box
 
         chrome "{i}Well, looks like if I want to know more I’ll need to ask one of the cops. But that’s fine, I can move on to my actual job.{/i}"
 
+        show dialogue_box
+
         show chrome thinking 
 
-        chrome "Well, then I would like to expand my questioning to a person of interest. What can you tell me about Freddy?"
+        chrome_nvl_left "Well, then I would like to expand my questioning to a person of interest. What can you tell me about Freddy?"
 
         show mariah confused
 
-        mariah "Freddy?"
+        mariah_nvl_right "Freddy?"
 
         show mariah angry 
 
-        mariah "That idiot was a no show. He’s supposed to be the Santa that works with Larry."
+        mariah_nvl_right "That idiot was a no show. He’s supposed to be the Santa that works with Larry."
+
+        hide dialogue_box
 
         chrome "{i}Well, looks like I found Freddy’s secret destination. He was working as a Mall Santa. Demeaning job. Probably kept a secret from Bianca due to embarrassment. {/i}"
 
+        show dialogue_box
+       
         show chrome neutral 
 
-        chrome "I see."
+        chrome_nvl_left "I see."
 
         show mariah neutral
 
-        mariah "However, he’s been talking about quitting. Said that he couldn’t handle the job anymore. I thought he just flaked out."
+        mariah_nvl_right "However, he’s been talking about quitting. Said that he couldn’t handle the job anymore. I thought he just flaked out."
 
         show chrome thinking
 
-        chrome "So he’s Larry’s direct coworker? I assume that the two of them spoke often."
+        chrome_nvl_left "So he’s Larry’s direct coworker? I assume that the two of them spoke often."
 
         show mariah angry 
 
-        mariah "Yeah, the two of them were thick as thieves. Except for this final week… Yeah…"
+        mariah_nvl_right "Yeah, the two of them were thick as thieves. Except for this final week… Yeah…"
 
         show mariah neutral 
 
-        mariah "You should look into him. The only person that really talked with Larry was Freddy. If anyone would have a reason to kill Larry, it would be Freddy."
+        mariah_nvl_right "You should look into him. The only person that really talked with Larry was Freddy."
+        
+        mariah_nvl_right "If anyone would have a reason to kill Larry, it would be Freddy."
 
         show mariah angry 
 
-        mariah "Now get out of my face. I’ve had enough of you Rent-a-Bots."
+        mariah_nvl_right "Now get out of my face. I’ve had enough of you Rent-a-Bots."
 
         show chrome neutral 
 
-        chrome "I’ll leave you alone for now."
+        chrome_nvl_left "I’ll leave you alone for now."
+
+        hide dialogue_box
 
         chrome "{i}Well, this mystery has become a lot more complicated. No, I need more information before I make any conclusions.{/i}"
 
@@ -228,63 +287,90 @@ label scene6:
 
     label scene6_unassuming:
 
-        chrome "Sorry, sorry. This entire thing has probably been an unpleasant surprise, like actually getting coal in the stocking, you know."
+        show dialogue_box
 
-        chrome "Just… do you think you could just run me through what happened, one last time."
+        chrome_nvl_left "Sorry, sorry. This entire thing has probably been an unpleasant surprise, like actually getting coal in the stocking, you know."
+
+        chrome_nvl_left "Just… do you think you could just run me through what happened, one last time."
 
         show mariah neutral 
 
-        mariah "It’s been a shitshow. Not only do I have to deal with the falling sales, but now I have to deal with all of these jokers gawking instead of shopping."
+        mariah_nvl_right "It’s been a shitshow."
 
-        chrome "It’s like a car crash. People will slow down just to look at it. Not in a helpful way or anything. They’re just slowing down traffic to see what happened."
+        mariah_nvl_right "Not only do I have to deal with the falling sales, but now I have to deal with all of these jokers gawking instead of shopping."
 
-        mariah "Exactly! It doesn’t matter if they’re inconveniencing a bunch of people, it’s more important that they get a glimpse of a tragedy."
+        chrome_nvl_left "It’s like a car crash. People will slow down just to look at it. Not in a helpful way or anything. They’re just slowing down traffic to see what happened."
 
-        mariah "Tch, the real tragedy is going to happen in a few months when I need to close."
-
-        chrome "Mmm. But about the body…"
-
-        mariah "Right. The guy who died is Larry Moss. He’s a seasonal hire. Little guy, kind of a sad sack."
-
-        mariah "We threw him in one of the elf costumes and put him in one of the Santa’s workshops."
-
-        show larry dead at center with dissolve
+        mariah_nvl_right "Exactly!"
         
-        pause 0.5
-        
-        hide larry dead at center with dissolve
+        mariah_nvl_right "It doesn’t matter if they’re inconveniencing a bunch of people, it’s more important that they get a glimpse of a tragedy."
 
-        chrome "Geez, I knew that Santa ran a tight ship, but I didn’t think he ran it so tight that he’d off one of his elves."
+        mariah_nvl_right "Tch, the real tragedy is going to happen in a few months when I need to close."
+
+        chrome_nvl_left "Mmm. But about the body…"
+
+        mariah_nvl_right "Right. The guy who died is Larry Moss. He’s a seasonal hire. Little guy, kind of a sad sack."
+
+        mariah_nvl_right "We threw him in one of the elf costumes and put him in one of the Santa’s workshops."
+
+        #hide dialogue_box
+
+        #show larry dead at center with dissolve
+        
+        #pause 0.5
+        
+        #hide larry dead at center with dissolve
+
+        #show dialogue_box
+
+        chrome_nvl_left "Geez, I knew that Santa ran a tight ship, but I didn’t think he ran it so tight that he’d off one of his elves."
 
         show mariah confused
 
-        mariah "You think one of the Santa’s killed him for talking?"
+        mariah_nvl_right "You think one of the Santa’s killed him for talking?"
 
         show chrome shocked 
 
-        chrome "What? No. Just a joke."
+        chrome_nvl_left "What? No. Just a joke."
 
         show mariah neutral 
 
-        mariah "Right. Right. A joke. But I can’t really think of anyone that would kill ol’ Larry. He was a bit of a bore, but he kept to himself. Well, I guess he had to talk to Freddy."
+        mariah_nvl_right "Right. Right. A joke."
+        
+        mariah_nvl_right "But I can’t really think of anyone that would kill ol’ Larry."
+        
+        mariah_nvl_right "He was a bit of a bore, but he kept to himself. Well, I guess he had to talk to Freddy."
+
+        hide dialogue_box
 
         chrome "{i}And suddenly I was reminded about my original job. As interesting as this mystery murder is, I was supposed to find Bianca’s father.{/i}"
 
-        chrome "Freddy? Is that someone that worked here?"
+        show dialogue_box
+
+        chrome_nvl_left "Freddy? Is that someone that worked here?"
 
         show mariah confused
 
-        mariah "What? I mean, yes. Freddy did work here. But not anymore. Today was supposed to be his last day, but he’s gone now. Just left early."
+        mariah_nvl_right "What? I mean, yes. Freddy did work here. But not anymore."
+        
+        mariah_nvl_right "Today was supposed to be his last day, but he’s gone now. Just left early."
 
         show chrome neutral
 
-        chrome "Well, that’s not suspicious"
+        chrome_nvl_left "Well, that’s not suspicious"
 
         show mariah neutral 
 
-        mariah "Yes… it is suspicious. The two of them were close, but I heard that they had a falling out this week. Maybe, you should go check that out."
+        mariah_nvl_right "Yes… it is suspicious. The two of them were close, but I heard that they had a falling out this week."
+        
+        mariah_nvl_right "Maybe, you should go check that out."
+
+        hide dialogue_box
+        nvl clear
 
         hide mariah neutral with dissolve
+        
+        show bg extstore night blur # blurs the background
 
         call start_glitch
 
@@ -336,6 +422,7 @@ label scene6:
 
         chrome "{i}That’s the nature of the beast. First, they blamed us androids for sowing Cane’s demise. Then they blamed Cane for extinguishing our own.{/i}"
 
+        show bg extstore night # unblurs the background
         call end_glitch
 
         $ glitch_counter +=1 # increment glitch counter

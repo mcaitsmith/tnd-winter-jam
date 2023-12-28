@@ -19,6 +19,8 @@ define mariah_nvl_left = Character("Mariah Fowler", color="#dbd839", image="mari
 define mariah_nvl_right = Character("Mariah Fowler", color="#dbd839", image="mariah", kind=nvl, what_text_align=1, who_text_align=1)
 define cop = Character("Generic Cop", color="#2d30d9", image="cop")
 define santa = Character("Robot Santa", color="#ff0000", image="santa")
+define santa_nvl_left = Character("Robot Santa", color="#ff0000", image="santa", kind=nvl)
+define santa_nvl_right = Character("Robot Santa", color="#ff0000", image="santa", kind=nvl, what_text_align=1, who_text_align=1)
 define santa1 = Character("Robot Santa", color="#ff0000", image="santa")
 define santa2 = Character("Robot Santa", color="#ff0000", image="santa")
 define figure = Character("Figure", color="#a5a5a5", image="chrome")
@@ -97,24 +99,26 @@ image santaboots = "props/santaclothes.png"
 image santaclothes = "props/santaclothes.png"
 image santa toy = "props/santatoy.png"
 
-
 # define location images
 image bg office = "backgrounds/bg office.png"
 image bg office blur = im.Blur("backgrounds/bg office.png", 1.5) # blurred version
 image bg office night = "backgrounds/bg office night.png"
+image bg office night blur = im.Blur("backgrounds/bg office night.png", 1.5) # blurred version
 image bg alley = "backgrounds/bg alley.png"
+image bg alley blur = im.Blur("backgrounds/bg alley.png", 1.5) # blurred version
 image bg bar = "backgrounds/bg bar.png"
+image bg bar blur = im.Blur("backgrounds/bg bar.png", 1.5) # blurred version
 image bg rooftop night = "backgrounds/bg rooftop night.png"
+image bg rooftop night blur = im.Blur("backgrounds/bg rooftop night.png", 1.5) # blurred version
 image bg extstore = "backgrounds/bg extstore.png"
+image bg extstore blur = im.Blur("backgrounds/bg extstore.png", 1.5) # blurred version
 image bg extstore night = "backgrounds/bg extstore night.png"
+image bg extstore night blur = im.Blur("backgrounds/bg extstore night.png", 1.5) # blurred version
 image bg freddyoffice = "backgrounds/bg freddyoffice.png"
 image bg freddyoffice blur = im.Blur("backgrounds/bg freddyoffice.png", 1.5) # blurred version
 image bg mariahoffice = "backgrounds/bg mariahoffice.png"
-# image bg extstore = "bg extstore.png" # placeholder until we get asset
-# image bg bar = "bg bar.png" # placeholder until we get asset
-# image bg bar blur = im.Blur("bg bar.png", 1.5) # blurred version - placeholder until we get asset
 
-# define sound effects
+# define sound effects & music
 define sfx_clatter = "audio/sfx/Clatter_SantaSecret_SFX.wav"
 define sfx_door = "audio/sfx/Door_SantaSecret_SFX.wav"
 define sfx_footsteps = "audio/sfx/FootSteps_SantaSecret_SFX.wav"
@@ -125,6 +129,7 @@ define sfx_punch = "audio/sfx/Punch_SantaSecret_SFX.wav"
 define sfx_rattle = "audio/sfx/Rattle_SantaSecret_SFX.wav"
 define sfx_santabeepscan = "audio/sfx/SantaBeepScan_SantaSecret_SFX.wav"
 define sfx_breakmetaltoy = "audio/sfx/BreakMetalToy_SantaSecret_SFX.wav"
+define bar_music = "audio/jazz_for_andrea_2.wav"
 
 init python:
     # define music channels
