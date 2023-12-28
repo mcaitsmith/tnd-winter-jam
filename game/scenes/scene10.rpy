@@ -8,7 +8,8 @@ label scene10:
 
     scene bg extstore
 
-    show chrome neutral at left
+    show chrome neutral at left:
+        xzoom -1.0
 
     show cop neutral at right
 
@@ -37,24 +38,30 @@ label scene10:
 
     # show santa angry
 
-    santa "I don’t have anything for you."
+    show dialogue_box
+    nvl show 
 
-    show chrome neutral:
-        xzoom -1.0
+    santa_nvl_right "I don’t have anything for you."
     
-    chrome "I haven’t said anything yet."
+    chrome_nvl_left "I haven’t said anything yet."
 
-    santa "Yeah, and unless you got a donation, then I won’t have anything else to say either. So beat it."
+    santa_nvl_right "Yeah, and unless you got a donation, then I won’t have anything else to say either. So beat it."
+
+    hide dialogue_box
 
     chrome "{i}Figures. Squeaky wheel gets the grease. Better put this one on the company card.{/i}"
 
-    chrome "Fine, here’s your donation."
+    show dialogue_box
+
+    chrome_nvl_left "Fine, here’s your donation."
 
     play sound sfx_santabeepscan
 
     show santa  
 
-    santa "Was that so hard detective? Now whatever it is hurry up. I got a lot of sitting around doing nothin to do."
+    santa_nvl_right "Was that so hard detective? Now whatever it is hurry up. I got a lot of sitting around doing nothin to do."
+
+    hide dialogue_box
 
     chrome "{i}At a glance, he seems unimpressive. My scans show his programming model is old fashioned, processor still runs on 32 bit.{/i}"
     chrome "{i}Runing on cheap batteries and even having an actual ON/OFF switch, he must be one of the earliest Android models around. Frame is well taken care of though, better than mine even.{/i}"
@@ -63,8 +70,6 @@ label scene10:
     chrome "{i}He’s more liable to push them back in my face than go along with it. I gotta keep it short and sweet, stick to the facts.{/i}"
 
     # CHOICE
-
-    santa "Well? Your circuits fried or something?"
 
     menu: 
         santa "Well? Your circuits fried or something?"
@@ -80,37 +85,45 @@ label scene10:
     label scene10_unassuming:
         # Boring Night
 
-        chrome "Guy like you must not have much to do on nights like this, huh?"
+        show dialogue_box
 
-        santa "As long as the donations are coming in, I’m happy."
+        chrome_nvl_left "Guy like you must not have much to do on nights like this, huh?"
 
-        chrome "Sure, sure. But don’t you ever get bored? Look for your own fun?"
+        santa_nvl_right "As long as the donations are coming in, I’m happy."
 
-        santa "I’m an android. Model EZMK-2512. They didn’t exactly code the need for a good time into my programming."
+        chrome_nvl_left "Sure, sure. But don’t you ever get bored? Look for your own fun?"
 
-        chrome "So you’re fine with just sittin’ here?"
+        santa_nvl_right "I’m an android. Model EZMK-2512. They didn’t exactly code the need for a good time into my programming."
 
-        santa "Sittin’ here and collecting donations, yeah."
+        chrome_nvl_left "So you’re fine with just sittin’ here?"
 
-        chrome "What’re the donations for?"
+        santa_nvl_right "Sittin’ here and collecting donations, yeah."
 
-        santa "For the kids, or the poor, or whatever. Fowler’s the one who organizes the donation drives, I just collect the money."
+        chrome_nvl_left "What’re the donations for?"
 
-        chrome "Ah, I see. They don’t tell you much about the whole operation?"
+        santa_nvl_right "For the kids, or the poor, or whatever. Fowler’s the one who organizes the donation drives, I just collect the money."
 
-        santa "They tell me as much as I gotta know. I get paid to sit pretty and make nice with the kids that pass by and want to meet Santa. Pretty good gig to me."
+        chrome_nvl_left "Ah, I see. They don’t tell you much about the whole operation?"
 
-        chrome "That want to meet Robot Santa?"
+        santa_nvl_right "They tell me as much as I gotta know. I get paid to sit pretty and make nice with the kids that pass by and want to meet Santa. Pretty good gig to me."
+
+        chrome_nvl_left "That want to meet Robot Santa?"
 
         # show santa happy
 
-        santa "You act like there’s a better alternative than the shiny steel St. Nick."
+        santa_nvl_right "You act like there’s a better alternative than the shiny steel St. Nick."
+
+        hide dialogue_box
 
         chrome "{i}This is going nowhere, But there is one other question I could ask… {/i}"
 
-        chrome "Did you happen to see anything happen here? Regarding the murder I mean?"
+        show dialogue_box
 
-        santa "Finally. I figured that would be the first place you went, but there’s no accounting for people’s time in your profession is there?"
+        chrome_nvl_left "Did you happen to see anything happen here? Regarding the murder I mean?"
+
+        santa_nvl_right "Finally. I figured that would be the first place you went, but there’s no accounting for people’s time in your profession is there?"
+
+        hide dialogue_box
 
         jump scene10_postchoice
 
@@ -119,47 +132,55 @@ label scene10:
 
         # Behaviours 
 
-        chrome "Have you noticed any strange behaviors recently? Regulars acting out of character, more commotion at odd times of night, that sort of thing?"
+        show dialogue_box
+
+        chrome_nvl_left "Have you noticed any strange behaviors recently? Regulars acting out of character, more commotion at odd times of night, that sort of thing?"
 
         # show santa happy 
         
-        santa "You kidding me? Humans are strange beings, detective. Not a day goes by where I don’t question why they do the things that they do."
+        santa_nvl_right "You kidding me? Humans are strange beings, detective. Not a day goes by where I don’t question why they do the things that they do."
 
         show chrome neutral # was frowning unsure what this should be? 
         
-        chrome "Sure, but you’ve been sitting on this block for how long? That’s normal everyday human activities."
+        chrome_nvl_left "Sure, but you’ve been sitting on this block for how long? That’s normal everyday human activities."
     
-        chrome "I’m talking about the truly strange, the {i}stuff{/i} that they try to hide."
+        chrome_nvl_left "I’m talking about the truly strange, the {i}stuff{/i} that they try to hide."
 
         # show santa neutral 
         
-        santa "A kid threw up on another kid. That was pretty odd."
+        santa_nvl_right "A kid threw up on another kid. That was pretty odd."
         
-        chrome "Stop the presses, we got the story of the month."
+        chrome_nvl_left "Stop the presses, we got the story of the month."
 
         #show santa angry 
 
-        santa "Well then be more specific! What are you looking for detective?"
+        santa_nvl_right "Well then be more specific! What are you looking for detective?"
 
         #insert santa angry
 
-        chrome "Think man! What about the employees? The elf, Larry? Notice anything off about him?"
+        chrome_nvl_left "Think man! What about the employees? The elf, Larry? Notice anything off about him?"
 
         #show santa neutral 
 
-        santa "His arms were too short for his torso and his face was too long. I know he talked with Freddy sometimes, that’s it."
+        santa_nvl_right "His arms were too short for his torso and his face was too long. I know he talked with Freddy sometimes, that’s it."
 
         show chrome neutral 
 
-        chrome "Were they good friends? Any arguments or anything?"
+        chrome_nvl_left "Were they good friends? Any arguments or anything?"
 
-        santa "I’m not familiar with the relationships of every human here at this department store detective. You’re not asking me the right question here."
+        santa_nvl_right "I’m not familiar with the relationships of every human here at this department store detective. You’re not asking me the right question here."
+
+        hide dialogue_box
 
         chrome "{i}Nothing useful. But there is one other question I could ask… {/i}"
 
-        chrome "Did you happen to see anything happen here? Regarding the murder I mean?"
+        show dialogue_box
 
-        santa "Finally. I figured that would be the first place you went, but there’s no accounting for people’s time in your profession is there?"
+        chrome_nvl_left "Did you happen to see anything happen here? Regarding the murder I mean?"
+
+        santa_nvl_right "Finally. I figured that would be the first place you went, but there’s no accounting for people’s time in your profession is there?"
+
+        hide dialogue_box
 
         jump scene10_postchoice
 
@@ -167,37 +188,56 @@ label scene10:
 
         # Surveillance 
 
-        chrome "Are you stationed here often?"
+        show dialogue_box
 
-        santa "Every Monday to Friday until 5 PM, then that asshole Freddy is supposed to take over."
+        chrome_nvl_left "Are you stationed here often?"
 
-        santa "Ever since he left though? I’m waiting an hour, sometimes two for the next schmuck to take over."
+        santa_nvl_right "Every Monday to Friday until 5 PM, then that asshole Freddy is supposed to take over."
 
-        chrome "If you’re here that often, then it’s safe to assume you saw something, didn’t you?"
+        santa_nvl_right "Ever since he left though? I’m waiting an hour, sometimes two for the next schmuck to take over."
+
+        chrome_nvl_left "If you’re here that often, then it’s safe to assume you saw something, didn’t you?"
 
         #show santa happy
 
-        santa "Maybe I did. Could you be more specific?"
+        santa_nvl_right "Maybe I did. Could you be more specific?"
 
-        chrome "When’s the last time you saw Mr. Fontaine?"
+        chrome_nvl_left "When’s the last time you saw Mr. Fontaine?"
 
-        santa "Well, I guess it’d be shortly before the murder happened"
+        santa_nvl_right "Well, I guess it’d be shortly before the murder happened"
 
         show chrome shocked
 
-        chrome "Did you see it happen?"
+        chrome_nvl_left "Did you see it happen?"
 
-        santa "Not sure really, but I saw somethin’."
+        santa_nvl_right "Not sure really, but I saw somethin’."
 
-        chrome "Well then? What did you see?"
+        chrome_nvl_left "Well then? What did you see?"
+
+        hide dialogue_box
 
         chrome "{i}The android shakes his head.{/i}"
 
-        santa "Nope, not yet. I got a question for you first. You saw me here before, when you first did your questioning. You didn’t think I had something useful?"
+        show dialogue_box
+
+        santa_nvl_right "Nope, not yet. I got a question for you first."
+        
+        santa_nvl_right "You saw me here before, when you first did your questioning."
+        
+        santa_nvl_right "You didn’t think I had something useful?"
+
+        hide dialogue_box
 
         chrome "{i}“I didn’t have a response. The android Santa looked me over, clearly enjoying my indecision.{/i}"
 
-        santa "All that new tech and AI training and you didn’t think of the obvious did you? I might be an earlier model than you, but our CPUs are still compatible."
+        show dialogue_box
+
+        santa_nvl_right "All that new tech and AI training and you didn’t think of the obvious did you?"
+        
+        santa_nvl_right "I might be an earlier model than you, but our CPUs are still compatible."
+
+        hide dialogue_box
+        
 
         ######### GLITCH 005- Something regarding video feeds or snow, or that missing clue that would’ve helped to find Forrest Cane.
 
@@ -284,11 +324,21 @@ label scene10:
 
         chrome "{i}As I begin to speak again, the android interrupts me.{/i}"
 
-        santa "If you notice, there’s cameras all over the place. They would have easily captured what I saw, but I heard from the dimwit cop over there that someone trashed the CCTV."
+        show dialogue_box
+
+        santa_nvl_right "If you notice, there’s cameras all over the place."
+
+        santa_nvl_right "They would have easily captured what I saw, but I heard from the dimwit cop over there that someone trashed the CCTV."
+
+        hide dialogue_box
 
         chrome "{i}The android pulled something small and thin out of the top of his head. A Hyman drive, meant for storing short term memory on an external device.{/i}"
 
-        santa "So, I’m your only option here. Take this and see what I saw that night."
+        show dialogue_box
+
+        santa_nvl_right "So, I’m your only option here. Take this and see what I saw that night."
+
+        hide dialogue_box
 
         chrome "{i}Slowly, I reached for the drive and looked it over in my palm. Typically, sticking something a stranger gave me into my CPU was an ill-advised decision.{/i}"
 
@@ -393,11 +443,16 @@ label scene10:
 
         chrome "{i}Freddy’s actions also didn’t seem like those of a killer. Did he know he was being watched? If he didn’t, then why run? None of it made any sense.{/i}"
 
-        santa "So? What do you think? Pretty interesting, wouldn’t you say?"
+        show dialogue_box
 
-        chrome "You should have shown me this earlier."
+        santa_nvl_right "So? What do you think? Pretty interesting, wouldn’t you say?"
 
-        santa "And you should’ve asked."
+        chrome_nvl_left "You should have shown me this earlier."
+
+        santa_nvl_right "And you should’ve asked."
+
+        hide dialogue_box
+        nvl clear
 
         chrome "{i}He wasn’t wrong. If I had asked him sooner, I might be farther along in this case.{/i}"
 
