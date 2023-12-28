@@ -4,7 +4,7 @@
 
 label scene8:
 
-    scene extstore
+    scene bg extstore
 
     show chrome neutral at left:
         xzoom -1.0 
