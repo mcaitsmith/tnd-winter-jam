@@ -18,7 +18,9 @@ label scene12:
 
     chrome sad "For me."
 
-    # sound effect: a clatter, or a cough, or a scuffle sound
+    play sound sfx_impactmetal
+
+    pause 1.0
 
     chrome neutral "Freddy? Is that you?"
 
@@ -89,7 +91,7 @@ label hardboiled12:
 
     freddy angry "I’d say you’ve got a bleeding heart but I know you androids don’t have souls."
 
-    #VISUAL screen shake
+    show bg rooftop night with hpunch
 
     chrome hardboiled "Shut. Up."
 
