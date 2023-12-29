@@ -23,33 +23,37 @@ label scene7:
         "Logical":
             #programming - ideal choice += 1
 
-            chrome logical "Hello, sir. I’m looking for Freddy Fontaine–"
+            show dialogue_box at center 
+            nvl show # show NVL dialogue
 
-            cop neutral "You’re not the only one."
+            chrome_nvl_right logical "Hello, sir. I’m looking for Freddy Fontaine–"
 
-            chrome logical "Hmm. And this poor sap?"
+            cop_nvl_left neutral "You’re not the only one."
 
-            cop neutral "That’s the funny thing. Larry the Elf here.. he worked with Freddy the Santa."
+            chrome_nvl_right logical "Hmm. And this poor sap?"
+
+            cop_nvl_left neutral "That’s the funny thing. Larry the Elf here.. he worked with Freddy the Santa."
             
-            cop neutral "Looks to me like a simple heart attack. Open and shut case."
+            cop_nvl_left neutral "Looks to me like a simple heart attack. Open and shut case."
 
-            chrome logical "You don't say? As I can see..."
+            chrome_nvl_right logical "You don't say? As I can see..."
 
-            chrome logical "Freddy’s clearly a suspect, but why? A heart attack is a natural cause of death, sure it can be induced in the victim by an outside force but not easily. Body is cold and already undergone rigor mortis, suggesting a time of death in the dead of night." 
+            chrome_nvl_right logical "Freddy’s clearly a suspect, but why? A heart attack is a natural cause of death, sure it can be induced in the victim by an outside force but not easily. Body is cold and already undergone rigor mortis, suggesting a time of death in the dead of night." 
 
-            chrome logical "Freddy has an immediate relationship with the victim, perhaps there’s a personal motive? And why here at their place of work? Certainly he knew this would paint him as a suspect?"
+            chrome_nvl_right logical "Freddy has an immediate relationship with the victim, perhaps there’s a personal motive? And why here at their place of work? Certainly he knew this would paint him as a suspect?"
         
-            cop angry "Uhh... Earth to metalhead? Am I interrupting you?"
+            cop_nvl_left angry "Uhh... Earth to metalhead? Am I interrupting you?"
 
-            chrome logical "Yes, you are. What is it?"
+            chrome_nvl_right logical "Yes, you are. What is it?"
 
-            cop neutral "We figured all that out already. Freddy was present at the scene according to our witness."
+            cop_nvl_left neutral "We figured all that out already. Freddy was present at the scene according to our witness."
 
-            chrome confused "Come again?"
+            chrome_nvl_right confused "Come again?"
 
-            cop neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction."
+            cop_nvl_left neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction."
 
-            chrome logical "Very interesting. Thanks."
+            hide dialogue_box
+            nvl clear 
 
             chrome "{i}Seems like Mariah didn't tell me the whole story - {/i}"
 
@@ -61,7 +65,7 @@ label scene7:
 
             $ chrome_on = False # turn off Chrome layer for glitch
             $ update_layers(0) # update layers
-            # show bg alley blur # blurs the background
+            show bg alley blur # blurs the background
             call start_glitch # shows Chrome glitching and grays out the background
 
             # pause for transition
@@ -122,58 +126,70 @@ label scene7:
 
             # hide chrome
             # show chrome angry at right
-            show cop neutral at left
+            
 
     #Option Three: (Unassuming)
         "Unassuming":
 
-            cop neutral "Alley’s closed."
+            show dialogue_box at center 
+            nvl show # show NVL dialogue
 
-            chrome unassuming "Oh, I work across the street."
+            cop_nvl_left neutral "Alley’s closed."
 
-            cop neutral "Where?"
+            chrome_nvl_right unassuming "Oh, I work across the street."
 
-            chrome thinking "..."
+            cop_nvl_left neutral "Where?"
 
-            cop neutral "..."
+            chrome_nvl_right thinking "..."
 
-            chrome thinking "..."
+            cop_nvl_left neutral "..."
 
-            chrome hardboiled "Over there."
+            chrome_nvl_right thinking "..."
 
-            cop shocked "In that boarded up bail bonds office?"
+            chrome_nvl_right hardboiled "Over there."
 
-            cop angry "This is an active crime scene. Get outta here!"
+            cop_nvl_left shocked "In that boarded up bail bonds office?"
 
-            chrome angry "..."
+            cop_nvl_left angry "This is an active crime scene. Get outta here!"
 
-            chrome logical "Under code 2034.44 You, sir, are interfering with the duties of a certified bail bonds agent…" 
+            chrome_nvl_right angry "..."
+
+            chrome_nvl_right logical "Under code 2034.44 You, sir, are interfering with the duties of a certified bail bonds agent…" 
 
             show cop angry
 
-            chrome unassuming "Would you like me to report THAT to your superior?"
+            chrome_nvl_right unassuming "Would you like me to report THAT to your superior?"
 
-            cop angry  "Fine. Go through"
+            cop_nvl_left angry  "Fine. Go through"
+
+            hide dialogue_box
+            nvl clear 
 
      # Option One: (hardboiled)
         "Hardboiled":
+        
+            show dialogue_box at center 
+            nvl show # show NVL dialogue
 
-            chrome hardboiled "Heyo, buddy boy! I’m looking for Freddy Font–"
+            chrome_nvl_right hardboiled "Heyo, buddy boy! I’m looking for Freddy Font–"
 
-            cop angry "Yeah? You and me both."
+            cop_nvl_left angry "Yeah? You and me both."
 
-            chrome shocked "Excuse me?"
+            chrome_nvl_right shocked "Excuse me?"
 
-            cop angry "He’s a person of interest- might even say a suspect."
+            cop_nvl_left angry "He’s a person of interest- might even say a suspect."
 
-            chrome angry "Really?"
+            chrome_nvl_right angry "Really?"
 
-            cop angry "That woman right over there, found this poor schmuck dead as a doornail."
+            cop_nvl_left angry "That woman right over there, found this poor schmuck dead as a doornail."
 
-            cop angry "Combine that with the fact Freddy didn’t show up today, his last day…"
+            cop_nvl_left angry "Combine that with the fact Freddy didn’t show up today, his last day…"
 
-            chrome confused "Hm. Something seems fishy…"
+            chrome_nvl_right confused "Hm. Something seems fishy…"
 
-            cop angry "The only thing fishy ‘round here is you! Now giddy up Jingle Horse and get the fuck out of my active crime scene!"
+            cop_nvl_left angry "The only thing fishy ‘round here is you! Now giddy up Jingle Horse and get the fuck out of my active crime scene!"
+
+            hide dialogue_box
+            nvl clear 
 
    jump scene8

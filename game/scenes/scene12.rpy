@@ -14,7 +14,9 @@ label scene12:
 
     chrome sad "...but where else than the roof would you find Santa?" 
 
-    # sound effect: a clatter, or a cough, or a scuffle sound
+    play sound sfx_impactmetal
+
+    pause 1.0
 
     chrome neutral "Freddy? Is that you?"
 
@@ -93,7 +95,7 @@ label hardboiled12:
 
     freddy angry "I’d say you’ve got a bleeding heart but I know you androids don’t have souls."
 
-    #VISUAL screen shake
+    show bg rooftop night with hpunch
 
     chrome hardboiled "Shut. Up."
 
@@ -115,7 +117,7 @@ label hardboiled12:
 
     chrome hardboiled "Testify."
 
-    freddy scared "They won’t believe me, Mariah’s protected-"
+    freddy sad "They won’t believe me, Mariah’s protected-"
 
     chrome hardboiled "I’ve got all the evidence we need to clear your name."
 
@@ -241,7 +243,7 @@ label unassuming12:
 
     $ chrome_on = False # turn off Chrome layer for glitch
     $ update_layers(0) # update layers
-    # show bg rooftop night blur # blurs the background
+    show bg rooftop night blur # blurs the background
     call start_glitch # shows Chrome glitching and grays out the background
 
     # pause for transition
@@ -1033,7 +1035,7 @@ label scene12_h: # bad ending
     show mariah happy at right
     show jack at left
 
-    jack scared "Wh-"
+    jack shocked "Wh-"
 
     play sound sfx_gunshots
     with hpunch

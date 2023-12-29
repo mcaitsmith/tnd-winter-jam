@@ -6,7 +6,7 @@
 
 label scene9:
 
-    scene freddyoffice night
+    scene bg freddyoffice
 
     play sound sfx_door
 
@@ -23,9 +23,13 @@ label scene9:
     $ bianca_on = True
     $ update_layers() # turn on Bianca layer
 
-    chrome "And speaking of Bianca…"
+    show dialogue_box at center 
+    nvl show # show NVL dialogue
 
-    bianca shocked "Mr. Steele! ¡Ay, casi me matas!"
+    bianca_nvl_right shocked "Mr. Steele! ¡Ay, casi me matas!"
+    
+    hide dialogue_box
+    nvl hide 
 
     chrome "{i}Almost scared her to death, eh? The irony of human idioms. I don’t need another body tonight.{/i}"
 
@@ -35,87 +39,100 @@ label scene9:
 
     menu detective_choices9:
         bianca "Did you find my Dad yet?"
+
         "Hardboiled":
-            chrome angry "I’m not the only one looking, kiddo. But I just might be the first to jump ship."
+            show dialogue_box at center
+            nvl show
+            chrome_nvl_left angry "I’m not the only one looking, kiddo. But I just might be the first to jump ship."
 
-            bianca angry "Why? Who else wants to find him?"
+            bianca_nvl_right angry "Why? Who else wants to find him?"
 
-            chrome angry "Oh little lady, who doesn’t? He’s more than missing. He’s the prime suspect in the murder of one Larry Moss. And I wasn’t hired for no murders."
+            chrome_nvl_left angry "Oh little lady, who doesn’t? He’s more than missing. He’s the prime suspect in the murder of one Larry Moss. And I wasn’t hired for no murders."
 
-            bianca shocked "No! ¡No te creo!"
+            bianca_nvl_right shocked "No! ¡No te creo!"
 
-            bianca angry "He wouldn’t. He couldn’t. Dad’s too soft for that. His soul couldn’t take it. Honest."
+            bianca_nvl_right angry "He wouldn’t. He couldn’t. Dad’s too soft for that. His soul couldn’t take it. Honest."
 
-            bianca sad "Everyone’s judging him, all the time. Turning him into something he ain’t. You know how much harder he has to try because of it?"
+            bianca_nvl_right sad "Everyone’s judging him, all the time. Turning him into something he ain’t. You know how much harder he has to try because of it?"
 
-            chrome angry "Well, being an android… I’ve got some idea."
+            chrome_nvl_left angry "Well, being an android… I’ve got some idea."
 
-            bianca neutral "Look, my dad’s no murderer. And besides, Larry was his friend. It doesn’t add up."
+            bianca_nvl_right neutral "Look, my dad’s no murderer. And besides, Larry was his friend. It doesn’t add up."
 
-            bianca neutral "Now, I paid you to find my dad. Are you gonna do that or not?"
+            bianca_nvl_right neutral "Now, I paid you to find my dad. Are you gonna do that or not?"
 
-            chrome angry "You expect me to uphold my end of this deal, and all the while you’re hiding a cow in a chicken coop?"
+            chrome_nvl_left angry "You expect me to uphold my end of this deal, and all the while you’re hiding a cow in a chicken coop?"
 
-            chrome angry "You can’t contain that cow, Miss Fontaine. The coop’s just not big enough. So stop pretending like this is the first time Daddy’s been in trouble."
+            chrome_nvl_left angry "You can’t contain that cow, Miss Fontaine. The coop’s just not big enough. So stop pretending like this is the first time Daddy’s been in trouble."
 
-            bianca angry "Fine! He’s had his issues. The worst of it was a year or so ago. He had to skip town, lay low. Left me alone for over a month."
+            bianca_nvl_right angry "Fine! He’s had his issues. The worst of it was a year or so ago. He had to skip town, lay low. Left me alone for over a month."
 
-            bianca shocked "I swear, he never hurt nobody! Just fell into some debt, that’s all."
+            bianca_nvl_right shocked "I swear, he never hurt nobody! Just fell into some debt, that’s all."
 
-            chrome angry "Didn’t think to mention this before I wasted my time?"
+            chrome_nvl_left angry "Didn’t think to mention this before I wasted my time?"
 
-            bianca sad "I don’t mention it to anyone, most of all, myself."
+            bianca_nvl_right sad "I don’t mention it to anyone, most of all, myself."
 
-            bianca sad "Dad’s been so good since. It ain’t fair for people to taint who he is with the shadow of who he was."
+            bianca_nvl_right sad "Dad’s been so good since. It ain’t fair for people to taint who he is with the shadow of who he was."
 
-            chrome angry "Way I see it, you don’t step into a light without casting a shadow."
+            chrome_nvl_left angry "Way I see it, you don’t step into a light without casting a shadow."
 
-            bianca neutral "Well, it’s better to try, ain’t it?"
+            bianca_nvl_right neutral "Well, it’s better to try, ain’t it?"
 
-            chrome angry "Sure, kid. So just to be certain, I’ll give it a try. But first, I oughta learn a bit more about ol’ Freddy Fontaine."
+            chrome_nvl_left angry "Sure, kid. So just to be certain, I’ll give it a try. But first, I oughta learn a bit more about ol’ Freddy Fontaine."
+
+            hide dialogue_box
+            nvl clear 
+
         "Unassuming":
-            chrome timid "Unfortunately, I haven’t. But I do have a rather distressing lead…"
 
-            chrome timid "The police want him for murder. A man named Larry Moss is dead."
+            show dialogue_box at center
+            nvl show
 
-            bianca shocked "No! ¡No te creo!"
+            chrome_nvl_left timid "Unfortunately, I haven’t. But I do have a rather distressing lead…"
 
-            bianca shocked "Larry was Dad’s friend. He may not have a shiny reputation, but my Dad wouldn’t hurt a fly."
+            chrome_nvl_left timid "The police want him for murder. A man named Larry Moss is dead."
 
-            bianca sad "Everyone’s judging him, all the time. Turning him into something he ain’t. You know how much harder he has to try because of it?"
+            bianca_nvl_right shocked "No! ¡No te creo!"
 
-            chrome timid "Too much, I take it?"
+            bianca_nvl_right shocked "Larry was Dad’s friend. He may not have a shiny reputation, but my Dad wouldn’t hurt a fly."
 
-            bianca sad "Way too much. Look, my dad’s no killer - he’s just missing, that’s all!"
+            bianca_nvl_right sad "Everyone’s judging him, all the time. Turning him into something he ain’t. You know how much harder he has to try because of it?"
 
-            chrome neutral "Hmph. If only he had a history of going missing. Strangely, it would make for a stronger alibi."
+            chrome_nvl_left timid "Too much, I take it?"
 
-            chrome timid "Think of a bird migrating for the winter. If this migration were to only happen once in a lifetime, it would be very curious. But as it occurs in pattern, we accept it as a common behavior."
+            bianca_nvl_right sad "Way too much. Look, my dad’s no killer - he’s just missing, that’s all!"
 
-            chrome timid "Disappearing for the first time, just as he’s implicated for murder - I could understand the curiosity surrounding your father…"
+            chrome_nvl_left neutral "Hmph. If only he had a history of going missing. Strangely, it would make for a stronger alibi."
 
-            bianca neutral "So you’re saying it would help if..."
+            chrome_nvl_left timid "Think of a bird migrating for the winter. If this migration were to only happen once in a lifetime, it would be very curious. But as it occurs in pattern, we accept it as a common behavior."
 
-            bianca sad "...if this wasn’t the first time he’d gone missing?"
+            chrome_nvl_left timid "Disappearing for the first time, just as he’s implicated for murder - I could understand the curiosity surrounding your father…"
 
-            chrome timid "Certainly. But isn’t it?"
+            bianca_nvl_right neutral "So you’re saying it would help if..."
 
-            bianca sad "Mr. Steele, you ever just want to forget something? Leave it in the past?"
+            bianca_nvl_right sad "...if this wasn’t the first time he’d gone missing?"
 
-            chrome timid "Of course. Luckily, I can simply encrypt my memory files. Though that is proving faulty these days..."
+            chrome_nvl_left timid "Certainly. But isn’t it?"
 
-            bianca sad "Well, I try my best to forget the last time Dad left. He moved us here and suddenly, I was alone for weeks, maybe months. He fled the city. Apparently, he owed someone money."
+            bianca_nvl_right sad "Mr. Steele, you ever just want to forget something? Leave it in the past?"
 
-            bianca sad "Turns out, he did it for me. Moved us to keep me safe and left me the rest of his cash for food. If he had paid up, I would’ve starved. But a full belly didn’t stop me from feeling scared and empty."
+            chrome_nvl_left timid "Of course. Luckily, I can simply encrypt my memory files. Though that is proving faulty these days..."
 
-            bianca neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
+            bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
  
             chrome timid "{i}Without a father...{/i}"
 
+            # bianca_nvl_right sad "Turns out, he did it for me. Moved us to keep me safe and left me the rest of his cash for food. If he had paid up, I would’ve starved. But a full belly didn’t stop me from feeling scared and empty."
+
+            # bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
+
+            hide dialogue_box
+            nvl clear
             ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
             hide bianca # hide Bianca for glitch
-            show freddyoffice night blur # blurs the background
+            show bg freddyoffice blur # blurs the background
             $ chrome_on = False # turn off Chrome layer for glitch
             $ update_layers(0) # update layers
             call start_glitch # shows Chrome glitching and grays out the background
@@ -167,7 +184,7 @@ label scene9:
 
             $ glitch_counter += 1
 
-            show freddyoffice night # unblur the background
+            show bg freddyoffice # unblur the background
             call end_glitch # return to normal Chrome and normal background
             $ chrome_on = True # turn on Chrome layer
             $ update_layers(0) # update layers
@@ -178,42 +195,49 @@ label scene9:
             pause 1.0
 
             ######### back to SCENE 9
+
         "Logical":
-            chrome thinking "My dear, you still operate under the assumption that I am indeed searching. Which is what I was hired for, true, but is no longer indicative of the job."
             
-            chrome thinking "Thanks to new evidence suggesting your father’s involvement in the murder of Larry Moss, this case is no longer that of a missing person, but that of a murder."
+            show dialogue_box at center 
+            nvl show 
 
-            chrome neutral "Which is to say: this is no longer a search, but a hunt. Your father is not missing. He is hiding!" 
+            chrome_nvl_left thinking "My dear, you still operate under the assumption that I am indeed searching. Which is what I was hired for, true, but is no longer indicative of the job."
+            
+            chrome_nvl_left thinking "Thanks to new evidence suggesting your father’s involvement in the murder of Larry Moss, this case is no longer that of a missing person, but that of a murder."
 
-            bianca shocked "That’s bullshit! Yeah, he can throw a punch, but outside the ring that punch becomes a handshake." 
+            chrome_nvl_left neutral "Which is to say: this is no longer a search, but a hunt. Your father is not missing. He is hiding!" 
 
-            bianca angry "I don’t know what kind of lies you’ve been feasting on, but if my dad’s hiding, he’s got a good reason to."
+            bianca_nvl_right shocked "That’s bullshit! Yeah, he can throw a punch, but outside the ring that punch becomes a handshake." 
 
-            chrome thinking "One would argue that anyone who hides has a good reason to. But what level of good it has hinges on the personal value it has to the reasoner. Hence, if Freddy’s \"good reason\" is that it would spare him from conviction, that’s righteous to him, but unfounded to me."
+            bianca_nvl_right angry "I don’t know what kind of lies you’ve been feasting on, but if my dad’s hiding, he’s got a good reason to."
 
-            bianca angry "Look, my dad’s no murderer. And besides, Larry was his friend. It doesn’t add up."
+            chrome_nvl_left thinking "One would argue that anyone who hides has a good reason to. But what level of good it has hinges on the personal value it has to the reasoner. Hence, if Freddy’s \"good reason\" is that it would spare him from conviction, that’s righteous to him, but unfounded to me."
 
-            bianca angry "Now, I paid you to find my dad. Are you gonna do that or not?"
+            bianca_nvl_right angry "Look, my dad’s no murderer. And besides, Larry was his friend. It doesn’t add up."
 
-            chrome thinking "It would be irresponsible of me to continue this investigation without all of the facts. Namely, your father’s history of criminal activity."
+            bianca_nvl_right angry "Now, I paid you to find my dad. Are you gonna do that or not?"
 
-            bianca angry "Fine! He’s had his issues. The worst of it was a year or so ago. He had to skip town, lay low. Left me alone for over a month."
+            chrome_nvl_left thinking "It would be irresponsible of me to continue this investigation without all of the facts. Namely, your father’s history of criminal activity."
 
-            bianca shocked "I swear, he never hurt nobody! Just fell into some debt, that’s all."
+            bianca_nvl_right angry "Fine! He’s had his issues. The worst of it was a year or so ago. He had to skip town, lay low. Left me alone for over a month."
 
-            chrome thinking "Never hurt nobody is a double negative. Meaning he always hurts somebody."
+            bianca_nvl_right shocked "I swear, he never hurt nobody! Just fell into some debt, that’s all."
 
-            bianca angry "¡Ay Dios mío! You know what I’m trying to say."
+            chrome_nvl_left thinking "Never hurt nobody is a double negative. Meaning he always hurts somebody."
 
-            bianca neutral "Dad’s been so good since. It ain’t fair for people to taint who he is with the shadow of who he was."
+            bianca_nvl_right angry "¡Ay dios mío! You know what I’m trying to say."
 
-            chrome thinking "Fascinating. Innocent until proven guilty, even in the wake of guilt."
+            chrome_nvl_left thinking "Fascinating. Innocent until proven guilty, even in the wake of guilt."
 
-            bianca neutral "It’s called giving him another chance, Mr. Steele."
+            bianca_nvl_right neutral "It’s called giving him another chance, Mr. Steele."
 
-            chrome neutral "Right. To prove or disprove one’s hypothesis requires a conclusive experiment."
+            chrome_nvl_left neutral "Right. To prove or disprove one’s hypothesis requires a conclusive experiment."
 
-            chrome neutral "Bianca, I will continue the case. I’ve already noticed several potential clues in this room alone. At this point, our conversation is detracting from my work."
+            chrome_nvl_left neutral "Bianca, I will continue the case. I’ve already noticed several potential clues in this room alone. At this point, our conversation is detracting from my work."
+            
+            hide dialogue_box
+            nvl clear 
+
     call lookaround
     return
 
@@ -227,33 +251,44 @@ label lookaround:
             "{i}My aromatic sensors are picking something up.{/i}"
             show cigarettes at right
             "{i}Ah, clove cigarettes. Just like Jack mentioned. Supply looks low. Maybe Freddy took one for the road.{/i}"
+            hide cigarettes
+
             jump helpful
         "Boxing Gloves":
             show chrome neutral at left
             show gloves at right
             chrome "{i}My database highlighted Freddy’s days as an amateur boxer. Seems like he’s hung up the gloves for now.{/i}"
 
-            hide gloves with moveoutright
+            hide gloves
 
-            show bianca neutral at right
+            show bianca neutral at right with moveinright
 
-            bianca neutral "Ever been in a fight?"
+            show dialogue_box at center
+            nvl show
 
-            chrome neutral "Not if I can help it."
+            bianca_nvl_right neutral "Ever been in a fight?"
 
-            bianca happy "Don’t blame ya. Es muy estúpido, ¿no? Better ways to make money than losing teeth and collecting concussions."
+            chrome_nvl_left neutral "Not if I can help it."
 
-            chrome neutral "Worse ways too."
+            bianca_nvl_right happy "Don’t blame ya. Es muy estúpido, ¿no? Better ways to make money than losing teeth and collecting concussions."
 
-            bianca sad "Yeah. That’s why I tried it once, when Dad was spiraling. It didn’t last as long as I’d hoped."
+            chrome_nvl_left neutral "Worse ways too."
 
-            chrome confused "But you just said boxing is stupid."
+            bianca_nvl_right sad "Yeah. That’s why I tried it once, when Dad was spiraling. It didn’t last as long as I’d hoped."
 
-            bianca happy "Sí, it is {i}incredibly{/i} stupid. But it was me and my dad. It was the two of us, away from the world, inside the ropes."
+            chrome_nvl_left confused "But you just said boxing is stupid."
 
-            bianca happy "Every minute he wasn’t off on some shady job was a minute he spent with me. That’s worth being stupid for."
+            bianca_nvl_right happy "Sí, it is {i}incredibly{/i} stupid. But it was me and my dad. It was the two of us, away from the world, inside the ropes."
 
-            chrome neutral "I see. At least you’ve still got all your teeth."
+            bianca_nvl_right happy "Every minute he wasn’t off on some shady job was a minute he spent with me. That’s worth being stupid for."
+
+            hide bianca happy with moveoutright
+
+            chrome_nvl_left neutral "I see. At least you’ve still got all your teeth."
+
+            hide dialogue_box
+            nvl hide 
+
             jump helpful
         "Santa Toy": 
             show chrome thinking at left
@@ -266,15 +301,21 @@ label lookaround:
 
             chrome "Wait a second - is this Santa droid hiding something?"
 
-            hide santa toy with moveoutright
+            hide santa toy
 
-            show bianca neutral at right
+            show bianca neutral at right with moveinright
 
-            chrome thinking "Where did this come from? Is it new?"
+            show dialogue_box at center
+            nvl show
 
-            bianca neutral "Oh, Dad brought it home a few days ago. It’s probably a gift. Funny enough, he’s not great at hiding when it comes to gifts."
+            chrome_nvl_left thinking "Where did this come from? Is it new?"
 
-            chrome happy "Oh it’s a gift, alright. A gift for me. And with any luck, I’ve been a real good boy this year."
+            bianca_nvl_right neutral "Oh, Dad brought it home a few days ago. It’s probably a gift. Funny enough, he’s not great at hiding when it comes to gifts."
+
+            chrome_nvl_left happy "Oh it’s a gift, alright. A gift for me. And with any luck, I’ve been a real good boy this year."
+
+            hide dialogue_box
+            nvl hide
 
             play sound sfx_breakmetaltoy
 
@@ -290,7 +331,7 @@ label lookaround:
 
             chrome "Damn. It’s corrupted. I can only see one file…"
 
-            hide memorystick with moveoutright
+            hide memorystick
 
             show creditcard at right
 
@@ -308,13 +349,19 @@ label lookaround:
 
             show chrome neutral at left
 
-            hide creditcard right with moveoutright
+            hide creditcard 
 
-            show bianca neutral at right
+            show bianca neutral at right with moveinright
 
-            bianca neutral "Share with the class, Mr. Steele! Did that Santa droid give you everything you asked for this year?"
+            show dialogue_box at center
+            nvl show
 
-            chrome thinking "Not everything. Not yet. But there’s another Santa out there who may just do exactly that…"
+            bianca_nvl_right neutral "Share with the class, Mr. Steele! Did that Santa droid give you everything you asked for this year?"
+
+            chrome_nvl_left thinking "Not everything. Not yet. But there’s another Santa out there who may just do exactly that…"
+
+            hide dialogue_box
+            nvl clear
 
             $ bianca_on = False
             $ update_layers() # turn off Larry layer

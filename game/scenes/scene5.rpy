@@ -2,7 +2,7 @@
 
 label scene5:
 
-    scene bg Fowlers department
+    scene bg extstore night
 
     show chrome neutral at left:
         xzoom -1.0

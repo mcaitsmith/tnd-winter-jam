@@ -4,7 +4,7 @@
 
 label scene8:
 
-    scene extstore
+    scene bg extstore
 
     show chrome neutral at left:
         xzoom -1.0 
@@ -33,9 +33,10 @@ label scene8:
             jump scene8_choices
         "What are those red speckles?":
             hide larry dead with moveoutright
-            # show #blood?
+            show bloodysnow
             chrome "{i}Blood droplets in the snow. Something shiny catches my eye.{/i}"
-            chrome "{i}Huh. A phone. The cops in all their disinterest haven't even notcied it.{/i}"
+            chrome "{i}Huh. A phone. The cops in all their disinterest haven't even noticed it.{/i}"
+
             call cellcell
             return
 

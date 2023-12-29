@@ -167,7 +167,7 @@ label scene2:
 
     $ chrome_on = False # turn off Chrome layer for glitch
     $ update_layers(0) # update layers
-    show bg office blur # blurs the background
+    show bg office night blur # blurs the background
     call start_glitch # shows Chrome glitching and grays out the background
 
     # pause for transition
