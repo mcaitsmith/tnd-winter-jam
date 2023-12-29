@@ -14,7 +14,8 @@ label scene7:
 
     chrome "{i}There's a cop standing guard. He's not making much effort to secure the area.{/i}"
 
-    show cop neutral at left   
+    show cop neutral at left:
+        xzoom -1.0  
 
     menu:
         "Hmm. He seems like a \"no nonsense, just the facts ma’am\" kinda guy..."
@@ -32,17 +33,31 @@ label scene7:
 
             chrome_nvl_right logical "Hmm. And this poor sap?"
 
-            cop_nvl_left neutral "That’s the funny thing. Larry the Elf here.. he worked with Freddy the Santa."
+            cop_nvl_left neutral "That’s the funny thing."
+
+            cop_nvl_left neutral "Larry the Elf here.. he worked with Freddy the Santa."
             
-            cop_nvl_left neutral "Looks to me like a simple heart attack. Open and shut case."
+            cop_nvl_left neutral "Looks to me like a simple heart attack."
+
+            cop_nvl_left neutral "Open and shut case."
 
             chrome_nvl_right logical "You don't say? As I can see..."
 
-            chrome_nvl_right logical "Freddy’s clearly a suspect, but why? A heart attack is a natural cause of death, sure it can be induced in the victim by an outside force but not easily. Body is cold and already undergone rigor mortis, suggesting a time of death in the dead of night." 
+            chrome_nvl_right logical "Freddy’s clearly a suspect, but why?" 
 
-            chrome_nvl_right logical "Freddy has an immediate relationship with the victim, perhaps there’s a personal motive? And why here at their place of work? Certainly he knew this would paint him as a suspect?"
+            chrome_nvl_right logical "A heart attack is a natural cause of death, sure it can be induced in the victim by an outside force but not easily." 
+
+            chrome_nvl_right logical "Body is cold and already undergone rigor mortis, suggesting a time of death in the dead of night." 
+
+            chrome_nvl_right logical "Freddy has a relationship with the victim, perhaps there’s a personal motive?"
         
-            cop_nvl_left angry "Uhh... Earth to metalhead? Am I interrupting you?"
+            chrome_nvl_right logical "And why here at their place of work?"
+
+            chrome_nvl_right logical "Certainly he knew this would paint him as a suspect?"
+
+            cop_nvl_left angry "Uhh... Earth to metalhead?"
+
+            cop_nvl_left angry "Am I interrupting you?"
 
             chrome_nvl_right logical "Yes, you are. What is it?"
 
