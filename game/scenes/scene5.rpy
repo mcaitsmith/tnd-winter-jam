@@ -2,13 +2,12 @@
 
 label scene5:
 
-
     scene bg Fowlers department
 
     show chrome neutral at left:
         xzoom -1.0
 
-    chrome "{i}Fowler’s Department Store. Still surviving. Barely{/i}"
+    chrome "{i}Fowler’s Department Store. Still surviving. Barely.{/i}"
 
     chrome "{i}Multi-colored lights litter the large storefront. Festive, if not for all the missing bulbs.{/i}"
 
@@ -28,7 +27,7 @@ label scene5:
 
     chrome "{i}Before I can get too cozy, a middle-aged woman bursts out the door, barking at everyone in sight.{/i}"
 
-    chrome "{i}I recognize her as Mariah Fowler, owner of the retail dinosuar. Grisled by decades of holiday shoppers, she clears the crowd with practiced ease.{/i}"
+    chrome "{i}I recognize her as Mariah Fowler, owner of the retail dinosaur. Grizzled by decades of holiday shoppers, she clears the crowd with practiced ease.{/i}"
 
     show mariah angry at right with moveinleft
 
@@ -52,6 +51,6 @@ label scene5:
 
     chrome "{i}Having seen enough, I consider my next steps...{/i}"
 
-    chrome "{i}I should talk to he owner of the department store. They’ll know the store better than anyone. If Freddy has been here, they’ll know.{/i}"
+    chrome "{i}I should talk to the owner of the department store. If Freddy has been here, they’ll know.{/i}"
     
     jump scene6

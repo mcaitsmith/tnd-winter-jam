@@ -104,22 +104,24 @@ label scene2:
     # his face should also cycle through the representative detective style. 
     # Noted on separate lines, as it is not dialogue.
 
+    chrome "{i}Loading interrogation identities...{/i}"
+
     show chrome thinking
 
-    chrome "{i}Do I go the LOGICIAN route? Pure analysis and deduction. The Holmesian way?{/i}"
+    chrome "{i}Do I go the logician route? {b}LOGICAL.{/b} Pure analysis and deduction. The Holmesian way?{/i}"
 
     show chrome timid
 
-    chrome "{i}Or would the CONVERSATIONALIST route work best. Unassuming. Disarming. Underestimated.{/i}"
+    chrome "{i}Or would the conversationalist route work best. {b}UNASSUMING.{/b} Disarming. Underestimated.{/i}"
 
     show chrome angry
 
-    chrome "{i}Or perhaps the CYNIC. Hardboiled. Direct. No nonsense...{/i}"
+    chrome "{i}Or perhaps the cynic. {b}HARDBOILED.{/b} Direct. No nonsense...{/i}"
 
     show bianca angry
     show chrome neutral # return to normal when Bianca talks
 
-    bianca_nvl_left "Hey, you listening to me? It's.. it's my dad, Freddy..."
+    bianca_nvl_left "Hey, you listening to me? It's... it's my dad, Freddy..."
 
     show bianca sad
 
@@ -143,12 +145,20 @@ label scene2:
 
     show chrome thinking
 
-    chrome_nvl_right "I am curious. Why come to me?"
+    chrome_nvl_right "I'm curious. Why come to me?"
 
-    bianca_nvl_left "..."
+    chrome_nvl_right "Organics aren't so keen on me taking their cases."
 
-    bianca_nvl_left "Word on the street is that you were trained by Forrest Cane."
+    bianca_nvl_left "Organics, synthetics... I don't care. My dad is {b}missing>.{/b}"
 
+    bianca_nvl_left "And besides..."
+
+    bianca_nvl_left "...word on the street is that you were trained by Forrest Cane."
+
+    show chrome shocked
+
+    chrome_nvl_right "Forrest Cane -"
+ 
     ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
     hide bianca # hide Bianca for glitch
@@ -173,7 +183,9 @@ label scene2:
 
     show chrome confused glitch
 
-    chrome "{i}What is this? Fleetingly, I lose sense of the world around me. Flashes of images, lines of code, all rush through me at once. I'm nowhere and everywhere. Everything I know, have known, have forgotten, fills my synthetic frame.{/i}"
+    chrome "{i}What is this? Fleetingly, I lose sense of the world around me. Flashes of images, lines of code, all rush through me at once.{/i)}" 
+
+    chrome "{i}I'm nowhere and everywhere. Everything I know, have known, have forgotten, fills my synthetic frame.{/i}"
 
     show chrome shocked glitch
 
@@ -185,7 +197,7 @@ label scene2:
 
     chrome "{i}But he's not here. He can't be...{/i}"
 
-    chrome "{i}Cane disappeared from this world long ago. He was never found.{/i}"
+    chrome "{i}Cane disappeared from this world long ago.{/i}"
 
     chrome "{i}Powerful as my processor may be, I could never reconcile that dissonance. Cane, gone from the world but present in my mind. After some time, I did the only thing that made sense.{/i}"
 
@@ -193,7 +205,11 @@ label scene2:
 
     show chrome angry glitch
 
-    chrome "{i}And yet, here he is, back to haunt me. Breaking free of his prison just as I'm tasked with finding another missing person. I'm not sure I can handle that. Not yet.{/i}"
+    chrome "{i}And yet, here he is, back to haunt me. Breaking free of his prison just as I'm tasked with finding another missing person.{/i}"
+
+    chrome "{i}I'm not sure I can handle that.{/i}"
+
+    chrome "{i}Not yet.{/i}"
 
     show bg office night # unblur the background
     call end_glitch # return to normal Chrome and normal background
@@ -218,7 +234,7 @@ label scene2:
 
     show bianca sad
 
-    bianca_nvl_left "Please. I don't know where else to turn..."
+    bianca_nvl_left "Imbécil. Please. I don't know where else to turn..."
 
     show chrome neutral
 
@@ -226,13 +242,17 @@ label scene2:
 
     show bianca angry
 
-    bianca_nvl_left "You saying the rumors are true? That you're just deprecated goods?!"
+    bianca_nvl_left "You saying the rumors are true? That you're just deprecated goods?! Metal inútil?!"
 
     bianca_nvl_left "Yeah, well - they say the same stuff about my dad. That he's a loser. A deadbeat. But it {i}{b}ain't{/b}{/i} true."
 
     bianca_nvl_left "Here's my info. My dad's been known to hang out at the Silver Cat. {i}{b}A lot.{/b}{/i}"
 
-    bianca_nvl_left "If anyone knows anything, that would be a good place to start."
+    bianca_nvl_left "If anyone knows anything, that would be a good place to start..."
+
+    bianca_nvl_left "... when you're done feeling sorry for yourself."
+
+    chrome_nvl_right "..."
 
     hide dialogue_box # end convo
     nvl clear # clear NVL dialogue

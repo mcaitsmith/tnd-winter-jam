@@ -21,22 +21,22 @@ label scene11:
 
     chrome "Mariah’s office. It’s clean- meticulously so. Funny how the messiest people can also be the most fastidious."
 
-    chrome unassuming "Seems Ms. Fowler isn’t in; surely she wouldn’t mind if I… poke around."
+    chrome timid "Seems Ms. Fowler isn’t in; surely she wouldn’t mind if I… poke around."
 
     call searchMenu
 
-    "Seems like that’s about anything of interest."
-    "I’ve got all the files I need. Not to mention these incriminating gloves."
+    "Seems like that’s about everything of interest."
+    "I’ve got all the intel I need."
     chrome shocked "Wait- that smell! I recognize it from Freddy’s apartment!"
 
-    chrome thinking "My regards to Jack Scanlon- I know exactly where to find Freddy."
+    chrome thinking "I know exactly where to find him..."
 
     # narration
-    "Chrome paused at the window. He took one final look around the office."
-    "He had the evidence: Mariah Fowler was going down."
-    "Bianca’s hunch was right. Freddy was clean."
-    "Now, Chrome just had to talk him out of hiding."
-    "With a vocaloid grunt and a self-conscious shimmy, the android clambered up the fire escape."
+    "I send my regards to good ol' Jack Scanlon- as well as my location. A little insurance, just in case."
+    "I pause at the window to take one final look around the office."
+    "Who knew the search for a two-bit Santa would lead to all this."
+    "But first things first. Bianca’s hunch was right all along. Freddy was clean."
+    "And the fire escape beckoned. I'll deal with Marah later."
 
     #options 1 2 and 3 are "critical path" clues- options 4 and 5 are just flavor text
 
@@ -74,9 +74,8 @@ label searchMenu:
             "Stale donuts…"
             chrome confused "Gloves? Hm. Latex. But there’s something else–"
             chrome shocked "Poison! Trace amounts, but it’s there."
+            chrome angry "Even one bite of this could kill a man..."
 
-            #Narration  
-            "It matches the cookies that killed Larry!"
             jump searchMenu
 
         # option three:
@@ -108,10 +107,10 @@ label scene11comp:
     menu:
         chrome "Let's see here..."
         "Select \'deleted items\'":
-            chrome confused "Hm. Totally empty. And nothing hidden as far as I can tell."
+            chrome confused "Hmm. Totally empty. And nothing hidden as far as I can tell."
             jump scene11comp
         "Select \'games\'":
-            chrome happy "She’s got cyber solitaire on here?? Oo, and pinball!"
+            chrome happy "She’s got cyber solitaire on here?? Ooh, and pinball!"
             jump scene11comp
         "Select \'saved pictures\'":
             chrome timid "Is that… Mariah in a bikini?"
@@ -125,5 +124,10 @@ label scene11comp:
             chrome thinking "Sales have been declining every holiday season…"
             chrome thinking "This program- some kind of credit card number skimming system."
             chrome angry "And here we’ve got some ‘creative’ accounting."
-            chrome shocked "This is the list of ex-con Santas! Jackpot!"
+            chrome angry "Classic charity skam. Santas aggressively ask for donations, and the bulk of it goes to Mariah's pockets."
+            chrome shocked "Seems like each Santa had a criminal record. Something Mariah was well aware of..."
+            chrome angry "Mariah must have kept their info under wraps in exchange for getting them to do her dirty work"
+            chrome angry "Mariah offers them a job. And they don't dare push back because she threatens to expose them."
+            chrome angry "Who are the cops to believe? An ex-con, like Freddy, or a respected business owner?"
+
     return

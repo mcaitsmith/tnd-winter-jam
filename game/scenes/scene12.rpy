@@ -8,15 +8,11 @@ label scene12:
 
     show chrome sad at left
 
-    chrome sad "I should have known to start here."
+    chrome sad "I feel like I should have pieced things together sooner."
 
-    chrome sad "If only I’d listened to Jack Scanlon from the jump…"
+    chrome sad "Nobody expects the suspect to be hiding in plain sight..."
 
-    chrome sad "Maybe I could have figured out this mess sooner." 
-
-    chrome sad "For Freddy. For Bianca."
-
-    chrome sad "For me."
+    chrome sad "...but where else than the roof would you find Santa?" 
 
     # sound effect: a clatter, or a cough, or a scuffle sound
 
@@ -33,7 +29,9 @@ label scene12:
 
     chrome unassuming "Hey Freddy. Thought I might find you up here."
 
-    freddy neutral "Oh. That robot cop. Whaddya want, metalhead?"
+    freddy neutral "Wait- a robot cop?! Of all things..."
+
+    freddy angry "Whaddya want, metalhead?"
 
     chrome neutral "The name’s Steele. Chrome Steele. And I’m not a cop, I’m a P.I."
 
@@ -45,32 +43,38 @@ label scene12:
 
     freddy sad "I didn’t know where else to go."
 
-    freddy angry "God. This town. This job. {i}El mundo entero{/i}. What the hell else was I supposed to do?"
+    freddy angry "God. This town. This job. {i}El mundo entero{/i}."
+
+    freddy angry "One second I was telling Larry I was out - no more scams - the next he was coughing up blood! What the hell else was I supposed to do?"
 
     #Narration
-    "I size him up. He looks exhausted."
+    "{i}I size him up. He looks exhausted.{/i}"
 
-    "The ground is littered with cigarette butts. Clove wafts through the air."
+    "{i}The ground is littered with cigarette butts. Clove wafts through the air.{/i}"
 
     chrome neutral "You’re OK, Freddy. I just want to talk."
 
     freddy angry "What about? I didn’t do nothin’!"
 
-    chrome timid "Uh oh…"
+    freddy angry "Fuck, what am I doing? I got two rules..."
+
+    freddy angry "Don't talk to cops, and don't talk to bots! And right now, I'm breaking both!"
+
+    "{i}Uh oh…{/i}"
 
     menu:
 
-        "He’s riled up. As  nervous as a cat on a floaty in a public pool. I have to be careful in my approach."
+        "He’s riled up. On his last nerve. And clearly I make him uncomfortable. I have to be careful in my approach..."
 
-        "Drill down. Put the thumbscrews to Freddy.":
-            call hardboiled12
-
-        "Lay out all the facts, even the ugly truths.":
+        "Logicial":
             call logical12
 
-        "Let's not spook him.":
+        "Unassuming":
             # Programming - ideal +- 1
             call unassuming12
+
+        "Hardboiled":
+            call hardboiled12
 
     # Jump to Scene 12 E 
     jump scene12_e
@@ -145,7 +149,7 @@ label logical12:
 
     chrome thinking "Do you really want to run, Freddy? Let’s look at the facts."
 
-    chrome logical "{i}Larry is dead. Pobre bastardo{/i}."
+    chrome logical "Larry is dead. Pobre bastardo."
 
     freddy sad "Yeah. No shit."
 
@@ -185,7 +189,7 @@ label unassuming12:
 
     # again "freddy confused" would great here but i’ll work with what we’ve got
 
-    freddy shocked "You.. smoke? How?"
+    freddy shocked "You... smoke? How?"
 
     chrome unassuming "Not exactly. But the smell tickled my sensors from a whole floor away."
 
@@ -205,7 +209,7 @@ label unassuming12:
 
     freddy angry "Everybody knows your kind aren’t suited for this sort of thing."
 
-    chrome unassuming "What kind of thing?"
+    chrome unassuming "What sort of thing?"
 
     freddy sad "I swear I didn’t do anything wrong! But try telling that to the cops."
 
@@ -213,7 +217,7 @@ label unassuming12:
 
     freddy sad "I don’t see any way out."
 
-    chrome unassuming "Sounds like you need a listening ear."
+    chrome unassuming "Sounds like you need someone to lend you an ear."
 
     chrome unassuming "I may not have any, but I can hear you just fine."
 
@@ -227,7 +231,7 @@ label unassuming12:
 
     freddy happy "Haha. That’s not bad. Maybe they were wrong about you."
 
-    chrome unassuming "I think people were wrong about you, too."
+    chrome unassuming "I think people were wrong about you, too -"
 
     ######### SCENE 12: GLITCH 6 (flashback with glitching animation on Steele & bg grayed out)
 
@@ -251,7 +255,7 @@ label unassuming12:
 
     show chrome happy glitch
 
-    chrome "{i}It's a funny scenario, letting loose with Freddy in the heat of it all. I couldn't have pictured it yesterday. Yet it's a moment that's flashed through my head hundreds of times, all night.{/i}"
+    chrome "{i}It's a funny scenario, chatting it up with Freddy in the heat of it all. I couldn't have pictured it yesterday. Yet it's a moment that's flashed through my head hundreds of times, all night.{/i}"
 
     chrome "{i}A moment from my first ride-along. A killer on the loose. A case to be closed. Cane and I cracking jokes. Enjoying each other's company, despite the turmoil.{/i}"
 
@@ -267,7 +271,9 @@ label unassuming12:
 
     show chrome sad glitch
 
-    chrome "{i}Since the day Cane vanished, misconceptions about me have skyrocketed. From suspicious to malfunctioning, from Tin Can to Rent-a-Bot, folks decided that they knew me. And with no idea who I was, I listened to them.{/i}"
+    chrome "{i}Since the day Cane vanished, misconceptions about me have skyrocketed. From suspicious to malfunctioning. Tin Can. Rent-a-Bot. Metalhead.{/i}"
+
+    chrome "{i}Folks decided that they knew me. And with no idea who I was, I listened to them.{/i}"
 
     show chrome thinking glitch
 
@@ -408,9 +414,9 @@ label scene12_e:
 
     chrome_nvl_right "No, no, please let it out."
 
-    chrome_nvl_right "Mr Fontaine found something about your sales going down. I understand. Online sales are doing a number on physical retail."
+    chrome_nvl_right "Mr. Fontaine found a discrepanciy in your sales. I understand; physical retail isn't what it used to be."
 
-    chrome_nvl_right "And what else? You publicly announce a charity campaign, but what's this? Says here, you diverted all the funds directly into your bank account?"
+    chrome_nvl_right "Freddy dug a little too deep. He found out that the proceeds from your little charity campaign were going right into your pockets."
 
     mariah_nvl_left "What the fuck are you talking about?"
 
@@ -429,17 +435,19 @@ label scene12_e:
 
     show chrome unassuming
 
-    chrome_nvl_right "Just doing my job! Let's not get distracted: I believe you really thought you had a reason for murder."
+    chrome_nvl_right "Just doing my job! But let's not get distracted: I believe you really thought you had a reason for murder."
 
-    chrome_nvl_right "And so, you hoped the cookies would be enough of a peace offering for our man Freddy to swallow."
+    chrome_nvl_right "And so, you made some special cookies for Freddy as a little... going away present."
 
-    chrome_nvl_right "But Freddy was too kind. He gave them to our dear Larry, turning this into a tragedy."
+    chrome_nvl_right "But I guess Freddy doesn't have much of a sweet tooth. He gave them to our dear Larry, turning this into a tragedy."
 
     chrome_nvl_right "And that's not all. You're smart. You needed the cops on your side."
 
-    chrome_nvl_right "It wasn't hard to convince the local fuzz. I've met them; not exactly our city's finest."
+    chrome_nvl_right "It wasn't hard to point the local fuzz towards Freddy. I've met them; not exactly our city's finest."
 
-    chrome_nvl_right "End, the curtains fall: You pushed all the blame on Freddy. Two birds with one stone? Master plan. Too bad, you did it all in a hurry."
+    chrome_nvl_right "And at this time of year? Any excuse to sweep something like this under the rug."
+
+    chrome_nvl_right "End, the curtains fall: You pushed all the blame on Freddy. Two birds with one stone? Quite the master plan. Too bad you did it all in a hurry."
 
     show mariah angry
 
@@ -453,7 +461,7 @@ label scene12_e:
 
     show mariah angry
 
-    mariah_nvl_left "I'll make things quick and clean this time."
+    mariah_nvl_left "As for my secret Santa here, I'll make things quick and clean this time."
 
     show mariah neutral
 
@@ -479,7 +487,7 @@ label scene12_e:
 
     mariah_nvl_left "I can't wait for future you to tell me how it feels."
 
-    mariah_nvl_left "Hell, thank you for leading me here, Detective. Now let's find out why new-gen robots go insane after they 'die' for the first time."
+    mariah_nvl_left "Hell, thank you for leading me here, Detective. You've tied up all my loose ends with a pretty bow."
 
     show mariah neutral
 
@@ -512,12 +520,9 @@ label scene12_f: # good ending
 
     mariah "What now? I've had enough with your Sherlock BS."
 
-    chrome "Use your ears, Ms. Fowler."
+    chrome "Use your ears, Ms. Fowler. Seems the cavalry has arrived."
 
     play sound sfx_footsteps
-
-    #narration
-    chrome "{i}Only treacherous adrenaline can hide the rubbing of rushed strides against the rooftop.{/i}"
 
     hide chrome
     hide mariah
@@ -552,7 +557,7 @@ label scene12_f: # good ending
 
     chrome "{i}That smirk. Crap.{/i}"
 
-    chrome "{i}The robots rush at me. I can hear their circuit boards straining. Their expressions are lifeless, their voiceboxes mute.{/i}"
+    chrome "{i}The robots rush at me. I can hear their circuit boards straining. Their expressions are lifeless, their movements rigid.{/i}"
 
     chrome "{i}Can't stop to think what she's done to them.{/i}"
 
@@ -573,7 +578,7 @@ label scene12_f: # good ending
     hide chrome
     show santa1 at center
 
-    chrome angry "{i}A claw shoots ahead, minus the festive glove. Sharp, aged, rusty - the ugly secret behind the fatherly figure.{/i}"
+    chrome angry "{i}A claw shoots ahead, minus the festive glove. Sharp-edged, rusty - the ugly secret behind the fatherly figure.{/i}"
 
     chrome angry "{i}Iron and 4th Grade Aluminum. 24%% Ferric Oxide. Thickness: 232 nm. Estimated body weight: 78 kilograms.{/i}"
 
@@ -614,7 +619,7 @@ label scene12_f: # good ending
 
     chrome "{i}I have to stop her.{/i}"
 
-    chrome "{i}The cop is holding a gun in his hands. Standard electric discharge pistol. One round can knock any standard-sized person. Unreliable against androids. Its aiming systems are faulty.{/i}"
+    chrome "{i}The cop is holding a gun in his hands. Standard electric discharge pistol. One round can knock out any average-sized person. Unreliable against androids. Its aiming systems are faulty.{/i}"
 
     chrome "{i}I rush. She's about to fire.{/i}"
 
@@ -627,11 +632,13 @@ label scene12_f: # good ending
 
     chrome "{i}She draws a pocket repeating pistol. Premium. Chevalier brand. 0.2 seconds are enough for 6 shots in a 75º angle barrage.{/i}"
 
-    chrome "{i}Enough to kill a poser kid and a lousy cop.{/i}"
+    chrome "{i}Enough to kill a functioning alcoholic and a lousy cop.{/i}"
+
+    chrome "{i}I can't let that happen.{/i}"
 
     show chrome at center
 
-    chrome hardboiled "OUT OF THE WAY, BRAT."
+    chrome hardboiled "OUT OF THE WAY, JACK!"
 
     play sound sfx_gunshots
     with hpunch
@@ -667,7 +674,7 @@ label scene12_f: # good ending
 
     chrome "{i}CORE system rerouted.{/i}"
 
-    chrome "{i}declare damaged hardware redundant{/i}"
+    chrome "{i}Declare damaged hardware redundant{/i}"
 
     chrome "{i}Disengaging damaged hardware.{/i}"
 
@@ -696,21 +703,21 @@ label scene12_f: # good ending
     $ mariah_on = True
     $ update_layers(1) # resume bg music
 
-    jack shocked "Dude, you're alive?"
+    jack shocked "Good God, you're alive?"
 
     jack happy "Damn, you saved my bacon!"
 
     hide jack
     show chrome at center
 
-    chrome sad "What happened."
+    chrome sad "What happened..."
 
     hide chrome
 
     show cop angry at center
     show mariah neutral at right
 
-    mariah angry "The trashpile is still up? Just how much are you for parts?"
+    mariah angry "The tin can is still up? What the hell they make you out of?"
 
     cop angry "FOR THE LOVE OF GOD, SHUT. UP!"
 
@@ -718,7 +725,7 @@ label scene12_f: # good ending
 
     cop angry "Ma'am, you have the right to remain silent."
 
-    mariah angry "You have no idea what you're dealing with. No friggin' idea."
+    mariah angry "You have no idea what you're dealing with. Don't you know who I am?"
 
     return
 
@@ -768,7 +775,7 @@ label scene12_g: # average ending
     #narration
     chrome "{i}...{/i}"
 
-    chrome "{i}The robots rush at me. I can hear their circuit boards straining. Their expressions are lifeless, their voiceboxes mute.{/i}"
+    chrome "{i}The robots rush at me. I can hear their circuit boards straining. Their expressions are lifeless, their movements rigid.{/i}"
 
     chrome "{i}Can’t stop to think what she’d done to them.{/i}"
 
@@ -843,7 +850,9 @@ label scene12_g: # average ending
 
     chrome "{i}She draws a pocket repeating pistol. Premium. Chevalier brand. 0.2 seconds are enough for 6 shots in a 75º angle barrage.{/i}"
 
-    chrome "{i}Enough to kill a poser kid and a lousy cop.{/i}"
+    chrome "{i}Enough to kill a functioning alcoholic and a lousy cop.{/i}"
+
+    chrome "{i}I can't let that happen.{/i}"
 
     show chrome at center
 
@@ -920,7 +929,7 @@ label scene12_h: # bad ending
 
     chrome "{i}...{/i}"
 
-    chrome "{i}The robots rush at me. I can hear their circuit boards straining. Their expressions are lifeless, their voiceboxes mute.{/i}"
+    chrome "{i}The robots rush at me. I can hear their circuit boards straining. Their expressions are lifeless, their movements rigid.{/i}"
 
     chrome "{i}What did she do to them?{/i}"
 

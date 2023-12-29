@@ -10,31 +10,14 @@ label scene7:
 
     show chrome neutral at right    
 
+    chrome "{i}I make my way to the alley to inspect the scene.{/i}"
+
+    chrome "{i}There's a cop standing guard. He's not making much effort to secure the area.{/i}"
+
     show cop neutral at left   
 
     menu:
-        "Hm. He seems like a \"no nonsense, just the facts ma’am\" kinda guy. I wonder what approach I should take?"
-
-    # Option One: (hardboiled)
-        "Hardboiled":
-
-            chrome hardboiled "Heyo, buddy boy! I’m looking for Freddy Font–"
-
-            cop angry "Yeah? You and me both."
-
-            chrome shocked "Excuse me?"
-
-            cop angry "He’s a person of interest- might even say a suspect."
-
-            chrome angry "Really?"
-
-            cop angry "That woman right over there, found this poor schmuck dead as a doornail."
-
-            cop angry "Combine that with the fact Freddy didn’t show up today, his last day…"
-
-            chrome confused "Hm. Something seems fishy…"
-
-            cop angry "The only thing fishy ‘round here is you! Now giddy up Jingle Horse and get the fuck out of my active crime scene!"
+        "Hmm. He seems like a \"no nonsense, just the facts ma’am\" kinda guy..."
 
     # Option Two: (Logical. IDEAL PATH)
         "Logical":
@@ -44,19 +27,31 @@ label scene7:
 
             cop neutral "You’re not the only one."
 
-            chrome logical "Hm. Interesting. Locate any evidence?"
+            chrome logical "Hmm. And this poor sap?"
 
-            cop neutral "That’s the funny thing. He died from a heart attack."
+            cop neutral "That’s the funny thing. Larry the Elf here.. he worked with Freddy the Santa."
+            
+            cop neutral "Looks to me like a simple heart attack. Open and shut case."
 
-            chrome confused "Heart attack? Something doesn’t add up here."
+            chrome logical "You don't say? As I can see..."
 
-            cop neutral "Whelp, we’ve got a witness...."
+            chrome logical "Freddy’s clearly a suspect, but why? A heart attack is a natural cause of death, sure it can be induced in the victim by an outside force but not easily. Body is cold and already undergone rigor mortis, suggesting a time of death in the dead of night." 
 
-            chrome confused "Who?"
+            chrome logical "Freddy has an immediate relationship with the victim, perhaps there’s a personal motive? And why here at their place of work? Certainly he knew this would paint him as a suspect?"
+        
+            cop angry "Uhh... Earth to metalhead? Am I interrupting you?"
 
-            cop neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction"
+            chrome logical "Yes, you are. What is it?"
+
+            cop neutral "We figured all that out already. Freddy was present at the scene according to our witness."
+
+            chrome confused "Come again?"
+
+            cop neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction."
 
             chrome logical "Very interesting. Thanks."
+
+            chrome "{i}Seems like Mariah didn't tell me the whole story - {/i}"
 
             ######### GLITCH 3 (flashback with glitching animation on Steele & bg grayed out)
 
@@ -160,5 +155,25 @@ label scene7:
 
             cop angry  "Fine. Go through"
 
+     # Option One: (hardboiled)
+        "Hardboiled":
 
-    jump scene8
+            chrome hardboiled "Heyo, buddy boy! I’m looking for Freddy Font–"
+
+            cop angry "Yeah? You and me both."
+
+            chrome shocked "Excuse me?"
+
+            cop angry "He’s a person of interest- might even say a suspect."
+
+            chrome angry "Really?"
+
+            cop angry "That woman right over there, found this poor schmuck dead as a doornail."
+
+            cop angry "Combine that with the fact Freddy didn’t show up today, his last day…"
+
+            chrome confused "Hm. Something seems fishy…"
+
+            cop angry "The only thing fishy ‘round here is you! Now giddy up Jingle Horse and get the fuck out of my active crime scene!"
+
+   jump scene8

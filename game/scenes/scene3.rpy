@@ -63,7 +63,7 @@ label scene3:
 
     chrome_nvl_left "Chrome. Chrome Steele. I'm a friend of Freddy's - Freddy Fontaine. You know him?"
 
-    jack_nvl_right "Good ole Freddy. Salt of the earth. His daughter too, um... Bianca! Lovely girl..."
+    jack_nvl_right "Good ol' Freddy. Salt of the earth. His daughter too, um... Bianca! Lovely girl..."
 
     jack_nvl_right "Fine gin this, ain't it?"
 
@@ -75,12 +75,14 @@ label scene3:
 
     jack_nvl_right "Hey, you look like the kind sort. Can I ask for a small loan? Something to get on my feet? I'm good for it..."
 
-    chrome "{i}Jack seemed like the friendly sort. Gregarious. Unfocused. Meandering. His attention wavering like a mercurial jazz riff. I'm sure it had nothing to do with synthahol bombarding my aromatic sensors.{/i}"
+    chrome "{i}Jack seemed like the friendly sort. Gregarious. Unfocused. Meandering. His attention wavering like a mercurial jazz riff.{/i}"
+
+    chrome "{i}I'm sure it had nothing to do with synthahol bombarding my aromatic sensors.{/i}"
 
     # CHOICE
 
     menu:
-        chrome "{i}This guy's all over the place. I've got to get through to him...{/i}"
+        chrome "{i}This guy's all over the place. I have to get him to focus somehow. I have to be careful which tact I choose, so I can get the most info...{/i}"
         "Logical":
             call scene3_logical
         "Unassuming":
@@ -104,7 +106,7 @@ label scene3:
 
     show jack neutral
 
-    jack_nvl_right "Excuse me now lad, time for a piss and a smoke. I'd ask you to join me, but, y'know..."
+    jack_nvl_right "Excuse me now Steeley boy, time for a piss and a smoke. I'd ask you to join me, but, y'know..."
 
     chrome_nvl_left "See you around, Jack."
 
@@ -149,7 +151,7 @@ label scene3_logical:
 
     jack_nvl_right "Did you say Bianca? Good kid, right??"
 
-    chrome_nvl_left "Please my man, just tell me how you know Freddy!"
+    chrome_nvl_left "Focus, sir! Just tell me how you know Freddy."
 
     show jack neutral
 
@@ -301,6 +303,8 @@ label scene3_hardboiled:
 
     jack_nvl_right "He would never do that to her again, not if he could help it. That's a fact!"
 
+    chrome "{i}Bianca... abandoned - {/i}"
+
     $ music_pos = renpy.music.get_pos('music') # get current time position of music
     $ music_pos_str = str(music_pos) # convert to string
     # If the user has all options muted, we'll set the current position to 0
@@ -366,6 +370,8 @@ label scene3_hardboiled:
     show chrome angry at left:
         xzoom -1.0 # make him face right
     show jack neutral at right
+
+    chrome_nvl_left "..."
 
     chrome_nvl_left "Anything else you leaving out? Spill the beans. All of 'em."
 

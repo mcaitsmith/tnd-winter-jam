@@ -10,7 +10,7 @@ label scene10:
 
     show chrome neutral at left
 
-    show cop neutral at right
+    chrome "{i}I make way back to Fowler's. Still a dump.{/i}"
 
     # I assume looking at Mica's scenes 1-3 correct me if I'm wrong, that chrome's monologues are in italics.
 
@@ -18,11 +18,13 @@ label scene10:
     
     chrome "{i}This missing person’s case was just the shell of something far more sinister, and I knew the best way to crack it wide open.{/i}"
 
+    show cop neutral at right
+
     chrome "{i}The cop was still around. I waved at him, getting a look of annoyance and a back turned as my response. Nice to be noticed, I guess.{/i}"
 
     hide cop neutral 
 
-    chrome "{i}At this point the crowd surrounding old Larry’s outline had largely moved on.{/i}"
+    chrome "{i}At this point the crowd surrounding Larry’s outline had largely moved on.{/i}"
     
     chrome "{i}One other person still remained, one I didn’t think much of earlier. Faded into the background, maybe by design.{/i}"
 
@@ -54,10 +56,10 @@ label scene10:
 
     show santa  
 
-    santa "Was that so hard detective? Now whatever it is hurry up. I got a lot of sitting around doing nothin to do."
+    santa "Was that so hard detective? Now whatever it is, hurry up. I got a lot of sitting around doing nothin' to do."
 
     chrome "{i}At a glance, he seems unimpressive. My scans show his programming model is old fashioned, processor still runs on 32 bit.{/i}"
-    chrome "{i}Runing on cheap batteries and even having an actual ON/OFF switch, he must be one of the earliest Android models around. Frame is well taken care of though, better than mine even.{/i}"
+    chrome "{i}Running on cheap batteries and even having an actual ON/OFF switch, he must be one of the earliest android models around. Frame is well taken care of though, better than mine even.{/i}"
 
     chrome "{i}This guy definitely saw something, but he might not be open to sharing. A guy like this won’t take kindly to human theatrics or pointless questions.{/i}"
     chrome "{i}He’s more liable to push them back in my face than go along with it. I gotta keep it short and sweet, stick to the facts.{/i}"
@@ -69,12 +71,12 @@ label scene10:
     menu: 
         santa "Well? Your circuits fried or something?"
 
+        "Logical":
+            jump scene10_logical 
         "Unassuming":
             jump scene10_unassuming 
         "Hardboiled":
             jump scene10_hardboiled
-        "Logicial":
-            jump scene10_logical 
     
 
     label scene10_unassuming:
@@ -171,7 +173,9 @@ label scene10:
 
         santa "Every Monday to Friday until 5 PM, then that asshole Freddy is supposed to take over."
 
-        santa "Ever since he left though? I’m waiting an hour, sometimes two for the next schmuck to take over."
+        santa "He didn't show up today, so I've been stuck here for over an hour waiting for the next shmuck to show up."
+
+        santa "And nobody seems to care."
 
         chrome "If you’re here that often, then it’s safe to assume you saw something, didn’t you?"
 
@@ -181,13 +185,13 @@ label scene10:
 
         chrome "When’s the last time you saw Mr. Fontaine?"
 
-        santa "Well, I guess it’d be shortly before the murder happened"
+        santa "Well, I guess it’d be shortly before the murder happened."
 
         show chrome shocked
 
         chrome "Did you see it happen?"
 
-        santa "Not sure really, but I saw somethin’."
+        santa "Not sure really, but I saw something."
 
         chrome "Well then? What did you see?"
 
@@ -195,9 +199,29 @@ label scene10:
 
         santa "Nope, not yet. I got a question for you first. You saw me here before, when you first did your questioning. You didn’t think I had something useful?"
 
-        chrome "{i}“I didn’t have a response. The android Santa looked me over, clearly enjoying my indecision.{/i}"
+        chrome "{i}I didn’t have a response. The android Santa looked me over, clearly enjoying my indecision.{/i}"
 
-        santa "All that new tech and AI training and you didn’t think of the obvious did you? I might be an earlier model than you, but our CPUs are still compatible."
+        santa "All that new tech and AI training and you didn’t think of the obvious, did you? I might be an earlier model than you, but our CPUs are still compatible."
+
+        chrome "{i}Robot Santa pointed to his neck, hidden behind the sheets of white metal serving as his makeshift beard. I can just make out a small USB port hidden within.{/i}"
+
+        santa "Why {i}tell{/i} you about what I saw, when I can just show you?"
+
+        #show santa happy
+
+        chrome "{i}It’s like a sudden ray of light parting the confusion in my mind. Of course, it's so obvious! How could I have overlooked it?{/i}"
+
+        chrome "{i}The android Santa smiled. Not everyday he gets one over on the “advanced” models.{/i}"
+
+        chrome "You’re saying you will give me the stored memory you have on last night?"
+
+        chrome "You should have shown me this earlier."
+
+        santa "And you should’ve asked."
+
+        chrome "{i}He wasn’t wrong. If I had asked him sooner, I might be farther along in this case.{/i}"
+
+        chrome "{i}An error born of my own misjudgment. How many other mistakes lay on my path, silently waiting to be discovered?{/i}"
 
         ######### GLITCH 005- Something regarding video feeds or snow, or that missing clue that would’ve helped to find Forrest Cane.
 
@@ -264,18 +288,6 @@ label scene10:
 
         $ glitch_counter +=1 # increment glitch counter
 
-        chrome "{i}EZMK-2512 pointed to his neck, hidden behind the sheets of white metal serving as his makeshift beard. I can just make out a small USB port hidden within.{/i}"
-
-        santa "Why {i}tell{/i} you about what I saw, when I can just show you?"
-
-        #show santa happy
-
-        chrome "{i}It’s like a sudden ray of light parting the confusion in my mind. Of course, it's so obvious! How could I have overlooked it?{/i}"
-
-        chrome "{i}The android Santa smiled. Not everyday he gets one over on the “advanced” models.{/i}"
-
-        chrome "You’re saying you give me the stored memory you have on last night?"
-
         jump scene10_postchoice
 
     label scene10_postchoice: 
@@ -284,15 +296,15 @@ label scene10:
 
         santa "If you notice, there’s cameras all over the place. They would have easily captured what I saw, but I heard from the dimwit cop over there that someone trashed the CCTV."
 
-        chrome "{i}The android pulled something small and thin out of the top of his head. A Hyman drive, meant for storing short term memory on an external device.{/i}"
+        chrome "{i}The android pulls something small and thin out of the top of his head. A Hyman drive, meant for storing short term memory on an external device.{/i}"
 
         santa "So, I’m your only option here. Take this and see what I saw that night."
 
-        chrome "{i}Slowly, I reached for the drive and looked it over in my palm. Typically, sticking something a stranger gave me into my CPU was an ill-advised decision.{/i}"
+        chrome "{i}Slowly, I reach for the drive and look it over in my palm. Typically, sticking something a stranger gave me into my CPU is an ill-advised decision.{/i}"
 
         chrome "{i}Sticklers never have any fun though.{/i}"
 
-        chrome  "{i}I jammed the drive into my neck and instantly was met with a flood of memories. All were locked but one, labeled “For you, detective”. I opened it.{/i}"
+        chrome "{i}I jam the drive into my neck and am instantly was met with a flood of memories. All are locked but one, labeled “For you, detective”. I open it.{/i}"
 
         #Visual Grayscale 
 
@@ -324,7 +336,7 @@ label scene10:
 
         show eatencookie at center with dissolve 
 
-        chrome "Larry moves to follow him, first taking out a cookie and taking a deep bite before walking over."
+        chrome "Larry moves to follow him, first taking out a cookie and taking a big bite before walking over."
 
         pause 0.5
 
@@ -352,7 +364,7 @@ label scene10:
 
         chrome "{i}Freddy looks around in panic, reaching in his pocket for something before pausing.{/i}"
 
-        chrome "{i}He looks over Larry’s body again, appearing to be in thought, before running down into the alleyway of the department store and disappearing.{/i}"
+        chrome "{i}He looks over Larry’s body again, before running down into the alleyway of the department store and disappearing.{/i}"
 
         hide freddy neutral with moveoutright
 
@@ -383,19 +395,15 @@ label scene10:
 
         show santa at right with dissolve
 
+        santa "So? What do you think? Pretty interesting, wouldn’t you say?"
+
+        chrome "...yes. Very interesting."
+
         chrome "{i}If anything, this was the smoking gun, right? Clearly something was wrong with those cookies, and here was direct proof that Freddy had handed them over. But what was Mariah doing at the end? {/i}"
 
         chrome "{i}She didn’t seem that concerned with Larry, in fact it almost seemed like she was hiding evidence of the crime. But why?{/i}"
 
         chrome "{i}Freddy’s actions also didn’t seem like those of a killer. Did he know he was being watched? If he didn’t, then why run? None of it made any sense.{/i}"
-
-        santa "So? What do you think? Pretty interesting, wouldn’t you say?"
-
-        chrome "You should have shown me this earlier."
-
-        santa "And you should’ve asked."
-
-        chrome "{i}He wasn’t wrong. If I had asked him sooner, I might be farther along in this case.{/i}"
 
         chrome "{i}With more answers came more questions. One thing was certain though, Ms. Fowler was looking more involved in this case than she let on.{/i}"
 

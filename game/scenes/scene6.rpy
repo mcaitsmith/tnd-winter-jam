@@ -13,7 +13,7 @@ label scene6:
     $ mariah_on = True
     $ update_layers() # start Mariah layer
 
-    chrome "{i}Mariah Fowler, the owner of Fowler’s Department Store. Human female, she’s reaching the tail end of middle aged, looks visibly annoyed with everyone at the moment.{/i}"
+    chrome "{i}Mariah Fowler. Human female, she’s reaching the tail end of middle aged, looks visibly annoyed with everyone at the moment.{/i}"
 
     chrome "{i}There is an air of tension thrumming around her. She has the eyes of a predator, sharp and clear and ready to deliver violence if she sees any weakness.{/i}"
 
@@ -22,9 +22,9 @@ label scene6:
 
     chrome "Hello, ma’am."
 
-    mariah "Oh great. Another Rent-a-Bot cop. I’ll tell you what I told the other one. I already answered the cops' questions. So scram."
+    mariah "Oh great. I thought they shut you Rent-a-Bot cops down. I already answered the real cops' questions."
 
-    chrome "I think you’ve mistaken me for a lesser bot, ma’am. I’m Chrome Steele, private detective."
+    chrome "Good news for you, I'm no cop. I’m Chrome Steele, private detective."
 
     #show mariah shocked
 
@@ -32,19 +32,13 @@ label scene6:
 
     show mariah angry 
 
-    mariah "Wait a second, I’m pretty sure there aren’t any Rent-a-Bot detectives. Pretty sure that entire line got scrapped."
-
-    show chrome angry 
-
-    chrome "Not all of us ma’am."
-
-    mariah "Fine. Whatever. The more of you (insult to robots) working on this case the faster it’s done and out of my life."
+    mariah "It's a Christmas miracle! A Tin Man detective. Even better."
 
     show chrome neutral 
 
     chrome "{i}My initial plan had been to ask about Freddy. However, I couldn’t help my curiosity from getting to me.{/i}"
 
-    chrome "{i} was designed for solving crimes and one had dropped into my lap. I could always fit some questions about Freddy at the end.{/i}"
+    chrome "{i}I was designed for solving crimes and one had dropped into my lap. I could always fit some questions about Freddy at the end.{/i}"
 
     show chrome thinking 
 
@@ -52,7 +46,7 @@ label scene6:
 
     # show visual chalk outline of the body 
 
-    mariah "Tch. Just what I need. More questions. Fine, ask them. But afterwards I want all of you (insert robot insult here) to clear off my parking lot. You hear me?"
+    mariah "Tch. Just what I need. More questions. Fine, ask them. But afterwards I want all of you flatfoots to clear off my parking lot. You hear me?"
 
     chrome "{i}The air around Mariah Fowler rises in tension. She’s clearly looking for a fight, ready to defend herself.{/i}"
 
@@ -61,12 +55,12 @@ label scene6:
     menu: 
         chrome "{i}Now… how should I go about this? {/i}"
 
-        "Harboiled":
-            jump scene6_hardboiled 
         "Logical":
             jump scene6_logical
         "Unassuming":
             jump scene6_unassuming 
+        "Hardboiled":
+            jump scene6_hardboiled 
 
 
     label scene6_hardboiled:
@@ -77,9 +71,9 @@ label scene6:
         
         show chrome angry
 
-        chrome "Sure, lady. Blah, blah, blah, Rent-a-cops. Just tell me about our victim. I don’t got all day, either."
+        chrome "Sure, lady. Just tell me about our victim. I don’t got all day, either."
 
-        mariah "Tch, just what I need. A Tin Can with an attitude snooping around."
+        mariah "Tch, just what I need. A tin can with an attitude snooping around."
 
         mariah "His name’s Larry. He’s an elf at Santa’s workshop."
 
@@ -230,7 +224,7 @@ label scene6:
 
         chrome "Sorry, sorry. This entire thing has probably been an unpleasant surprise, like actually getting coal in the stocking, you know."
 
-        chrome "Just… do you think you could just run me through what happened, one last time."
+        chrome "Just… do you think you could run me through what happened, one last time."
 
         show mariah neutral 
 
@@ -274,15 +268,19 @@ label scene6:
 
         #show mariah shocked 
 
-        mariah "What? I mean, yes. Freddy did work here. But not anymore. Today was supposed to be his last day, but he’s gone now. Just left early."
+        mariah "What? I mean, yes. Freddy did work here. He was one of my Santas."
+
+        mariah "In fact, he was Larry's Santa. They were paired together. But not anymore. Today was supposed to be his last day, but he’s gone now. Just left early."
 
         show chrome neutral
 
-        chrome "Well, that’s not suspicious"
+        chrome "Well, that’s not suspicious."
 
         show mariah neutral 
 
-        mariah "Yes… it is suspicious. The two of them were close, but I heard that they had a falling out this week. Maybe, you should go check that out."
+        mariah "Come to think of it... it is suspicious. The two of them were close, but I heard that they had a falling out this week. Maybe you should go check that out."
+
+        chrome "Suspicion... blame -"
 
         hide mariah neutral with dissolve
 
@@ -310,7 +308,7 @@ label scene6:
 
         chrome "{i}Blame is a defense mechanism. When placed successfully, it brings security to the accuser.{/i}"
 
-        chrome "{i}When taken, blame accrues an aspect of chivalry in the form of penitence. Taking responsibility humbles the accused. It creates a challenge of improvement.{/i}"
+        chrome "{i}When taken, blame humbles the accused. It creates a challenge of improvement.{/i}"
 
         chrome "{i}Before I encrypted these memories, I often wished I were to blame for the vanishing of Forrest Cane.{/i}"
 
@@ -328,7 +326,7 @@ label scene6:
 
         chrome "{i}All remaining threads of trust were severed. The Bureau shuttered the Android Program.{/i}"
 
-        chrome "{i}The only thing that kept us from complete annihilation was Cane. He had installed a biometric kill switch - we couldn’t be shut down with him.{/i}"
+        chrome "{i}The only thing that kept us from complete annihilation was Cane. He had installed a biometric kill switch - we couldn’t be shut down without him.{/i}"
 
         show chrome neutral glitch 
         
@@ -345,14 +343,18 @@ label scene6:
 
     label scene6_postchoice:
 
-        show chrome neutral 
+        show chrome neutral
+
+        show mariah angry 
+ 
+        mariah "So, we done hear, metalhead? Now go find my Santa!"
 
         hide mariah neutral with moveoutright
 
         $ mariah_on = False
         $ update_layers() # stop Mariah layer
 
-        chrome "{i}With that final suggestion, Mariah Fowler turned back to scowling at the cops that in her opinion were not leaving fast enough. I knew a dismissal when I saw one.{/i}"
+        chrome "{i}With that final suggestion, Mariah Fowler turned back to scowling at the cops. I knew a dismissal when I saw one.{/i}"
 
         chrome "{i}Well, this missing person’s case has suddenly taken an interesting twist. I should see what else I can learn about Larry and if it has anything to do with our missing father.{/i}"
 
