@@ -6,12 +6,13 @@
 
 label scene9:
 
-    scene bg freddyoffice
+    scene bg freddyoffice with fade
 
     play sound sfx_door
 
     show chrome neutral at left:
         xzoom -1.0 
+    with dissolve
     
     chrome "{i}The Fontaine digs. Three rooms and a toilet chamber. One of hundreds packing this block, nestled between an old-school bodega and a shabby, second-hand pawn shop.{/i}"
 
@@ -19,7 +20,7 @@ label scene9:
 
     chrome "{i}Cozy, if not a bit haphazard. I’m one to talk. I suppose Bianca’s doing her best with Freddy on the lam.{/i}"
 
-    show bianca sad at right
+    show bianca sad at right with moveinright
     $ bianca_on = True
     $ update_layers() # turn on Bianca layer
 

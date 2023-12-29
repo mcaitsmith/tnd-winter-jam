@@ -14,10 +14,11 @@ default pickedFive = False
 label scene11:
 
 
-    scene bg mariahoffice
+    scene bg mariahoffice with fade
 
 
-    show chrome neutral at left
+    show chrome neutral at left:
+        xzoom -1.0
 
     chrome "Mariah’s office. It’s clean- meticulously so. Funny how the messiest people can also be the most fastidious."
 

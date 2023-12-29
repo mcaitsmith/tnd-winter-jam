@@ -2,10 +2,11 @@
 
 label scene5:
 
-    scene bg extstore night
+    scene bg extstore night with fade
 
     show chrome neutral at left:
         xzoom -1.0
+    with dissolve
 
     chrome "{i}Fowler’s Department Store. Still surviving. Barely.{/i}"
 

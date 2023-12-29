@@ -6,9 +6,9 @@
 
 label scene7:
 
-    scene bg alley
+    scene bg alley with fade
 
-    show chrome neutral at right    
+    show chrome neutral at right with dissolve
 
     chrome "{i}I make my way to the alley to inspect the scene.{/i}"
 
@@ -16,6 +16,7 @@ label scene7:
 
     show cop neutral at left:
         xzoom -1.0  
+    with dissolve
 
     menu:
         "Hmm. He seems like a \"no nonsense, just the facts ma’am\" kinda guy..."

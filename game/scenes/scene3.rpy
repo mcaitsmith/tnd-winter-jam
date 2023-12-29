@@ -10,7 +10,7 @@ label scene3:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg bar
+    scene bg bar with fade
 
     # play music
     play music bar_music fadeout 3.0
