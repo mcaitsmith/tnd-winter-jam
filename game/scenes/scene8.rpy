@@ -1,6 +1,6 @@
 ﻿# The script of the scene goes in this file.
 
-######### SCENE 8
+######### SCENE 8: FOWLER'S DEPARTMENT STORE (Alley)
 
 label scene8:
 

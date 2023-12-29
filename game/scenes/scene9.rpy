@@ -1,6 +1,6 @@
 ﻿# The script of the scene goes in this file.
 
-######### SCENE 9: ???
+######### SCENE 9: FREDDY'S APARTMENT
 
 # The scene starts here.
 
