@@ -152,7 +152,7 @@ label logical12:
 
     freddy neutral "Listen boltbrain. I’m about to skip town. You got a warrant?"
 
-    chrome thinking "Do you really want to run, Freddy? Let’s look at the facts."
+    chrome thinking left "Do you really want to run, Freddy? Let’s look at the facts."
 
     chrome logical "Larry is dead. Pobre bastardo."
 
@@ -280,7 +280,7 @@ label unassuming12:
 
     chrome "{i}Folks decided that they knew me. And with no idea who I was, I listened to them.{/i}"
 
-    show chrome thinking glitch
+    show chrome thinking left glitch
 
     chrome "{i}Here we all were, telling Freddy who he was. Come to find out, he wasn't listening to a word.{/i}"
 
@@ -363,8 +363,9 @@ label scene12_e:
 
     mariah happy "You've handed yourselves over - and on my property!"
 
-    hide santa1 with dissolve
-    hide santa2 with dissolve
+    hide santa1
+    hide santa2 
+    with dissolve
 
     show mariah at right with moveoutright
     show chrome neutral at left:
@@ -373,7 +374,6 @@ label scene12_e:
     
     chrome unassuming "How convenient for you, right?"
 
-    hide chrome
     show chrome thinking left at left
 
     chrome "{i}Two Santa robots. EZMK model. Old, modified, likely holding a criminal record. Hell, I'm getting tired of these guys...{/i}"
@@ -435,7 +435,7 @@ label scene12_e:
 
     mariah_nvl_right "What the fuck are you talking about?"
 
-    show chrome thinking
+    show chrome thinking left
 
     hide dialogue_box
 
@@ -530,7 +530,7 @@ label scene12_f: # good ending
     hide dialogue_box # end convo
     nvl clear # clear NVL dialogue
 
-    show chrome thinking
+    show chrome thinking left
 
     chrome "Not so fast! Haven't you heard?"
 
@@ -544,16 +544,19 @@ label scene12_f: # good ending
 
     hide chrome
     hide mariah
+    with dissolve
 
-    show cop at left
+    show cop shocked at center with moveinright
 
     cop shocked "Mariah Fowler! Stand down!"
 
-    show jack at center
+    show jack shocked at right with moveinright
 
     jack shocked "Freddy! He's alive!"
 
-    show freddy at right
+    show freddy shocked at left:
+        xzoom -1.0
+    with moveinleft
 
     freddy shocked "Hmph."
 
@@ -561,13 +564,12 @@ label scene12_f: # good ending
 
     cop neutral "Quiet!"
 
-    hide cop
-    hide jack
-    hide freddy
+    scene bg rooftop night with dissolve
 
     show santa1 at left
     show santa2 at right
-    show mariah at center
+    show mariah neutral at center
+    with dissolve
 
     mariah neutral "Get me the android. NOW!"
 
@@ -582,19 +584,21 @@ label scene12_f: # good ending
     hide santa1
     hide mariah
     hide santa2
-    show santa1 at center
+    with dissolve
+
+    show santa1 at center with dissolve
 
     chrome "{i}I can't let them surround me.{/i}"
 
     chrome "{i}There's not a lot of room to maneuver. I sweep sideways.{/i}"
 
-    hide santa1
-    show chrome at center
+    hide santa1 with dissolve
+    show chrome at center with dissolve
 
     chrome angry "Try harder, turkey."
 
-    hide chrome
-    show santa1 at center
+    hide chrome with dissolve
+    show santa1 at center with dissolve
 
     chrome angry "{i}A claw shoots ahead, minus the festive glove. Sharp-edged, rusty - the ugly secret behind the fatherly figure.{/i}"
 
@@ -607,21 +611,24 @@ label scene12_f: # good ending
 
     chrome angry "{i}EZMK models may be big, but their frame is hollow, and the chassis thin.{/i}"
 
-    hide santa1
-    show mariah neutral at center
+    hide santa1 with dissolve
+    show mariah neutral at center with dissolve
 
     chrome angry "{i}Mariah's expression is relaxed. Her eyes are shooting in different directions. Her shoulders are tense.{/i}"
 
     chrome angry "{i}I have to hurry.{/i}"
 
-    hide mariah
-    show chrome shocked at left
+    hide mariah with dissolve
+    show chrome shocked at left:
+        xzoom -1.0
     show santa2 at right
+    with dissolve
 
     santa2 "KILL!"
 
-    hide mariah
-    show freddy at center
+    show freddy happy at center:
+        xzoom -1.0
+    with moveinleft
     
     freddy happy "Over here, ugly tinfoil beardie."
 
@@ -629,6 +636,11 @@ label scene12_f: # good ending
     with hpunch
 
     freddy angry "I'm not going down without a fight."
+    scene bg rooftop night with dissolve
+
+    show mariah happy at right
+    show cop shocked at left
+    with dissolve
 
     hide freddy
     hide santa2
@@ -644,7 +656,10 @@ label scene12_f: # good ending
     cop "I said stand-!"
 
     hide cop
-    show jack at left
+    show jack angry at left:
+        xzoom -1.0
+    with moveinleft
+
 
     jack angry "If you won't stop her, I will!"
 
@@ -654,7 +669,9 @@ label scene12_f: # good ending
 
     chrome "{i}I can't let that happen.{/i}"
 
-    show chrome at center
+    show chrome angry at center:
+        xzoom -1.0 
+    with moveinleft
 
     chrome hardboiled "OUT OF THE WAY, JACK!"
 
@@ -713,7 +730,7 @@ label scene12_f: # good ending
     scene bg rooftop night
     with fade
 
-    show jack at center
+    show jack shocked at center
 
     $ chrome_on = True
     $ freddy_on = True
@@ -734,8 +751,12 @@ label scene12_f: # good ending
 
     show cop angry at center
     show mariah neutral at right
+    with dissolve
 
     mariah angry "The tin can is still up? What the hell they make you out of?"
+
+    show cop angry at center:
+            xzoom -1.0
 
     cop angry "FOR THE LOVE OF GOD, SHUT. UP!"
 
@@ -757,34 +778,32 @@ label scene12_g: # average ending
 
     hide chrome
     hide mariah
+    with dissolve
 
-    show cop at left 
-    
-    cop shocked "Mariah Fowler! Stand down!!"
+    show cop shocked at center with moveinright
 
-    show jack at center
+    cop shocked "Mariah Fowler! Stand down!"
 
-    jack shocked "Freddy! He’s alive!"
+    show jack shocked at right with moveinright
 
-    show freddy at right
+    jack shocked "Freddy! He's alive!"
+
+    show freddy shocked at left:
+        xzoom -1.0
+    with moveinleft
 
     freddy shocked "Hmph."
 
-    jack happy "Can’t believe the tin detective got it right."
+    jack happy "Can't believe the tin detective got it right."
 
     cop neutral "Quiet!"
 
-    hide cop
-
-    hide jack
-
-    hide freddy
+    scene bg rooftop night with dissolve
 
     show santa1 at left
-
     show santa2 at right
-
-    show mariah at center
+    show mariah neutral at center
+    with dissolve
 
     mariah neutral "Get me the android. NOW!"
 
@@ -833,13 +852,17 @@ label scene12_g: # average ending
     chrome angry "{i}Crap. What is she doing? And what’s the cop waiting for?{/i}"
 
     hide mariah
-    show chrome shocked at left
+    show chrome shocked at left:
+        xzoom -1.0
     show santa2 at right
 
     santa2 "KILL!"
 
     hide mariah
-    show freddy at center
+    show freddy happy at center:
+        xzoom -1.0
+    with moveinleft
+
     
     freddy happy "Over here, ugly tinfoil beardie."
 
@@ -848,10 +871,11 @@ label scene12_g: # average ending
 
     freddy angry "I'm not going down without a fight."
 
-    hide freddy
-    hide santa2
+    scene bg rooftop night with dissolve
+
     show mariah happy at right
     show cop shocked at left
+    with dissolve
 
     chrome "{i}I have to stop her.{/i}"
 
@@ -862,7 +886,9 @@ label scene12_g: # average ending
     cop "I said stand-!"
 
     hide cop
-    show jack at left
+    show jack angry at left:
+        xzoom -1.0
+    with moveinleft
 
     jack angry "If you won't stop her, I will!"
 
@@ -872,7 +898,7 @@ label scene12_g: # average ending
 
     chrome "{i}I can't let that happen.{/i}"
 
-    show chrome at center
+    show chrome shocked at center with moveinleft
 
     chrome shocked "Duck! Duck!"
 
@@ -883,7 +909,7 @@ label scene12_g: # average ending
     with hpunch
     pause 1.0
 
-    hide mariah
+    hide mariah with moveoutright
 
     play sound sfx_footsteps
     pause 1.0
@@ -893,9 +919,12 @@ label scene12_g: # average ending
     chrome angry "Get to cover, dammit!"
 
     play sound sfx_gunshots
+    show chrome angry:
+            xzoom -1.0
 
     #Narration
     chrome "{i}...{/i}"
+
     play sound sfx_footsteps
     chrome "{i}She escaped.{/i}"
 
@@ -1027,12 +1056,11 @@ label scene12_h: # bad ending
     santa2 "KILL."
 
     freddy angry "Fuck, this is bad."
+    scene bg rooftop night with dissolve
 
-    hide freddy
-    hide santa2
-    hide chrome
     show mariah happy at right
     show cop shocked at left
+    with dissolve
 
     chrome "{i}The cop’s gun is out.{/i}"
 
@@ -1041,7 +1069,9 @@ label scene12_h: # bad ending
     cop "I said stand-!"
 
     hide cop
-    show jack at left
+    show jack angry at left:
+        xzoom -1.0
+    with moveinleft
 
     jack angry "If you won't stop her, I will!"
 
