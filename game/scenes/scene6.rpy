@@ -49,7 +49,6 @@ label scene6:
 
     chrome "{i}I was designed for solving crimes and one had dropped into my lap. I could always fit some questions about Freddy at the end.{/i}"
 
-    hide chrome
     show chrome thinking left at left
 
     show dialogue_box
@@ -128,7 +127,6 @@ label scene6:
 
         chrome "{i} Well, it looks like Larry is a deadend. Fine, I shouldn’t be messing around with a crime scene, anyways. I’ll move on to my actual job.{/i}"
 
-        hide chrome
         show chrome thinking left at left
 
         show dialogue_box
@@ -165,7 +163,6 @@ label scene6:
 
         mariah_nvl_right "Actually, now that you bring him up. You should probably look for Freddy. Yeah, he’s probably the one that did this."
 
-        hide chrome
         show chrome thinking left at left
 
         chrome_nvl_left "That’s a rather sudden jump in logic."
@@ -252,7 +249,6 @@ label scene6:
 
         show dialogue_box
 
-        hide chrome
         show chrome thinking left at left
 
         chrome_nvl_left "Well, then I would like to expand my questioning to a person of interest."
@@ -284,7 +280,6 @@ label scene6:
 
         mariah_nvl_right "Said that he couldn’t handle the job anymore. I thought he just flaked out."
 
-        hide chrome
         show chrome thinking left at left
 
         chrome_nvl_left "So he’s Larry’s direct coworker? I assume that the two of them spoke often."
@@ -431,7 +426,6 @@ label scene6:
 
         chrome "{i}Here we go again. Energy surges through me. My systems flood with information, trusting me to interpret the proper pieces. I suspect that I am trying to tell myself something.{/i}"
 
-        hide chrome
         show chrome thinking left glitch at left
         
         chrome "{i}Suspicion breeds blame. Blame then circles like a vulture, seeking a host.{/i}"
@@ -485,9 +479,9 @@ label scene6:
 
         show chrome neutral
 
-        show mariah angry 
+        show mariah angry at right
  
-        mariah "So, we done hear, metalhead? Now go find my Santa!"
+        mariah "So, we done here, metalhead? Now go find my Santa!"
 
         hide mariah neutral with moveoutright
 

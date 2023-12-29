@@ -47,7 +47,9 @@ label scene5:
 
     mariah "And ring that bell louder! Now that the lookie loos are gone, I expect you to hit your quota, you hear me!"
 
-    show chrome thinking left at left with moveinleft
+    show chrome thinking left at left:
+        xzoom -1.0
+    with moveinleft
 
     chrome "{i}Having seen enough, I consider my next steps...{/i}"
 

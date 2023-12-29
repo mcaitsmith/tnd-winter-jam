@@ -4,9 +4,12 @@
 
 label scene12:
 
-    scene bg rooftop night
+    scene bg rooftop night with fade
 
-    show chrome sad at left
+    show chrome sad at left:
+        xzoom -1.0
+    with dissolve
+
 
     chrome sad "I feel like I should have pieced things together sooner."
 
@@ -20,7 +23,7 @@ label scene12:
 
     chrome neutral "Freddy? Is that you?"
 
-    show freddy shocked at right
+    show freddy shocked at right with moveinright
 
     $ freddy_on = True
     $ update_layers() # turn on Freddy layer
@@ -337,14 +340,18 @@ label scene12_e:
     #Here comes Mariah and her backup: Santa1, Mariah, Santa2. In this scene also: steele
     #Mariah + The santa goons appear. They threaten Chrome and Freddy.
 
-    hide freddy
+    hide freddy with moveoutleft
     hide chrome
+    show chrome unassuming at left
+    pause 0.2
+    hide chrome with moveoutleft
 
     #Swap to ADV mode
 
-    show mariah at center
+    show mariah neutral at center
     show santa1 at left
-    show santa2 at right
+    show santa2 at right 
+    with moveinright
 
     mariah neutral "Wait up."
 
@@ -356,144 +363,153 @@ label scene12_e:
 
     mariah happy "You've handed yourselves over - and on my property!"
 
-    hide santa1 
-    hide santa2
+    hide santa1 with dissolve
+    hide santa2 with dissolve
 
-    show mariah at left
-    show chrome at center
+    show mariah at right with moveoutright
+    show chrome neutral at left:
+        xzoom -1.0 
+    with moveinleft
     
     chrome unassuming "How convenient for you, right?"
 
-    chrome thinking "{i}Two Santa robots. EZMK model. Old, modified, likely holding a criminal record. Hell, I'm getting tired of these guys...{/i}"
+    hide chrome
+    show chrome thinking left at left
+
+    chrome "{i}Two Santa robots. EZMK model. Old, modified, likely holding a criminal record. Hell, I'm getting tired of these guys...{/i}"
 
     #Swap to NVL mode. Steele and Mariah are getting their showdown now.
 
+    nvl clear
     show dialogue_box at center
 
-    hide chrome
-    show chrome unassuming at right
-    show mariah neutral at left
+    show chrome unassuming at left:
+        xzoom -1.0
+    show mariah neutral at right
 
-    chrome_nvl_right "Mariah, so good to see you! And you even brought company. We can finally celebrate the return of your employee. Your lost property!"
+    chrome_nvl_left "Mariah, so good to see you! And you even brought company. We can finally celebrate the return of your employee. Your lost property!"
 
-    chrome_nvl_right "Too bad he wasn't satisfied with the working conditions."
+    chrome_nvl_left "Too bad he wasn't satisfied with the working conditions."
 
-    chrome_nvl_right "Wasn't today his last day?"
+    chrome_nvl_left "Wasn't today his last day?"
 
     show mariah angry
 
-    mariah_nvl_left "Beat it. What do you know, rustbucket?"
+    mariah_nvl_right "Beat it. What do you know, rustbucket?"
 
     show chrome happy
 
-    chrome_nvl_right "I know plenty."
+    chrome_nvl_left "I know plenty."
 
     show chrome unassuming
 
-    chrome_nvl_right "Madam, I'm programmed to take my work very seriously."
+    chrome_nvl_left "Madam, I'm programmed to take my work very seriously."
 
-    chrome_nvl_right "This murder could have been avoided. I dare say you were willing to accept Freddy's resignation."
+    chrome_nvl_left "This murder could have been avoided. I dare say you were willing to accept Freddy's resignation."
 
-    chrome_nvl_right "You both play by the book, save a few bucks and carry on with your lives. Oh, but Freddy wanted to pull a final trick and you caught on."
+    chrome_nvl_left "You both play by the book, save a few bucks and carry on with your lives. Oh, but Freddy wanted to pull a final trick and you caught on."
 
     show mariah neutral
 
-    mariah_nvl_left "This idiot believes he's a detective. Spit it out."
+    mariah_nvl_right "This idiot believes he's a detective. Spit it out."
 
-    chrome_nvl_right "You caught him trying to download incriminating information."
+    chrome_nvl_left "You caught him trying to download incriminating information."
 
     show mariah angry
 
-    mariah_nvl_left "You're wasting your battery."
+    mariah_nvl_right "You're wasting your battery."
 
-    chrome_nvl_right "No, Mariah, I get it! He wanted to tarnish your image. I'd be upset too."
+    chrome_nvl_left "No, Mariah, I get it! He wanted to tarnish your image. I'd be upset too."
 
-    chrome_nvl_right "As an android, I hear derogatory comments all day. I can empathize."
+    chrome_nvl_left "As an android, I hear derogatory comments all day. I can empathize."
 
     show mariah neutral
 
-    mariah_nvl_left "Shut up."
+    mariah_nvl_right "Shut up."
 
-    chrome_nvl_right "No, no, please let it out."
+    chrome_nvl_left "No, no, please let it out."
 
-    chrome_nvl_right "Mr. Fontaine found a discrepanciy in your sales. I understand; physical retail isn't what it used to be."
+    chrome_nvl_left "Mr. Fontaine found a discrepanciy in your sales. I understand; physical retail isn't what it used to be."
 
-    chrome_nvl_right "Freddy dug a little too deep. He found out that the proceeds from your little charity campaign were going right into your pockets."
+    chrome_nvl_left "Freddy dug a little too deep. He found out that the proceeds from your little charity campaign were going right into your pockets."
 
-    mariah_nvl_left "What the fuck are you talking about?"
+    mariah_nvl_right "What the fuck are you talking about?"
 
     show chrome thinking
+
+    hide dialogue_box
 
     #narration
     chrome "{i}Sweat is building up under her neck. She's getting nervous. I might be making things worse. No, I mustn't back down, I gotta double up.{/i}"
 
+    show dialogue_box
     #Dialog
 
     show chrome happy
 
-    chrome_nvl_right "I've got the evidence triple-secured in my hard drive now."
+    chrome_nvl_left "I've got the evidence triple-secured in my hard drive now."
 
-    mariah_nvl_left "Oh, motherf-"
+    mariah_nvl_right "Oh, motherf-"
 
     show chrome unassuming
 
-    chrome_nvl_right "Just doing my job! But let's not get distracted: I believe you really thought you had a reason for murder."
+    chrome_nvl_left "Just doing my job! But let's not get distracted: I believe you really thought you had a reason for murder."
 
-    chrome_nvl_right "And so, you made some special cookies for Freddy as a little... going away present."
+    chrome_nvl_left "And so, you made some special cookies for Freddy as a little... going away present."
 
-    chrome_nvl_right "But I guess Freddy doesn't have much of a sweet tooth. He gave them to our dear Larry, turning this into a tragedy."
+    chrome_nvl_left "But I guess Freddy doesn't have much of a sweet tooth. He gave them to our dear Larry, turning this into a tragedy."
 
-    chrome_nvl_right "And that's not all. You're smart. You needed the cops on your side."
+    chrome_nvl_left "And that's not all. You're smart. You needed the cops on your side."
 
-    chrome_nvl_right "It wasn't hard to point the local fuzz towards Freddy. I've met them; not exactly our city's finest."
+    chrome_nvl_left "It wasn't hard to point the local fuzz towards Freddy. I've met them; not exactly our city's finest."
 
-    chrome_nvl_right "And at this time of year? Any excuse to sweep something like this under the rug."
+    chrome_nvl_left "And at this time of year? Any excuse to sweep something like this under the rug."
 
-    chrome_nvl_right "End, the curtains fall: You pushed all the blame on Freddy. Two birds with one stone? Quite the master plan. Too bad you did it all in a hurry."
-
-    show mariah angry
-
-    mariah_nvl_left "I swear to God, you talk too much."
-
-    show mariah happy
-
-    mariah_nvl_left "Nice guesses, Steele. I couldn't have completed this without you."
-
-    mariah_nvl_left "Following your scent, I've got the right people in the place I want. My property, as you said, on my turf."
+    chrome_nvl_left "End, the curtains fall: You pushed all the blame on Freddy. Two birds with one stone? Quite the master plan. Too bad you did it all in a hurry."
 
     show mariah angry
 
-    mariah_nvl_left "As for my secret Santa here, I'll make things quick and clean this time."
-
-    show mariah neutral
-
-    mariah_nvl_left "But you...you're cunning."
-
-    mariah_nvl_left "My people know ways to make you useful. Heck, I'll be generous. I won't even wipe your memory. At least, at first."
+    mariah_nvl_right "I swear to God, you talk too much."
 
     show mariah happy
 
-    mariah_nvl_left "Imagine: one day you wake with your consciousness trapped in a cash-dispensing machine."
+    mariah_nvl_right "Nice guesses, Steele. I couldn't have completed this without you."
 
-    mariah_nvl_left "You try to move your fingers, and the only thing that happens is that cash comes out of your box-shaped mouth."
+    mariah_nvl_right "Following your scent, I've got the right people in the place I want. My property, as you said, on my turf."
 
-    mariah_nvl_left "Wait, what if I put you on my phone? You could be my assistant."
+    show mariah angry
 
-    mariah_nvl_left "We could make it so every time I unlock it, you suffer the equivalent of a plasma torch pressed against your receptors. I could browse you all day long."
+    mariah_nvl_right "As for my secret Santa here, I'll make things quick and clean this time."
 
     show mariah neutral
 
-    mariah_nvl_left "Once I'm done playing games with you, I'll wipe your memory and boot you up into one of these shitty Santas."
+    mariah_nvl_right "But you...you're cunning."
+
+    mariah_nvl_right "My people know ways to make you useful. Heck, I'll be generous. I won't even wipe your memory. At least, at first."
 
     show mariah happy
 
-    mariah_nvl_left "I can't wait for future you to tell me how it feels."
+    mariah_nvl_right "Imagine: one day you wake with your consciousness trapped in a cash-dispensing machine."
 
-    mariah_nvl_left "Hell, thank you for leading me here, Detective. You've tied up all my loose ends with a pretty bow."
+    mariah_nvl_right "You try to move your fingers, and the only thing that happens is that cash comes out of your box-shaped mouth."
+
+    mariah_nvl_right "Wait, what if I put you on my phone? You could be my assistant."
+
+    mariah_nvl_right "We could make it so every time I unlock it, you suffer the equivalent of a plasma torch pressed against your receptors. I could browse you all day long."
 
     show mariah neutral
 
-    mariah_nvl_left "Santas - Clean this mess up."
+    mariah_nvl_right "Once I'm done playing games with you, I'll wipe your memory and boot you up into one of these shitty Santas."
+
+    show mariah happy
+
+    mariah_nvl_right "I can't wait for future you to tell me how it feels."
+
+    mariah_nvl_right "Hell, thank you for leading me here, Detective. You've tied up all my loose ends with a pretty bow."
+
+    show mariah neutral
+
+    mariah_nvl_right "Santas - Clean this mess up."
 
     if glitch_counter >= 5:
         call scene12_f # good ending
@@ -898,18 +914,20 @@ label scene12_h: # bad ending
     chrome "{i}She turns her gaze behind us.{/i}"
     chrome "{i}Dammit. Someone’s coming.{/i}"
 
-    hide chrome
-    hide mariah
+    hide chrome with dissolve
+    hide mariah with dissolve
 
-    show cop at left
+    show cop shocked at center with moveinright
 
     cop shocked "Mariah Fowler! Stand down!"
 
-    show jack at center
+    show jack shocked at right with moveinright
 
     jack shocked "Freddy! He's alive!"
 
-    show freddy at right
+    show freddy shocked at left:
+        xzoom -1.0
+    with moveinleft
 
     freddy shocked "Hmph."
 
@@ -917,19 +935,20 @@ label scene12_h: # bad ending
 
     cop neutral "Quiet!"
 
-    hide cop
-    hide jack
-    hide freddy
+    scene bg rooftop night with dissolve
 
     show santa1 at left
     show santa2 at right
-    show mariah at center
+    show mariah neutral at center
+    with dissolve
 
     mariah neutral "Really? Is that all?"
 
     mariah happy "Get me the android. NOW!"
 
     chrome "{i}...{/i}"
+
+    show bg rooftop night with hpunch
 
     chrome "{i}The robots rush at me. I can hear their circuit boards straining. Their expressions are lifeless, their movements rigid.{/i}"
 
@@ -940,14 +959,15 @@ label scene12_h: # bad ending
     hide santa1
     hide mariah
     hide santa2
+    with dissolve
     show santa1 at center
 
     chrome "{i}I can't let them surround me.{/i}"
 
     chrome "{i}There's not a lot of room to maneuver. I sweep sideways.{/i}"
 
-    hide santa1
-    show chrome at center
+    hide santa1 with dissolve
+    show chrome confused at center with dissolve
 
     chrome confused "Foul play!"
 
@@ -987,13 +1007,16 @@ label scene12_h: # bad ending
     chrome "{i}Crap. What is she doing? And what’s the cop waiting for?{/i}"
 
     hide mariah
-    show chrome shocked at left
+    show chrome shocked at left:
+        xzoom -1.0
     show santa2 at right
 
     santa2 "KILL!"
 
     hide mariah
-    show freddy at center
+    show freddy happy at center:
+        xzoom -1.0
+    with moveinleft
     
     freddy happy "Over here, ugly tinfoil beardie."
 
@@ -1007,6 +1030,7 @@ label scene12_h: # bad ending
 
     hide freddy
     hide santa2
+    hide chrome
     show mariah happy at right
     show cop shocked at left
 

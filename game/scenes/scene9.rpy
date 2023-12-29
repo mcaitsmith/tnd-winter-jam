@@ -185,7 +185,6 @@ label scene9:
 
             chrome "{i}And when the moment comes - when we separate for good - we are forced to reevaluate our entire state of functionality.{/i}"
 
-            hide chrome
             show chrome thinking left glitch at left
 
             chrome "{i}That’s why they thought I did it. That’s why I was the number one suspect in Cane’s disappearance.{/i}"
@@ -203,7 +202,6 @@ label scene9:
 
             chrome "{i}I miss Cane. If I ever had a father, it was him.{/i}"
 
-            hide chrome
             show chrome thinking left glitch at left
 
             chrome"{i}Bianca needs Freddy. They are each other’s reason to be.{/i}"
@@ -235,7 +233,7 @@ label scene9:
             nvl show 
 
             hide chrome
-            show chrome thinking left at left
+            show chrome thinking left
 
             chrome_nvl_left "My dear, you still operate under the assumption that I am indeed searching."
             
@@ -261,7 +259,7 @@ label scene9:
             bianca_nvl_right angry "...but if my dad’s hiding, he’s got a good reason to."
 
             hide chrome
-            show chrome thinking left at left
+            show chrome thinking left
 
             chrome_nvl_left "One would argue that anyone who hides has a good reason to."
 
@@ -353,7 +351,6 @@ label lookaround:
 
             bianca_nvl_right sad "Yeah. That’s why I tried it once, when Dad was spiraling. It didn’t last as long as I’d hoped."
 
-            hide chrome
             show chrome confused left at left
             chrome_nvl_left "But you just said boxing is stupid."
 
@@ -378,7 +375,8 @@ label lookaround:
             jump helpful
         "Santa Toy": 
             hide chrome
-            show chrome thinking left at left
+            show chrome thinking left at left:
+                xzoom -1.0
 
             show santa toy at right
 
@@ -425,8 +423,7 @@ label lookaround:
 
             show creditcard at right
 
-            hide chrome
-            show chrome thinking left at left
+            show chrome thinking left
 
             chrome "{i}Hmm. ‘Card Reader Schematics.’ ‘Install on all registers’. These credit card readers are programmed to redirect sales to a private bank account!{/i}"
 
@@ -435,8 +432,7 @@ label lookaround:
 
             chrome "{i}I wanted to believe Bianca. But it looks like I’ve discovered Santa’s secret - Freddy’s been embezzling cash over at the department store.{/i}" 
 
-            hide chrome
-            show chrome confused left at left
+            show chrome confused left
 
             chrome "{i}Was Larry in on it? Is that why he’s dead? I must be missing something over at Fowler’s. One stone left unturned…{/i}"
 
@@ -454,8 +450,7 @@ label lookaround:
 
             bianca_nvl_right neutral "Did that Santa droid give you everything you asked for this year?"
 
-            hide chrome
-            show chrome thinking left at left
+            show chrome thinking left
             chrome_nvl_left "Not everything. Not yet."
 
             chrome_nvl_left "But there’s another Santa out there who may just do exactly that…"

@@ -45,12 +45,11 @@ label scene8:
             return
 
 label cellcell:
-    hide chrome
-    show chrome thinking left at left
+    show chrome thinking left at left:
+        xzoom -1.0
     chrome "{i}Hmm. What's on this phone?{/i}"
     show phone at center
-    show chrome shocked:
-        xzoom -1.0
+    show chrome shocked
     chrome shocked "{i}There's a message from Freddy. \"Leave me alone, Larry. After tonight, you're dead to me.\"{/i}"
     chrome neutral "{i}This looks bad for Freddy. How quickly a missing persons case can become murder. This is more than I bargained for. Better tell the kid in person.{/i}"
     
