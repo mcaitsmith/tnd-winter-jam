@@ -10,37 +10,14 @@ label scene7:
 
     show chrome neutral at right    
 
+    chrome "{i}I make my way to the alley to inspect the scene.{/i}"
+
+    chrome "{i}There's a cop standing guard. He's not making much effort to secure the area.{/i}"
+
     show cop neutral at left   
 
     menu:
-        "Hm. He seems like a \"no nonsense, just the facts ma’am\" kinda guy. I wonder what approach I should take?"
-
-    # Option One: (hardboiled)
-        "Hardboiled":
-
-            show dialogue_box at center 
-            nvl show # show NVL dialogue
-
-            chrome_nvl_right hardboiled "Heyo, buddy boy! I’m looking for Freddy Font–"
-
-            cop_nvl_left angry "Yeah? You and me both."
-
-            chrome_nvl_right shocked "Excuse me?"
-
-            cop_nvl_left angry "He’s a person of interest- might even say a suspect."
-
-            chrome_nvl_right angry "Really?"
-
-            cop_nvl_left angry "That woman right over there, found this poor schmuck dead as a doornail."
-
-            cop_nvl_left angry "Combine that with the fact Freddy didn’t show up today, his last day…"
-
-            chrome_nvl_right confused "Hm. Something seems fishy…"
-
-            cop_nvl_left "The only thing fishy ‘round here is you! Now giddy up Jingle Horse and get the fuck out of my active crime scene!"
-            
-            hide dialogue_box
-            nvl clear 
+        "Hmm. He seems like a \"no nonsense, just the facts ma’am\" kinda guy..."
 
     # Option Two: (Logical. IDEAL PATH)
         "Logical":
@@ -53,22 +30,32 @@ label scene7:
 
             cop_nvl_left neutral "You’re not the only one."
 
-            chrome_nvl_right logical "Hm. Interesting. Locate any evidence?"
+            chrome_nvl_right logical "Hmm. And this poor sap?"
 
-            cop_nvl_left neutral "That’s the funny thing. He died from a heart attack."
+            cop_nvl_left neutral "That’s the funny thing. Larry the Elf here.. he worked with Freddy the Santa."
+            
+            cop_nvl_left neutral "Looks to me like a simple heart attack. Open and shut case."
 
-            chrome_nvl_right confused "Heart attack? Something doesn’t add up here."
+            chrome_nvl_right logical "You don't say? As I can see..."
 
-            cop_nvl_left neutral "Whelp, we’ve got a witness...."
+            chrome_nvl_right logical "Freddy’s clearly a suspect, but why? A heart attack is a natural cause of death, sure it can be induced in the victim by an outside force but not easily. Body is cold and already undergone rigor mortis, suggesting a time of death in the dead of night." 
 
-            chrome_nvl_right confused "Who?"
+            chrome_nvl_right logical "Freddy has an immediate relationship with the victim, perhaps there’s a personal motive? And why here at their place of work? Certainly he knew this would paint him as a suspect?"
+        
+            cop_nvl_left angry "Uhh... Earth to metalhead? Am I interrupting you?"
 
-            cop_nvl_left neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction"
+            chrome_nvl_right logical "Yes, you are. What is it?"
 
-            chrome_nvl_right logical "Very interesting. Thanks."
+            cop_nvl_left neutral "We figured all that out already. Freddy was present at the scene according to our witness."
+
+            chrome_nvl_right confused "Come again?"
+
+            cop_nvl_left neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction."
 
             hide dialogue_box
             nvl clear 
+
+            chrome "{i}Seems like Mariah didn't tell me the whole story - {/i}"
 
             ######### GLITCH 3 (flashback with glitching animation on Steele & bg grayed out)
 
@@ -178,5 +165,31 @@ label scene7:
             hide dialogue_box
             nvl clear 
 
+     # Option One: (hardboiled)
+        "Hardboiled":
+        
+            show dialogue_box at center 
+            nvl show # show NVL dialogue
 
-    jump scene8
+            chrome_nvl_right hardboiled "Heyo, buddy boy! I’m looking for Freddy Font–"
+
+            cop_nvl_left angry "Yeah? You and me both."
+
+            chrome_nvl_right shocked "Excuse me?"
+
+            cop_nvl_left angry "He’s a person of interest- might even say a suspect."
+
+            chrome_nvl_right angry "Really?"
+
+            cop_nvl_left angry "That woman right over there, found this poor schmuck dead as a doornail."
+
+            cop_nvl_left angry "Combine that with the fact Freddy didn’t show up today, his last day…"
+
+            chrome_nvl_right confused "Hm. Something seems fishy…"
+
+            cop_nvl_left angry "The only thing fishy ‘round here is you! Now giddy up Jingle Horse and get the fuck out of my active crime scene!"
+
+            hide dialogue_box
+            nvl clear 
+
+   jump scene8

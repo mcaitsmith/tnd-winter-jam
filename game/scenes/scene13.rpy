@@ -26,7 +26,7 @@ label scene13:
     freddy angry "Before I knew it, I was in too deep."
     freddy angry "At first, I wanted to do something good for a change, but Mariah... she had other plans."
     freddy sad "I can’t believe how cold she is, to stoop that low. Poor Larry..."
-    chrome neutral "My... mentor... once said, there’s nothing colder than the human heart."
+    chrome sad "My... mentor... once said, there’s nothing colder than the human heart."
     chrome neutral "I now disagree."
     chrome neutral "For every Mariah there’s a Freddy, or a Jack, just trying their best."
     chrome neutral "Each one of a kind, like how two jazz sessions are never the same."
@@ -43,9 +43,9 @@ label scene13:
     freddy neutral "But seriously, thank you. I mean it."
     hide freddy
     show bianca at left
-    bianca neutral "Hey listen, if you need some help on the next case..."
+    bianca neutral "Hey listen, I know I can never repay you, but if you need some help on the next case..."
     bianca happy "or a partner even, you know where to find me."
-    chrome neutral "I might take you up on that."
+    chrome happy "I might take you up on that."
     hide bianca
     show freddy at left
     freddy neutral "Speaking of which, what’s next for ya, Steele?"

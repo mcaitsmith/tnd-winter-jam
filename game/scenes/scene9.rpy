@@ -17,7 +17,7 @@ label scene9:
 
     "{i}Exactly 738 square feet if you count the entry vestibule. Which I do.{/i}"
 
-    "{i}Cozy, if not erroneously kept. I’m one to talk. I suppose Bianca’s doing her best with Freddy on the lamb.{/i}"
+    "{i}Cozy, if not a bit haphazard. I’m one to talk. I suppose Bianca’s doing her best with Freddy on the lam.{/i}"
 
     show bianca sad at right
     $ bianca_on = True
@@ -26,24 +26,23 @@ label scene9:
     show dialogue_box at center 
     nvl show # show NVL dialogue
 
-    chrome_nvl_left "And speaking of Bianca…"
-
-    bianca_nvl_right shocked "Mr. Steele!¡Ay, casi me matas!"
-
+    bianca_nvl_right shocked "Mr. Steele! ¡Ay, casi me matas!"
+    
     hide dialogue_box
     nvl hide 
 
     chrome "{i}Almost scared her to death, eh? The irony of human idioms. I don’t need another body tonight.{/i}"
 
-    "{i}She’s on edge. Freddy may be a flake, but she’s clearly not adverse to the effects of his absence. She’s hurting. Damn it. It’s hard enough to quit on the case. But it’s harder to quit on the girl.{/i}"
+    "{i}She’s on edge. Freddy may be a flake, but Bianca's clearly not averse to the effects of his absence. She could use a friendly voice right. Righ now I'm all she's got.{/i}"
+
+    "{i}She’s hurting. Damn it. It’s hard enough to quit on the case. But it’s harder to quit on the girl.{/i}"
 
     menu detective_choices9:
         bianca "Did you find my Dad yet?"
-        "Not the Only One...":
 
+        "Hardboiled":
             show dialogue_box at center
             nvl show
-
             chrome_nvl_left angry "I’m not the only one looking, kiddo. But I just might be the first to jump ship."
 
             bianca_nvl_right angry "Why? Who else wants to find him?"
@@ -85,7 +84,7 @@ label scene9:
             hide dialogue_box
             nvl clear 
 
-        "Unfortunately...":
+        "Unassuming":
 
             show dialogue_box at center
             nvl show
@@ -120,11 +119,13 @@ label scene9:
 
             chrome_nvl_left timid "Of course. Luckily, I can simply encrypt my memory files. Though that is proving faulty these days..."
 
-            bianca_nvl_right sad "Well, I try my best to forget the last time Dad left. He moved us here and suddenly, I was alone for weeks, maybe months. He fled the city. Apparently, he owed someone money."
-
-            bianca_nvl_right sad "Turns out, he did it for me. Moved us to keep me safe and left me the rest of his cash for food. If he had paid up, I would’ve starved. But a full belly didn’t stop me from feeling scared and empty."
-
             bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
+ 
+            chrome timid "{i}Without a father...{/i}"
+
+            # bianca_nvl_right sad "Turns out, he did it for me. Moved us to keep me safe and left me the rest of his cash for food. If he had paid up, I would’ve starved. But a full belly didn’t stop me from feeling scared and empty."
+
+            # bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
 
             hide dialogue_box
             nvl clear
@@ -143,39 +144,43 @@ label scene9:
 
             show chrome shocked glitch
 
-            chrome "This one stings. Like I’ve blown a fuse. Bianca and I are more similar than she knows."
+            chrome "This one stings. Like I’ve blown a fuse. Bianca and I are more similar than she knows.{/i}"
 
             show chrome timid glitch
 
-            chrome "As young beings, we adopt the lives of our parents. Our mentors. We learn from them, grow with them, explore the world under their wing. Our physical functionality may be independent but our programming is synced."
+            chrome "{i}As young beings, we adopt the lives of our parents. Our mentors. We learn from them, grow with them, explore the world under their wing.{/i}"
 
-            chrome "We live so naturally together that we forget it is temporary. Expectations are created. Dependencies installed. And when the moment comes - when separate for good - we are forced to reevaluate our entire way of being."
+            chrome "{i}Our physical functionality may be independent but our programming is synced.{/i}"
+
+            chrome "{i}We live so naturally together that we forget it is temporary. Expectations are created. Dependencies installed.{/i}"
+
+            chrome "{i}And when the moment comes - when we separate for good - we are forced to reevaluate our entire state of functionality.{/i}"
 
             show chrome thinking glitch
 
-            chrome "That’s why they thought I did it. That’s why I was the number one suspect in Cane’s disappearance."
+            chrome "{i}That’s why they thought I did it. That’s why I was the number one suspect in Cane’s disappearance.{/i}"
 
-            chrome "I knew him the best. Lived with him in my infancy. He did not make a move that I couldn’t calculate. Until his final move, that is."
+            chrome "{i}I knew him the best. Lived with him in my infancy. He did not make a move that I couldn’t calculate. Until his final move, that is.{/i}"
 
             show chrome sad glitch
 
-            chrome "It was only after losing Cane that I understood his gift to me. The culmination of his guidance and care: purpose."
+            chrome "{i}It was only after losing Cane that I understood his gift to me. The culmination of his guidance and care: purpose.{/i}"
 
-            chrome "Cane gave me reason to be. At a certain point, without realizing it, I became the one guiding and caring for him."
+            chrome "{i}Cane gave me reason to be. At a certain point, without realizing it, I became the one guiding and caring for him.{/i}"
 
-            chrome "Without him, purpose is lost on me. I have no expectations, nothing to uphold. Nobody to share my existence with."
+            chrome "{i}Without him, purpose is lost on me. I have no expectations, nothing to uphold. Nobody to share my existence with.{/i}"
 
-            chrome "I miss Cane. If I ever had a father, it was him."
+            chrome "{i}I miss Cane. If I ever had a father, it was him.{/i}"
 
             show chrome thinking glitch
 
-            chrome"Bianca needs Freddy. They are each other’s reason to be."
+            chrome"{i}Bianca needs Freddy. They are each other’s reason to be.{/i}"
 
-            chrome "And, perhaps…"
+            chrome "{i}And, perhaps…{/i}"
 
             show chrome happy glitch
 
-            chrome "They are my reason to be."
+            chrome "{i}They are my reason to be.{/i}"
 
             $ glitch_counter += 1
 
@@ -190,7 +195,8 @@ label scene9:
             pause 1.0
 
             ######### back to SCENE 9
-        "My Dear...":
+
+        "Logical":
             
             show dialogue_box at center 
             nvl show 
@@ -221,8 +227,6 @@ label scene9:
 
             bianca_nvl_right angry "¡Ay dios mío! You know what I’m trying to say."
 
-            bianca_nvl_right neutral "Dad’s been so good since. It ain’t fair for people to taint who he is with the shadow of who he was."
-
             chrome_nvl_left thinking "Fascinating. Innocent until proven guilty, even in the wake of guilt."
 
             bianca_nvl_right neutral "It’s called giving him another chance, Mr. Steele."
@@ -244,10 +248,11 @@ label lookaround:
         chrome "Let's see..."
         "Cigarettes":
             show chrome neutral at left
-            "My aromatic sensors are picking something up."
+            "{i}My aromatic sensors are picking something up.{/i}"
             show cigarettes at right
-            "Ah, clove cigarettes. Just like Jack mentioned. Supply looks low. Maybe Freddy took one for the road."
+            "{i}Ah, clove cigarettes. Just like Jack mentioned. Supply looks low. Maybe Freddy took one for the road.{/i}"
             hide cigarettes
+
             jump helpful
         "Boxing Gloves":
             show chrome neutral at left
@@ -340,7 +345,7 @@ label lookaround:
 
             show chrome confused at left
 
-            chrome "Was Larry in on it? Is that why he’s dead? I must be missing something over at Fowler’s Department Store. One stone left unturned…"
+            chrome "Was Larry in on it? Is that why he’s dead? I must be missing something over at Fowler’s. One stone left unturned…"
 
             show chrome neutral at left
 
