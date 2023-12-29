@@ -18,45 +18,57 @@ label scene7:
     # Option One: (hardboiled)
         "Hardboiled":
 
-            chrome hardboiled "Heyo, buddy boy! I’m looking for Freddy Font–"
+            show dialogue_box at center 
+            nvl show # show NVL dialogue
 
-            cop angry "Yeah? You and me both."
+            chrome_nvl_right hardboiled "Heyo, buddy boy! I’m looking for Freddy Font–"
 
-            chrome shocked "Excuse me?"
+            cop_nvl_left angry "Yeah? You and me both."
 
-            cop angry "He’s a person of interest- might even say a suspect."
+            chrome_nvl_right shocked "Excuse me?"
 
-            chrome angry "Really?"
+            cop_nvl_left angry "He’s a person of interest- might even say a suspect."
 
-            cop angry "That woman right over there, found this poor schmuck dead as a doornail."
+            chrome_nvl_right angry "Really?"
 
-            cop angry "Combine that with the fact Freddy didn’t show up today, his last day…"
+            cop_nvl_left angry "That woman right over there, found this poor schmuck dead as a doornail."
 
-            chrome confused "Hm. Something seems fishy…"
+            cop_nvl_left angry "Combine that with the fact Freddy didn’t show up today, his last day…"
 
-            cop angry "The only thing fishy ‘round here is you! Now giddy up Jingle Horse and get the fuck out of my active crime scene!"
+            chrome_nvl_right confused "Hm. Something seems fishy…"
+
+            cop_nvl_left "The only thing fishy ‘round here is you! Now giddy up Jingle Horse and get the fuck out of my active crime scene!"
+            
+            hide dialogue_box
+            nvl clear 
 
     # Option Two: (Logical. IDEAL PATH)
         "Logical":
             #programming - ideal choice += 1
 
-            chrome logical "Hello, sir. I’m looking for Freddy Fontaine–"
+            show dialogue_box at center 
+            nvl show # show NVL dialogue
 
-            cop neutral "You’re not the only one."
+            chrome_nvl_right logical "Hello, sir. I’m looking for Freddy Fontaine–"
 
-            chrome logical "Hm. Interesting. Locate any evidence?"
+            cop_nvl_left neutral "You’re not the only one."
 
-            cop neutral "That’s the funny thing. He died from a heart attack."
+            chrome_nvl_right logical "Hm. Interesting. Locate any evidence?"
 
-            chrome confused "Heart attack? Something doesn’t add up here."
+            cop_nvl_left neutral "That’s the funny thing. He died from a heart attack."
 
-            cop neutral "Whelp, we’ve got a witness...."
+            chrome_nvl_right confused "Heart attack? Something doesn’t add up here."
 
-            chrome confused "Who?"
+            cop_nvl_left neutral "Whelp, we’ve got a witness...."
 
-            cop neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction"
+            chrome_nvl_right confused "Who?"
 
-            chrome logical "Very interesting. Thanks."
+            cop_nvl_left neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction"
+
+            chrome_nvl_right logical "Very interesting. Thanks."
+
+            hide dialogue_box
+            nvl clear 
 
             ######### GLITCH 3 (flashback with glitching animation on Steele & bg grayed out)
 
@@ -127,38 +139,44 @@ label scene7:
 
             # hide chrome
             # show chrome angry at right
-            show cop neutral at left
+            
 
     #Option Three: (Unassuming)
         "Unassuming":
 
-            cop neutral "Alley’s closed."
+            show dialogue_box at center 
+            nvl show # show NVL dialogue
 
-            chrome unassuming "Oh, I work across the street."
+            cop_nvl_left neutral "Alley’s closed."
 
-            cop neutral "Where?"
+            chrome_nvl_right unassuming "Oh, I work across the street."
 
-            chrome thinking "..."
+            cop_nvl_left neutral "Where?"
 
-            cop neutral "..."
+            chrome_nvl_right thinking "..."
 
-            chrome thinking "..."
+            cop_nvl_left neutral "..."
 
-            chrome hardboiled "Over there."
+            chrome_nvl_right thinking "..."
 
-            cop shocked "In that boarded up bail bonds office?"
+            chrome_nvl_right hardboiled "Over there."
 
-            cop angry "This is an active crime scene. Get outta here!"
+            cop_nvl_left shocked "In that boarded up bail bonds office?"
 
-            chrome angry "..."
+            cop_nvl_left angry "This is an active crime scene. Get outta here!"
 
-            chrome logical "Under code 2034.44 You, sir, are interfering with the duties of a certified bail bonds agent…" 
+            chrome_nvl_right angry "..."
+
+            chrome_nvl_right logical "Under code 2034.44 You, sir, are interfering with the duties of a certified bail bonds agent…" 
 
             show cop angry
 
-            chrome unassuming "Would you like me to report THAT to your superior?"
+            chrome_nvl_right unassuming "Would you like me to report THAT to your superior?"
 
-            cop angry  "Fine. Go through"
+            cop_nvl_left angry  "Fine. Go through"
+
+            hide dialogue_box
+            nvl clear 
 
 
     jump scene8
