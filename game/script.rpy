@@ -47,13 +47,17 @@ image chrome neutral glitch = Glitch("characters/chrome/chrome neutral.png", gli
 image chrome shocked = "characters/chrome/chrome shocked.png"
 image chrome shocked glitch = Glitch("characters/chrome/chrome shocked.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome confused = "characters/chrome/chrome confused.png"
+image chrome confused left = "characters/chrome/chrome confused left.png"
 image chrome confused glitch = Glitch("characters/chrome/chrome confused.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome confused left glitch = Glitch("characters/chrome/chrome confused left.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome happy = "characters/chrome/chrome happy.png"
 image chrome happy glitch = Glitch("characters/chrome/chrome happy.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome sad = "characters/chrome/chrome sad.png"
 image chrome sad glitch = Glitch("characters/chrome/chrome sad.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome thinking = "characters/chrome/chrome thinking.png"
+image chrome thinking left = "characters/chrome/chrome thinking left.png"
 image chrome thinking glitch = Glitch("characters/chrome/chrome thinking.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome thinking left glitch = Glitch("characters/chrome/chrome thinking left.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome timid = "characters/chrome/chrome timid.png"
 image chrome timid glitch = Glitch("characters/chrome/chrome timid.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome angry = "characters/chrome/chrome angry.png"

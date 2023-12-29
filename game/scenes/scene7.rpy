@@ -165,7 +165,7 @@ label scene7:
             hide dialogue_box
             nvl clear 
 
-     # Option One: (hardboiled)
+        # Option One: (hardboiled)
         "Hardboiled":
         
             show dialogue_box at center 
@@ -192,4 +192,4 @@ label scene7:
             hide dialogue_box
             nvl clear 
 
-   jump scene8
+    jump scene8

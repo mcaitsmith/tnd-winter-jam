@@ -25,13 +25,13 @@ label scene6:
     show dialogue_box at center 
     nvl show # show NVL dialogue
 
-    mariah_nvl_right "Oh great. I thought they shut you Rent-a-Bot cops down. I already answered the real cops' questions."
+    mariah_nvl_right "Oh great. I thought they shut you Rent-a-Bot cops down."
 
-    chrome_nvl_left "Good news for you, I'm no cop. I’m Chrome Steele, private detective."
+    mariah_nvl_right "I already answered the real cops' questions."
 
-    mariah_nvl_right "Oh great. Another rent-a-Bot cop. I’ll tell you what I told the other one. I already answered the cops' questions. So scram."
+    chrome_nvl_left "Good news for you, I'm no cop."
 
-    chrome_nvl_left "I think you’ve mistaken me for a lesser bot, ma’am. I’m Chrome Steele, private detective."
+    chrome_nvl_left "I’m Chrome Steele, private detective."
 
     show mariah confused
 
@@ -49,7 +49,8 @@ label scene6:
 
     chrome "{i}I was designed for solving crimes and one had dropped into my lap. I could always fit some questions about Freddy at the end.{/i}"
 
-    show chrome thinking 
+    hide chrome
+    show chrome thinking left at left
 
     show dialogue_box
 
@@ -57,7 +58,11 @@ label scene6:
 
     # show visual chalk outline of the body 
 
-    mariah_nvl_right "Tch. Just what I need. More questions. Fine, ask them. But afterwards I want all of you flatfoots to clear off my parking lot. You hear me?"
+    mariah_nvl_right "Tch. Just what I need. More questions."
+
+    mariah_nvl_right "Fine, ask them."
+
+    mariah_nvl_right "But afterwards I want all of you flatfoots to clear off my parking lot. You hear me?"
 
     hide dialogue_box
 
@@ -86,9 +91,12 @@ label scene6:
 
         mariah_nvl_right "I don’t need to take that from a tin can."
         
-        show chrome angry
+        show chrome angry:
+            xzoom -1.0
 
-        chrome_nvl_left "Sure, lady. Just tell me about our victim. I don’t got all day, either."
+        chrome_nvl_left "Sure, lady. Just tell me about our victim."
+
+        chrome_nvl_left "I don’t got all day, either."
 
         mariah_nvl_right "Tch, just what I need. A tin can with an attitude snooping around."
 
@@ -106,17 +114,22 @@ label scene6:
 
         chrome_nvl_left "And what did Larry do that got him a permanent red slip?"
 
-        mariah_nvl_right "Well, it’s not like I did it! I was in my office when I heard people shouting."
+        mariah_nvl_right "Well, it’s not like I did it!"
+
+        mariah_nvl_right "I was in my office when I heard people shouting."
         
         mariah_nvl_right "When I ran out here, I found Larry dead on the ground."
 
-        mariah_nvl_right "You’d know all of this if you just asked one of the cops over there. Now stop wasting my time."
+        mariah_nvl_right "You’d know all of this if you just asked one of the cops over there."
+
+        mariah_nvl_right "Now stop wasting my time."
 
         hide dialogue_box
 
         chrome "{i} Well, it looks like Larry is a deadend. Fine, I shouldn’t be messing around with a crime scene, anyways. I’ll move on to my actual job.{/i}"
 
-        show chrome thinking 
+        hide chrome
+        show chrome thinking left at left
 
         show dialogue_box
 
@@ -152,11 +165,14 @@ label scene6:
 
         mariah_nvl_right "Actually, now that you bring him up. You should probably look for Freddy. Yeah, he’s probably the one that did this."
 
-        show chrome thinking 
+        hide chrome
+        show chrome thinking left at left
 
         chrome_nvl_left "That’s a rather sudden jump in logic."
 
-        mariah_nvl_right "Maybe for a tin can like you. But Freddy and Larry were thick as thieves. Until this week, that is."
+        mariah_nvl_right "Maybe for a tin can like you. But Freddy and Larry were thick as thieves."
+
+        mariah_nvl_right "Until this week, that is."
 
         mariah_nvl_right "The two of them apparently had a falling out. Which probably led to poor Larry’s death."
 
@@ -180,19 +196,30 @@ label scene6:
 
         show dialogue_box
 
-        chrome_nvl_left "The owner of the store standing in front of a crime scene. If this was just another crime there would be no need for your attention."
+        chrome_nvl_left "The owner of the store standing in front of a crime scene."
 
-        chrome_nvl_left "Which means this crime has to do with the store. An employee, perhaps?"
+        chrome_nvl_left "If this was just another crime there would be no need for your attention."
+
+        chrome_nvl_left "Which means this crime has to do with the store."
+
+        chrome_nvl_left "An employee, perhaps?"
 
         show mariah angry 
 
-        mariah_nvl_right "Well, no shit sherlock. I wouldn’t be standing out here in the cold if I wasn’t invested."
+        mariah_nvl_right "Well, no shit sherlock."
 
-        show chrome neutral 
+        mariah_nvl_right "I wouldn’t be standing out here in the cold if I wasn’t invested."
+
+        show chrome neutral:
+            xzoom -1.0
 
         chrome_nvl_left "Yeah, yeah. Just tell me about our victim."
 
-        mariah_nvl_right "His name is Larry Moss. He’s an elf that works at one of Santa’s workshop. Well, he was."
+        mariah_nvl_right "His name is Larry Moss."
+
+        mariah_nvl_right "He’s an elf that works at Santa’s workshop."
+
+        mariah_nvl_right "Well, he was."
 
         #hide dialogue_box
 
@@ -204,15 +231,20 @@ label scene6:
 
         #show dialogue_box
 
-        chrome_nvl_left "Did he have any enemies that could have done this?"
+        chrome_nvl_left "Did he have any enemies?"
 
         mariah_nvl_right "Yeah, Rudolph hated being picked on by an elf!"
 
-        mariah_nvl_right "I don’t keep track of my employees relationships. I have better things to do than micromanage every employee."
+        mariah_nvl_right "I don’t keep track of employee relationships."
+
+        mariah_nvl_right "I have better things to do than micromanage every employee."
 
         mariah_nvl_right "All I know was that I heard shouting and when I came out here, Larry was lying dead on the ground."
 
-        mariah_nvl_right "If you want to know more, just ask the other Rent-a-Bot cops. I’m done with this."
+        mariah_nvl_right "If you want to know more, just ask the other Rent-a-Bot cops."
+
+        mariah_nvl_right "I’m done with this."
+
 
         hide dialogue_box
 
@@ -220,9 +252,12 @@ label scene6:
 
         show dialogue_box
 
-        show chrome thinking 
+        hide chrome
+        show chrome thinking left at left
 
-        chrome_nvl_left "Well, then I would like to expand my questioning to a person of interest. What can you tell me about Freddy?"
+        chrome_nvl_left "Well, then I would like to expand my questioning to a person of interest."
+
+        chrome_nvl_left "What can you tell me about Freddy?"
 
         show mariah confused
 
@@ -238,21 +273,27 @@ label scene6:
 
         show dialogue_box
        
-        show chrome neutral 
+        show chrome neutral:
+            xzoom -1.0
 
         chrome_nvl_left "I see."
 
         show mariah neutral
 
-        mariah_nvl_right "However, he’s been talking about quitting. Said that he couldn’t handle the job anymore. I thought he just flaked out."
+        mariah_nvl_right "However, he’s been talking about quitting."
 
-        show chrome thinking
+        mariah_nvl_right "Said that he couldn’t handle the job anymore. I thought he just flaked out."
+
+        hide chrome
+        show chrome thinking left at left
 
         chrome_nvl_left "So he’s Larry’s direct coworker? I assume that the two of them spoke often."
 
         show mariah angry 
 
-        mariah_nvl_right "Yeah, the two of them were thick as thieves. Except for this final week… Yeah…"
+        mariah_nvl_right "Yeah, the two of them were thick as thieves."
+
+        mariah_nvl_right "Except for this final week… Yeah…"
 
         show mariah neutral 
 
@@ -264,7 +305,8 @@ label scene6:
 
         mariah_nvl_right "Now get out of my face. I’ve had enough of you Rent-a-Bots."
 
-        show chrome neutral 
+        show chrome neutral:
+            xzoom -1.0
 
         chrome_nvl_left "I’ll leave you alone for now."
 
@@ -279,7 +321,9 @@ label scene6:
 
         show dialogue_box
 
-        chrome_nvl_left "Sorry, sorry. This entire thing has probably been an unpleasant surprise, like actually getting coal in the stocking, you know."
+        chrome_nvl_left "Sorry, sorry."
+
+        chrome_nvl_left "This entire thing has probably been an unpleasant surprise, like actually getting coal in the stocking, you know."
 
         chrome_nvl_left "Just… do you think you could run me through what happened, one last time."
 
@@ -289,7 +333,13 @@ label scene6:
 
         mariah_nvl_right "Not only do I have to deal with the falling sales, but now I have to deal with all of these jokers gawking instead of shopping."
 
-        chrome_nvl_left "It’s like a car crash. People will slow down just to look at it. Not in a helpful way or anything. They’re just slowing down traffic to see what happened."
+        chrome_nvl_left "It’s like a car crash."
+
+        chrome_nvl_left "People will slow down just to look at it."
+
+        chrome_nvl_left "Not in a helpful way or anything."
+
+        chrome_nvl_left "They’re just slowing down traffic to see what happened."
 
         mariah_nvl_right "Exactly!"
         
@@ -299,7 +349,11 @@ label scene6:
 
         chrome_nvl_left "Mmm. But about the body…"
 
-        mariah_nvl_right "Right. The guy who died is Larry Moss. He’s a seasonal hire. Little guy, kind of a sad sack."
+        mariah_nvl_right "Right."
+
+        mariah_nvl_right "The guy who died is Larry Moss."
+
+        mariah_nvl_right "He’s a seasonal hire. Little guy, kind of a sad sack."
 
         mariah_nvl_right "We threw him in one of the elf costumes and put him in one of the Santa’s workshops."
 
@@ -319,7 +373,8 @@ label scene6:
 
         mariah_nvl_right "You think one of the Santa’s killed him for talking?"
 
-        show chrome shocked 
+        show chrome shocked:
+            xzoom -1.0
 
         chrome_nvl_left "What? No. Just a joke."
 
@@ -329,7 +384,9 @@ label scene6:
         
         mariah_nvl_right "But I can’t really think of anyone that would kill ol’ Larry."
         
-        mariah_nvl_right "He was a bit of a bore, but he kept to himself. Well, I guess he had to talk to Freddy."
+        mariah_nvl_right "He was a bit of a bore, but he kept to himself."
+
+        mariah_nvl_right "Well, I guess he had to talk to Freddy."
 
         hide dialogue_box
 
@@ -349,7 +406,11 @@ label scene6:
 
         show mariah neutral 
 
-        mariah_nvl_right "Come to think of it... it is suspicious. The two of them were close, but I heard that they had a falling out this week. Maybe you should go check that out."
+        mariah_nvl_right "Come to think of it... it is suspicious."
+
+        mariah_nvl_right "The two of them were close, but I heard that they had a falling out this week."
+
+        mariah_nvl_right "Maybe you should go check that out."
 
         chrome_nvl_left "Suspicion... blame -"
         
@@ -370,13 +431,15 @@ label scene6:
 
         chrome "{i}Here we go again. Energy surges through me. My systems flood with information, trusting me to interpret the proper pieces. I suspect that I am trying to tell myself something.{/i}"
 
-        show chrome thinking glitch 
+        hide chrome
+        show chrome thinking left glitch at left
         
         chrome "{i}Suspicion breeds blame. Blame then circles like a vulture, seeking a host.{/i}"
 
         chrome "{i}The victim needn’t be responsible. Blame is attracted far more to believability than responsibility.{/i}"
 
-        show chrome sad glitch
+        show chrome sad glitch:
+            xzoom -1.0
         
         chrome "{i}I’ve been on both sides of such condemnation. {/i}"
 
