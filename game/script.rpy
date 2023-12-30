@@ -136,6 +136,8 @@ define sfx_punch = "audio/sfx/Punch_SantaSecret_SFX.wav"
 define sfx_rattle = "audio/sfx/Rattle_SantaSecret_SFX.wav"
 define sfx_santabeepscan = "audio/sfx/SantaBeepScan_SantaSecret_SFX.wav"
 define sfx_breakmetaltoy = "audio/sfx/BreakMetalToy_SantaSecret_SFX.wav"
+define sfx_glitchin = "audio/sfx/digital-glitch-betacut-1-00-01.mp3"
+define sfx_glitchout = "audio/sfx/Glitch_SantaSecret_SFX.wav"
 define title_music = "audio/Prueba_Jazz_investigador.mp3"
 define bar_music = "audio/jazz_for_andrea_2.wav"
 
@@ -179,6 +181,7 @@ init python:
 
 # call this label when you want a glitch scene to start
 label start_glitch():
+    play sound sfx_glitchin
     $ stop_layers(0) # stop bg music
     
     scene bg glitchvoid with pixellate #
@@ -186,12 +189,12 @@ label start_glitch():
     # show bg:
         # matrixcolor TintMatrix("#ffffff") * SaturationMatrix(0.0)
     # play glitch music
-    # play music "GlitchSequence_127BPM_CMaj.wav"
     play music "GlitchSequence.wav"
     return
 
 # call this label when you want a glitch scene to end
 label end_glitch:
+    play sound sfx_glitchout
     # show chrome neutral
     #show bg:
         #matrixcolor TintMatrix("#ffffff") * SaturationMatrix(1.0)
