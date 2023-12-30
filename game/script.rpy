@@ -102,7 +102,7 @@ image emptytin = "props/emptytin.png"
 image gloves = "props/gloves.png"
 image memorystick = "props/memorystick.png"
 image phone = "props/phone.png"
-image santaboots = "props/santaclothes.png"
+image santaboots = "props/santaboots.png"
 image santaclothes = "props/santaclothes.png"
 image santa toy = "props/santatoy.png"
 
