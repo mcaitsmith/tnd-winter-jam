@@ -3,48 +3,218 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define larry = Character("Larry Moss", color="#2fb525")
-define chrome = Character("Chrome Steele", color="#a5a5a5")
-define bianca = Character("Bianca Fontaine", color="#45b7f0")
-define freddy = Character("Freddy Fontaine", color="#f07635")
-define jack = Character("Jack Scanlon", color="#dbd839")
-define mariah = Character("Mariah Fowler", color="#d339db")
-define cop = Character("Generic Cop", color="#2d30d9")
-define santa = Character("Robot Santa", color="#ff0000")
+define larry = Character("Larry Moss", color="#2fb525", image="larry")
+define chrome = Character("Chrome Steele", color="#a5a5a5", image="chrome")
+define chrome_nvl_left = Character("Chrome Steele", color="#a5a5a5", image="chrome", kind=nvl)
+define chrome_nvl_right = Character("Chrome Steele", color="#a5a5a5", image="chrome", kind=nvl, what_text_align=1, who_text_align=1)
+define bianca = Character("Bianca Fontaine", color="#45b7f0", image="bianca")
+define bianca_nvl_left = Character("Bianca Fontaine", color="#45b7f0", image="bianca", kind=nvl)
+define bianca_nvl_right = Character("Bianca Fontaine", color="#45b7f0", image="bianca", kind=nvl, what_text_align=1, who_text_align=1)
+define freddy = Character("Freddy Fontaine", color="#f07635", image="freddy")
+define jack = Character("Jack Scanlon", color="#dbd839", image="jack")
+define jack_nvl_left = Character("Jack Scanlon", color="#dbd839", image="jack", kind=nvl)
+define jack_nvl_right = Character("Jack Scanlon", color="#dbd839", image="jack", kind=nvl, what_text_align=1, who_text_align=1)
+define mariah = Character("Mariah Fowler", color="#d339db", image="mariah")
+define mariah_nvl_left = Character("Mariah Fowler", color="#dbd839", image="mariah", kind=nvl)
+define mariah_nvl_right = Character("Mariah Fowler", color="#dbd839", image="mariah", kind=nvl, what_text_align=1, who_text_align=1)
+define cop = Character("Generic Cop", color="#2d30d9", image="cop")
+define cop_nvl_left = Character("Generic Cop", color="#2d30d9", image="cop", kind=nvl)
+define cop_nvl_right = Character("Generic Cop", color="#2d30d9", image="cop", kind=nvl, what_text_align=1, who_text_align=1)
+define santa = Character("Robot Santa", color="#ff0000", image="santa")
+define santa_nvl_left = Character("Robot Santa", color="#ff0000", image="santa", kind=nvl)
+define santa_nvl_right = Character("Robot Santa", color="#ff0000", image="santa", kind=nvl, what_text_align=1, who_text_align=1)
+define santa1 = Character("Robot Santa", color="#ff0000", image="santa")
+define santa2 = Character("Robot Santa", color="#ff0000", image="santa")
+define figure = Character("Figure", color="#a5a5a5", image="chrome")
 define narration = Character("Narration", kind=nvl)
 
-# define images for each character
-image larry = "larry.jpg"
+image bg office = "bg office.png"
 image chrome neutral = "chrome neutral.png"
-image chrome neutral glitch = Glitch("chrome neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
-image bianca neutral = "bianca neutral.jpg"
-image jack neutral = "jack neutral.jpg"
-image mariah neutral = "mariah neutral.jpg"
-image cop neutral = "cop neutral.jpg"
-image santa = "santa.jpg"
-image freddy neutral = "freddy neutral.jpg"
+image bianca neutral = "bianca neutral.png"
+image dialogue_box = "gui/nvl_box.png"
+
+# define images for each character (need to be updated when we get assets)
+
+image larry dead = "characters/larry/larry dead.png"
+image larry neutral = "characters/larry/larry neutral.png"
+image larry ecstatic = "characters/larry/larry ecstatic.png"
+image larry enraged = "characters/larry/larry enraged.png"
+image larry mad = "characters/larry/larry mad.png"
+image larry sad = "characters/larry/larry sad.png"
+image figure = "characters/chrome/chrome neutral.png"
+image chrome neutral = "characters/chrome/chrome neutral.png"
+image chrome neutral glitch = Glitch("characters/chrome/chrome neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome shocked = "characters/chrome/chrome shocked.png"
+image chrome shocked glitch = Glitch("characters/chrome/chrome shocked.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome confused = "characters/chrome/chrome confused.png"
+image chrome confused left = "characters/chrome/chrome confused left.png"
+image chrome confused glitch = Glitch("characters/chrome/chrome confused.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome confused left glitch = Glitch("characters/chrome/chrome confused left.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome happy = "characters/chrome/chrome happy.png"
+image chrome happy glitch = Glitch("characters/chrome/chrome happy.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome sad = "characters/chrome/chrome sad.png"
+image chrome sad glitch = Glitch("characters/chrome/chrome sad.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome thinking = "characters/chrome/chrome thinking.png"
+image chrome thinking left = "characters/chrome/chrome thinking left.png"
+image chrome thinking glitch = Glitch("characters/chrome/chrome thinking.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome thinking left glitch = Glitch("characters/chrome/chrome thinking left.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome timid = "characters/chrome/chrome timid.png"
+image chrome timid glitch = Glitch("characters/chrome/chrome timid.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome angry = "characters/chrome/chrome angry.png"
+image chrome angry glitch = Glitch("characters/chrome/chrome angry.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome embarrassed = "characters/chrome/chrome embarrassed.png"
+image chrome hardboiled = "characters/chrome/chrome angry.png"
+image chrome logical = "characters/chrome/chrome logical.png"
+image chrome unassuming = "characters/chrome/chrome unassuming.png"
+image bianca neutral = "characters/bianca/bianca neutral.png"
+image bianca angry = "characters/bianca/bianca angry.png"
+image bianca sad = "characters/bianca/bianca sad.png"
+image jack neutral = "characters/jack/jack neutral.png"
+image jack happy = "characters/jack/jack happy.png"
+image jack sad = "characters/jack/jack sad.png"
+image jack shocked = "characters/jack/jack shocked.png"
+image jack angry = "characters/jack/jack angry.png"
+image mariah neutral = "characters/mariah/mariah neutral.png"
+image mariah angry = "characters/mariah/mariah angry.png"
+image mariah confused = "characters/mariah/mariah confused.png"
+image mariah happy = "characters/mariah/mariah happy.png"
+image mariah sad = "characters/mariah/mariah sad.png"
+image cop neutral = "characters/cop/cop neutral.png"
+image cop angry = "characters/cop/cop angry.png"
+image santa = "characters/santa/santa.png"
+image santa1 = "characters/santa/santa.png"
+image santa2 = "characters/santa/santa.png"
+image freddy neutral = "characters/freddy/freddy neutral.png"
+image freddy angry = "characters/freddy/freddy angry.png"
+image freddy shocked = "characters/freddy/freddy shocked.png"
+image freddy happy = "characters/freddy/freddy happy.png"
+image freddy sad = "characters/freddy/freddy sad.png"
+
+# Evidence & Props
+image bloodysnow = "props/bloodysnow.png"
+image cigarettes = "props/cigarettes.png"
+image cookies = "props/cookies.png"
+image cookietin = "props/cookietin.png"
+image creditcard = "props/creditcard.png"
+image documents = "props/documents.png"
+image eatencookie = "props/eatencookie.png"
+image emptytin = "props/emptytin.png"
+image gloves = "props/gloves.png"
+image memorystick = "props/memorystick.png"
+image phone = "props/phone.png"
+image santaboots = "props/santaclothes.png"
+image santaclothes = "props/santaclothes.png"
+image santa toy = "props/santatoy.png"
 
 # define location images
-image bg office = "bg office.png"
-image bg office blur = im.Blur("bg office.png", 1.5) # blurred version
+image bg office = "backgrounds/bg office.png"
+image bg office blur = im.Blur("backgrounds/bg office.png", 1.5) # blurred version
+image bg office night = "backgrounds/bg office night.png"
+image bg office night blur = im.Blur("backgrounds/bg office night.png", 1.5) # blurred version
+image bg alley = "backgrounds/bg alley.png"
+image bg alley blur = im.Blur("backgrounds/bg alley.png", 1.5) # blurred version
+image bg bar = "backgrounds/bg bar.png"
+image bg bar blur = im.Blur("backgrounds/bg bar.png", 1.5) # blurred version
+image bg rooftop night = "backgrounds/bg rooftop night.png"
+image bg rooftop night blur = im.Blur("backgrounds/bg rooftop night.png", 1.5) # blurred version
+image bg extstore = "backgrounds/bg extstore.png"
+image bg extstore blur = im.Blur("backgrounds/bg extstore.png", 1.5) # blurred version
+image bg extstore night = "backgrounds/bg extstore night.png"
+image bg extstore night blur = im.Blur("backgrounds/bg extstore night.png", 1.5) # blurred version
+image bg freddyoffice = "backgrounds/bg freddyoffice.png"
+image bg freddyoffice blur = im.Blur("backgrounds/bg freddyoffice.png", 1.5) # blurred version
+image bg mariahoffice = "backgrounds/bg mariahoffice.png"
+image bg glitchvoid = "backgrounds/bg glitchvoid.png"
+
+# define sound effects & music
+define sfx_clatter = "audio/sfx/Clatter_SantaSecret_SFX.wav"
+define sfx_door = "audio/sfx/Door_SantaSecret_SFX.wav"
+define sfx_footsteps = "audio/sfx/FootSteps_SantaSecret_SFX.wav"
+define sfx_gunshots = "audio/sfx/Gunshots_SantaSecret_SFX.wav"
+define sfx_impactmetal = "audio/sfx/ImpactMetal_SantaSecret_SFX.wav"
+define sfx_mariahclap = "audio/sfx/MariahClap_SantaSecret_SFX.wav"
+define sfx_punch = "audio/sfx/Punch_SantaSecret_SFX.wav"
+define sfx_rattle = "audio/sfx/Rattle_SantaSecret_SFX.wav"
+define sfx_santabeepscan = "audio/sfx/SantaBeepScan_SantaSecret_SFX.wav"
+define sfx_breakmetaltoy = "audio/sfx/BreakMetalToy_SantaSecret_SFX.wav"
+define bar_music = "audio/jazz_for_andrea_2.wav"
+
+init python:
+    # define music channels
+    renpy.music.register_channel("layer_chrome", "music")
+    renpy.music.register_channel("layer_bianca", "music")
+    renpy.music.register_channel("layer_freddy", "music")
+    renpy.music.register_channel("layer_mariah", "music")
+    renpy.music.register_channel("layer_larry_santa", "music")
+
+    # function to start playing layers
+    def start_layers(delay=3):
+        renpy.music.play("audio/Dept Store Main Chrom.wav", channel='layer_chrome', loop=True, synchro_start=True, fadein=delay)
+        renpy.music.play("audio/Dept Store Main Bianca.wav", channel='layer_bianca', loop=True, synchro_start=True, fadein=delay)
+        renpy.music.play("audio/Dept Store Main Freddie.wav", channel='layer_freddy', loop=True, synchro_start=True, fadein=delay)
+        renpy.music.play("audio/Dept Store Main Mariah.wav", channel='layer_mariah', loop=True, synchro_start=True, fadein=delay)
+        renpy.music.play("audio/Dept Store Main Larry_Santa.wav", channel='layer_larry_santa', loop=True, synchro_start=True, fadein=delay)
+
+    # function to stop playing layers
+    def stop_layers(delay=None):
+        renpy.music.stop(channel='layer_chrome', fadeout=delay)
+        renpy.music.stop(channel='layer_bianca', fadeout=delay)
+        renpy.music.stop(channel='layer_freddy', fadeout=delay)
+        renpy.music.stop(channel='layer_mariah', fadeout=delay)
+        renpy.music.stop(channel='layer_larry_santa', fadeout=delay)
+
+    # function to update layers
+    def update_layers(delay=1):
+        layer_chrome = 0.2 if chrome_on else 0
+        layer_bianca = 1 if bianca_on else 0
+        layer_freddy = 1 if freddy_on else 0
+        layer_mariah = 1 if mariah_on else 0
+        layer_larry_santa = 1 if larry_santa_on else 0
+        
+        renpy.music.set_volume(layer_chrome, delay=delay, channel='layer_chrome')
+        renpy.music.set_volume(layer_bianca, delay=delay, channel='layer_bianca')
+        renpy.music.set_volume(layer_freddy, delay=delay, channel='layer_freddy')
+        renpy.music.set_volume(layer_mariah, delay=delay, channel='layer_mariah')
+        renpy.music.set_volume(layer_larry_santa, delay=delay, channel='layer_larry_santa')
 
 # call this label when you want a glitch scene to start
 label start_glitch():
-    show chrome neutral glitch
-    show bg:
-        matrixcolor TintMatrix("#ffffff") * SaturationMatrix(0.0)
+    $ stop_layers(0) # stop bg music
+    
+    scene bg glitchvoid with pixellate #
+    # show chrome neutral glitch
+    # show bg:
+        # matrixcolor TintMatrix("#ffffff") * SaturationMatrix(0.0)
+    # play glitch music
+    # play music "GlitchSequence_127BPM_CMaj.wav"
+    play music "GlitchSequence.wav"
     return
 
 # call this label when you want a glitch scene to end
 label end_glitch:
-    show chrome neutral
-    show bg:
-        matrixcolor TintMatrix("#ffffff") * SaturationMatrix(1.0)
+    # show chrome neutral
+    #show bg:
+        #matrixcolor TintMatrix("#ffffff") * SaturationMatrix(1.0)
+    stop music
+    $ start_layers(0) # resume bg music
     return
 
 # The game starts here.
 
 label start:
+
+    # fadeout intro music
+    stop music fadeout 3.0
+
+    # initialize music layers
+    $ chrome_on = False
+    $ bianca_on = False
+    $ freddy_on = False
+    $ mariah_on = False
+    $ larry_santa_on = False
+
+    # VARIABLE: Create a glitch counter and set it to 0
+    $ glitch_counter = 0
 
     # jump to the first scene
 

@@ -1,45 +1,63 @@
 ﻿# The script of the scene goes in this file.
 
-######### SCENE 8: ROOFTOP (find Freddy, dialogue with Freddy, then Mariah appears for climax, then cop & Jack Scanlon)
-
-# The scene starts here.
+######### SCENE 8: FOWLER'S DEPARTMENT STORE (Alley)
 
 label scene8:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    scene bg extstore with fade
 
-    scene bg room
+    $ chrome_on = True # turn on Chrome layer
+    $ update_layers(0) # update layers
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    show chrome neutral at left:
+        xzoom -1.0 
+    with dissolve
 
-    show freddy neutral at left
+    chrome "{i}I make my way to the alley to inspect the scene.{/i}"
 
-    # These display lines of dialogue.
+    show larry dead at right with dissolve
 
-    freddy "Welcome to Scene 8."
+    $ larry_santa_on = True
+    $ update_layers() # turn on Larry layer
 
-    ######### SCENE 8A: ENDING 1 (best ending, if get 5-6/6 choices right)
 
-    show chrome neutral at center
+    chrome "Poor Schmuck."
 
-    chrome "This is Scene 8A."
+    menu scene8_choices:
+        chrome "Strange, I wonder if this has something to do with Freddy? There's got to be some evidence lurking around here somewhere." 
+        "What's that in the snow bank?":
+            hide larry dead with moveoutright
+            show cookietin at right
+            chrome "{i}Hm. A cookie tin filled with freshly baked Christmas cookies. Is this involved somehow?{/i}"
+            hide cookietin
+            jump scene8_choices
+        "Footprints in the snow?":
+            hide larry dead with moveoutright
+            show santaboots at right
+            chrome "{i}These look like santa boots.{/i}"
+            hide santaboots
+            jump scene8_choices
+        "What are those red speckles?":
+            hide larry dead with moveoutright
+            show bloodysnow at right
+            chrome "{i}Blood droplets in the snow. Something shiny catches my eye.{/i}"
+            chrome "{i}Huh. A phone. The cops in all their disinterest haven't even noticed it.{/i}"
+            hide bloodysnow
 
-    ######### SCENE 8B: ENDING 2 (average ending, if get 3-4/6 choices right)
+            call cellcell
+            return
 
-    show mariah neutral at right
-
-    mariah "This is Scene 8B."
-
-    ######### SCENE 8C: ENDING 3 (worst ending, if get 0-2/6 choices right)
-
-    freddy "This is Scene 8C."
-
-    chrome "Now we're going to Scene 9."
-
-    # jump to next scene
-
+label cellcell:
+    show chrome thinking left at left:
+        xzoom -1.0
+    chrome "{i}Hmm. What's on this phone?{/i}"
+    show phone at center
+    show chrome shocked
+    chrome shocked "{i}There's a message from Freddy. \"Leave me alone, Larry. After tonight, you're dead to me.\"{/i}"
+    chrome neutral "{i}This looks bad for Freddy. How quickly a missing persons case can become murder. This is more than I bargained for. Better tell the kid in person.{/i}"
+    
+    $ larry_santa_on = False
+    $ update_layers() # turn off Larry layer
+    
     jump scene9
+    

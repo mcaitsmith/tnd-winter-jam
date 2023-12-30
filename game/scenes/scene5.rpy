@@ -1,53 +1,60 @@
 ﻿# The script of the scene goes in this file.
 
-######### SCENE 5: FREDDY'S APARTMENT
-
-# The scene starts here.
+# SCENE 5: FOWLER'S DEPARTMENT STORE (INTRO)
 
 label scene5:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    scene bg extstore night with fade
 
-    scene bg room
+    show chrome neutral at left:
+        xzoom -1.0
+    with dissolve
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    chrome "{i}Fowler’s Department Store. Still surviving. Barely.{/i}"
 
-    show chrome neutral
+    chrome "{i}Multi-colored lights litter the large storefront. Festive, if not for all the missing bulbs.{/i}"
 
-    # These display lines of dialogue.
+    chrome "{i}That and the flashing red and blue lights of the cop cars swarmed near the side of the building.{/i}"
 
-    chrome "Welcome to Scene 5."
+    chrome "{i}A small crowd of onlookers hover near the scene, the winter chill warding off all but the most curious.{/i}"
 
-    # next 2 subscenes can be played in any order
+    chrome "{i}When I join them, I spot a ghastly chalk outline on the ground. That can only mean one thing.{/i}"
 
-    ######### SCENE 5A: BIANCA
+    #VISUAL- Police lights? 
 
-    show bianca neutral
+    # SOUND- Crowds murmuring. 
 
-    bianca "This is Scene 5A."
+    hide chrome with dissolve
 
-    hide bianca
+    show mariah angry at left with moveinleft
 
-    ######### SCENE 5A-1: GLITCH 5
+    chrome "{i}Before I can get too cozy, a middle-aged woman bursts out the door, barking at everyone in sight.{/i}"
 
-    show chrome neutral
+    chrome "{i}I recognize her as Mariah Fowler, owner of the retail dinosaur. Grizzled by decades of holiday shoppers, she clears the crowd with practiced ease.{/i}"
 
-    chrome "GLITCH GLITCH GLITCH"
+    show mariah angry at right with moveinleft
 
-    ######### back to SCENE 5A
+    pause 0.5
 
-    chrome "Woah that was weird"
+    show cop neutral at left with moveinleft:
+        xzoom -1.0
 
-    ######### SCENE 5B: INVESTIGATE APARTMENT (more clickable areas?)
+    chrome "{i}A police officer follows behind her, trying his best to ask questions. By the look on his face, he’s not happy with the answers.{/i}"
 
-    chrome "This is Scene 5B."
+    chrome "{i}Mariah trades some words with the cop before scaring him away for good.{/i}"
 
-    chrome "Now we're going to Scene 6."
+    hide cop neutral with moveoutleft
 
-    # jump to next scene
+    chrome "{i}Not done yet, she yells at a rickety Robot Santa stationed by the door.{/i}"
 
+    mariah "And ring that bell louder! Now that the lookie loos are gone, I expect you to hit your quota, you hear me!"
+
+    show chrome thinking left at left:
+        xzoom -1.0
+    with moveinleft
+
+    chrome "{i}Having seen enough, I consider my next steps...{/i}"
+
+    chrome "{i}I should talk to the owner of the department store. If Freddy has been here, they’ll know.{/i}"
+    
     jump scene6
