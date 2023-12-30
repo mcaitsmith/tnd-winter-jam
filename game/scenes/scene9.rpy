@@ -156,22 +156,25 @@ label scene9:
 
             # bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
 
-            hide dialogue_box
+            # hide dialogue_box
             nvl clear
             ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
-            hide bianca # hide Bianca for glitch
-            show bg freddyoffice blur # blurs the background
+            # hide bianca # hide Bianca for glitch
+            # show bg freddyoffice blur # blurs the background
             $ chrome_on = False # turn off Chrome layer for glitch
             $ update_layers(0) # update layers
             call start_glitch # shows Chrome glitching and grays out the background
 
-            # pause for transition
-            pause 1.0
+
 
             ### GLITCH SCENE #004
 
-            show chrome shocked glitch
+            show chrome shocked glitch at left:
+                xzoom -1.0
+
+            # pause for transition
+            pause 1.0
 
             chrome "{i}This one stings. Like I’ve blown a fuse. Bianca and I are more similar than she knows.{/i}"
 
@@ -215,12 +218,16 @@ label scene9:
 
             $ glitch_counter += 1
 
-            show bg freddyoffice # unblur the background
+            scene bg freddyoffice with pixellate # unblur the background
             call end_glitch # return to normal Chrome and normal background
+    
             $ chrome_on = True # turn on Chrome layer
             $ update_layers(0) # update layers
             # show Bianca again
+            show chrome neutral at left:
+                xzoom -1.0
             show bianca neutral at right
+            with dissolve
 
             # pause for transition
             pause 1.0

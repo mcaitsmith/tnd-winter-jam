@@ -266,21 +266,18 @@ label scene10:
 
         ######### GLITCH 005- Something regarding video feeds or snow, or that missing clue that would’ve helped to find Forrest Cane.
 
-        hide santa #Hide Santa for the glitch 
-
-        #VISUAL- Add background blur aka show fowlers department background blur 
-
         $ chrome_on = False # turn off Chrome layer for glitch
         $ update_layers(0) # update layers
 
-        show bg extstore blur # blurs the background
         call start_glitch
+
+        show chrome thinking left glitch at left:
+            xzoom -1.0 
+
 
         #pause for transistion 
 
         pause 1.0
-
-        show chrome thinking glitch
 
         chrome "{i}I’m expecting this one. It comes on fast, but it’s more disorienting than painful.{/i}"
 
@@ -320,14 +317,17 @@ label scene10:
 
         chrome "{i}I will improve.{/i}"
 
-        show bg extstore # unblurs the background
+        scene bg extstore with pixellate # unblurs the background
         call end_glitch
         $ chrome_on = True # turn on Chrome layer
         $ update_layers(0) # update layers
 
-        show santa at right with dissolve
+        show santa at right
+        show chrome neutral at left:
+            xzoom -1.0 
+        with dissolve
 
-        pause 1.0
+        # pause 1.0
 
         $ glitch_counter +=1 # increment glitch counter
 

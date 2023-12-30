@@ -161,14 +161,16 @@ label scene2:
  
     ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
-    hide bianca # hide Bianca for glitch
-    hide dialogue_box # temporarily end convo
-    nvl hide # hide NVL dialogue
+    # hide bianca # hide Bianca for glitch
+    # hide dialogue_box # temporarily end convo
+    # nvl hide # hide NVL dialogue
 
     $ chrome_on = False # turn off Chrome layer for glitch
     $ update_layers(0) # update layers
-    show bg office night blur # blurs the background
+    # show bg office night blur # blurs the background
     call start_glitch # shows Chrome glitching and grays out the background
+
+    show chrome shocked glitch at right
 
     # pause for transition
     pause 1.0
@@ -176,8 +178,6 @@ label scene2:
     ### GLITCH SCENE #0
     ### This is the first minor glitch. It is a freebie, so no variable tracking.  
     ### It sets up the malfunctions. The floodgates are unleashed at the mention of Forrest Cane.
-
-    show chrome shocked glitch
 
     chrome "{i}My circuitry burns like fire. I imagine. So hot that the intricate systems feeding information through my body go numb.{/i}"
 
@@ -211,24 +211,25 @@ label scene2:
 
     chrome "{i}Not yet.{/i}"
 
-    show bg office night # unblur the background
+    
+    scene bg office night with pixellate # unblur the background
     call end_glitch # return to normal Chrome and normal background
     $ chrome_on = True # turn on Chrome layer
     $ update_layers(0) # update layers
 
     # pause for transition
-    pause 1.0
+    # pause 1.0
 
     ######### back to SCENE 2
 
     $ glitch_counter +=1 # increment glitch counter
 
-    show dialogue_box at center # return to convo
-    nvl show # show NVL dialogue
-
-    hide chrome
     show chrome angry at right
     show bianca neutral at left
+    with dissolve
+
+    show dialogue_box at center # return to convo
+    nvl show # show NVL dialogue
 
     chrome_nvl_right "Then you should know that I'm not the guy for the job."
 

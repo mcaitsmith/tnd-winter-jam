@@ -75,21 +75,19 @@ label scene7:
 
             ######### GLITCH 3 (flashback with glitching animation on Steele & bg grayed out)
 
-            hide cop # hide cop for glitch
+            # hide cop # hide cop for glitch
             # hide dialogue_box # temporarily end convo
             # nvl hide # hide NVL dialogue
 
             $ chrome_on = False # turn off Chrome layer for glitch
             $ update_layers(0) # update layers
-            show bg alley blur # blurs the background
             call start_glitch # shows Chrome glitching and grays out the background
-
-            # pause for transition
-            pause 1.0
 
             ### GLITCH SCENE #3
 
-            show chrome shocked glitch
+            show chrome shocked glitch at right
+            # pause for transition
+            pause 1.0
 
             chrome "{i}Another glitch. My algorithm searches for answers in the past as I seek them in the present.{/i}"
 
@@ -125,7 +123,7 @@ label scene7:
 
             chrome "{i}I remember the reasons all too well.{/i}"
 
-            show bg alley # unblur the background
+            scene bg alley with pixellate # unblur the background
             call end_glitch # return to normal Chrome and normal background
             $ chrome_on = True # turn on Chrome layer
             $ update_layers(0) # update layers
@@ -134,8 +132,6 @@ label scene7:
             pause 1.0
 
             $ glitch_counter +=1 # increment glitch counter
-
-            ######### back to SCENE 2
 
             # show dialogue_box at center # return to convo
             # nvl show # show NVL dialogue

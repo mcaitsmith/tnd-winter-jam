@@ -409,20 +409,21 @@ label scene6:
 
         chrome_nvl_left "Suspicion... blame -"
         
-        hide dialogue_box
-        nvl clear
+        # hide dialogue_box
+        # nvl clear
 
-        hide mariah neutral with dissolve
+        # hide mariah neutral with dissolve
         
-        show bg extstore night blur # blurs the background
+        # show bg extstore night blur # blurs the background
 
         call start_glitch
 
         #pause for transistion 
 
+        show chrome shocked glitch at left:
+            xzoom -1.0
+   
         pause 1.0
-
-        show chrome shocked glitch 
 
         chrome "{i}Here we go again. Energy surges through me. My systems flood with information, trusting me to interpret the proper pieces. I suspect that I am trying to tell myself something.{/i}"
 
@@ -467,7 +468,7 @@ label scene6:
 
         chrome "{i}That’s the nature of the beast. First, they blamed us androids for sowing Cane’s demise. Then they blamed Cane for extinguishing our own.{/i}"
 
-        show bg extstore night # unblurs the background
+        scene bg extstore night with pixellate # unblurs the background
         call end_glitch
 
         $ glitch_counter +=1 # increment glitch counter
@@ -477,7 +478,8 @@ label scene6:
 
     label scene6_postchoice:
 
-        show chrome neutral
+        show chrome neutral at left:
+            xzoom -1.0
 
         show mariah angry at right
  

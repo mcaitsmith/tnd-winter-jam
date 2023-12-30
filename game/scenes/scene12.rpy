@@ -240,21 +240,24 @@ label unassuming12:
 
     ######### SCENE 12: GLITCH 6 (flashback with glitching animation on Steele & bg grayed out)
 
-    hide freddy # hide Freddy for glitch
+    # hide freddy # hide Freddy for glitch
     # hide dialogue_box # temporarily end convo
     # nvl hide # hide NVL dialogue
 
     $ chrome_on = False # turn off Chrome layer for glitch
     $ update_layers(0) # update layers
-    show bg rooftop night blur # blurs the background
+
     call start_glitch # shows Chrome glitching and grays out the background
+    
 
     # pause for transition
-    pause 1.0
 
     ### GLITCH SCENE #6
 
-    show chrome shocked glitch
+    show chrome shocked glitch at left:
+        xzoom -1.0
+
+    pause 1.0
 
     chrome "{i}I welcome this glitch. It's a jolt, a shock of radiant energy. Maybe this is what espresso is like.{/i}"
 
@@ -304,7 +307,7 @@ label unassuming12:
 
     chrome "{i}Sometimes, the right spot is the rooftop of Fowler's Department Store.{/i}"
 
-    show bg rooftop night # unblur the background
+    scene bg rooftop night with pixellate # unblur the background
     call end_glitch # return to normal Chrome and normal background
     $ chrome_on = True # turn on Chrome layer
     $ update_layers(0) # update layers
@@ -312,7 +315,6 @@ label unassuming12:
     $ glitch_counter +=1 # increment glitch counter
 
     # pause for transition
-    pause 1.0
 
     ######### back to SCENE 2
 
@@ -320,9 +322,10 @@ label unassuming12:
     # nvl show # show NVL dialogue
 
     # hide chrome
-    # show chrome angry at right
+    show chrome unassuming at left:
+        xzoom -1.0
     show freddy happy at right
-
+    with dissolve
     chrome unassuming "Hope isn’t lost Freddy. In fact, Bianca sent me. We’re on to something."
 
     chrome unassuming "Something that might keep you safe. And maybe even clear your name."
