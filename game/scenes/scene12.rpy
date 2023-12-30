@@ -345,6 +345,14 @@ label unassuming12:
 
 label scene12_e:
 
+    freddy_nvl_right neutral "*sigh* {i}Ay no me digas{/i}, just when I thought I could leave all of this behind me."
+
+    freddy_nvl_right neutral "Can you believe I put in my resignation just a few days ago?"
+
+    freddy_nvl_right neutral "Right before this all went down, I went up to Fowler's office and told her I was done."
+
+    freddy_nvl_right neutral "Feels like a lifetime ago."
+
     #Here comes Mariah and her backup: Santa1, Mariah, Santa2. In this scene also: steele
     #Mariah + The santa goons appear. They threaten Chrome and Freddy.
 
@@ -387,7 +395,7 @@ label scene12_e:
 
     show chrome thinking left at left
 
-    chrome "{i}Two Santa robots. EZMK model. Old, modified, likely holding a criminal record. Hell, I'm getting tired of these guys...{/i}"
+    chrome "{i}Two Santa robots. The old EZMK model, like the one down on the street. But it seems that these two have gotten Mariah’s ‘upgrade’ - a hostile bodyguard protocol.{/i}"
 
     #Swap to NVL mode. Steele and Mariah are getting their showdown now.
 

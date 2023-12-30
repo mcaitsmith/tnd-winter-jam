@@ -10,9 +10,9 @@ label scene7:
 
     show chrome neutral at right with dissolve
 
-    chrome "{i}I make my way to the alley to inspect the scene.{/i}"
+    # chrome "{i}I make my way to the alley to inspect the scene.{/i}"
 
-    chrome "{i}There's a cop standing guard. He's not making much effort to secure the area.{/i}"
+    chrome "{i}There's a cop standing guard by the alley. He's not making much effort to secure the area.{/i}"
 
     show cop neutral at left:
         xzoom -1.0  

@@ -4,7 +4,7 @@
 
 label scene8:
 
-    scene bg extstore with fade
+    scene bg alley with fade
 
     $ chrome_on = True # turn on Chrome layer
     $ update_layers(0) # update layers

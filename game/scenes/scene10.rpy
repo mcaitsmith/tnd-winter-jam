@@ -380,7 +380,11 @@ label scene10:
 
         show dialogue_box
 
-        santa_nvl_right "I was here late last night. Had to close because Freddy decided to take the morning shift last minute. The prick."
+        santa_nvl_right "I was here late last night."
+
+        santa_nvl_right "Had to close because Freddy decided to take the morning shift last minute."
+
+        santa_nvl_right "The prick."
 
         santa_nvl_right "As I was closing up though, I noticed he was still around, talking with the elf."
 
@@ -507,7 +511,9 @@ label scene10:
 
         santa_nvl_right "Boss is offering me an upgrade to my CPU and I don’t want to piss her off and ruin that whole thing."
 
-        santa_nvl_right "Now that you have that, I can wipe that memory from my harddrive and poof. It’s like I saw nothin."
+        santa_nvl_right "Now that you have that, I can wipe that memory from my harddrive and poof."
+
+        santa_nvl_right "It’s like I saw nothin."
 
         hide dialogue_box
         nvl clear
