@@ -19,9 +19,9 @@ define jack_nvl_right = Character("Jack Scanlon", color="#dbd839", image="jack",
 define mariah = Character("Mariah Fowler", color="#d339db", image="mariah")
 define mariah_nvl_left = Character("Mariah Fowler", color="#d339db", image="mariah", kind=nvl)
 define mariah_nvl_right = Character("Mariah Fowler", color="#d339db", image="mariah", kind=nvl, what_text_align=1, who_text_align=1)
-define cop = Character("Generic Cop", color="#2d30d9", image="cop")
-define cop_nvl_left = Character("Generic Cop", color="#2d30d9", image="cop", kind=nvl)
-define cop_nvl_right = Character("Generic Cop", color="#2d30d9", image="cop", kind=nvl, what_text_align=1, who_text_align=1)
+define cop = Character("Officer Jones", color="#2d30d9", image="cop")
+define cop_nvl_left = Character("Officer Jones", color="#2d30d9", image="cop", kind=nvl)
+define cop_nvl_right = Character("Officer Jones", color="#2d30d9", image="cop", kind=nvl, what_text_align=1, who_text_align=1)
 define santa = Character("Robot Santa", color="#ff0000", image="santa")
 define santa_nvl_left = Character("Robot Santa", color="#ff0000", image="santa", kind=nvl)
 define santa_nvl_right = Character("Robot Santa", color="#ff0000", image="santa", kind=nvl, what_text_align=1, who_text_align=1)
@@ -30,9 +30,6 @@ define santa2 = Character("Robot Santa", color="#ff0000", image="santa")
 define figure = Character("Figure", color="#a5a5a5", image="chrome")
 define narration = Character("Narration", kind=nvl)
 
-image bg office = "bg office.png"
-image chrome neutral = "chrome neutral.png"
-image bianca neutral = "bianca neutral.png"
 image dialogue_box = "gui/nvl_box.png"
 
 # define images for each character (need to be updated when we get assets)

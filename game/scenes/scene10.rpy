@@ -380,7 +380,13 @@ label scene10:
 
         show dialogue_box
 
-        santa_nvl_right "So, I’m your only option here. Take this and see what I saw that night."
+        santa_nvl_right "I was here late last night. Had to close because Freddy decided to take the morning shift last minute. The prick."
+
+        santa_nvl_right "As I was closing up though, I noticed he was still around, talking with the elf."
+
+        santa_nvl_right "Things seemed pretty heated, so I decided to stay back and watch."
+
+        santa_nvl_right "So, I’m your only option here. Take this and see what I saw last night."
 
         hide dialogue_box
 
@@ -493,8 +499,20 @@ label scene10:
 
         chrome_nvl_left "...yes. Very interesting."
 
+        chrome_nvl_left neutral "You didn’t think to go to the police with this?"
+
+        santa_nvl_right "I mean, I’m giving it to you aren’t I? A P.I’s good enough for me."
+
+        santa_nvl_right "Plus I’d rather this doesn’t come back to bite me."
+
+        santa_nvl_right "Boss is offering me an upgrade to my CPU and I don’t want to piss her off and ruin that whole thing."
+
+        santa_nvl_right "Now that you have that, I can wipe that memory from my harddrive and poof. It’s like I saw nothin."
+
         hide dialogue_box
         nvl clear
+
+        chrome "{i}An android upgrade? There’s very few people who can do something like that nowadays. Didn’t think Mariah had the knowhow or the connections.{/i}"
 
         chrome "{i}If anything, this was the smoking gun, right? Clearly something was wrong with those cookies, and here was direct proof that Freddy had handed them over. But what was Mariah doing at the end? {/i}"
 
