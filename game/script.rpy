@@ -79,7 +79,7 @@ image mariah confused = "characters/mariah/mariah confused.png"
 image mariah happy = "characters/mariah/mariah happy.png"
 image mariah sad = "characters/mariah/mariah sad.png"
 image cop neutral = "characters/cop/cop neutral.png"
-image cop angry = "characters/cop/cop neutral.png"
+image cop angry = "characters/cop/cop angry.png"
 image santa = "characters/santa/santa.png"
 image santa1 = "characters/santa/santa.png"
 image santa2 = "characters/santa/santa.png"
@@ -123,6 +123,7 @@ image bg extstore night blur = im.Blur("backgrounds/bg extstore night.png", 1.5)
 image bg freddyoffice = "backgrounds/bg freddyoffice.png"
 image bg freddyoffice blur = im.Blur("backgrounds/bg freddyoffice.png", 1.5) # blurred version
 image bg mariahoffice = "backgrounds/bg mariahoffice.png"
+image bg glitchvoid = "backgrounds/bg glitchvoid.png"
 
 # define sound effects & music
 define sfx_clatter = "audio/sfx/Clatter_SantaSecret_SFX.wav"
@@ -178,9 +179,11 @@ init python:
 # call this label when you want a glitch scene to start
 label start_glitch():
     $ stop_layers(0) # stop bg music
-    show chrome neutral glitch
-    show bg:
-        matrixcolor TintMatrix("#ffffff") * SaturationMatrix(0.0)
+    
+    scene bg glitchvoid with pixellate #
+    # show chrome neutral glitch
+    # show bg:
+        # matrixcolor TintMatrix("#ffffff") * SaturationMatrix(0.0)
     # play glitch music
     # play music "GlitchSequence_127BPM_CMaj.wav"
     play music "GlitchSequence.wav"
@@ -188,9 +191,9 @@ label start_glitch():
 
 # call this label when you want a glitch scene to end
 label end_glitch:
-    show chrome neutral
-    show bg:
-        matrixcolor TintMatrix("#ffffff") * SaturationMatrix(1.0)
+    # show chrome neutral
+    #show bg:
+        #matrixcolor TintMatrix("#ffffff") * SaturationMatrix(1.0)
     stop music
     $ start_layers(0) # resume bg music
     return

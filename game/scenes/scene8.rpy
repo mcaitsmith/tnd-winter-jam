@@ -4,14 +4,15 @@
 
 label scene8:
 
-    scene bg extstore
+    scene bg extstore with fade
 
     show chrome neutral at left:
         xzoom -1.0 
+    with dissolve
 
     chrome "{i}I make my way to the alley to inspect the scene.{/i}"
 
-    show larry dead at right
+    show larry dead at right with dissolve
 
     $ larry_santa_on = True
     $ update_layers() # turn on Larry layer
@@ -25,29 +26,31 @@ label scene8:
             hide larry dead with moveoutright
             show cookietin at right
             chrome "{i}Hm. A cookie tin filled with freshly baked Christmas cookies. Is this involved somehow?{/i}"
+            hide cookietin
             jump scene8_choices
         "Footprints in the snow?":
             hide larry dead with moveoutright
-            show santaboots
+            show santaboots at right
             chrome "{i}These look like santa boots.{/i}"
+            hide santaboots
             jump scene8_choices
         "What are those red speckles?":
             hide larry dead with moveoutright
-            show bloodysnow
+            show bloodysnow at right
             chrome "{i}Blood droplets in the snow. Something shiny catches my eye.{/i}"
             chrome "{i}Huh. A phone. The cops in all their disinterest haven't even noticed it.{/i}"
+            hide bloodysnow
 
             call cellcell
             return
 
 label cellcell:
-    hide chrome
-    show chrome thinking left at left
+    show chrome thinking left at left:
+        xzoom -1.0
     chrome "{i}Hmm. What's on this phone?{/i}"
     show phone at center
-    show chrome shocked:
-        xzoom -1.0
-    chrome shocked "{i}There'a message from Freddy. \"Leave me alone, Larry. After tonight, you're dead to me.\"{/i}"
+    show chrome shocked
+    chrome shocked "{i}There's a message from Freddy. \"Leave me alone, Larry. After tonight, you're dead to me.\"{/i}"
     chrome neutral "{i}This looks bad for Freddy. How quickly a missing persons case can become murder. This is more than I bargained for. Better tell the kid in person.{/i}"
     
     $ larry_santa_on = False

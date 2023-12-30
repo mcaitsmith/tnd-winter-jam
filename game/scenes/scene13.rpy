@@ -4,23 +4,25 @@
 
 label scene13:
 
-    scene bg office
+    scene bg office with fade
 
     $ bianca_on = True
     $ update_layers() # turn on Bianca layer
 
-    show chrome neutral at right
+    show chrome neutral at right with dissolve
 
     chrome "{i}Back at the office, Bianca and Freddy get to reunite in peace.{/i}"
     chrome "{i}The kid’s been through a lot, but she’s a fighter.{/i}"
     chrome "{i}Just like her dad, I guess.{/i}"
 
-    show bianca at left
+    show bianca happy at left with dissolve
     bianca happy "Thanks again, Steele. You really came through."
     bianca neutral "I told you my dad was innocent. He just needs a chance."
     chrome neutral "You have that chance now, Freddy. Make the best of it. If not for you, then for Bianca’s sake."
-    hide bianca
-    show freddy at left
+    hide bianca with dissolve
+    show freddy neutral at left:
+        xzoom -1.0
+    with dissolve
     freddy neutral "Yeah, I know how lucky I am. You don’t have to tell me twice!"
     freddy neutral "The whole Santa thing..."
     freddy angry "Before I knew it, I was in too deep."
@@ -30,24 +32,26 @@ label scene13:
     chrome neutral "I now disagree."
     chrome neutral "For every Mariah there’s a Freddy, or a Jack, just trying their best."
     chrome neutral "Each one of a kind, like how two jazz sessions are never the same."
-    hide freddy
+    hide freddy with dissolve
     show bianca at left
     bianca neutral "You think that’s true for androids too?"
     chrome "..."
-    hide bianca
-    show freddy at left
+    hide bianca with dissolve
+    show freddy neutral at left:
+        xzoom -1.0
     freddy neutral "Well, one thing’s for sure, there ain’t another android like you."
     freddy neutral "Hell, there ain’t no other detective like you either."
     chrome neutral "I suppose that’s true."
     freddy happy "You’re alright, Steele... for a droid, and all. No offense."
     freddy neutral "But seriously, thank you. I mean it."
-    hide freddy
-    show bianca at left
+    hide freddy with dissolve
+    show bianca neutral at left with dissolve
     bianca neutral "Hey listen, I know I can never repay you, but if you need some help on the next case..."
     bianca happy "or a partner even, you know where to find me."
     chrome happy "I might take you up on that."
-    hide bianca
-    show freddy at left
+    hide bianca with dissolve
+    show freddy neutral at left:
+        xzoom -1.0
     freddy neutral "Speaking of which, what’s next for ya, Steele?"
     chrome neutral "I... may have a case in mind."
     chrome neutral "Either way, it’s time I stepped out of the shadows."

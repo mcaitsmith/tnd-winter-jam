@@ -6,10 +6,11 @@
 
 label scene10:
 
-    scene bg extstore
+    scene bg extstore with fade
 
     show chrome neutral at left:
         xzoom -1.0
+    with dissolve
 
     chrome "{i}I make way back to Fowler's. Still a dump.{/i}"
 
@@ -19,17 +20,24 @@ label scene10:
     
     chrome "{i}This missing person’s case was just the shell of something far more sinister, and I knew the best way to crack it wide open.{/i}"
 
-    show cop neutral at right
+    show cop angry at right with dissolve
 
-    chrome "{i}The cop was still around. I waved at him, getting a look of annoyance and a back turned as my response. Nice to be noticed, I guess.{/i}"
+    chrome "{i}The cop was still around. I waved at him, getting a look of annoyance and a back turned as my response." 
 
-    hide cop neutral 
+    show cop angry at right:
+        xzoom -1.0
+    
+    hide cop with moveoutright
+
+    pause 0.2
+
+    chrome "{i}Nice to be noticed I guess.{/i}"
 
     chrome "{i}At this point the crowd surrounding Larry’s outline had largely moved on.{/i}"
     
     chrome "{i}One other person still remained, one I didn’t think much of earlier. Faded into the background, maybe by design.{/i}"
 
-    show santa at right 
+    show santa at right with dissolve 
     $ larry_santa_on = True
     $ update_layers() # turn on Santa layer
 
@@ -258,21 +266,18 @@ label scene10:
 
         ######### GLITCH 005- Something regarding video feeds or snow, or that missing clue that would’ve helped to find Forrest Cane.
 
-        hide santa #Hide Santa for the glitch 
-
-        #VISUAL- Add background blur aka show fowlers department background blur 
-
         $ chrome_on = False # turn off Chrome layer for glitch
         $ update_layers(0) # update layers
 
-        show bg extstore blur # blurs the background
         call start_glitch
+
+        show chrome thinking left glitch at left:
+            xzoom -1.0 
+
 
         #pause for transistion 
 
         pause 1.0
-
-        show chrome thinking glitch
 
         chrome "{i}I’m expecting this one. It comes on fast, but it’s more disorienting than painful.{/i}"
 
@@ -312,14 +317,17 @@ label scene10:
 
         chrome "{i}I will improve.{/i}"
 
-        show bg extstore # unblurs the background
+        scene bg extstore with pixellate # unblurs the background
         call end_glitch
         $ chrome_on = True # turn on Chrome layer
         $ update_layers(0) # update layers
 
-        show santa at right with dissolve
+        show santa at right
+        show chrome neutral at left:
+            xzoom -1.0 
+        with dissolve
 
-        pause 1.0
+        # pause 1.0
 
         $ glitch_counter +=1 # increment glitch counter
 
@@ -353,11 +361,15 @@ label scene10:
 
         #Visual Grayscale 
 
-        hide chrome neutral with dissolve
+        # hide chrome neutral with dissolve
 
-        hide santa with dissolve 
+        # hide santa with dissolve 
 
-        show larry sad at left with dissolve 
+        scene bg extstore with fade
+
+        show larry sad at left:
+            xzoom -1.0
+        with dissolve
 
         show freddy sad at right with dissolve
 
@@ -431,18 +443,26 @@ label scene10:
 
         #VISUAL GRAYSCALE END
 
-        hide larry with dissolve
+        # hide larry with dissolve
 
-        hide mariah neutral with dissolve
+        # hide mariah neutral with dissolve
+
+        scene bg extstore with fade
 
         show chrome neutral at left with dissolve:
             xzoom -1.0
 
         show santa at right with dissolve
 
-        santa "So? What do you think? Pretty interesting, wouldn’t you say?"
+        nvl clear
 
-        chrome "...yes. Very interesting."
+        show dialogue_box
+
+        santa_nvl_right "So? What do you think? Pretty interesting, wouldn’t you say?"
+
+        chrome_nvl_left "...yes. Very interesting."
+
+        hide dialogue_box
 
         chrome "{i}If anything, this was the smoking gun, right? Clearly something was wrong with those cookies, and here was direct proof that Freddy had handed them over. But what was Mariah doing at the end? {/i}"
 

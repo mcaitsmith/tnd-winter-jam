@@ -14,10 +14,11 @@ default pickedFive = False
 label scene11:
 
 
-    scene bg mariahoffice
+    scene bg mariahoffice with fade
 
 
-    show chrome neutral at left
+    show chrome neutral at left:
+        xzoom -1.0
 
     chrome "Mariah’s office. It’s clean- meticulously so. Funny how the messiest people can also be the most fastidious."
 
@@ -29,7 +30,7 @@ label scene11:
     "I’ve got all the intel I need."
     chrome shocked "Wait- that smell! I recognize it from Freddy’s apartment!"
 
-    chrome thinking "I know exactly where to find him..."
+    chrome thinking left "I know exactly where to find him..."
 
     # narration
     "I send my regards to good ol' Jack Scanlon- as well as my location. A little insurance, just in case."
@@ -49,8 +50,10 @@ label scene11:
     return
 
 label searchMenu:
+    show chrome confused left at left:
+        xzoom -1.0
     menu:
-        chrome thinking "Let’s see…"
+        chrome "Let’s see…"
 
         # option one:
         "The computer looks suspicious…" if pickedOne == False:
@@ -72,7 +75,7 @@ label searchMenu:
             "Some used napkins…"
             "Half-eaten takeout…"
             "Stale donuts…"
-            chrome confused "Gloves? Hm. Latex. But there’s something else–"
+            chrome confused left "Gloves? Hm. Latex. But there’s something else–"
             chrome shocked "Poison! Trace amounts, but it’s there."
             chrome angry "Even one bite of this could kill a man..."
 
@@ -84,8 +87,8 @@ label searchMenu:
             chrome "Can’t believe she left the window open…"
             chrome "Organics are susceptible to cold."
             # Close Window?
-            chrome thinking "My sensors are detecting a scent blowing in from outside."
-            chrome thinking "Smoke- no, cloves. Clove cigarettes?"
+            chrome thinking left "My sensors are detecting a scent blowing in from outside."
+            chrome thinking left "Smoke- no, cloves. Clove cigarettes?"
             chrome shocked "Smells… clove-y. And familiar."
             jump searchMenu
 
@@ -93,21 +96,21 @@ label searchMenu:
         "Some nice books on the shelf…" if pickedFour == False:
             $pickedFour = True
             chrome "Organics say there’s nothing like the smell of an old book."
-            chrome thinking "I think I see the appeal."
+            chrome thinking left "I think I see the appeal."
             jump searchMenu
 
         # option five: 
         "That’s a nice plant." if pickedFive == False:
             $pickedFive = True
-            chrome thinking "I should get myself a bonsai tree."
+            chrome thinking left "I should get myself a bonsai tree."
             jump searchMenu
     return
 
 label scene11comp:
     menu:
-        chrome "Let's see here..."
+        chrome thinking left "Let's see here..."
         "Select \'deleted items\'":
-            chrome confused "Hmm. Totally empty. And nothing hidden as far as I can tell."
+            chrome confused left "Hmm. Totally empty. And nothing hidden as far as I can tell."
             jump scene11comp
         "Select \'games\'":
             chrome happy "She’s got cyber solitaire on here?? Ooh, and pinball!"
@@ -116,13 +119,13 @@ label scene11comp:
             chrome timid "Is that… Mariah in a bikini?"
             jump scene11comp
         "Select \'recipes\'":
-            chrome thinking "Lots of cookie recipes here…"
+            chrome thinking left "Lots of cookie recipes here…"
             jump scene11comp
         "Select \'santa project\'": 
             chrome shocked "Ah-ha! Now we’re getting somewhere!"
-            chrome thinking "Let’s see- looks like Fowler’s has been in the red for years."
-            chrome thinking "Sales have been declining every holiday season…"
-            chrome thinking "This program- some kind of credit card number skimming system."
+            chrome thinking left "Let’s see- looks like Fowler’s has been in the red for years."
+            chrome thinking left "Sales have been declining every holiday season…"
+            chrome thinking left "This program- some kind of credit card number skimming system."
             chrome angry "And here we’ve got some ‘creative’ accounting."
             chrome angry "Classic charity skam. Santas aggressively ask for donations, and the bulk of it goes to Mariah's pockets."
             chrome shocked "Seems like each Santa had a criminal record. Something Mariah was well aware of..."

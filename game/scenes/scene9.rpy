@@ -6,12 +6,13 @@
 
 label scene9:
 
-    scene bg freddyoffice
+    scene bg freddyoffice with fade
 
     play sound sfx_door
 
     show chrome neutral at left:
         xzoom -1.0 
+    with dissolve
     
     chrome "{i}The Fontaine digs. Three rooms and a toilet chamber. One of hundreds packing this block, nestled between an old-school bodega and a shabby, second-hand pawn shop.{/i}"
 
@@ -19,7 +20,7 @@ label scene9:
 
     chrome "{i}Cozy, if not a bit haphazard. I’m one to talk. I suppose Bianca’s doing her best with Freddy on the lam.{/i}"
 
-    show bianca sad at right
+    show bianca sad at right with moveinright
     $ bianca_on = True
     $ update_layers() # turn on Bianca layer
 
@@ -155,22 +156,25 @@ label scene9:
 
             # bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
 
-            hide dialogue_box
+            # hide dialogue_box
             nvl clear
             ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
-            hide bianca # hide Bianca for glitch
-            show bg freddyoffice blur # blurs the background
+            # hide bianca # hide Bianca for glitch
+            # show bg freddyoffice blur # blurs the background
             $ chrome_on = False # turn off Chrome layer for glitch
             $ update_layers(0) # update layers
             call start_glitch # shows Chrome glitching and grays out the background
 
-            # pause for transition
-            pause 1.0
+
 
             ### GLITCH SCENE #004
 
-            show chrome shocked glitch
+            show chrome shocked glitch at left:
+                xzoom -1.0
+
+            # pause for transition
+            pause 1.0
 
             chrome "{i}This one stings. Like I’ve blown a fuse. Bianca and I are more similar than she knows.{/i}"
 
@@ -184,7 +188,6 @@ label scene9:
 
             chrome "{i}And when the moment comes - when we separate for good - we are forced to reevaluate our entire state of functionality.{/i}"
 
-            hide chrome
             show chrome thinking left glitch at left
 
             chrome "{i}That’s why they thought I did it. That’s why I was the number one suspect in Cane’s disappearance.{/i}"
@@ -202,7 +205,6 @@ label scene9:
 
             chrome "{i}I miss Cane. If I ever had a father, it was him.{/i}"
 
-            hide chrome
             show chrome thinking left glitch at left
 
             chrome"{i}Bianca needs Freddy. They are each other’s reason to be.{/i}"
@@ -216,12 +218,16 @@ label scene9:
 
             $ glitch_counter += 1
 
-            show bg freddyoffice # unblur the background
+            scene bg freddyoffice with pixellate # unblur the background
             call end_glitch # return to normal Chrome and normal background
+    
             $ chrome_on = True # turn on Chrome layer
             $ update_layers(0) # update layers
             # show Bianca again
+            show chrome neutral at left:
+                xzoom -1.0
             show bianca neutral at right
+            with dissolve
 
             # pause for transition
             pause 1.0
@@ -234,7 +240,7 @@ label scene9:
             nvl show 
 
             hide chrome
-            show chrome thinking left at left
+            show chrome thinking left
 
             chrome_nvl_left "My dear, you still operate under the assumption that I am indeed searching."
             
@@ -260,7 +266,7 @@ label scene9:
             bianca_nvl_right angry "...but if my dad’s hiding, he’s got a good reason to."
 
             hide chrome
-            show chrome thinking left at left
+            show chrome thinking left
 
             chrome_nvl_left "One would argue that anyone who hides has a good reason to."
 
@@ -352,7 +358,6 @@ label lookaround:
 
             bianca_nvl_right sad "Yeah. That’s why I tried it once, when Dad was spiraling. It didn’t last as long as I’d hoped."
 
-            hide chrome
             show chrome confused left at left
             chrome_nvl_left "But you just said boxing is stupid."
 
@@ -377,7 +382,8 @@ label lookaround:
             jump helpful
         "Santa Toy": 
             hide chrome
-            show chrome thinking left at left
+            show chrome thinking left at left:
+                xzoom -1.0
 
             show santa toy at right
 
@@ -424,8 +430,7 @@ label lookaround:
 
             show creditcard at right
 
-            hide chrome
-            show chrome thinking left at left
+            show chrome thinking left
 
             chrome "{i}Hmm. ‘Card Reader Schematics.’ ‘Install on all registers’. These credit card readers are programmed to redirect sales to a private bank account!{/i}"
 
@@ -434,8 +439,7 @@ label lookaround:
 
             chrome "{i}I wanted to believe Bianca. But it looks like I’ve discovered Santa’s secret - Freddy’s been embezzling cash over at the department store.{/i}" 
 
-            hide chrome
-            show chrome confused left at left
+            show chrome confused left
 
             chrome "{i}Was Larry in on it? Is that why he’s dead? I must be missing something over at Fowler’s. One stone left unturned…{/i}"
 
@@ -453,8 +457,7 @@ label lookaround:
 
             bianca_nvl_right neutral "Did that Santa droid give you everything you asked for this year?"
 
-            hide chrome
-            show chrome thinking left at left
+            show chrome thinking left
             chrome_nvl_left "Not everything. Not yet."
 
             chrome_nvl_left "But there’s another Santa out there who may just do exactly that…"

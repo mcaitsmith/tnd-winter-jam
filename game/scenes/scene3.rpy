@@ -10,7 +10,7 @@ label scene3:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg bar
+    scene bg bar with fade
 
     # play music
     play music bar_music fadeout 3.0
@@ -303,6 +303,8 @@ label scene3_hardboiled:
 
     jack_nvl_right "He would never do that to her again, not if he could help it. That's a fact!"
 
+    hide dialogue_box
+
     chrome "{i}Bianca... abandoned - {/i}"
 
     $ music_pos = renpy.music.get_pos('music') # get current time position of music
@@ -313,17 +315,19 @@ label scene3_hardboiled:
 
     ######### SCENE 3A: GLITCH 001
 
-    hide jack # hide Jack for glitch
-    hide dialogue_box # temporarily end convo
-    nvl hide # hide NVL dialogue
+    # hide jack # hide Jack for glitch
+    # hide dialogue_box # temporarily end convo
+    # nvl hide # hide NVL dialogue
 
-    show bg bar blur # blurs the background
+    # show bg bar blur # blurs the background
     call start_glitch # shows Chrome glitching and grays out the background
+
+    show chrome shocked glitch at left:
+        xzoom -1.0
 
     # pause for transition
     pause 1.0
 
-    show chrome shocked glitch
 
     chrome "{i}It hits me again. A burning wave of memory, of images and sounds tattooed with situational states of being. Emotions, so to speak. All of them at once, culminating in a big bang and then an oasis of darkness.{/i}"
 
@@ -349,12 +353,12 @@ label scene3_hardboiled:
 
     chrome "{i}But for Bianca, a young girl still bargaining with her loss, I can't say it wouldn't make all the difference in the world.{/i}"
 
-    show bg bar # unblur the background
+    scene bg bar with pixellate # unblur the background
     call end_glitch # return to normal Chrome and normal background
     $ stop_layers() # stop playing layers (since layers start in end_glitch)
 
     # pause for transition
-    pause 1.0
+    # pause 1.0
 
     ######### back to SCENE 3
 
@@ -363,13 +367,15 @@ label scene3_hardboiled:
 
     $ glitch_counter +=1 # increment glitch counter
 
-    show dialogue_box at center # return to convo
-    nvl show # show NVL dialogue
-
-    hide chrome
+    # hide chrome
     show chrome angry at left:
         xzoom -1.0 # make him face right
     show jack neutral at right
+    with dissolve
+
+    
+    show dialogue_box at center # return to convo
+    nvl show # show NVL dialogue
 
     chrome_nvl_left "..."
 
