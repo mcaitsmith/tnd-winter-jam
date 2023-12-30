@@ -34,7 +34,7 @@ label scene8:
         "Footprints in the snow?":
             hide larry dead with moveoutright
             show santaboots at right
-            chrome "{i}These look like santa boots.{/i}"
+            chrome "{i}These look like Santa boots.{/i}"
             hide santaboots
             jump scene8_choices
         "What are those red speckles?":
