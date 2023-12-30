@@ -149,7 +149,7 @@ label scene2:
 
     chrome_nvl_right "Organics aren't so keen on me taking their cases."
 
-    bianca_nvl_left "Organics, synthetics... I don't care. My dad is {b}missing>.{/b}"
+    bianca_nvl_left "Organics, synthetics... I don't care. My dad is {b}missing.{/b}"
 
     bianca_nvl_left "And besides..."
 
@@ -183,7 +183,7 @@ label scene2:
 
     show chrome confused glitch
 
-    chrome "{i}What is this? Fleetingly, I lose sense of the world around me. Flashes of images, lines of code, all rush through me at once.{/i)}" 
+    chrome "{i}What is this? Fleetingly, I lose sense of the world around me. Flashes of images, lines of code, all rush through me at once.{/i}" 
 
     chrome "{i}I'm nowhere and everywhere. Everything I know, have known, have forgotten, fills my synthetic frame.{/i}"
 
