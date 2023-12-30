@@ -41,199 +41,6 @@ label scene9:
     menu detective_choices9:
         bianca "Did you find my Dad yet?"
 
-        "Hardboiled":
-            show dialogue_box at center
-            nvl show
-            chrome_nvl_left angry "I’m not the only one looking, kiddo. But I just might be the first to jump ship."
-
-            bianca_nvl_right angry "Why? Who else wants to find him?"
-
-            chrome_nvl_left angry "Oh little lady, who doesn’t? He’s more than missing. He’s the prime suspect in the murder of one Larry Moss. And I wasn’t hired for no murders."
-
-            bianca_nvl_right shocked "No! ¡No te creo!"
-
-            bianca_nvl_right angry "He wouldn’t. He couldn’t. Dad’s too soft for that. His soul couldn’t take it. Honest."
-
-            bianca_nvl_right sad "Everyone’s judging him, all the time."
-
-            bianca_nvl_right sad "Turning him into something he ain’t."
-
-            bianca_nvl_right sad "You know how much harder he has to try because of it?"
-
-            chrome_nvl_left angry "Well, being an android… I’ve got some idea."
-
-            bianca_nvl_right neutral "Look, my dad’s no murderer."
-
-            bianca_nvl_right neutral "And besides, Larry was his friend. It doesn’t add up."
-
-            bianca_nvl_right neutral "Now, I paid you to find my dad. Are you gonna do that or not?"
-
-            chrome_nvl_left angry "You expect me to uphold my end of this deal, and all the while you’re hiding a cow in a chicken coop?"
-
-            chrome_nvl_left angry "You can’t contain that cow, Miss Fontaine. The coop’s just not big enough."
-
-            chrome_nvl_left angry "So stop pretending like this is the first time Daddy’s been in trouble."
-
-            bianca_nvl_right angry "Fine! He’s had his issues."
-
-            bianca_nvl_right angry "The worst of it was a year or so ago."
-
-            bianca_nvl_right angry "He had to skip town, lay low. Left me alone for over a month."
-
-            bianca_nvl_right shocked "I swear, he never hurt nobody! Just fell into some debt, that’s all."
-
-            chrome_nvl_left angry "Didn’t think to mention this before I wasted my time?"
-
-            bianca_nvl_right sad "I don’t mention it to anyone, most of all, myself."
-
-            bianca_nvl_right sad "Dad’s been so good since."
-
-            bianca_nvl_right sad "It ain’t fair for people to taint who he is with the shadow of who he was."
-
-            chrome_nvl_left angry "Way I see it, you don’t step into a light without casting a shadow."
-
-            bianca_nvl_right neutral "Well, it’s better to try, ain’t it?"
-
-            chrome_nvl_left angry "Sure, kid. So just to be certain, I’ll give it a try. But first, I oughta learn a bit more about ol’ Freddy Fontaine."
-
-            hide dialogue_box
-            nvl clear 
-
-        "Unassuming":
-
-            show dialogue_box at center
-            nvl show
-
-            chrome_nvl_left unassuming "Unfortunately, I haven’t. But I do have a rather distressing lead…"
-
-            chrome_nvl_left unassuming "The police want him for murder. A man named Larry Moss is dead."
-
-            bianca_nvl_right shocked "No! ¡No te creo!"
-
-            bianca_nvl_right shocked "Larry was Dad’s friend. He may not have a shiny reputation, but my Dad wouldn’t hurt a fly."
-
-            bianca_nvl_right sad "Everyone’s judging him, all the time."
-
-            bianca_nvl_right sad "Turning him into something he ain’t."
-
-            bianca_nvl_right sad "You know how much harder he has to try because of it?"
-
-            chrome_nvl_left timid "Too much, I take it?"
-
-            bianca_nvl_right sad "Way too much. Look, my dad’s no killer - he’s just missing, that’s all!"
-
-            chrome_nvl_left neutral "Hmph."
-
-            chrome_nvl_left neutral "If only he had a history of going missing."
-
-            chrome_nvl_left neutral "Strangely, it would make for a stronger alibi."
-
-            chrome_nvl_left timid "Think of a bird migrating for the winter."
-
-            chrome_nvl_left timid "If this migration were to only happen once in a lifetime, it would be very curious."
-
-            chrome_nvl_left timid "But as it occurs in pattern, we accept it as a common behavior."
-
-            chrome_nvl_left timid "Disappearing for the first time, just as he’s implicated for murder - I could understand the curiosity surrounding your father…"
-
-            bianca_nvl_right neutral "So you’re saying it would help if..."
-
-            bianca_nvl_right sad "...if this wasn’t the first time he’d gone missing?"
-
-            chrome_nvl_left timid "Certainly. But isn’t it?"
-
-            bianca_nvl_right sad "Mr. Steele, you ever just want to forget something? Leave it in the past?"
-
-            chrome_nvl_left timid "Of course. Luckily, I can simply encrypt my memory files."
-
-            chrome_nvl_left timid "Though that is proving faulty these days..."
-
-            bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
- 
-            chrome timid "{i}Without a father...{/i}"
-
-            # bianca_nvl_right sad "Turns out, he did it for me. Moved us to keep me safe and left me the rest of his cash for food. If he had paid up, I would’ve starved. But a full belly didn’t stop me from feeling scared and empty."
-
-            # bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
-
-            # hide dialogue_box
-            nvl clear
-            ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
-
-            # hide bianca # hide Bianca for glitch
-            # show bg freddyoffice blur # blurs the background
-            $ chrome_on = False # turn off Chrome layer for glitch
-            $ update_layers(0) # update layers
-            call start_glitch # shows Chrome glitching and grays out the background
-
-
-
-            ### GLITCH SCENE #004
-
-            show chrome shocked glitch at left:
-                xzoom -1.0
-
-            # pause for transition
-            pause 1.0
-
-            chrome "{i}This one stings. Like I’ve blown a fuse. Bianca and I are more similar than she knows.{/i}"
-
-            show chrome timid glitch
-
-            chrome "{i}As young beings, we adopt the lives of our parents. Our mentors. We learn from them, grow with them, explore the world under their wing.{/i}"
-
-            chrome "{i}Our physical functionality may be independent but our programming is synced.{/i}"
-
-            chrome "{i}We live so naturally together that we forget it is temporary. Expectations are created. Dependencies installed.{/i}"
-
-            chrome "{i}And when the moment comes - when we separate for good - we are forced to reevaluate our entire state of functionality.{/i}"
-
-            show chrome thinking left glitch at left
-
-            chrome "{i}That’s why they thought I did it. That’s why I was the number one suspect in Cane’s disappearance.{/i}"
-
-            chrome "{i}I knew him the best. Lived with him in my infancy. He did not make a move that I couldn’t calculate. Until his final move, that is.{/i}"
-
-            show chrome sad glitch:
-                xzoom -1.0
-
-            chrome "{i}It was only after losing Cane that I understood his gift to me. The culmination of his guidance and care: purpose.{/i}"
-
-            chrome "{i}Cane gave me reason to be. At a certain point, without realizing it, I became the one guiding and caring for him.{/i}"
-
-            chrome "{i}Without him, purpose is lost on me. I have no expectations, nothing to uphold. Nobody to share my existence with.{/i}"
-
-            chrome "{i}I miss Cane. If I ever had a father, it was him.{/i}"
-
-            show chrome thinking left glitch at left
-
-            chrome"{i}Bianca needs Freddy. They are each other’s reason to be.{/i}"
-
-            chrome "{i}And, perhaps…{/i}"
-
-            show chrome happy glitch:
-                xzoom -1.0
-
-            chrome "{i}They are my reason to be.{/i}"
-
-            $ glitch_counter += 1
-
-            scene bg freddyoffice with pixellate # unblur the background
-            call end_glitch # return to normal Chrome and normal background
-    
-            $ chrome_on = True # turn on Chrome layer
-            $ update_layers(0) # update layers
-            # show Bianca again
-            show chrome neutral at left:
-                xzoom -1.0
-            show bianca neutral at right
-            with dissolve
-
-            # pause for transition
-            pause 1.0
-
-            ######### back to SCENE 9
-
         "Logical":
             
             show dialogue_box at center 
@@ -318,7 +125,200 @@ label scene9:
             hide dialogue_box
             nvl clear 
 
-    call lookaround
+        "Unassuming":
+
+            show dialogue_box at center
+            nvl show
+
+            chrome_nvl_left unassuming "Unfortunately, I haven’t. But I do have a rather distressing lead…"
+
+            chrome_nvl_left unassuming "The police want him for murder. A man named Larry Moss is dead."
+
+            bianca_nvl_right shocked "No! ¡No te creo!"
+
+            bianca_nvl_right shocked "Larry was Dad’s friend. He may not have a shiny reputation, but my Dad wouldn’t hurt a fly."
+
+            bianca_nvl_right sad "Everyone’s judging him, all the time."
+
+            bianca_nvl_right sad "Turning him into something he ain’t."
+
+            bianca_nvl_right sad "You know how much harder he has to try because of it?"
+
+            chrome_nvl_left timid "Too much, I take it?"
+
+            bianca_nvl_right sad "Way too much. Look, my dad’s no killer - he’s just missing, that’s all!"
+
+            chrome_nvl_left neutral "Hmph."
+
+            chrome_nvl_left neutral "If only he had a history of going missing."
+
+            chrome_nvl_left neutral "Strangely, it would make for a stronger alibi."
+
+            chrome_nvl_left timid "Think of a bird migrating for the winter."
+
+            chrome_nvl_left timid "If this migration were to only happen once in a lifetime, it would be very curious."
+
+            chrome_nvl_left timid "But as it occurs in pattern, we accept it as a common behavior."
+
+            chrome_nvl_left timid "Disappearing for the first time, just as he’s implicated for murder - I could understand the curiosity surrounding your father…"
+
+            bianca_nvl_right neutral "So you’re saying it would help if..."
+
+            bianca_nvl_right sad "...if this wasn’t the first time he’d gone missing?"
+
+            chrome_nvl_left timid "Certainly. But isn’t it?"
+
+            bianca_nvl_right sad "Mr. Steele, you ever just want to forget something? Leave it in the past?"
+
+            chrome_nvl_left timid "Of course. Luckily, I can simply encrypt my memory files."
+
+            chrome_nvl_left timid "Though that is proving faulty these days..."
+
+            bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
+ 
+            chrome timid "{i}Without a father...{/i}"
+
+            # bianca_nvl_right sad "Turns out, he did it for me. Moved us to keep me safe and left me the rest of his cash for food. If he had paid up, I would’ve starved. But a full belly didn’t stop me from feeling scared and empty."
+
+            # bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
+
+            # hide dialogue_box
+            nvl clear
+            ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
+
+            # hide bianca # hide Bianca for glitch
+            # show bg freddyoffice blur # blurs the background
+            $ chrome_on = False # turn off Chrome layer for glitch
+            $ update_layers(0) # update layers
+            call start_glitch from _call_start_glitch_7 # shows Chrome glitching and grays out the background
+
+
+
+            ### GLITCH SCENE #004
+
+            show chrome shocked glitch at left:
+                xzoom -1.0
+
+            # pause for transition
+            pause 1.0
+
+            chrome "{i}This one stings. Like I’ve blown a fuse. Bianca and I are more similar than she knows.{/i}"
+
+            show chrome timid glitch
+
+            chrome "{i}As young beings, we adopt the lives of our parents. Our mentors. We learn from them, grow with them, explore the world under their wing.{/i}"
+
+            chrome "{i}Our physical functionality may be independent but our programming is synced.{/i}"
+
+            chrome "{i}We live so naturally together that we forget it is temporary. Expectations are created. Dependencies installed.{/i}"
+
+            chrome "{i}And when the moment comes - when we separate for good - we are forced to reevaluate our entire state of functionality.{/i}"
+
+            show chrome thinking left glitch at left
+
+            chrome "{i}That’s why they thought I did it. That’s why I was the number one suspect in Cane’s disappearance.{/i}"
+
+            chrome "{i}I knew him the best. Lived with him in my infancy. He did not make a move that I couldn’t calculate. Until his final move, that is.{/i}"
+
+            show chrome sad glitch:
+                xzoom -1.0
+
+            chrome "{i}It was only after losing Cane that I understood his gift to me. The culmination of his guidance and care: purpose.{/i}"
+
+            chrome "{i}Cane gave me reason to be. At a certain point, without realizing it, I became the one guiding and caring for him.{/i}"
+
+            chrome "{i}Without him, purpose is lost on me. I have no expectations, nothing to uphold. Nobody to share my existence with.{/i}"
+
+            chrome "{i}I miss Cane. If I ever had a father, it was him.{/i}"
+
+            show chrome thinking left glitch at left
+
+            chrome"{i}Bianca needs Freddy. They are each other’s reason to be.{/i}"
+
+            chrome "{i}And, perhaps…{/i}"
+
+            show chrome happy glitch:
+                xzoom -1.0
+
+            chrome "{i}They are my reason to be.{/i}"
+
+            $ glitch_counter += 1
+
+            scene bg freddyoffice with pixellate # unblur the background
+            call end_glitch from _call_end_glitch_6 # return to normal Chrome and normal background
+    
+            $ chrome_on = True # turn on Chrome layer
+            $ update_layers(0) # update layers
+            # show Bianca again
+            show chrome neutral at left:
+                xzoom -1.0
+            show bianca neutral at right
+            with dissolve
+
+            # pause for transition
+            pause 1.0
+
+            ######### back to SCENE 9
+
+        "Hardboiled":
+            show dialogue_box at center
+            nvl show
+            chrome_nvl_left angry "I’m not the only one looking, kiddo. But I just might be the first to jump ship."
+
+            bianca_nvl_right angry "Why? Who else wants to find him?"
+
+            chrome_nvl_left angry "Oh little lady, who doesn’t? He’s more than missing. He’s the prime suspect in the murder of one Larry Moss. And I wasn’t hired for no murders."
+
+            bianca_nvl_right shocked "No! ¡No te creo!"
+
+            bianca_nvl_right angry "He wouldn’t. He couldn’t. Dad’s too soft for that. His soul couldn’t take it. Honest."
+
+            bianca_nvl_right sad "Everyone’s judging him, all the time."
+
+            bianca_nvl_right sad "Turning him into something he ain’t."
+
+            bianca_nvl_right sad "You know how much harder he has to try because of it?"
+
+            chrome_nvl_left angry "Well, being an android… I’ve got some idea."
+
+            bianca_nvl_right neutral "Look, my dad’s no murderer."
+
+            bianca_nvl_right neutral "And besides, Larry was his friend. It doesn’t add up."
+
+            bianca_nvl_right neutral "Now, I paid you to find my dad. Are you gonna do that or not?"
+
+            chrome_nvl_left angry "You expect me to uphold my end of this deal, and all the while you’re hiding a cow in a chicken coop?"
+
+            chrome_nvl_left angry "You can’t contain that cow, Miss Fontaine. The coop’s just not big enough."
+
+            chrome_nvl_left angry "So stop pretending like this is the first time Daddy’s been in trouble."
+
+            bianca_nvl_right angry "Fine! He’s had his issues."
+
+            bianca_nvl_right angry "The worst of it was a year or so ago."
+
+            bianca_nvl_right angry "He had to skip town, lay low. Left me alone for over a month."
+
+            bianca_nvl_right shocked "I swear, he never hurt nobody! Just fell into some debt, that’s all."
+
+            chrome_nvl_left angry "Didn’t think to mention this before I wasted my time?"
+
+            bianca_nvl_right sad "I don’t mention it to anyone, most of all, myself."
+
+            bianca_nvl_right sad "Dad’s been so good since."
+
+            bianca_nvl_right sad "It ain’t fair for people to taint who he is with the shadow of who he was."
+
+            chrome_nvl_left angry "Way I see it, you don’t step into a light without casting a shadow."
+
+            bianca_nvl_right neutral "Well, it’s better to try, ain’t it?"
+
+            chrome_nvl_left angry "Sure, kid. So just to be certain, I’ll give it a try. But first, I oughta learn a bit more about ol’ Freddy Fontaine."
+
+            hide dialogue_box
+            nvl clear 
+
+    call lookaround from _call_lookaround
     return
 
 label lookaround:

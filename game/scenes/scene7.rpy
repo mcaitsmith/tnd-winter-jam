@@ -81,7 +81,7 @@ label scene7:
 
             $ chrome_on = False # turn off Chrome layer for glitch
             $ update_layers(0) # update layers
-            call start_glitch # shows Chrome glitching and grays out the background
+            call start_glitch from _call_start_glitch_6 # shows Chrome glitching and grays out the background
 
             ### GLITCH SCENE #3
 
@@ -124,7 +124,7 @@ label scene7:
             chrome "{i}I remember the reasons all too well.{/i}"
 
             # scene bg alley with pixellate # unblur the background
-            call end_glitch # return to normal Chrome and normal background
+            call end_glitch from _call_end_glitch_5 # return to normal Chrome and normal background
 
             # pause for transition
             # pause 1.0

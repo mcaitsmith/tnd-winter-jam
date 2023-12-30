@@ -418,7 +418,7 @@ label scene6:
         
         # show bg extstore night blur # blurs the background
 
-        call start_glitch
+        call start_glitch from _call_start_glitch_5
 
         #pause for transistion 
 
@@ -471,7 +471,7 @@ label scene6:
         chrome "{i}That’s the nature of the beast. First, they blamed us androids for sowing Cane’s demise. Then they blamed Cane for extinguishing our own.{/i}"
 
         scene bg extstore night with pixellate # unblurs the background
-        call end_glitch
+        call end_glitch from _call_end_glitch_4
 
         $ glitch_counter +=1 # increment glitch counter
 

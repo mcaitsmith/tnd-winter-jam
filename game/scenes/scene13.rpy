@@ -67,7 +67,7 @@ label scene13:
     chrome "{i}Myself included.{/i}"
 
     if glitch_counter >= 5:
-        call secret_ending # secret ending
+        call secret_ending from _call_secret_ending # secret ending
     else:
         $ stop_layers(3) # stop playing layers
         play music bar_music fadein 1

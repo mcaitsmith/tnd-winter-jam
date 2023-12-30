@@ -84,11 +84,11 @@ label scene3:
     menu:
         chrome "{i}This guy's all over the place. I have to get him to focus somehow. I have to be careful which tact I choose, so I can get the most info...{/i}"
         "Logical":
-            call scene3_logical
+            call scene3_logical from _call_scene3_logical
         "Unassuming":
-            call scene3_unassuming
+            call scene3_unassuming from _call_scene3_unassuming
         "Hardboiled":
-            call scene3_hardboiled
+            call scene3_hardboiled from _call_scene3_hardboiled
 
     show chrome neutral
 
@@ -320,7 +320,7 @@ label scene3_hardboiled:
     # nvl hide # hide NVL dialogue
 
     # show bg bar blur # blurs the background
-    call start_glitch # shows Chrome glitching and grays out the background
+    call start_glitch from _call_start_glitch_4 # shows Chrome glitching and grays out the background
 
     show chrome shocked glitch at left:
         xzoom -1.0
@@ -354,7 +354,7 @@ label scene3_hardboiled:
     chrome "{i}But for Bianca, a young girl still bargaining with her loss, I can't say it wouldn't make all the difference in the world.{/i}"
 
     scene bg bar with pixellate # unblur the background
-    call end_glitch # return to normal Chrome and normal background
+    call end_glitch from _call_end_glitch_3 # return to normal Chrome and normal background
     $ stop_layers() # stop playing layers (since layers start in end_glitch)
 
     # pause for transition

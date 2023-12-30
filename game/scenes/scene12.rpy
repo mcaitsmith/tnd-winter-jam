@@ -76,14 +76,14 @@ label scene12:
         chrome "{i}He’s riled up. On his last nerve. And clearly I make him uncomfortable. I have to be careful in my approach...{/i}"
 
         "Logical":
-            call logical12
+            call logical12 from _call_logical12
 
         "Unassuming":
             # Programming - ideal +- 1
-            call unassuming12
+            call unassuming12 from _call_unassuming12
 
         "Hardboiled":
-            call hardboiled12
+            call hardboiled12 from _call_hardboiled12
 
     # Jump to Scene 12 E 
     jump scene12_e
@@ -251,7 +251,7 @@ label unassuming12:
     $ chrome_on = False # turn off Chrome layer for glitch
     $ update_layers(0) # update layers
 
-    call start_glitch # shows Chrome glitching and grays out the background
+    call start_glitch from _call_start_glitch_1 # shows Chrome glitching and grays out the background
     
 
     # pause for transition
@@ -312,7 +312,7 @@ label unassuming12:
     chrome "{i}Sometimes, the right spot is the rooftop of Fowler's Department Store.{/i}"
 
     scene bg rooftop night with pixellate # unblur the background
-    call end_glitch # return to normal Chrome and normal background
+    call end_glitch from _call_end_glitch_1 # return to normal Chrome and normal background
     $ chrome_on = True # turn on Chrome layer
     $ update_layers(0) # update layers
 
@@ -552,11 +552,11 @@ label scene12_e:
     mariah_nvl_right "Santas - Clean this mess up."
 
     if glitch_counter >= 5:
-        call scene12_f # good ending
+        call scene12_f from _call_scene12_f # good ending
     elif glitch_counter >= 3:
-        call scene12_g # average ending
+        call scene12_g from _call_scene12_g # average ending
     else:
-        call scene12_h # bad ending
+        call scene12_h from _call_scene12_h # bad ending
 
     $ mariah_on = False
     $ larry_santa_on = False

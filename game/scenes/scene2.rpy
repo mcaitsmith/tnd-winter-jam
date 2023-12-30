@@ -168,7 +168,7 @@ label scene2:
     $ chrome_on = False # turn off Chrome layer for glitch
     $ update_layers(0) # update layers
     # show bg office night blur # blurs the background
-    call start_glitch # shows Chrome glitching and grays out the background
+    call start_glitch from _call_start_glitch_3 # shows Chrome glitching and grays out the background
 
     show chrome shocked glitch at right
 
@@ -213,7 +213,7 @@ label scene2:
 
     
     scene bg office night with pixellate # unblur the background
-    call end_glitch # return to normal Chrome and normal background
+    call end_glitch from _call_end_glitch_2 # return to normal Chrome and normal background
     $ chrome_on = True # turn on Chrome layer
     $ update_layers(0) # update layers
 

@@ -24,7 +24,7 @@ label scene11:
 
     chrome timid "{i}Seems Ms. Fowler isn’t in; surely she wouldn’t mind if I… poke around.{/i}"
 
-    call searchMenu
+    call searchMenu from _call_searchMenu
 
     chrome neutral "{i}Seems like that’s about everything of interest.{/i}"
     chrome "{i}I’ve got all the intel I need.{/i}"
@@ -61,7 +61,7 @@ label searchMenu:
             chrome "{i}The computer looks suspicious…{/i}"
             $pickedOne = True
             # [LABELS for "deleted items", "games", "saved pictures", "recipes", "Santa Project". Kind of what we talked about in the writer/ programmer sync. Once they’ve been read, they don’t appear again as choices]
-            call scene11comp
+            call scene11comp from _call_scene11comp
             jump searchMenu
 
         # option two:

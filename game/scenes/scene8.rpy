@@ -44,7 +44,7 @@ label scene8:
             chrome "{i}Huh. A phone. The cops in all their disinterest haven't even noticed it.{/i}"
             hide bloodysnow
 
-            call cellcell
+            call cellcell from _call_cellcell
             return
 
 label cellcell:

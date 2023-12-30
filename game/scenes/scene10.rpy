@@ -301,7 +301,7 @@ label scene10:
         $ chrome_on = False # turn off Chrome layer for glitch
         $ update_layers(0) # update layers
 
-        call start_glitch
+        call start_glitch from _call_start_glitch
 
         show chrome thinking left glitch at left:
             xzoom -1.0 
@@ -349,7 +349,7 @@ label scene10:
         chrome "{i}I will improve.{/i}"
 
         scene bg extstore with pixellate # unblurs the background
-        call end_glitch
+        call end_glitch from _call_end_glitch
         $ chrome_on = True # turn on Chrome layer
         $ update_layers(0) # update layers
 

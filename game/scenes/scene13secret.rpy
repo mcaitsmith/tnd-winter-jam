@@ -13,7 +13,7 @@ label secret_ending:
     # scene bg office blur with fade # blurs the background
     $ chrome_on = False # turn off Chrome layer for glitch
     $ update_layers(0) # update layers
-    call start_glitch # shows Chrome glitching and grays out the background
+    call start_glitch from _call_start_glitch_2 # shows Chrome glitching and grays out the background
 
     # pause for transition
     # pause 1.0
