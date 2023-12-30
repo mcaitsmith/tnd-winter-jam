@@ -1170,4 +1170,10 @@ label scene12_h: # bad ending
     chrome neutral "He’s dead."
     freddy sad "Why? Why you...?"
 
+    #Narration
+    chrome "{i}...{/i}"
+
+    play sound sfx_footsteps
+    chrome "{i}She escaped.{/i}"
+
     return

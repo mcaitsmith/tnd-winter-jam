@@ -10,7 +10,11 @@ label scene13:
 
     show chrome neutral at right with dissolve
 
-    chrome "{i}Back at the office, Bianca and Freddy get to reunite in peace.{/i}"
+    if glitch_counter < 3: # bad ending
+        chrome "{i}Back at the office, Bianca and Freddy reunite. Freddy is crestfallen- he's lost a friend after all. However, seeing his daughter's face brings some light back to his eyes.{/i}"
+    else:
+        chrome "{i}Back at the office, Bianca and Freddy get to reunite in peace.{/i}"
+
     chrome "{i}The kid’s been through a lot, but she’s a fighter.{/i}"
     chrome "{i}Just like her dad, I guess.{/i}"
 
