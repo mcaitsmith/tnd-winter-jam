@@ -8,6 +8,8 @@ label scene7:
 
     scene bg alley with fade
 
+    play sound sfx_policechatter volume 0.5 loop
+
     show chrome neutral at right with dissolve
 
     # chrome "{i}I make my way to the alley to inspect the scene.{/i}"
@@ -201,5 +203,7 @@ label scene7:
 
             hide dialogue_box
             nvl clear 
+
+    stop sound
 
     jump scene8

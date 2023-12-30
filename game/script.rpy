@@ -138,6 +138,7 @@ define sfx_santabeepscan = "audio/sfx/SantaBeepScan_SantaSecret_SFX.wav"
 define sfx_breakmetaltoy = "audio/sfx/BreakMetalToy_SantaSecret_SFX.wav"
 define sfx_glitchin = "audio/sfx/digital-glitch-betacut-1-00-01.mp3"
 define sfx_glitchout = "audio/sfx/Glitch_SantaSecret_SFX.wav"
+define sfx_policechatter = "audio/sfx/PoliceChatter_SantaSecret_SFX.wav"
 define title_music = "audio/Prueba_Jazz_investigador.mp3"
 define bar_music = "audio/jazz_for_andrea_2.wav"
 
