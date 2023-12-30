@@ -139,7 +139,7 @@ label scene3:
 
 label scene3_logical:
 
-    show chrome thinking
+    show chrome thinking left
 
     chrome_nvl_left "I'm curious as to the whereabouts of Freddy."
 

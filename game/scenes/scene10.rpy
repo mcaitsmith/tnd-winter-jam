@@ -69,7 +69,9 @@ label scene10:
 
     show santa  
 
-    santa_nvl_right "Was that so hard detective? Now whatever it is, hurry up. I got a lot of sitting around doing nothin' to do."
+    santa_nvl_right "Was that so hard detective?"
+
+    santa_nvl_right "Now whatever it is, hurry up. I got a lot of sitting around doing nothin' to do."
 
     hide dialogue_box
 
@@ -111,11 +113,17 @@ label scene10:
 
         chrome_nvl_left "What’re the donations for?"
 
-        santa_nvl_right "For the kids, or the poor, or whatever. Fowler’s the one who organizes the donation drives, I just collect the money."
+        santa_nvl_right "For the kids, or the poor, or whatever."
+
+        santa_nvl_right "Fowler’s the one who organizes the donation drives, I just collect the money."
 
         chrome_nvl_left "Ah, I see. They don’t tell you much about the whole operation?"
 
-        santa_nvl_right "They tell me as much as I gotta know. I get paid to sit pretty and make nice with the kids that pass by and want to meet Santa. Pretty good gig to me."
+        santa_nvl_right "They tell me as much as I gotta know."
+
+        santa_nvl_right "I get paid to sit pretty and make nice with the kids that pass by and want to meet Santa."
+
+        santa_nvl_right "Pretty good gig to me."
 
         chrome_nvl_left "That want to meet Robot Santa?"
 
@@ -129,9 +137,11 @@ label scene10:
 
         show dialogue_box
 
-        chrome_nvl_left "Did you happen to see anything happen here? Regarding the murder I mean?"
+        chrome_nvl_left "Did you see anything happen here?"
 
-        santa_nvl_right "Finally. I figured that would be the first place you went, but there’s no accounting for people’s time in your profession is there?"
+        chrome_nvl_left "Regarding the murder I mean?"
+
+        santa_nvl_right "Finally. I figured that'd be the first place you went, but there’s no accounting for people’s time in your profession is there?"
 
         hide dialogue_box
 
@@ -144,16 +154,24 @@ label scene10:
 
         show dialogue_box
 
-        chrome_nvl_left "Have you noticed any strange behaviors recently? Regulars acting out of character, more commotion at odd times of night, that sort of thing?"
+        show chrome hardboiled
+
+        chrome_nvl_left "Have you noticed any strange behaviors recently?"
+
+        chrome_nvl_left "Regulars acting out of character, more commotion at night, that sort of thing?"
 
         # show santa happy 
         
-        santa_nvl_right "You kidding me? Humans are strange beings, detective. Not a day goes by where I don’t question why they do the things that they do."
+        santa_nvl_right "You kidding me? Humans are strange beings, detective."
+
+        santa_nvl_right "Not a day goes by where I don’t question why they do the things that they do."
 
         show chrome neutral # was frowning unsure what this should be? 
         
-        chrome_nvl_left "Sure, but you’ve been sitting on this block for how long? That’s normal everyday human activities."
-    
+        chrome_nvl_left "Sure, but you’ve been sitting on this block for how long?"
+
+        chrome_nvl_left "That’s normal everyday human activities."
+
         chrome_nvl_left "I’m talking about the truly strange, the {i}stuff{/i} that they try to hide."
 
         # show santa neutral 
@@ -164,21 +182,31 @@ label scene10:
 
         #show santa angry 
 
-        santa_nvl_right "Well then be more specific! What are you looking for detective?"
+        santa_nvl_right "Well then be more specific!"
+
+        santa_nvl_right "What are you looking for detective?"
 
         #insert santa angry
 
-        chrome_nvl_left "Think man! What about the employees? The elf, Larry? Notice anything off about him?"
+        chrome_nvl_left "Think man! What about the employees?"
+
+        chrome_nvl_left "The elf, Larry? Notice anything off about him?"
 
         #show santa neutral 
 
-        santa_nvl_right "His arms were too short for his torso and his face was too long. I know he talked with Freddy sometimes, that’s it."
+        santa_nvl_right "His arms were too short for his torso and his face was too long."
+
+        santa_nvl_right "I know he talked with Freddy sometimes, that’s it."
 
         show chrome neutral 
 
-        chrome_nvl_left "Were they good friends? Any arguments or anything?"
+        chrome_nvl_left "Were they good friends?"
 
-        santa_nvl_right "I’m not familiar with the relationships of every human here at this department store detective. You’re not asking me the right question here."
+        chrome_nvl_left "Any arguments or anything?"
+
+        santa_nvl_right "I’m not familiar with the relationships of every human here at this department store."
+
+        santa_nvl_right "You’re not asking the right question here."
 
         hide dialogue_box
 
@@ -186,9 +214,11 @@ label scene10:
 
         show dialogue_box
 
-        chrome_nvl_left "Did you happen to see anything happen here? Regarding the murder I mean?"
+        chrome_nvl_left "Did you see anything happen here?"
 
-        santa_nvl_right "Finally. I figured that would be the first place you went, but there’s no accounting for people’s time in your profession is there?"
+        chrome_nvl_left "Regarding the murder I mean?"
+
+        santa_nvl_right "Finally. I figured that'd be the first place you went, but there’s no accounting for people’s time in your profession is there?"
 
         hide dialogue_box
 
@@ -199,6 +229,8 @@ label scene10:
         # Surveillance 
 
         show dialogue_box
+
+        show chrome logical
 
         chrome_nvl_left "Are you stationed here often?"
 
@@ -274,7 +306,6 @@ label scene10:
         show chrome thinking left glitch at left:
             xzoom -1.0 
 
-
         #pause for transistion 
 
         pause 1.0
@@ -305,7 +336,7 @@ label scene10:
 
         chrome "{i}When Cane launched the Android Program, it was not meant to create perfect detectives. It was meant to create detectives who could constantly improve.{/i}"
 
-        show chrome thinking glitch
+        show chrome thinking left glitch
 
         chrome "{i}Cane once told me, ‘Mistakes allow for challenges. Challenges allow for growth. To recognize and rectify these errors allows for the betterment of any great detective’.{/i}"
 

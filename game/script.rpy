@@ -62,6 +62,7 @@ image chrome timid = "characters/chrome/chrome timid.png"
 image chrome timid glitch = Glitch("characters/chrome/chrome timid.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
 image chrome angry = "characters/chrome/chrome angry.png"
 image chrome angry glitch = Glitch("characters/chrome/chrome angry.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
+image chrome embarrassed = "characters/chrome/chrome embarrassed.png"
 image chrome hardboiled = "characters/chrome/chrome angry.png"
 image chrome logical = "characters/chrome/chrome logical.png"
 image chrome unassuming = "characters/chrome/chrome unassuming.png"

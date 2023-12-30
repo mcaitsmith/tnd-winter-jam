@@ -123,13 +123,11 @@ label scene7:
 
             chrome "{i}I remember the reasons all too well.{/i}"
 
-            scene bg alley with pixellate # unblur the background
+            # scene bg alley with pixellate # unblur the background
             call end_glitch # return to normal Chrome and normal background
-            $ chrome_on = True # turn on Chrome layer
-            $ update_layers(0) # update layers
 
             # pause for transition
-            pause 1.0
+            # pause 1.0
 
             $ glitch_counter +=1 # increment glitch counter
 
@@ -172,7 +170,7 @@ label scene7:
 
             chrome_nvl_right unassuming "Would you like me to report THAT to your superior?"
 
-            cop_nvl_left angry  "Fine. Go through"
+            cop_nvl_left angry  "Fine. Go through."
 
             hide dialogue_box
             nvl clear 

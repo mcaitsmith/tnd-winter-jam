@@ -104,9 +104,9 @@ label scene9:
             show dialogue_box at center
             nvl show
 
-            chrome_nvl_left timid "Unfortunately, I haven’t. But I do have a rather distressing lead…"
+            chrome_nvl_left unassuming "Unfortunately, I haven’t. But I do have a rather distressing lead…"
 
-            chrome_nvl_left timid "The police want him for murder. A man named Larry Moss is dead."
+            chrome_nvl_left unassuming "The police want him for murder. A man named Larry Moss is dead."
 
             bianca_nvl_right shocked "No! ¡No te creo!"
 
@@ -239,7 +239,6 @@ label scene9:
             show dialogue_box at center 
             nvl show 
 
-            hide chrome
             show chrome thinking left
 
             chrome_nvl_left "My dear, you still operate under the assumption that I am indeed searching."
@@ -265,7 +264,6 @@ label scene9:
 
             bianca_nvl_right angry "...but if my dad’s hiding, he’s got a good reason to."
 
-            hide chrome
             show chrome thinking left
 
             chrome_nvl_left "One would argue that anyone who hides has a good reason to."
@@ -381,9 +379,7 @@ label lookaround:
 
             jump helpful
         "Santa Toy": 
-            hide chrome
-            show chrome thinking left at left:
-                xzoom -1.0
+            show chrome thinking left
 
             show santa toy at right
 

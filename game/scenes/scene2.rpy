@@ -245,7 +245,11 @@ label scene2:
 
     bianca_nvl_left "You saying the rumors are true? That you're just deprecated goods?! Metal inútil?!"
 
-    bianca_nvl_left "Yeah, well - they say the same stuff about my dad. That he's a loser. A deadbeat. But it {i}{b}ain't{/b}{/i} true."
+    bianca_nvl_left "Yeah, well - they say the same stuff about my dad."
+
+    bianca_nvl_left "That he's a loser. A deadbeat."
+
+    bianca_nvl_left "But it {i}{b}ain't{/b}{/i} true."
 
     bianca_nvl_left "Here's my info. My dad's been known to hang out at the Silver Cat. {i}{b}A lot.{/b}{/i}"
 

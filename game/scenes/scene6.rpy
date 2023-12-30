@@ -316,6 +316,8 @@ label scene6:
 
         show dialogue_box
 
+        show chrome unassuming
+
         chrome_nvl_left "Sorry, sorry."
 
         chrome_nvl_left "This entire thing has probably been an unpleasant surprise, like actually getting coal in the stocking, you know."
@@ -477,6 +479,8 @@ label scene6:
 
 
     label scene6_postchoice:
+
+        nvl clear
 
         show chrome neutral at left:
             xzoom -1.0

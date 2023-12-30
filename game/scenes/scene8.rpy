@@ -6,6 +6,9 @@ label scene8:
 
     scene bg extstore with fade
 
+    $ chrome_on = True # turn on Chrome layer
+    $ update_layers(0) # update layers
+
     show chrome neutral at left:
         xzoom -1.0 
     with dissolve
