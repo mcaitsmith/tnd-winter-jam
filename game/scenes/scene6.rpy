@@ -8,6 +8,9 @@ label scene6:
 
     scene bg extstore night
 
+    show chrome neutral at left:
+        xzoom -1.0
+
     show mariah neutral at right
 
     $ mariah_on = True
@@ -17,8 +20,8 @@ label scene6:
 
     chrome "{i}There is an air of tension thrumming around her. She has the eyes of a predator, sharp and clear and ready to deliver violence if she sees any weakness.{/i}"
 
-    show chrome neutral at left with moveinleft:
-        xzoom -1.0
+    # show chrome neutral at left with moveinleft:
+    #     xzoom -1.0
 
     pause 1.0
 
