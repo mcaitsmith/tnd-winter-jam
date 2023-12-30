@@ -31,6 +31,8 @@ label scene13:
     freddy angry "Before I knew it, I was in too deep."
     freddy angry "At first, I wanted to do something good for a change, but Mariah... she had other plans."
     freddy sad "I can’t believe how cold she is, to stoop that low. Poor Larry..."
+    if glitch_counter < 3: # bad ending
+        freddy sad "Jack too... if it weren't for me, he'd never have gotten caught up in this mess. {i}Qué mundo...{/i}"
     chrome sad "My... mentor... once said, there’s nothing colder than the human heart."
     chrome neutral "I now disagree."
     chrome neutral "For every Mariah there’s a Freddy, or a Jack, just trying their best."

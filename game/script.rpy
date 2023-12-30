@@ -112,6 +112,7 @@ image bg office night = "backgrounds/bg office night.png"
 image bg office night blur = im.Blur("backgrounds/bg office night.png", 1.5) # blurred version
 image bg alley = "backgrounds/bg alley.png"
 image bg alley blur = im.Blur("backgrounds/bg alley.png", 1.5) # blurred version
+image bg alley night = "backgrounds/bg alley night.png"
 image bg bar = "backgrounds/bg bar.png"
 image bg bar blur = im.Blur("backgrounds/bg bar.png", 1.5) # blurred version
 image bg rooftop night = "backgrounds/bg rooftop night.png"

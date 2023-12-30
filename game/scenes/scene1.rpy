@@ -25,7 +25,7 @@ label scene1:
 
     pause 2.0
 
-    scene bg extstore # the sidewalk is snowy, random footprints
+    scene bg alley night # the sidewalk is snowy, random footprints
     with fade
 
     # add pause at beginning of scene

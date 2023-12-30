@@ -111,7 +111,7 @@ screen credits():
                 add "images/logo.png"
 
             vbox:
-                text "{b}SMALL LOAN STUDIOS{/b}"
+                text "{b}SMALL LOAN STUDIO{/b}"
                 text "https://smallloanstudio.wordpress.com"
                 text "Thanks for playing!"
 
