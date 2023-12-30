@@ -1,6 +1,6 @@
 ﻿# The script of the scene goes in this file.
 
-######### SCENE 10: SECRET ENDING (if get 6/6 choices right - closure of Steele's backstory)
+######### SCENE 10: SANTA
 
 # The scene starts here.
 

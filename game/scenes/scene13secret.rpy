@@ -1,3 +1,6 @@
+
+### SCENE 13 SECRET ENDING
+
 # glitch starts
 
 # gray out bg

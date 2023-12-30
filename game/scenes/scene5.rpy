@@ -1,5 +1,7 @@
 ﻿# The script of the scene goes in this file.
 
+# SCENE 5: FOWLER'S DEPARTMENT STORE (INTRO)
+
 label scene5:
 
     scene bg extstore night with fade

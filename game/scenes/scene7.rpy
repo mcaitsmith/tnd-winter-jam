@@ -1,6 +1,6 @@
 ﻿# The script of the scene goes in this file.
 
-######### SCENE 7: Alley
+######### SCENE 7: FOWLER'S DEPARTMENT STORE (Cop)
 
 # The scene starts here.
 

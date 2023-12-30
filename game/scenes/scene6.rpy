@@ -1,6 +1,6 @@
 # The script of the scene goes in this file.
 
-######### SCENE 6: 
+######### SCENE 6: FOWLER'S DEPARTMENT STORE (MARIAH)
 
 # The scene starts here.
 

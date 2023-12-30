@@ -1,5 +1,7 @@
 # The script of the scene goes in this file.
 
+### SCENE 13: FREDDY'S APARTMENT (ending)
+
 # The scene starts here.
 
 label scene13:

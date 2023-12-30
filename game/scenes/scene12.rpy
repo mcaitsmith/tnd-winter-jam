@@ -1,5 +1,7 @@
 # The script of the scene goes in this file.
 
+### SCENE 12: ROOFTOP
+
 # The scene starts here.
 
 label scene12:
