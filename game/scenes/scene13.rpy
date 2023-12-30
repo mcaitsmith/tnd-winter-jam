@@ -8,9 +8,6 @@ label scene13:
 
     scene bg office with fade
 
-    $ bianca_on = True
-    $ update_layers() # turn on Bianca layer
-
     show chrome neutral at right with dissolve
 
     chrome "{i}Back at the office, Bianca and Freddy get to reunite in peace.{/i}"
@@ -58,6 +55,10 @@ label scene13:
     chrome neutral "I... may have a case in mind."
     chrome neutral "Either way, it’s time I stepped out of the shadows."
     hide freddy
+
+    $ chrome_on = True
+    $ update_layers() # turn on Chrome layer
+    $ start_layers() # resume music
     chrome "{i}A wise man once said, there‘s no thicker malaise than one of your own making.{/i}"
     chrome "{i}For the first time in a long time, I’m sure of my purpose.{/i}"
     chrome "{i}Chrome Steele P.I. is back in business.{/i}"
@@ -67,13 +68,9 @@ label scene13:
 
     if glitch_counter >= 5:
         call secret_ending # secret ending
-
-    $ freddy_on = False
-    $ bianca_on = False
-    $ chrome_on = False
-    $ update_layers() # turn off all layers
-
-    $ stop_layers() # stop playing layers
+    else:
+        $ stop_layers(3) # stop playing layers
+        play music bar_music fadein 1
 
     scene black # fade to black
     with fade

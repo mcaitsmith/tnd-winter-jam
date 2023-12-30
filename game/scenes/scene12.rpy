@@ -12,14 +12,13 @@ label scene12:
         xzoom -1.0
     with dissolve
 
+    chrome sad "{i}I feel like I should have pieced things together sooner.{/i}"
 
-    chrome sad "I feel like I should have pieced things together sooner."
+    chrome sad "{i}Nobody expects the suspect to be hiding in plain sight...{/i}"
 
-    chrome sad "Nobody expects the suspect to be hiding in plain sight..."
+    chrome sad "{i}...but where else than the roof would you find Santa?{/i}" 
 
-    chrome sad "...but where else than the roof would you find Santa?" 
-
-    play sound sfx_impactmetal
+    play sound sfx_impactmetal volume 0.5
 
     pause 1.0
 
@@ -30,50 +29,53 @@ label scene12:
     $ freddy_on = True
     $ update_layers() # turn on Freddy layer
 
+    show dialogue_box
+    nvl show 
+
     #Freddy has a CIGARETTE- not sure if the asset needs to be called out? Or it’s just part of his character portrait
 
-    freddy shocked "{i}Quién es ese{/i}– what do you want? I’m armed!"
+    freddy_nvl_right shocked "{i}Quién es ese{/i}– what do you want? I’m armed!"
 
-    chrome unassuming "Hey Freddy. Thought I might find you up here."
+    chrome_nvl_left unassuming "Hey Freddy. Thought I might find you up here."
 
-    freddy neutral "Wait- a robot cop?! Of all things..."
+    freddy_nvl_right neutral "Wait- a robot cop?! Of all things..."
 
-    freddy angry "Whaddya want, metalhead?"
+    freddy_nvl_right angry "Whaddya want, metalhead?"
 
-    chrome neutral "The name’s Steele. Chrome Steele. And I’m not a cop, I’m a P.I."
+    chrome_nvl_left neutral "The name’s Steele. Chrome Steele. And I’m not a cop, I’m a P.I."
 
-    chrome neutral "I’m just here to talk, Freddy. Can I call you Freddy?"
+    chrome_nvl_left neutral "I’m just here to talk, Freddy. Can I call you Freddy?"
 
     # i’d love "freddy nervous" but it doesn’t look like we have that
 
-    freddy sad "I guess. I– that’s fine."
+    freddy_nvl_right sad "I guess. I– that’s fine."
 
-    freddy sad "I didn’t know where else to go."
+    freddy_nvl_right sad "I didn’t know where else to go."
 
-    freddy angry "God. This town. This job. {i}El mundo entero{/i}."
+    freddy_nvl_right angry "God. This town. This job. {i}El mundo entero{/i}."
 
-    freddy angry "One second I was telling Larry I was out - no more scams - the next he was coughing up blood! What the hell else was I supposed to do?"
+    freddy_nvl_right angry "One second I was telling Larry I was out - no more scams - the next he was coughing up blood! What the hell else was I supposed to do?"
 
     #Narration
-    "{i}I size him up. He looks exhausted.{/i}"
+    chrome "{i}I size him up. He looks exhausted.{/i}"
 
-    "{i}The ground is littered with cigarette butts. Clove wafts through the air.{/i}"
+    chrome "{i}The ground is littered with cigarette butts. Clove wafts through the air.{/i}"
 
-    chrome neutral "You’re OK, Freddy. I just want to talk."
+    chrome_nvl_left neutral "You’re OK, Freddy. I just want to talk."
 
-    freddy angry "What about? I didn’t do nothin’!"
+    freddy_nvl_right angry "What about? I didn’t do nothin’!"
 
-    freddy angry "Fuck, what am I doing? I got two rules..."
+    freddy_nvl_right angry "Fuck, what am I doing? I got two rules..."
 
-    freddy angry "Don't talk to cops, and don't talk to bots! And right now, I'm breaking both!"
+    freddy_nvl_right angry "Don't talk to cops, and don't talk to bots! And right now, I'm breaking both!"
 
-    "{i}Uh oh…{/i}"
+    chrome "{i}Uh oh…{/i}"
 
     menu:
 
-        "He’s riled up. On his last nerve. And clearly I make him uncomfortable. I have to be careful in my approach..."
+        chrome "{i}He’s riled up. On his last nerve. And clearly I make him uncomfortable. I have to be careful in my approach...{/i}"
 
-        "Logicial":
+        "Logical":
             call logical12
 
         "Unassuming":
@@ -88,157 +90,157 @@ label scene12:
 
 # 012 ROO B
 label hardboiled12:
-    chrome neutral "Freddy. You’re OK."
+    chrome_nvl_left neutral "Freddy. You’re OK."
 
-    freddy angry "I don’t know you. But I know cops. And {i}fuck cops. Todos ellos{/i}."
+    freddy_nvl_right angry "I don’t know you. But I know cops. And {i}fuck cops. Todos ellos{/i}."
 
-    chrome neutral "I’m not a cop. Just an android who gets things done. Let me help you."
+    chrome_nvl_left neutral "I’m not a cop. Just an android who gets things done. Let me help you."
 
-    freddy angry "Help me? Fuck you. I ain’t sayin’ nothing."
+    freddy_nvl_right angry "Help me? Fuck you. I ain’t sayin’ nothing."
 
-    freddy angry "Where do you get off anyway? You’re not even a Santa bot, why do you care?"
+    freddy_nvl_right angry "Where do you get off anyway? You’re not even a Santa bot, why do you care?"
 
-    freddy angry "I’d say you’ve got a bleeding heart but I know you androids don’t have souls."
+    freddy_nvl_right angry "I’d say you’ve got a bleeding heart but I know you androids don’t have souls."
 
     show bg rooftop night with hpunch
 
-    chrome hardboiled "Shut. Up."
+    chrome_nvl_left hardboiled "Shut. Up."
 
-    chrome hardboiled "Listen up, you."
+    chrome_nvl_left hardboiled "Listen up, you."
 
-    freddy shocked "Wha-what?"
+    freddy_nvl_right shocked "Wha-what?"
 
-    chrome hardboiled "You’re in a lot of trouble, Freddy."
+    chrome_nvl_left hardboiled "You’re in a lot of trouble, Freddy."
 
-    chrome hardboiled "A man is dead. And you ran when you shouldn’t have." 
+    chrome_nvl_left hardboiled "A man is dead. And you ran when you shouldn’t have." 
 
-    chrome hardboiled "{i}You’ve got to face what you did, Freddy{/i}."
+    chrome_nvl_left hardboiled "{i}You’ve got to face what you did, Freddy{/i}."
 
-    freddy shocked "I didn’t mean for any of this to happen! It wasn’t my fault!"
+    freddy_nvl_right shocked "I didn’t mean for any of this to happen! It wasn’t my fault!"
 
-    chrome hardboiled "Cowards run. Don’t be one. You can still fix this."
+    chrome_nvl_left hardboiled "Cowards run. Don’t be one. You can still fix this."
 
-    freddy sad "What can I do?"
+    freddy_nvl_right sad "What can I do?"
 
-    chrome hardboiled "Testify."
+    chrome_nvl_left hardboiled "Testify."
 
-    freddy sad "They won’t believe me, Mariah’s protected-"
+    freddy_nvl_right sad "They won’t believe me, Mariah’s protected-"
 
-    chrome hardboiled "I’ve got all the evidence we need to clear your name."
+    chrome_nvl_left hardboiled "I’ve got all the evidence we need to clear your name."
 
-    chrome hardboiled "Man up. Shake off the shame and protect your daughter. She needs you."
+    chrome_nvl_left hardboiled "Man up. Shake off the shame and protect your daughter. She needs you."
 
-    freddy sad "I… I… You’re right. I just hope Bianca’s OK."
+    freddy_nvl_right sad "I… I… You’re right. I just hope Bianca’s OK."
 
-    freddy sad "I didn’t mean for any of this to happen."
+    freddy_nvl_right sad "I didn’t mean for any of this to happen."
 
-    chrome neutral "You’ll be OK, Freddy. The Secret Santas are being brought to justice."
+    chrome_nvl_left neutral "You’ll be OK, Freddy. The Secret Santas are being brought to justice."
 
     return
 
 # 012 ROO C
 label logical12:
-    chrome neutral "Freddy. No need to get worked up."
+    chrome_nvl_left neutral "Freddy. No need to get worked up."
 
-    freddy angry "Worked up? What’s that, buckethead?"
+    freddy_nvl_right angry "Worked up? What’s that, buckethead?"
 
-    chrome neutral "I do not have a bucket for a head. I am an android."
+    chrome_nvl_left neutral "I do not have a bucket for a head. I am an android."
 
-    chrome neutral "Complex circuitry and advanced logarithmic processing."
+    chrome_nvl_left neutral "Complex circuitry and advanced logarithmic processing."
 
-    chrome neutral "All encased in a nanomesh exoskeleton with chrome finish."
+    chrome_nvl_left neutral "All encased in a nanomesh exoskeleton with chrome finish."
 
-    chrome neutral "I am about as far from a bucket as Saturn is from the Silver Cat."
+    chrome_nvl_left neutral "I am about as far from a bucket as Saturn is from the Silver Cat."
 
     # "freddy confused" may also be a nice art asset to have but i guess we’ve got to draw the line at some point
 
-    freddy neutral "Listen boltbrain. I’m about to skip town. You got a warrant?"
+    freddy_nvl_right neutral "Listen boltbrain. I’m about to skip town. You got a warrant?"
 
-    chrome thinking left "Do you really want to run, Freddy? Let’s look at the facts."
+    chrome_nvl_left thinking left "Do you really want to run, Freddy? Let’s look at the facts."
 
-    chrome logical "Larry is dead. Pobre bastardo."
+    chrome_nvl_left logical "Larry is dead. Pobre bastardo."
 
-    freddy sad "Yeah. No shit."
+    freddy_nvl_right sad "Yeah. No shit."
 
-    chrome logical "The police have already presumed your guilt."
+    chrome_nvl_left logical "The police have already presumed your guilt."
 
-    chrome logical "If you run, it makes you look worse."
+    chrome_nvl_left logical "If you run, it makes you look worse."
 
-    chrome logical "More importantly, it makes Mariah Fowler’s claims seem more legitimate."
+    chrome_nvl_left logical "More importantly, it makes Mariah Fowler’s claims seem more legitimate."
 
-    chrome logical "I’m a Private Investigator. I follow the facts where they lead."
+    chrome_nvl_left logical "I’m a Private Investigator. I follow the facts where they lead."
 
-    chrome logical "I can’t tell you what to do. But I can say that Bianca needs you."
+    chrome_nvl_left logical "I can’t tell you what to do. But I can say that Bianca needs you."
 
-    freddy sad "The poor kid… her daddy’s a fuckup."
+    freddy_nvl_right sad "The poor kid… her daddy’s a fuckup."
 
-    chrome logical "Yes, you did fuck up. You should not have tried to flee."
+    chrome_nvl_left logical "Yes, you did fuck up. You should not have tried to flee."
 
-    chrome logical "Stay here. The truth will come out. Face your judgment."
+    chrome_nvl_left logical "Stay here. The truth will come out. Face your judgment."
 
-    chrome logical "Based on your age, health, and other factors, there is a 71 percent likelihood that you will be fine."
+    chrome_nvl_left logical "Based on your age, health, and other factors, there is a 71 percent likelihood that you will be fine."
 
-    freddy neutral "Loving the vote of confidence."
+    freddy_nvl_right neutral "Loving the vote of confidence."
 
-    chrome logical "No votes have been cast. At least, to my knowledge."
+    chrome_nvl_left logical "No votes have been cast. At least, to my knowledge."
 
     return
 
 # 012 ROO D
 label unassuming12:
-    freddy angry "{i}En serio{/i} man. Don’t come any closer."
+    freddy_nvl_right angry "{i}En serio{/i} man. Don’t come any closer."
 
-    chrome unassuming "Well, I actually came up here to ask a favor."
+    chrome_nvl_left unassuming "Well, I actually came up here to ask a favor."
 
-    freddy neutral "A favor? What’s an android need from a piece of shit like me?"
+    freddy_nvl_right neutral "A favor? What’s an android need from a piece of shit like me?"
 
-    chrome unassuming "I actually was hoping to bum a cigarette."
+    chrome_nvl_left unassuming "I actually was hoping to bum a cigarette."
 
     # again "freddy confused" would great here but i’ll work with what we’ve got
 
-    freddy shocked "You... smoke? How?"
+    freddy_nvl_right shocked "You... smoke? How?"
 
-    chrome unassuming "Not exactly. But the smell tickled my sensors from a whole floor away."
+    chrome_nvl_left unassuming "Not exactly. But the smell tickled my sensors from a whole floor away."
 
-    chrome unassuming "I’d love a closer look. I like the sensation."
+    chrome_nvl_left unassuming "I’d love a closer look. I like the sensation."
 
-    freddy neutral "Well. Sure. Couldn’t hurt."
+    freddy_nvl_right neutral "Well. Sure. Couldn’t hurt."
 
-    chrome unassuming "You know what they say: smoke ‘em if you got ‘em."
+    chrome_nvl_left unassuming "You know what they say: smoke ‘em if you got ‘em."
 
-    chrome unassuming "And if you’ve got ‘em, flaunt ‘em!"
+    chrome_nvl_left unassuming "And if you’ve got ‘em, flaunt ‘em!"
 
-    freddy sad "At this point, they’re about all I’ve got. Everything’s fucked."
+    freddy_nvl_right sad "At this point, they’re about all I’ve got. Everything’s fucked."
 
-    chrome unassuming "I’m sure it’s not all bad, friend."
+    chrome_nvl_left unassuming "I’m sure it’s not all bad, friend."
 
-    freddy angry "It’s bad, slick. I don’t even know why I’m talking to you."
+    freddy_nvl_right angry "It’s bad, slick. I don’t even know why I’m talking to you."
 
-    freddy angry "Everybody knows your kind aren’t suited for this sort of thing."
+    freddy_nvl_right angry "Everybody knows your kind aren’t suited for this sort of thing."
 
-    chrome unassuming "What sort of thing?"
+    chrome_nvl_left unassuming "What sort of thing?"
 
-    freddy sad "I swear I didn’t do anything wrong! But try telling that to the cops."
+    freddy_nvl_right sad "I swear I didn’t do anything wrong! But try telling that to the cops."
 
-    freddy sad "My daughter can’t stand me. Everyone’s out for my blood."
+    freddy_nvl_right sad "My daughter can’t stand me. Everyone’s out for my blood."
 
-    freddy sad "I don’t see any way out."
+    freddy_nvl_right sad "I don’t see any way out."
 
-    chrome unassuming "Sounds like you need someone to lend you an ear."
+    chrome_nvl_left unassuming "Sounds like you need someone to lend you an ear."
 
-    chrome unassuming "I may not have any, but I can hear you just fine."
+    chrome_nvl_left unassuming "I may not have any, but I can hear you just fine."
 
-    freddy happy "Heh. Fair enough."
+    freddy_nvl_right happy "Heh. Fair enough."
 
-    chrome unassuming "You’re safe, Freddy. I’m a P.I. but I ain’t no snitch."
+    chrome_nvl_left unassuming "You’re safe, Freddy. I’m a P.I. but I ain’t no snitch."
 
-    freddy happy "You’re a funny little bot, aren’t ya?"
+    freddy_nvl_right happy "You’re a funny little bot, aren’t ya?"
 
-    chrome happy "Funny-looking, maybe."
+    chrome_nvl_left happy "Funny-looking, maybe."
 
-    freddy happy "Haha. That’s not bad. Maybe they were wrong about you."
+    freddy_nvl_right happy "Haha. That’s not bad. Maybe they were wrong about you."
 
-    chrome unassuming "I think people were wrong about you, too -"
+    chrome_nvl_left unassuming "I think people were wrong about you, too -"
 
     ######### SCENE 12: GLITCH 6 (flashback with glitching animation on Steele & bg grayed out)
 
@@ -320,23 +322,24 @@ label unassuming12:
 
     ######### back to SCENE 2
 
-    # show dialogue_box at center # return to convo
-    # nvl show # show NVL dialogue
-
     # hide chrome
     show chrome unassuming at left:
         xzoom -1.0
     show freddy happy at right
     with dissolve
-    chrome unassuming "Hope isn’t lost Freddy. In fact, Bianca sent me. We’re on to something."
 
-    chrome unassuming "Something that might keep you safe. And maybe even clear your name."
+    show dialogue_box at center # return to convo
+    nvl show # show NVL dialogue
 
-    freddy neutral "I’ll believe it when I see it."
+    chrome_nvl_left unassuming "Hope isn’t lost Freddy. In fact, Bianca sent me. We’re on to something."
 
-    chrome unassuming "And I believe I’ll try and smoke this cigarette. Got a light?"
+    chrome_nvl_left unassuming "Something that might keep you safe. And maybe even clear your name."
 
-    freddy happy "Sure."
+    freddy_nvl_right neutral "I’ll believe it when I see it."
+
+    chrome_nvl_left unassuming "And I believe I’ll try and smoke this cigarette. Got a light?"
+
+    freddy_nvl_right happy "Sure."
 
     return
 
@@ -344,6 +347,9 @@ label scene12_e:
 
     #Here comes Mariah and her backup: Santa1, Mariah, Santa2. In this scene also: steele
     #Mariah + The santa goons appear. They threaten Chrome and Freddy.
+
+    hide dialogue_box
+    nvl clear
 
     hide freddy with moveoutleft
     hide chrome
@@ -410,9 +416,13 @@ label scene12_e:
 
     chrome_nvl_left "Madam, I'm programmed to take my work very seriously."
 
-    chrome_nvl_left "This murder could have been avoided. I dare say you were willing to accept Freddy's resignation."
+    chrome_nvl_left "This murder could have been avoided."
 
-    chrome_nvl_left "You both play by the book, save a few bucks and carry on with your lives. Oh, but Freddy wanted to pull a final trick and you caught on."
+    chrome_nvl_left "I dare say you were willing to accept Freddy's resignation."
+
+    chrome_nvl_left "You both play by the book, save a few bucks and carry on with your lives."
+
+    chrome_nvl_left "Oh, but Freddy wanted to pull a final trick and you caught on."
 
     show mariah neutral
 
@@ -424,7 +434,9 @@ label scene12_e:
 
     mariah_nvl_right "You're wasting your battery."
 
-    chrome_nvl_left "No, Mariah, I get it! He wanted to tarnish your image. I'd be upset too."
+    chrome_nvl_left "No, Mariah, I get it!"
+
+    chrome_nvl_left "He wanted to tarnish your image. I'd be upset too."
 
     chrome_nvl_left "As an android, I hear derogatory comments all day. I can empathize."
 
@@ -434,7 +446,9 @@ label scene12_e:
 
     chrome_nvl_left "No, no, please let it out."
 
-    chrome_nvl_left "Mr. Fontaine found a discrepanciy in your sales. I understand; physical retail isn't what it used to be."
+    chrome_nvl_left "Mr. Fontaine found a discrepancy in your sales."
+
+    chrome_nvl_left "I understand; physical retail isn't what it used to be."
 
     chrome_nvl_left "Freddy dug a little too deep. He found out that the proceeds from your little charity campaign were going right into your pockets."
 
@@ -458,19 +472,30 @@ label scene12_e:
 
     show chrome unassuming
 
-    chrome_nvl_left "Just doing my job! But let's not get distracted: I believe you really thought you had a reason for murder."
+    chrome_nvl_left "Just doing my job!"
+
+    chrome_nvl_left "But let's not get distracted: I believe you really thought you had a reason for murder."
 
     chrome_nvl_left "And so, you made some special cookies for Freddy as a little... going away present."
 
-    chrome_nvl_left "But I guess Freddy doesn't have much of a sweet tooth. He gave them to our dear Larry, turning this into a tragedy."
+    chrome_nvl_left "But I guess Freddy doesn't have much of a sweet tooth."
 
-    chrome_nvl_left "And that's not all. You're smart. You needed the cops on your side."
+    chrome_nvl_left "He gave them to our dear Larry, turning this into a tragedy."
+
+    chrome_nvl_left "And that's not all."
+
+    chrome_nvl_left "You're smart. You needed the cops on your side."
 
     chrome_nvl_left "It wasn't hard to point the local fuzz towards Freddy. I've met them; not exactly our city's finest."
 
     chrome_nvl_left "And at this time of year? Any excuse to sweep something like this under the rug."
 
-    chrome_nvl_left "End, the curtains fall: You pushed all the blame on Freddy. Two birds with one stone? Quite the master plan. Too bad you did it all in a hurry."
+    chrome_nvl_left "End, the curtains fall: You pushed all the blame on Freddy."
+
+    chrome_nvl_left "Two birds with one stone? Quite the master plan."
+
+    chrome_nvl_left "Too bad you did it all in a hurry."
+
 
     show mariah angry
 
@@ -490,7 +515,11 @@ label scene12_e:
 
     mariah_nvl_right "But you...you're cunning."
 
-    mariah_nvl_right "My people know ways to make you useful. Heck, I'll be generous. I won't even wipe your memory. At least, at first."
+    mariah_nvl_right "My people know ways to make you useful."
+
+    mariah_nvl_right "Heck, I'll be generous. I won't even wipe your memory."
+
+    mariah_nvl_right "At least, at first."
 
     show mariah happy
 
@@ -498,9 +527,13 @@ label scene12_e:
 
     mariah_nvl_right "You try to move your fingers, and the only thing that happens is that cash comes out of your box-shaped mouth."
 
-    mariah_nvl_right "Wait, what if I put you on my phone? You could be my assistant."
+    mariah_nvl_right "Wait, what if I put you on my phone?"
 
-    mariah_nvl_right "We could make it so every time I unlock it, you suffer the equivalent of a plasma torch pressed against your receptors. I could browse you all day long."
+    mariah_nvl_right "You could be my assistant."
+
+    mariah_nvl_right "We could make it so every time I unlock it, you suffer the equivalent of a plasma torch pressed against your receptors."
+
+    mariah_nvl_right "I could browse you all day long."
 
     show mariah neutral
 
@@ -510,7 +543,9 @@ label scene12_e:
 
     mariah_nvl_right "I can't wait for future you to tell me how it feels."
 
-    mariah_nvl_right "Hell, thank you for leading me here, Detective. You've tied up all my loose ends with a pretty bow."
+    mariah_nvl_right "Thank you for leading me here, Detective."
+
+    mariah_nvl_right "You've tied up all my loose ends with a pretty bow."
 
     show mariah neutral
 
@@ -525,7 +560,11 @@ label scene12_e:
 
     $ mariah_on = False
     $ larry_santa_on = False
+    $ bianca_on = False
+    $ freddy_on = False
     $ update_layers() # turn off Mariah/Santa layer
+
+    $ stop_layers(1) # pause temporarily
 
     jump scene13 # jump to next scene
 
@@ -563,6 +602,9 @@ label scene12_f: # good ending
         xzoom -1.0
     with moveinleft
 
+    $ bianca_on = True
+    $ update_layers() # now all 5 are playing
+
     freddy shocked "Hmph."
 
     jack happy "Can't believe the tin detective got it right."
@@ -598,7 +640,7 @@ label scene12_f: # good ending
     chrome "{i}There's not a lot of room to maneuver. I sweep sideways.{/i}"
 
     hide santa1 with dissolve
-    show chrome at center with dissolve
+    show chrome neutral at center with dissolve
 
     chrome angry "Try harder, turkey."
 
@@ -687,6 +729,7 @@ label scene12_f: # good ending
     $ freddy_on = False
     $ larry_santa_on = False
     $ mariah_on = False
+    $ bianca_on = False
     $ update_layers(1) # temporarily stop bg music
 
     scene black
@@ -741,6 +784,7 @@ label scene12_f: # good ending
     $ freddy_on = True
     $ larry_santa_on = True
     $ mariah_on = True
+    $ bianca_on = True
     $ update_layers(1) # resume bg music
 
     jack shocked "Good God, you're alive?"
@@ -748,7 +792,7 @@ label scene12_f: # good ending
     jack happy "Damn, you saved my bacon!"
 
     hide jack
-    show chrome at center
+    show chrome neutral at center
 
     chrome sad "What happened..."
 
@@ -831,7 +875,7 @@ label scene12_g: # average ending
     chrome "{i}There's not a lot of room to maneuver. I sweep sideways.{/i}"
 
     hide santa1
-    show chrome at center
+    show chrome neutral at center
 
     chrome angry "What are you waiting for? Hit me!"
 
@@ -920,7 +964,7 @@ label scene12_g: # average ending
     pause 1.0
     play sound sfx_gunshots
 
-    show chrome at left
+    show chrome neutral at left
     chrome angry "Get to cover, dammit!"
 
     play sound sfx_gunshots
@@ -1020,7 +1064,7 @@ label scene12_h: # bad ending
     chrome "{i}Minor damage.{/i}"
 
     hide santa1
-    show chrome at center
+    show chrome neutral at center
     chrome angry "Sorry, man!"
 
     hide chrome
@@ -1086,7 +1130,7 @@ label scene12_h: # bad ending
 
     hide mariah
     hide jack
-    show chrome at center
+    show chrome neutral at center
 
     chrome shocked "WAIT!"
 
@@ -1114,7 +1158,7 @@ label scene12_h: # bad ending
 
     chrome "{i}Blood on the ground. He’s grown cold already. His spark… extinguished.{/i}"
     chrome "{i}I don’t have the courage to assess the damage. There’s no heartbeat.{/i}"
-    show chrome at left
+    show chrome neutral at left
     chrome neutral "He’s dead."
     freddy sad "Why? Why you...?"
 

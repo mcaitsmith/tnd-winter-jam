@@ -11,12 +11,14 @@ define bianca = Character("Bianca Fontaine", color="#45b7f0", image="bianca")
 define bianca_nvl_left = Character("Bianca Fontaine", color="#45b7f0", image="bianca", kind=nvl)
 define bianca_nvl_right = Character("Bianca Fontaine", color="#45b7f0", image="bianca", kind=nvl, what_text_align=1, who_text_align=1)
 define freddy = Character("Freddy Fontaine", color="#f07635", image="freddy")
+define freddy_nvl_left = Character("Freddy Fontaine", color="#f07635", image="freddy", kind=nvl)
+define freddy_nvl_right = Character("Freddy Fontaine", color="#f07635", image="freddy", kind=nvl, what_text_align=1, who_text_align=1)
 define jack = Character("Jack Scanlon", color="#dbd839", image="jack")
 define jack_nvl_left = Character("Jack Scanlon", color="#dbd839", image="jack", kind=nvl)
 define jack_nvl_right = Character("Jack Scanlon", color="#dbd839", image="jack", kind=nvl, what_text_align=1, who_text_align=1)
 define mariah = Character("Mariah Fowler", color="#d339db", image="mariah")
-define mariah_nvl_left = Character("Mariah Fowler", color="#dbd839", image="mariah", kind=nvl)
-define mariah_nvl_right = Character("Mariah Fowler", color="#dbd839", image="mariah", kind=nvl, what_text_align=1, who_text_align=1)
+define mariah_nvl_left = Character("Mariah Fowler", color="#d339db", image="mariah", kind=nvl)
+define mariah_nvl_right = Character("Mariah Fowler", color="#d339db", image="mariah", kind=nvl, what_text_align=1, who_text_align=1)
 define cop = Character("Generic Cop", color="#2d30d9", image="cop")
 define cop_nvl_left = Character("Generic Cop", color="#2d30d9", image="cop", kind=nvl)
 define cop_nvl_right = Character("Generic Cop", color="#2d30d9", image="cop", kind=nvl, what_text_align=1, who_text_align=1)
@@ -137,6 +139,7 @@ define sfx_punch = "audio/sfx/Punch_SantaSecret_SFX.wav"
 define sfx_rattle = "audio/sfx/Rattle_SantaSecret_SFX.wav"
 define sfx_santabeepscan = "audio/sfx/SantaBeepScan_SantaSecret_SFX.wav"
 define sfx_breakmetaltoy = "audio/sfx/BreakMetalToy_SantaSecret_SFX.wav"
+define title_music = "audio/Prueba_Jazz_investigador.mp3"
 define bar_music = "audio/jazz_for_andrea_2.wav"
 
 init python:

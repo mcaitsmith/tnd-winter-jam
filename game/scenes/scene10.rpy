@@ -494,6 +494,7 @@ label scene10:
         chrome_nvl_left "...yes. Very interesting."
 
         hide dialogue_box
+        nvl clear
 
         chrome "{i}If anything, this was the smoking gun, right? Clearly something was wrong with those cookies, and here was direct proof that Freddy had handed them over. But what was Mariah doing at the end? {/i}"
 
