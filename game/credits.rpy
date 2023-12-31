@@ -86,12 +86,12 @@ screen credits():
             hbox:
                 add "images/santa_mini.png" 
                 text "{b}QUALITY\nASSURANCE    {/b}"
-                text "Sangita Nuli (Lead)\nMax Lincoln\nGideon Devendra\nLina Caro\nRafael Campbell"
+                text "Sangita Nuli (Lead)\nMax Lincoln\nGideon Devendra\nLina Caro\nRafael Campbell\nCrowe Whitney"
 
             hbox:
                 add "images/cigarettes_mini.png"
                 text "{b}PLAYTESTERS{/b}"
-                text "Max Lincoln\nGideon Devendra\nLina Caro\nRafael Campbell"
+                text "Max Lincoln\nGideon Devendra\nLina Caro\nRafael Campbell\nCrowe Whitney"
 
             hbox:
                 add "images/larry_mini.png" 
