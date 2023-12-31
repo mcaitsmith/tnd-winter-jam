@@ -71,7 +71,7 @@ screen credits():
             hbox:
                 add "images/gloves_mini.png"
                 text "{b}PRODUCTION  {/b}"
-                text "Salvador Bas Folch (Lead)\nTiago Da Cunha"
+                text "Salvador Bas Folch (Lead)\nTiago Da Cunha\nCameron Daxon\nAnivette Wong"
 
             hbox:
                 add "images/mariah_mini.png" 
