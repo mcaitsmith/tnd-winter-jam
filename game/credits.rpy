@@ -45,7 +45,7 @@ screen credits():
             hbox:
                 add "images/bianca_mini.png"
                 text "{b}EDITING        {/b}"
-                text "Cameron Daxon\nJonathan Rhee\nSalvador Bas Folch\nSangita Nuli"
+                text "Cameron Daxon\nJonathan Rhee\nSalvador Bas Folch\nSangita Nuli\nAnivette Wong"
 
             hbox:
                 add "images/cookietin_mini.png" 
