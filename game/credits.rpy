@@ -49,8 +49,8 @@ screen credits():
 
             hbox:
                 add "images/cookietin_mini.png" 
-                text "{b}NARRATIVE\nDESIGNER      {/b}"
-                text "Lily Gwyer-Miller"
+                text "{b}NARRATIVE\nDESIGNERS    {/b}"
+                text "Lily Gwyer-Miller\nRobert Corra"
 
             hbox:
                 add "images/freddy_mini.png"
