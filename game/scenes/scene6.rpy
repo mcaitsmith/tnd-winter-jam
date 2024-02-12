@@ -128,7 +128,7 @@ label scene6:
 
         hide dialogue_box
 
-        chrome "{i} Well, it looks like Larry is a deadend. Fine, I shouldn’t be messing around with a crime scene, anyways. I’ll move on to my actual job.{/i}"
+        chrome "{i} Well, it looks like Larry is a dead-end. Fine, I shouldn’t be messing around with a crime scene, anyways. I’ll move on to my actual job.{/i}"
 
         show chrome thinking left at left
 
@@ -347,7 +347,7 @@ label scene6:
 
         mariah_nvl_right "Tch, the real tragedy is going to happen in a few months when I need to close."
 
-        chrome_nvl_left "Mmm. But about the body…"
+        chrome_nvl_left "Mm. But about the body…"
 
         mariah_nvl_right "Right."
 

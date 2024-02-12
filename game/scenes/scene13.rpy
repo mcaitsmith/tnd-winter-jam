@@ -65,7 +65,7 @@ label scene13:
     $ chrome_on = True
     $ update_layers() # turn on Chrome layer
     $ start_layers() # resume music
-    chrome "{i}A wise man once said, there‘s no thicker malaise than one of your own making.{/i}"
+    chrome "{i}A wise man once said, there's no thicker malaise than one of your own making.{/i}"
     chrome "{i}For the first time in a long time, I’m sure of my purpose.{/i}"
     chrome "{i}Chrome Steele P.I. is back in business.{/i}"
     chrome "{i}I technically always was, but this time...{/i}"

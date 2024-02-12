@@ -973,7 +973,7 @@ label scene12_g: # average ending
     play sound sfx_gunshots
 
     show chrome neutral at left
-    chrome angry "Get to cover, dammit!"
+    chrome angry "Get to cover, damn it!"
 
     play sound sfx_gunshots
     show chrome angry:
@@ -998,7 +998,7 @@ label scene12_h: # bad ending
     mariah neutral "Wait. What now?"
 
     chrome "{i}She turns her gaze behind us.{/i}"
-    chrome "{i}Dammit. Someone’s coming.{/i}"
+    chrome "{i}Damn it. Someone’s coming.{/i}"
 
     hide chrome with dissolve
     hide mariah with dissolve
@@ -1062,7 +1062,7 @@ label scene12_h: # bad ending
 
     chrome confused "{i}A claw shoots ahead, minus the festive glove. Sharp, aged, rusty - the ugly secret behind the fatherly figure.{/i}"
 
-    chrome confused "{i}Analysing… Dah, no time.{/i}"
+    chrome confused "{i}Analyzing… Dah, no time.{/i}"
 
     play sound sfx_impactmetal
     with hpunch

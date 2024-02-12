@@ -34,12 +34,12 @@ label scene9:
 
     chrome "{i}Almost scared her to death, eh? The irony of human idioms. I don’t need another body tonight.{/i}"
 
-    chrome "{i}She’s on edge. Freddy may be a flake, but Bianca's clearly not averse to the effects of his absence. She could use a friendly voice right. Righ now I'm all she's got.{/i}"
+    chrome "{i}She’s on edge. Freddy may be a flake, but Bianca's clearly not averse to the effects of his absence. She could use a friendly voice right. Right now I'm all she's got.{/i}"
 
     chrome "{i}She’s hurting. Damn it. It’s hard enough to quit on the case. But it’s harder to quit on the girl.{/i}"
 
     menu detective_choices9:
-        bianca "Did you find my Dad yet?"
+        bianca "Did you find my dad yet?"
 
         "Logical":
             
@@ -136,7 +136,7 @@ label scene9:
 
             bianca_nvl_right shocked "No! ¡No te creo!"
 
-            bianca_nvl_right shocked "Larry was Dad’s friend. He may not have a shiny reputation, but my Dad wouldn’t hurt a fly."
+            bianca_nvl_right shocked "Larry was dad’s friend. He may not have a shiny reputation, but my dad wouldn’t hurt a fly."
 
             bianca_nvl_right sad "Everyone’s judging him, all the time."
 
@@ -208,7 +208,7 @@ label scene9:
 
             chrome "{i}As young beings, we adopt the lives of our parents. Our mentors. We learn from them, grow with them, explore the world under their wing.{/i}"
 
-            chrome "{i}Our physical functionality may be independent but our programming is synced.{/i}"
+            chrome "{i}Our physical functionality may be independent, but our programming is synced.{/i}"
 
             chrome "{i}We live so naturally together that we forget it is temporary. Expectations are created. Dependencies installed.{/i}"
 
@@ -291,7 +291,7 @@ label scene9:
 
             chrome_nvl_left angry "You can’t contain that cow, Miss Fontaine. The coop’s just not big enough."
 
-            chrome_nvl_left angry "So stop pretending like this is the first time Daddy’s been in trouble."
+            chrome_nvl_left angry "So stop pretending like this is the first time daddy’s been in trouble."
 
             bianca_nvl_right angry "Fine! He’s had his issues."
 
@@ -354,7 +354,7 @@ label lookaround:
 
             chrome_nvl_left neutral "Worse ways too."
 
-            bianca_nvl_right sad "Yeah. That’s why I tried it once, when Dad was spiraling. It didn’t last as long as I’d hoped."
+            bianca_nvl_right sad "Yeah. That’s why I tried it once, when dad was spiraling. It didn’t last as long as I’d hoped."
 
             show chrome confused left at left
             chrome_nvl_left "But you just said boxing is stupid."
@@ -398,7 +398,7 @@ label lookaround:
 
             chrome_nvl_left "Where did this come from? Is it new?"
 
-            bianca_nvl_right neutral "Oh, Dad brought it home a few days ago. It’s probably a gift. Funny enough, he’s not great at hiding when it comes to gifts."
+            bianca_nvl_right neutral "Oh, dad brought it home a few days ago. It’s probably a gift. Funny enough, he’s not great at hiding when it comes to gifts."
 
             show chrome happy:
                 xzoom -1.0

@@ -127,7 +127,7 @@ label scene11comp:
             chrome logical "{i}Sales have been declining every holiday season…{/i}"
             chrome logical "{i}This program- some kind of credit card number skimming system.{/i}"
             chrome angry "{i}And here we’ve got some ‘creative’ accounting.{/i}"
-            chrome angry "{i}Classic charity skam. Santas aggressively ask for donations, and the bulk of it goes to Mariah's pockets.{/i}"
+            chrome angry "{i}Classic charity scam. Santas aggressively ask for donations, and the bulk of it goes to Mariah's pockets.{/i}"
             chrome shocked "{i}Seems like each Santa had a criminal record. Something Mariah was well aware of...{/i}"
             chrome angry "{i}Mariah must have kept their info under wraps in exchange for getting them to do her dirty work.{/i}"
             chrome angry "{i}Mariah offers them a job. And they don't dare push back because she threatens to expose them.{/i}"
