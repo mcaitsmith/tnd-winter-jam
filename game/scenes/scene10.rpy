@@ -139,7 +139,7 @@ label scene10:
 
         chrome_nvl_left "Did you see anything happen here?"
 
-        chrome_nvl_left "Regarding the murder I mean?"
+        chrome_nvl_left "Regarding the murder, I mean?"
 
         santa_nvl_right "Finally. I figured that'd be the first place you went, but there’s no accounting for people’s time in your profession is there?"
 
@@ -236,7 +236,7 @@ label scene10:
 
         santa_nvl_right "Every Monday to Friday until 5 PM, then that asshole Freddy is supposed to take over."
 
-        santa_nvl_right "He didn't show up today, so I've been stuck here for over an hour waiting for the next shmuck to show up."
+        santa_nvl_right "He didn't show up today, so I've been stuck here for over an hour waiting for the next schmuck to show up."
 
         santa_nvl_right "And nobody seems to care."
 
@@ -398,7 +398,7 @@ label scene10:
 
         chrome "{i}Sticklers never have any fun though.{/i}"
 
-        chrome "{i}I jam the drive into my neck and am instantly was met with a flood of memories. All are locked but one, labeled “For you, detective”. I open it.{/i}"
+        chrome "{i}I jam the drive into my neck and am instantly met with a flood of memories. All are locked but one, labeled “For you, detective”. I open it.{/i}"
 
         #Visual Grayscale 
 
@@ -511,14 +511,14 @@ label scene10:
 
         santa_nvl_right "Boss is offering me an upgrade to my CPU and I don’t want to piss her off and ruin that whole thing."
 
-        santa_nvl_right "Now that you have that, I can wipe that memory from my harddrive and poof."
+        santa_nvl_right "Now that you have that, I can wipe that memory from my hard drive and poof."
 
-        santa_nvl_right "It’s like I saw nothin."
+        santa_nvl_right "It’s like I saw nothin'."
 
         hide dialogue_box
         nvl clear
 
-        chrome "{i}An android upgrade? There’s very few people who can do something like that nowadays. Didn’t think Mariah had the knowhow or the connections.{/i}"
+        chrome "{i}An android upgrade? There’s very few people who can do something like that nowadays. Didn’t think Mariah had the know-how or the connections.{/i}"
 
         chrome "{i}If anything, this was the smoking gun, right? Clearly something was wrong with those cookies, and here was direct proof that Freddy had handed them over. But what was Mariah doing at the end? {/i}"
 

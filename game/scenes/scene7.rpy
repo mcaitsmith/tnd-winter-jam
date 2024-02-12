@@ -38,7 +38,7 @@ label scene7:
 
             cop_nvl_left neutral "That’s the funny thing."
 
-            cop_nvl_left neutral "Larry the Elf here.. he worked with Freddy the Santa."
+            cop_nvl_left neutral "Larry the Elf here... he worked with Freddy the Santa."
             
             cop_nvl_left neutral "Looks to me like a simple heart attack."
 
@@ -58,7 +58,7 @@ label scene7:
 
             chrome_nvl_right logical "Certainly he knew this would paint him as a suspect?"
 
-            cop_nvl_left angry "Uhh... Earth to metalhead?"
+            cop_nvl_left angry "Uh... Earth to metalhead?"
 
             cop_nvl_left angry "Am I interrupting you?"
 
