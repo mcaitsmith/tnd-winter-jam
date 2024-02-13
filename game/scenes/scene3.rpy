@@ -75,14 +75,14 @@ label scene3:
 
     jack_nvl_right "Hey, you look like the kind sort. Can I ask for a small loan? Something to get on my feet? I'm good for it..."
 
-    chrome "{i}Jack seemed like the friendly sort. Gregarious. Unfocused. Meandering. His attention wavering like a mercurial jazz riff.{/i}"
+    chrome "{i}Jack seemed like the friendly sort. Gregarious, but unfocused. Meandering. His attention wavering like a mercurial jazz riff.{/i}"
 
-    chrome "{i}I'm sure it had nothing to do with synthahol bombarding my aromatic sensors.{/i}"
+    chrome "{i}I'm sure it had nothing to do with the synthahol on his breath bombarding my aromatic sensors.{/i}"
 
     # CHOICE
 
     menu:
-        chrome "{i}This guy's all over the place. I have to get him to focus somehow. I have to be careful which tact I choose, so I can get the most info...{/i}"
+        chrome "{i}This guy's all over the place. I need to keep him focused somehow. I have to be careful which tact I choose, so I can extract the most info...{/i}"
         "Logical":
             call scene3_logical from _call_scene3_logical
         "Unassuming":
@@ -139,7 +139,7 @@ label scene3:
 
 label scene3_logical:
 
-    show chrome thinking left
+    show chrome logical
 
     chrome_nvl_left "I'm curious as to the whereabouts of Freddy."
 
@@ -155,7 +155,7 @@ label scene3_logical:
 
     show jack neutral
 
-    jack_nvl_right "Oh, me and Freddy?  We go waaay back."
+    jack_nvl_right "Oh, me and Freddy? We go waaay back."
 
     jack_nvl_right "We used to work together at the docks - after his boxing career fizzled."
 
@@ -163,7 +163,7 @@ label scene3_logical:
 
     jack_nvl_right "But he straightened himself out."
 
-    chrome_nvl_left "Is there anything else worth note? Think!"
+    chrome_nvl_left "Is there anything else worth note? And be specific."
 
     jack_nvl_right "He used to get his hands on all these fancy cigarettes."
 
@@ -195,7 +195,7 @@ label scene3_logical:
 
     jack_nvl_right "Yeah, that dump!! Didn't really want to talk about it though. Was about a week ago."
 
-    chrome_nvl_left "I see. Is there {i}{b}anything{/b}{/i} else? Anything you forgot to mention?"
+    chrome_nvl_left "I see. Are there any other details you may have forgotten to mention?"
 
     show jack sad
 
@@ -205,7 +205,7 @@ label scene3_logical:
 
 label scene3_unassuming:
 
-    show chrome timid
+    show chrome unassuming
 
     chrome_nvl_left "So, about Freddy. Nice guy, huh?"
 
@@ -261,7 +261,7 @@ label scene3_unassuming:
 
 label scene3_hardboiled:
 
-    show chrome angry
+    show chrome hardboiled
 
     chrome_nvl_left "Let's cut to the chase. Freddy's missing."
 
@@ -285,7 +285,7 @@ label scene3_hardboiled:
 
     jack_nvl_right "But he straightened himself out, Freddy did."
 
-    chrome_nvl_left "Are you sure about that?"
+    chrome_nvl_left "Oh, really? You sure about that?"
 
     show jack angry
 
@@ -377,11 +377,15 @@ label scene3_hardboiled:
     show dialogue_box at center # return to convo
     nvl show # show NVL dialogue
 
+    show chrome neutral
+
     chrome_nvl_left "..."
+
+    show chrome hardboiled
 
     chrome_nvl_left "Anything else you leaving out? Spill the beans. All of 'em."
 
-    jack_nvl_right "He used to get his hands on all these fancy cigarettes."
+    jack_nvl_right "Well, he used to get his hands on all these fancy cigarettes."
 
     jack_nvl_right "European shit, right off the boats. Hand-rolled, clove, you name it!"
 
@@ -393,9 +397,11 @@ label scene3_hardboiled:
 
     chrome_nvl_left "Tell me about the last time you spoke."
 
-    show jack neutral
+    show jack shocked
 
     jack_nvl_right "Eh, sure. Lemme, think..."
+
+    show jack neutral
 
     jack_nvl_right "..."
 

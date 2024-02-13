@@ -36,7 +36,7 @@ label scene2:
 
     chrome "{i}The police wire rattles off petty theft after petty theft.{/i}"
 
-    chrome "{i}Drunken disturbances, faulty old droids...even a cat in a tree.{/i}"
+    chrome "{i}Drunken disturbances, faulty old droids... even a cat in a tree.{/i}"
 
     chrome "{i}Nothing for an android detective. The one and only. In more ways than one...{/i}"
 
@@ -85,6 +85,8 @@ label scene2:
     
     bianca_nvl_left "Finally. What took you so long?"
     
+    show chrome thinking
+
     chrome_nvl_right "And your name is?"
 
     show bianca neutral
@@ -92,6 +94,8 @@ label scene2:
     bianca_nvl_left "BIANCA. Bianca Fontaine. I {i}{b}need{/b}{/i} your help."
 
     bianca_nvl_left "That's what you do, no? Help people?!"
+
+    show chrome neutral
 
     # pause to switch to narration
     # pause 1.0
@@ -106,15 +110,15 @@ label scene2:
 
     chrome "{i}Loading interrogation identities...{/i}"
 
-    show chrome thinking
+    show chrome logical
 
     chrome "{i}Do I go the logician route? {b}LOGICAL.{/b} Pure analysis and deduction. The Holmesian way?{/i}"
 
-    show chrome timid
+    show chrome unassuming
 
     chrome "{i}Or would the conversationalist route work best. {b}UNASSUMING.{/b} Disarming. Underestimated.{/i}"
 
-    show chrome angry
+    show chrome hardboiled
 
     chrome "{i}Or perhaps the cynic. {b}HARDBOILED.{/b} Direct. No nonsense...{/i}"
 
@@ -127,11 +131,15 @@ label scene2:
 
     bianca_nvl_left "...he's gone missing."
 
+    show chrome thinking
+
     chrome_nvl_right "Have you gone to the authorities?"
 
     bianca_nvl_left "Pff, the cops have no time for me and my dad."
 
     bianca_nvl_left "They just told me to wait 'til he comes home from whatever bender he's on."
+
+    show chrome neutral
 
     chrome_nvl_right "Perhaps they're right."
 
@@ -157,7 +165,7 @@ label scene2:
 
     show chrome shocked
 
-    chrome_nvl_right "Forrest Cane -"
+    chrome_nvl_right "Forrest Cane. That name - "
  
     ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
@@ -187,6 +195,8 @@ label scene2:
 
     chrome "{i}I'm nowhere and everywhere. Everything I know, have known, have forgotten, fills my synthetic frame.{/i}"
 
+    chrome "{i}I must be glitching... somehow..."
+
     show chrome shocked glitch
 
     chrome "{i}Then I see his face. Angular, laugh lines at the corners of his mouth. Tangled silver hair and horn-rimmed glasses that magnify deep, kind eyes. Eyes that listened as much as they saw.{/i}"
@@ -211,6 +221,7 @@ label scene2:
 
     chrome "{i}Not yet.{/i}"
 
+    chrome "{i}I've got to get a grip...{/i}"
     
     scene bg office night with pixellate # unblur the background
     call end_glitch from _call_end_glitch_2 # return to normal Chrome and normal background
@@ -231,7 +242,7 @@ label scene2:
     show dialogue_box at center # return to convo
     nvl show # show NVL dialogue
 
-    chrome_nvl_right "Then you should know that I'm not the guy for the job."
+    chrome_nvl_right "Then... Then you should know that I'm not the guy for the job."
 
     show bianca sad
 
@@ -277,7 +288,7 @@ label scene2:
 
     chrome "{i}The Silver Cat, huh? I know the joint.{/i}"
 
-    chrome "{i}I could use some jazz to clear my mind...{/i}"
+    chrome "{i}What the hell. I could use some jazz to clear my mind...{/i}"
 
     $ stop_layers(3) # stop playing layers
 
