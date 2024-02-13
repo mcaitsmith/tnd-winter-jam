@@ -40,66 +40,66 @@ label searchMenu:
 
         # option one:
         "The computer looks suspicious…" if pickedOne == False:
-            call computer
+            jump computer
         "{s}The computer looks suspicious…{/s}" if pickedOne == True:
-            call computer
+            jump computer
 
         # option two:
         "What’s that in the trash…?" if pickedTwo == False:
-            call trash
+            jump trash
         "{s}What’s that in the trash…?{/s}" if pickedTwo == True:
-            call trash
+            jump trash
 
         # option three:
         "Can’t believe she left the window open…" if pickedThree == False:
-            call window
+            jump window
         "{s}Can’t believe she left the window open…{/s}" if pickedThree == True:
-            call window
+            jump window
 
         # option four: 
         "Some nice books on the shelf…" if pickedFour == False:
-            call books
+            jump books
         "{s}Some nice books on the shelf…{/s}" if pickedFour == True:
-            call books
+            jump books
 
         # option five: 
         "That’s a nice plant." if pickedFive == False:
-            call plant
+            jump plant
         "{s}That’s a nice plant.{/s}" if pickedFive == True:
-            call plant
+            jump plant
 
 menu scene11comp:
     chrome logical "{i}Let's see here...{/i}"
     "Select \'deleted items\'" if computer_choice1 == False:
-        call deleteditems
+        jump deleteditems
     "{s}Select \'deleted items\'{/s}" if computer_choice1 == True:
-        call deleteditems
+        jump deleteditems
     "Select \'games\'" if computer_choice2 == False:
-        call games
+        jump games
     "{s}Select \'games\'{/s}" if computer_choice2 == True:
-        call games
+        jump games
     "Select \'saved pictures\'" if computer_choice3 == False:
-        call savedpictures
+        jump savedpictures
     "{s}Select \'saved pictures\'{/s}" if computer_choice3 == True:
-        call savedpictures
+        jump savedpictures
     "Select \'recipes\'" if computer_choice4 == False:
-        call recipes
+        jump recipes
     "{s}Select \'recipes\'{/s}" if computer_choice4 == True:
-        call recipes
+        jump recipes
     "Select \'santa project\'" if computer_choice5 == False: 
-        call santaproject
+        jump santaproject
     "{s}Select \'santa project\'{/s}" if computer_choice5 == True: 
-        call santaproject
+        jump santaproject
 
 label computer:
     chrome "{i}The computer looks suspicious…{/i}"
     $pickedOne = True
     # [LABELS for "deleted items", "games", "saved pictures", "recipes", "Santa Project". Kind of what we talked about in the writer/ programmer sync. Once they’ve been read, they don’t appear again as choices]
-    call scene11comp from _call_scene11comp
-    if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
-        jump finished_search
-    else:
-        jump searchMenu
+    jump scene11comp
+    # if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
+    #     jump finished_search
+    # else:
+    #     jump searchMenu
 
 label trash:
     chrome neutral "{i}What’s that in the trash…?{/i}"

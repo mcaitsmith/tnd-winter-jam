@@ -318,8 +318,8 @@ label scene9:
             hide dialogue_box
             nvl clear 
 
-    call lookaround from _call_lookaround
-    return
+    jump lookaround
+    # return
 
 label lookaround:
     bianca neutral "Please, look around. See if there’s anything else here that’s helpful."
@@ -332,17 +332,17 @@ label lookaround:
     menu helpful:
         chrome "Let's see..."
         "Cigarettes" if scene9_choice1 == False:
-            call cigarettes
+            jump cigarettes
         "{s}Cigarettes{/s}" if scene9_choice1 == True:
-            call cigarettes
+            jump cigarettes
         "Boxing Gloves" if scene9_choice2 == False:
-            call boxing_gloves
+            jump boxing_gloves
         "{s}Boxing Gloves{/s}" if scene9_choice2 == True:
-            call boxing_gloves
+            jump boxing_gloves
         "Santa Toy" if scene9_choice3 == False: 
-            call santatoy
+            jump santatoy
         "{s}Santa Toy{/s}" if scene9_choice3 == True: 
-            call santatoy
+            jump santatoy
 
 label cigarettes:
     show chrome neutral at left

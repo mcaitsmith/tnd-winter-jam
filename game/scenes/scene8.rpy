@@ -36,17 +36,17 @@ label scene8:
     menu scene8_choices:
         chrome "Strange, I wonder if this has something to do with Freddy? There's got to be some evidence lurking around here somewhere." 
         "What's that in the snow bank?" if scene8_choice1 == False:
-            call snowbank
+            jump snowbank
         "{s}What's that in the snow bank?{/s}" if scene8_choice1 == True:
-            call snowbank
+            jump snowbank
         "Footprints in the snow?" if scene8_choice2 == False:
-            call footprints
+            jump footprints
         "{s}Footprints in the snow?{/s}" if scene8_choice2 == True:
-            call footprints
+            jump footprints
         "What are those red speckles?" if scene8_choice3 == False:
-            call snowblood
+            jump snowblood
         "{s}What are those red speckles?{/s}" if scene8_choice3 == True:
-            call snowblood
+            jump snowblood
 
 label snowbank:
     hide larry dead with moveoutright
