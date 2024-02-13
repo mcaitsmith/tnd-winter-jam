@@ -10,6 +10,12 @@ default pickedThree = False
 default pickedFour = False
 default pickedFive = False
 
+default computer_choice1 = False
+default computer_choice2 = False
+default computer_choice3 = False
+default computer_choice4 = False
+default computer_choice5 = False
+
 
 label scene11:
 
@@ -24,8 +30,190 @@ label scene11:
 
     chrome timid "{i}Seems Ms. Fowler isn’t in; surely she wouldn’t mind if I… poke around.{/i}"
 
-    call searchMenu from _call_searchMenu
+    jump searchMenu
 
+label searchMenu:
+    show chrome confused left at left:
+        xzoom -1.0
+    menu:
+        chrome "{i}Let’s see…{/i}"
+
+        # option one:
+        "The computer looks suspicious…" if pickedOne == False:
+            jump computer
+        "{s}The computer looks suspicious…{/s}" if pickedOne == True:
+            jump computer
+
+        # option two:
+        "What’s that in the trash…?" if pickedTwo == False:
+            jump trash
+        "{s}What’s that in the trash…?{/s}" if pickedTwo == True:
+            jump trash
+
+        # option three:
+        "Can’t believe she left the window open…" if pickedThree == False:
+            jump window
+        "{s}Can’t believe she left the window open…{/s}" if pickedThree == True:
+            jump window
+
+        # option four: 
+        "Some nice books on the shelf…" if pickedFour == False:
+            jump books
+        "{s}Some nice books on the shelf…{/s}" if pickedFour == True:
+            jump books
+
+        # option five: 
+        "That’s a nice plant." if pickedFive == False:
+            jump plant
+        "{s}That’s a nice plant.{/s}" if pickedFive == True:
+            jump plant
+
+menu scene11comp:
+    chrome logical "{i}Let's see here...{/i}"
+    "Select \'deleted items\'" if computer_choice1 == False:
+        jump deleteditems
+    "{s}Select \'deleted items\'{/s}" if computer_choice1 == True:
+        jump deleteditems
+    "Select \'games\'" if computer_choice2 == False:
+        jump games
+    "{s}Select \'games\'{/s}" if computer_choice2 == True:
+        jump games
+    "Select \'saved pictures\'" if computer_choice3 == False:
+        jump savedpictures
+    "{s}Select \'saved pictures\'{/s}" if computer_choice3 == True:
+        jump savedpictures
+    "Select \'recipes\'" if computer_choice4 == False:
+        jump recipes
+    "{s}Select \'recipes\'{/s}" if computer_choice4 == True:
+        jump recipes
+    "Select \'santa project\'" if computer_choice5 == False: 
+        jump santaproject
+    "{s}Select \'santa project\'{/s}" if computer_choice5 == True: 
+        jump santaproject
+
+label computer:
+    chrome "{i}The computer looks suspicious…{/i}"
+    $pickedOne = True
+    # [LABELS for "deleted items", "games", "saved pictures", "recipes", "Santa Project". Kind of what we talked about in the writer/ programmer sync. Once they’ve been read, they don’t appear again as choices]
+    jump scene11comp
+    # if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
+    #     jump finished_search
+    # else:
+    #     jump searchMenu
+
+label trash:
+    chrome neutral "{i}What’s that in the trash…?{/i}"
+    $pickedTwo = True
+    # UNLIKE option one, my thought was that players would just click through all of these options- and the final one returns them to the office proper
+
+    chrome "{i}A banana peel, an empty cigarette pack…{/i}"
+    chrome "{i}Some used napkins…{/i}"
+    chrome "{i}Half-eaten takeout…{/i}"
+    chrome "{i}Stale donuts…{/i}"
+    chrome confused left "{i}Gloves? Hm. Latex. But there’s something else–{/i}"
+    chrome shocked "{i}Poison! Trace amounts, but it’s there.{/i}"
+    chrome angry "{i}Even one bite of this could kill a man...{/i}"
+
+    if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
+        jump finished_search
+    else:
+        jump searchMenu
+
+label window:
+    $pickedThree = True
+    chrome neutral "{i}Can’t believe she left the window open…{/i}"
+    chrome "{i}Organics are susceptible to cold.{/i}"
+    # Close Window?
+    chrome thinking left "{i}My sensors are detecting a scent blowing in from outside.{/i}"
+    chrome thinking left "{i}Smoke- no, cloves. Clove cigarettes?{/i}"
+    chrome shocked "{i}Smells… clove-y. And familiar.{/i}"
+    if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
+        jump finished_search
+    else:
+        jump searchMenu
+
+label books:
+    $pickedFour = True
+    chrome neutral "{i}Organics say there’s nothing like the smell of an old book.{/i}"
+    chrome logical "{i}I think I see the appeal.{/i}"
+    if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
+        jump finished_search
+    else:
+        jump searchMenu
+
+label plant:
+    $pickedFive = True
+    chrome logical "{i}I should get myself a bonsai tree.{/i}"
+    if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
+        jump finished_search
+    else:
+        jump searchMenu
+
+label deleteditems:
+    chrome confused left "{i}Hmm. Totally empty. And nothing hidden as far as I can tell.{/i}"
+    $computer_choice1 = True
+    if computer_choice1 == True and computer_choice2 == True and computer_choice3 == True and computer_choice4 == True and computer_choice5 == True:
+        if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
+            jump finished_search
+        else:
+            jump searchMenu
+    else:
+        jump scene11comp
+
+label games:
+    chrome happy "{i}She’s got cyber solitaire on here?? Ooh, and pinball!{/i}"
+    $computer_choice2 = True
+    if computer_choice1 == True and computer_choice2 == True and computer_choice3 == True and computer_choice4 == True and computer_choice5 == True:
+        if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
+            jump finished_search
+        else:
+            jump searchMenu
+    else:
+        jump scene11comp
+
+label savedpictures:
+    chrome embarrassed "{i}Is that… Mariah in a bikini?{/i}"
+    $computer_choice3 = True
+    if computer_choice1 == True and computer_choice2 == True and computer_choice3 == True and computer_choice4 == True and computer_choice5 == True:
+        if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
+            jump finished_search
+        else:
+            jump searchMenu
+    else:
+        jump scene11comp
+
+label recipes:
+    chrome unassuming "{i}Lots of cookie recipes here…{/i}"
+    $computer_choice4 = True
+    if computer_choice1 == True and computer_choice2 == True and computer_choice3 == True and computer_choice4 == True and computer_choice5 == True:
+        if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
+            jump finished_search
+        else:
+            jump searchMenu
+    else:
+        jump scene11comp
+
+label santaproject:
+    chrome shocked "{i}Ah-ha! Now we’re getting somewhere!{/i}"
+    chrome logical "{i}Let’s see- looks like Fowler’s has been in the red for years.{/i}"
+    chrome logical "{i}Sales have been declining every holiday season…{/i}"
+    chrome logical "{i}This program- some kind of credit card number skimming system.{/i}"
+    chrome angry "{i}And here we’ve got some ‘creative’ accounting.{/i}"
+    chrome angry "{i}Classic charity scam. Santas aggressively ask for donations, and the bulk of it goes to Mariah's pockets.{/i}"
+    chrome shocked "{i}Seems like each Santa had a criminal record. Something Mariah was well aware of...{/i}"
+    chrome angry "{i}Mariah must have kept their info under wraps in exchange for getting them to do her dirty work.{/i}"
+    chrome angry "{i}Mariah offers them a job. And they don't dare push back because she threatens to expose them.{/i}"
+    chrome angry "{i}Who are the cops to believe? An ex-con, like Freddy, or a respected business owner?{/i}"
+    $computer_choice5 = True
+    if computer_choice1 == True and computer_choice2 == True and computer_choice3 == True and computer_choice4 == True and computer_choice5 == True:
+        if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
+            jump finished_search
+        else:
+            jump searchMenu
+    else:
+        jump scene11comp
+
+label finished_search:
     chrome neutral "{i}Seems like that’s about everything of interest.{/i}"
     chrome "{i}I’ve got all the intel I need.{/i}"
     chrome shocked "{i}Wait- that smell! I recognize it from Freddy’s apartment!{/i}"
@@ -43,94 +231,4 @@ label scene11:
 
     #End
 
-
-
     jump scene12
-
-    return
-
-label searchMenu:
-    show chrome confused left at left:
-        xzoom -1.0
-    menu:
-        chrome "{i}Let’s see…{/i}"
-
-        # option one:
-        "The computer looks suspicious…" if pickedOne == False:
-
-            chrome "{i}The computer looks suspicious…{/i}"
-            $pickedOne = True
-            # [LABELS for "deleted items", "games", "saved pictures", "recipes", "Santa Project". Kind of what we talked about in the writer/ programmer sync. Once they’ve been read, they don’t appear again as choices]
-            call scene11comp from _call_scene11comp
-            jump searchMenu
-
-        # option two:
-        "What’s that in the trash…?" if pickedTwo == False:
-            chrome neutral "{i}What’s that in the trash…?{/i}"
-            $pickedTwo = True
-            # UNLIKE option one, my thought was that players would just click through all of these options- and the final one returns them to the office proper
-
-
-            chrome "{i}A banana peel, an empty cigarette pack…{/i}"
-            chrome "{i}Some used napkins…{/i}"
-            chrome "{i}Half-eaten takeout…{/i}"
-            chrome "{i}Stale donuts…{/i}"
-            chrome confused left "{i}Gloves? Hm. Latex. But there’s something else–{/i}"
-            chrome shocked "{i}Poison! Trace amounts, but it’s there.{/i}"
-            chrome angry "{i}Even one bite of this could kill a man...{/i}"
-
-            jump searchMenu
-
-        # option three:
-        "Can’t believe she left the window open…" if pickedThree == False:
-            $pickedThree = True
-            chrome neutral "{i}Can’t believe she left the window open…{/i}"
-            chrome "{i}Organics are susceptible to cold.{/i}"
-            # Close Window?
-            chrome thinking left "{i}My sensors are detecting a scent blowing in from outside.{/i}"
-            chrome thinking left "{i}Smoke- no, cloves. Clove cigarettes?{/i}"
-            chrome shocked "{i}Smells… clove-y. And familiar.{/i}"
-            jump searchMenu
-
-        # option four: 
-        "Some nice books on the shelf…" if pickedFour == False:
-            $pickedFour = True
-            chrome neutral "{i}Organics say there’s nothing like the smell of an old book.{/i}"
-            chrome logical "{i}I think I see the appeal.{/i}"
-            jump searchMenu
-
-        # option five: 
-        "That’s a nice plant." if pickedFive == False:
-            $pickedFive = True
-            chrome logical "{i}I should get myself a bonsai tree.{/i}"
-            jump searchMenu
-    return
-
-label scene11comp:
-    menu:
-        chrome logical "{i}Let's see here...{/i}"
-        "Select \'deleted items\'":
-            chrome confused left "{i}Hmm. Totally empty. And nothing hidden as far as I can tell.{/i}"
-            jump scene11comp
-        "Select \'games\'":
-            chrome happy "{i}She’s got cyber solitaire on here?? Ooh, and pinball!{/i}"
-            jump scene11comp
-        "Select \'saved pictures\'":
-            chrome embarrassed "{i}Is that… Mariah in a bikini?{/i}"
-            jump scene11comp
-        "Select \'recipes\'":
-            chrome unassuming "{i}Lots of cookie recipes here…{/i}"
-            jump scene11comp
-        "Select \'santa project\'": 
-            chrome shocked "{i}Ah-ha! Now we’re getting somewhere!{/i}"
-            chrome logical "{i}Let’s see- looks like Fowler’s has been in the red for years.{/i}"
-            chrome logical "{i}Sales have been declining every holiday season…{/i}"
-            chrome logical "{i}This program- some kind of credit card number skimming system.{/i}"
-            chrome angry "{i}And here we’ve got some ‘creative’ accounting.{/i}"
-            chrome angry "{i}Classic charity scam. Santas aggressively ask for donations, and the bulk of it goes to Mariah's pockets.{/i}"
-            chrome shocked "{i}Seems like each Santa had a criminal record. Something Mariah was well aware of...{/i}"
-            chrome angry "{i}Mariah must have kept their info under wraps in exchange for getting them to do her dirty work.{/i}"
-            chrome angry "{i}Mariah offers them a job. And they don't dare push back because she threatens to expose them.{/i}"
-            chrome angry "{i}Who are the cops to believe? An ex-con, like Freddy, or a respected business owner?{/i}"
-
-    return
