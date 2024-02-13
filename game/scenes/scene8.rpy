@@ -29,29 +29,58 @@ label scene8:
 
     chrome "Poor Schmuck."
 
+    $ scene8_choice1 = False
+    $ scene8_choice2 = False
+    $ scene8_choice3 = False
+
     menu scene8_choices:
         chrome "Strange, I wonder if this has something to do with Freddy? There's got to be some evidence lurking around here somewhere." 
-        "What's that in the snow bank?":
-            hide larry dead with moveoutright
-            show cookietin at right
-            chrome "{i}Hm. A cookie tin filled with freshly baked Christmas cookies. Is this involved somehow?{/i}"
-            hide cookietin
-            jump scene8_choices
-        "Footprints in the snow?":
-            hide larry dead with moveoutright
-            show santaboots at right
-            chrome "{i}These look like Santa boots.{/i}"
-            hide santaboots
-            jump scene8_choices
-        "What are those red speckles?":
-            hide larry dead with moveoutright
-            show bloodysnow at right
-            chrome "{i}Blood droplets in the snow. Something shiny catches my eye.{/i}"
-            chrome "{i}Huh. A phone. The cops in all their disinterest haven't even noticed it.{/i}"
-            hide bloodysnow
+        "What's that in the snow bank?" if scene8_choice1 == False:
+            call snowbank
+        "{s}What's that in the snow bank?{/s}" if scene8_choice1 == True:
+            call snowbank
+        "Footprints in the snow?" if scene8_choice2 == False:
+            call footprints
+        "{s}Footprints in the snow?{/s}" if scene8_choice2 == True:
+            call footprints
+        "What are those red speckles?" if scene8_choice3 == False:
+            call snowblood
+        "{s}What are those red speckles?{/s}" if scene8_choice3 == True:
+            call snowblood
 
-            call cellcell from _call_cellcell
-            return
+label snowbank:
+    hide larry dead with moveoutright
+    show cookietin at right
+    chrome "{i}Hm. A cookie tin filled with freshly baked Christmas cookies. Is this involved somehow?{/i}"
+    hide cookietin
+    $ scene8_choice1 = True
+    if scene8_choice1 == True and scene8_choice2 == True and scene8_choice3 == True:
+        jump cellcell
+    else:
+        jump scene8_choices
+
+label footprints:
+    hide larry dead with moveoutright
+    show santaboots at right
+    chrome "{i}These look like Santa boots.{/i}"
+    hide santaboots
+    $ scene8_choice2 = True
+    if scene8_choice1 == True and scene8_choice2 == True and scene8_choice3 == True:
+        jump cellcell
+    else:
+        jump scene8_choices
+
+label snowblood:
+    hide larry dead with moveoutright
+    show bloodysnow at right
+    chrome "{i}Blood droplets in the snow. Something shiny catches my eye.{/i}"
+    chrome "{i}Huh. A phone. The cops in all their disinterest haven't even noticed it.{/i}"
+    hide bloodysnow
+    $ scene8_choice3 = True
+    if scene8_choice1 == True and scene8_choice2 == True and scene8_choice3 == True:
+        jump cellcell
+    else:
+        jump scene8_choices
 
 label cellcell:
     show chrome thinking left at left:

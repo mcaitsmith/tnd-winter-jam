@@ -324,144 +324,179 @@ label scene9:
 label lookaround:
     bianca neutral "Please, look around. See if there’s anything else here that’s helpful."
     hide bianca neutral with moveoutright
+
+    $ scene9_choice1 = False
+    $ scene9_choice2 = False
+    $ scene9_choice3 = False
+
     menu helpful:
         chrome "Let's see..."
-        "Cigarettes":
-            show chrome neutral at left
-            chrome "{i}My aromatic sensors are picking something up.{/i}"
-            show cigarettes at right
-            chrome "{i}Ah, clove cigarettes. Just like Jack mentioned. Supply looks low. Maybe Freddy took one for the road.{/i}"
-            hide cigarettes
+        "Cigarettes" if scene9_choice1 == False:
+            call cigarettes
+        "{s}Cigarettes{/s}" if scene9_choice1 == True:
+            call cigarettes
+        "Boxing Gloves" if scene9_choice2 == False:
+            call boxing_gloves
+        "{s}Boxing Gloves{/s}" if scene9_choice2 == True:
+            call boxing_gloves
+        "Santa Toy" if scene9_choice3 == False: 
+            call santatoy
+        "{s}Santa Toy{/s}" if scene9_choice3 == True: 
+            call santatoy
 
-            jump helpful
-        "Boxing Gloves":
-            show chrome neutral at left
-            show gloves at right
-            chrome "{i}My database highlighted Freddy’s days as an amateur boxer. Seems like he’s hung up the gloves for now.{/i}"
+label cigarettes:
+    show chrome neutral at left
+    chrome "{i}My aromatic sensors are picking something up.{/i}"
+    show cigarettes at right
+    chrome "{i}Ah, clove cigarettes. Just like Jack mentioned. Supply looks low. Maybe Freddy took one for the road.{/i}"
+    hide cigarettes
+    $ scene9_choice1 = True
+    if scene9_choice1 == True and scene9_choice2 == True and scene9_choice3 == True:
+        jump memorystick
+    else:
+        jump helpful
 
-            hide gloves
+label boxing_gloves:
+    show chrome neutral at left
+    show gloves at right
+    chrome "{i}My database highlighted Freddy’s days as an amateur boxer. Seems like he’s hung up the gloves for now.{/i}"
 
-            show bianca neutral at right with moveinright
+    hide gloves
 
-            show dialogue_box at center
-            nvl show
+    show bianca neutral at right with moveinright
 
-            bianca_nvl_right neutral "Ever been in a fight?"
+    show dialogue_box at center
+    nvl clear
+    nvl show
 
-            chrome_nvl_left neutral "Not if I can help it."
+    bianca_nvl_right neutral "Ever been in a fight?"
 
-            bianca_nvl_right happy "Don’t blame ya. Es muy estúpido, ¿no? Better ways to make money than losing teeth and collecting concussions."
+    chrome_nvl_left neutral "Not if I can help it."
 
-            chrome_nvl_left neutral "Worse ways too."
+    bianca_nvl_right happy "Don’t blame ya. Es muy estúpido, ¿no? Better ways to make money than losing teeth and collecting concussions."
 
-            bianca_nvl_right sad "Yeah. That’s why I tried it once, when dad was spiraling. It didn’t last as long as I’d hoped."
+    chrome_nvl_left neutral "Worse ways too."
 
-            show chrome confused left at left
-            chrome_nvl_left "But you just said boxing is stupid."
+    bianca_nvl_right sad "Yeah. That’s why I tried it once, when dad was spiraling. It didn’t last as long as I’d hoped."
 
-            bianca_nvl_right happy "Sí, it is {i}incredibly{/i} stupid. But it was me and my dad."
+    show chrome confused left at left
+    chrome_nvl_left "But you just said boxing is stupid."
 
-            bianca_nvl_right happy "It was the two of us, away from the world, inside the ropes."
+    bianca_nvl_right happy "Sí, it is {i}incredibly{/i} stupid. But it was me and my dad."
 
-            bianca_nvl_right happy "Every minute he wasn’t off on some shady job was a minute he spent with me."
+    bianca_nvl_right happy "It was the two of us, away from the world, inside the ropes."
 
-            bianca_nvl_right happy "That’s worth being stupid for."
+    bianca_nvl_right happy "Every minute he wasn’t off on some shady job was a minute he spent with me."
 
-            hide bianca happy with moveoutright
+    bianca_nvl_right happy "That’s worth being stupid for."
 
-            show chrome neutral:
-                xzoom -1.0
+    hide bianca happy with moveoutright
 
-            chrome_nvl_left neutral "I see. At least you’ve still got all your teeth."
+    show chrome neutral:
+        xzoom -1.0
 
-            hide dialogue_box
-            nvl hide 
+    chrome_nvl_left neutral "I see. At least you’ve still got all your teeth."
 
-            jump helpful
-        "Santa Toy": 
-            show chrome thinking left
+    hide dialogue_box
+    nvl hide 
 
-            show santa toy at right
+    $ scene9_choice2 = True
+    if scene9_choice1 == True and scene9_choice2 == True and scene9_choice3 == True:
+        jump memorystick
+    else:
+        jump helpful
 
-            chrome "{i}Some kind of toy model. Like one of those Santa androids at the department store. Typical. Milking androidkind for commercial value while giving us the societal cold shoulder.{/i}"
+label santatoy:
+    show chrome thinking left
 
-            play sound sfx_rattle
+    show santa toy at right
 
-            chrome "{i}Wait a second - is this Santa droid hiding something?{/i}"
+    chrome "{i}Some kind of toy model. Like one of those Santa androids at the department store. Typical. Milking androidkind for commercial value while giving us the societal cold shoulder.{/i}"
 
-            hide santa toy
+    play sound sfx_rattle
 
-            show bianca neutral at right with moveinright
+    chrome "{i}Wait a second - is this Santa droid hiding something?{/i}"
 
-            show dialogue_box at center
-            nvl show
+    hide santa toy
+    $ scene9_choice3 = True
+    if scene9_choice1 == True and scene9_choice2 == True and scene9_choice3 == True:
+        jump memorystick
+    else:
+        jump helpful
 
-            chrome_nvl_left "Where did this come from? Is it new?"
+label memorystick:
+    show bianca neutral at right with moveinright
 
-            bianca_nvl_right neutral "Oh, dad brought it home a few days ago. It’s probably a gift. Funny enough, he’s not great at hiding when it comes to gifts."
+    show dialogue_box at center
+    nvl clear
+    nvl show
 
-            show chrome happy:
-                xzoom -1.0
+    chrome_nvl_left "Where did this Santa toy come from? Is it new?"
 
-            chrome_nvl_left happy "Oh it’s a gift, alright. A gift for me. And with any luck, I’ve been a real good boy this year."
+    bianca_nvl_right neutral "Oh, dad brought it home a few days ago. It’s probably a gift. Funny enough, he’s not great at hiding when it comes to gifts."
 
-            hide dialogue_box
-            nvl hide
+    show chrome happy:
+        xzoom -1.0
 
-            play sound sfx_breakmetaltoy
+    chrome_nvl_left happy "Oh it’s a gift, alright. A gift for me. And with any luck, I’ve been a real good boy this year."
 
-            hide bianca neutral right with moveoutright
+    hide dialogue_box
+    nvl hide
 
-            show memorystick at right
+    play sound sfx_breakmetaltoy
 
-            show chrome shocked at left
+    hide bianca neutral right with moveoutright
 
-            chrome "{i}Aha! It was hiding a memory stick! Now let me just plug into it…{/i}"
+    show memorystick at right
 
-            play sound sfx_santabeepscan
+    show chrome shocked at left
 
-            chrome "{i}Damn. It’s corrupted. I can only see one file…{/i}"
+    chrome "{i}Aha! It was hiding a memory stick! Now let me just plug into it…{/i}"
 
-            hide memorystick
+    play sound sfx_santabeepscan
 
-            show creditcard at right
+    chrome "{i}Damn. It’s corrupted. I can only see one file…{/i}"
 
-            show chrome thinking left
+    hide memorystick
 
-            chrome "{i}Hmm. ‘Card Reader Schematics.’ ‘Install on all registers’. These credit card readers are programmed to redirect sales to a private bank account!{/i}"
+    show creditcard at right
 
-            show chrome neutral:
-                xzoom -1.0
+    show chrome thinking left
 
-            chrome "{i}I wanted to believe Bianca. But it looks like I’ve discovered Santa’s secret - Freddy’s been embezzling cash over at the department store.{/i}" 
+    chrome "{i}Hmm. ‘Card Reader Schematics.’ ‘Install on all registers’. These credit card readers are programmed to redirect sales to a private bank account!{/i}"
 
-            show chrome confused left
+    show chrome neutral:
+        xzoom -1.0
 
-            chrome "{i}Was Larry in on it? Is that why he’s dead? I must be missing something over at Fowler’s. One stone left unturned…{/i}"
+    chrome "{i}I wanted to believe Bianca. But it looks like I’ve discovered Santa’s secret - Freddy’s been embezzling cash over at the department store.{/i}" 
 
-            show chrome neutral:
-                xzoom -1.0
+    show chrome confused left
 
-            hide creditcard 
+    chrome "{i}Was Larry in on it? Is that why he’s dead? I must be missing something over at Fowler’s. One stone left unturned…{/i}"
 
-            show bianca neutral at right with moveinright
+    show chrome neutral:
+        xzoom -1.0
 
-            show dialogue_box at center
-            nvl show
+    hide creditcard 
 
-            bianca_nvl_right neutral "Share with the class, Mr. Steele!"
+    show bianca neutral at right with moveinright
 
-            bianca_nvl_right neutral "Did that Santa droid give you everything you asked for this year?"
+    show dialogue_box at center
+    nvl show
 
-            show chrome thinking left
-            chrome_nvl_left "Not everything. Not yet."
+    bianca_nvl_right neutral "Share with the class, Mr. Steele!"
 
-            chrome_nvl_left "But there’s another Santa out there who may just do exactly that…"
+    bianca_nvl_right neutral "Did that Santa droid give you everything you asked for this year?"
+
+    show chrome thinking left
+    chrome_nvl_left "Not everything. Not yet."
+
+    chrome_nvl_left "But there’s another Santa out there who may just do exactly that…"
 
 
-            hide dialogue_box
-            nvl clear
+    hide dialogue_box
+    nvl clear
 
-            $ bianca_on = False
-            $ update_layers() # turn off Larry layer
-            jump scene10
+    $ bianca_on = False
+    $ update_layers() # turn off Larry layer
+    jump scene10
