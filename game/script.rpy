@@ -35,11 +35,11 @@ image dialogue_box = "gui/nvl_box.png"
 # define images for each character (need to be updated when we get assets)
 
 image larry dead = Image("characters/larry/larry dead.png",yoffset=60)
-image larry neutral = "characters/larry/larry neutral.png"
-image larry ecstatic = "characters/larry/larry ecstatic.png"
-image larry enraged = "characters/larry/larry enraged.png"
-image larry mad = "characters/larry/larry mad.png"
-image larry sad = "characters/larry/larry sad.png"
+image larry neutral = Image("characters/larry/larry neutral.png",yoffset=60)
+image larry ecstatic = Image("characters/larry/larry ecstatic.png",yoffset=60)
+image larry enraged = Image("characters/larry/larry enraged.png",yoffset=60)
+image larry mad = Image("characters/larry/larry mad.png",yoffset=60)
+image larry sad = Image("characters/larry/larry sad.png",yoffset=60)
 image figure = "characters/chrome/chrome neutral.png"
 image chrome neutral = "characters/chrome/chrome neutral.png"
 image chrome neutral glitch = Glitch("characters/chrome/chrome neutral.png", glitch_strength=.005, color_range1="#0a00", color_range2="#bcbcbc") # glitched version
