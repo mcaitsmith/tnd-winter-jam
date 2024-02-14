@@ -51,8 +51,8 @@ label scene13:
     freddy neutral "But seriously, thank you. I mean it."
     hide freddy with dissolve
     show bianca neutral at left with dissolve
-    bianca neutral "Hey listen, I know I can never repay you, but if you need some help on the next case..."
-    bianca happy "or a partner even, you know where to find me."
+    bianca neutral "Hey listen, I know I can never really repay you, but if you need some help on the next case..."
+    bianca happy "...or a partner even, you know where to find me."
     chrome happy "I might take you up on that."
     hide bianca with dissolve
     show freddy neutral at left:

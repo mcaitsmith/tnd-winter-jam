@@ -87,15 +87,15 @@ label scene6:
 
         show dialogue_box
 
+        show chrome hardboiled:
+            xzoom -1.0
+
         chrome_nvl_left "Yeah, because you’re doing a whole lot just standing out here glowering at everyone."
         
         chrome_nvl_left "Look lady, just answer a few of my questions and we both can get on with our day."
 
         mariah_nvl_right "I don’t need to take that from a tin can."
         
-        show chrome angry:
-            xzoom -1.0
-
         chrome_nvl_left "Sure, lady. Just tell me about our victim."
 
         chrome_nvl_left "I don’t got all day, either."
@@ -124,19 +124,21 @@ label scene6:
 
         mariah_nvl_right "You’d know all of this if you just asked one of the cops over there."
 
+        show mariah angry
+
         mariah_nvl_right "Now stop wasting my time."
 
         hide dialogue_box
 
-        chrome "{i} Well, it looks like Larry is a dead-end. Fine, I shouldn’t be messing around with a crime scene, anyways. I’ll move on to my actual job.{/i}"
+        show chrome neutral
 
-        show chrome thinking left at left
+        chrome "{i} Well, it looks like Larry is a dead-end. Maybe. I’ll move on to the reason I'm here.{/i}"
 
         show dialogue_box
 
-        chrome_nvl_left "Well, that’s fine. No need to aggravate a lady with such a delicate physique."
+        show chrome hardboiled
 
-        chrome_nvl_left "Then let’s ask about someone else. What do you know about a Freddy Fontaine."
+        chrome_nvl_left "Then let me ask you about someone else. What do you know about a Freddy Fontaine."
 
         show mariah confused 
 
@@ -148,13 +150,13 @@ label scene6:
         
         mariah_nvl_right "Today was supposed to be his last day, but he hasn’t shown up for his shift."
 
-        show chrome neutral 
-
         chrome_nvl_left "And what does Freddy do at Fowler’s?"
 
         mariah_nvl_right "He’s a Santa. He does Santa stuff. Look it up in that fancy database in your head."
 
         hide dialogue_box
+
+        show chrome neutral 
 
         chrome "{i}A mall Santa. That’s Freddy’s secret. Well, that’s disappointing.{/i}"
 
@@ -169,6 +171,8 @@ label scene6:
         show chrome thinking left at left
 
         chrome_nvl_left "That’s a rather sudden jump in logic."
+
+        show chrom neutral
 
         mariah_nvl_right "Maybe for a tin can like you. But Freddy and Larry were thick as thieves."
 
@@ -196,7 +200,9 @@ label scene6:
 
         show dialogue_box
 
-        chrome_nvl_left "The owner of the store standing in front of a crime scene."
+        show chrome logical
+
+        chrome_nvl_left "Hmm. The owner of the store standing in front of a crime scene."
 
         chrome_nvl_left "If this was just another crime there would be no need for your attention."
 
@@ -210,10 +216,9 @@ label scene6:
 
         mariah_nvl_right "I wouldn’t be standing out here in the cold if I wasn’t invested."
 
-        show chrome neutral:
-            xzoom -1.0
+        chrome_nvl_left "Just as I said. Now tell me more about our victim."
 
-        chrome_nvl_left "Yeah, yeah. Just tell me about our victim."
+        show mariah neutral
 
         mariah_nvl_right "His name is Larry Moss."
 
@@ -233,11 +238,15 @@ label scene6:
 
         chrome_nvl_left "Did he have any enemies?"
 
+        show mariah angry
+
         mariah_nvl_right "Yeah, Rudolph hated being picked on by an elf!"
 
         mariah_nvl_right "I don’t keep track of employee relationships."
 
         mariah_nvl_right "I have better things to do than micromanage every employee."
+
+        show mariah neutral
 
         mariah_nvl_right "All I know was that I heard shouting and when I came out here, Larry was lying dead on the ground."
 
@@ -245,14 +254,15 @@ label scene6:
 
         mariah_nvl_right "I’m done with this."
 
+        show chrome neutral
 
         hide dialogue_box
 
-        chrome "{i}Well, looks like if I want to know more I’ll need to ask one of the cops. But that’s fine, I can move on to my actual job.{/i}"
+        chrome "{i}Well, looks like if I want to know more I’ll need to ask one of the cops. Fine with me. I’ll move on to the reason I'm here.{/i}"
 
         show dialogue_box
 
-        show chrome thinking left at left
+        show chrome logical
 
         chrome_nvl_left "Well, then I would like to expand my questioning to a person of interest."
 
@@ -272,7 +282,7 @@ label scene6:
 
         show dialogue_box
        
-        show chrome neutral:
+        show chrome logical:
             xzoom -1.0
 
         chrome_nvl_left "I see."
@@ -300,6 +310,8 @@ label scene6:
         mariah_nvl_right "If anyone would have a reason to kill Larry, it would be Freddy."
 
         show mariah angry 
+
+        show chrome shocked
 
         mariah_nvl_right "Now get out of my face. I’ve had enough of you Rent-a-Bots."
 
@@ -382,37 +394,45 @@ label scene6:
 
         mariah_nvl_right "Right. Right. A joke."
         
+        show chrome unassuming
+
         mariah_nvl_right "But I can’t really think of anyone that would kill ol’ Larry."
         
         mariah_nvl_right "He was a bit of a bore, but he kept to himself."
 
         mariah_nvl_right "Well, I guess he had to talk to Freddy."
 
+        show chrome neutral
+
         hide dialogue_box
 
-        chrome "{i}And suddenly I was reminded about my original job. As interesting as this mystery murder is, I was supposed to find Bianca’s father.{/i}"
+        chrome "{i}I was suddenly reminded of what brought me here.{/i}"
 
         show dialogue_box
 
-        chrome_nvl_left "Freddy? Is that someone that worked here?"
+        show chrome unassuming
+
+        chrome_nvl_left "Freddy? You mean Freddy Fontaine? Doesn't he work here?"
 
         mariah_nvl_right "What? I mean, yes. Freddy did work here. He was one of my Santas."
 
         mariah_nvl_right "In fact, he was Larry's Santa. They were paired together. But not anymore. Today was supposed to be his last day, but he’s gone now. Just left early."
 
-        show chrome neutral
-
         chrome_nvl_left "Well, that’s not suspicious."
 
-        show mariah neutral 
+        show mariah confused
 
         mariah_nvl_right "Come to think of it... it is suspicious."
+
+        show mariah neutral
 
         mariah_nvl_right "The two of them were close, but I heard that they had a falling out this week."
 
         mariah_nvl_right "Maybe you should go check that out."
 
-        chrome_nvl_left "Suspicion... blame -"
+        show chrome neutral
+
+        chrome_nvl_left "Sus... Suspicion... blame -"
         
         # hide dialogue_box
         # nvl clear
@@ -471,7 +491,7 @@ label scene6:
         
         chrome "{i}Naturally, it wasn’t long before the Bureau turned on their once great hero.{/i}"
 
-        chrome "{i}That’s the nature of the beast. First, they blamed us androids for sowing Cane’s demise. Then they blamed Cane for extinguishing our own.{/i}"
+        chrome "{i}That’s the nature of the beast. First, they blamed us androids for sowing Cane’s demise. Then they blamed Cane for extinguishing our own...{/i}"
 
         scene bg extstore night with pixellate # unblurs the background
         call end_glitch from _call_end_glitch_4
@@ -490,7 +510,7 @@ label scene6:
 
         show mariah angry at right
  
-        mariah "So, we done here, metalhead? Now go find my Santa!"
+        mariah "So, are we done here, metalhead? Yeah?? Now go find my Santa!"
 
         hide mariah neutral with moveoutright
 

@@ -51,8 +51,12 @@ label scene10:
     show dialogue_box
     nvl show 
 
+    show chrome shocked
+
     santa_nvl_right "I don’t have anything for you."
     
+    show chrome neutral
+
     chrome_nvl_left "I haven’t said anything yet."
 
     santa_nvl_right "Yeah, and unless you got a donation, then I won’t have anything else to say either. So beat it."
@@ -63,11 +67,15 @@ label scene10:
 
     show dialogue_box
 
+    show chrome angry
+
     chrome_nvl_left "Fine, here’s your donation."
 
     play sound sfx_santabeepscan
 
     show santa  
+
+    show chrome neutral
 
     santa_nvl_right "Was that so hard detective?"
 
@@ -98,6 +106,8 @@ label scene10:
         # Boring Night
 
         show dialogue_box
+
+        show chrome unassuming
 
         chrome_nvl_left "Guy like you must not have much to do on nights like this, huh?"
 
@@ -166,8 +176,6 @@ label scene10:
 
         santa_nvl_right "Not a day goes by where I don’t question why they do the things that they do."
 
-        show chrome neutral # was frowning unsure what this should be? 
-        
         chrome_nvl_left "Sure, but you’ve been sitting on this block for how long?"
 
         chrome_nvl_left "That’s normal everyday human activities."
@@ -197,8 +205,6 @@ label scene10:
         santa_nvl_right "His arms were too short for his torso and his face was too long."
 
         santa_nvl_right "I know he talked with Freddy sometimes, that’s it."
-
-        show chrome neutral 
 
         chrome_nvl_left "Were they good friends?"
 
@@ -258,39 +264,53 @@ label scene10:
 
         chrome_nvl_left "Well then? What did you see?"
 
-        hide dialogue_box
-
-        chrome "{i}The android shakes his head.{/i}"
-
-        show dialogue_box
-
         santa_nvl_right "Nope, not yet. I got a question for you first."
         
         santa_nvl_right "You saw me here before, when you first did your questioning."
         
         santa_nvl_right "You didn’t think I had something useful?"
 
+        show chrome neutral
+
         hide dialogue_box
 
-        chrome "{i}I didn’t have a response. The android Santa looked me over, clearly enjoying my indecision.{/i}"
+        chrome "{i}I didn’t have a response. The android santa looked me over, clearly enjoying my indecision.{/i}"
 
-        santa "All that new tech and AI training and you didn’t think of the obvious, did you? I might be an earlier model than you, but our CPUs are still compatible."
+        show dialogue_box
+
+        santa_nvl_right "All that new tech and AI training and you didn’t think of the obvious, did you?"
+
+        santa_nvl_right "I might be an earlier model than you, but our CPUs are still compatible."
+
+        hide dialogue_box
 
         chrome "{i}Robot Santa pointed to his neck, hidden behind the sheets of white metal serving as his makeshift beard. I can just make out a small USB port hidden within.{/i}"
 
-        santa "Why {i}tell{/i} you about what I saw, when I can just show you?"
+        show dialogue_box
+
+        santa_nvl_right "Why {i}tell{/i} you about what I saw, when I can just show you?"
 
         #show santa happy
 
+        show chrome logical
+
+        hide dialogue_box
+
         chrome "{i}It’s like a sudden ray of light parting the confusion in my mind. Of course, it's so obvious! How could I have overlooked it?{/i}"
 
-        chrome "{i}The android Santa smiled. Not everyday he gets one over on the “advanced” models.{/i}"
+        chrome "{i}The android santa smiled. Not everyday he gets one over on the “advanced” models.{/i}"
 
-        chrome "You’re saying you will give me the stored memory you have on last night?"
+        show dialogue_box
 
-        chrome "You should have shown me this earlier."
+        show chrome logical
 
-        santa "And you should’ve asked."
+        chrome_nvl_left "You’re saying you will give me the stored memory you have on last night?"
+
+        chrome_nvl_left "You should have shown me this earlier."
+
+        santa_nvl_right "And you should’ve asked."
+
+        hide dialogue_box
 
         chrome "{i}He wasn’t wrong. If I had asked him sooner, I might be farther along in this case.{/i}"
 
@@ -366,7 +386,7 @@ label scene10:
 
     label scene10_postchoice: 
 
-        chrome "{i}As I begin to speak again, the android interrupts me.{/i}"
+        chrome "{i}As I begin to speak again, the android santa interrupts me.{/i}"
 
         show dialogue_box
 
@@ -376,7 +396,7 @@ label scene10:
 
         hide dialogue_box
 
-        chrome "{i}The android pulls something small and thin out of the top of his head. A Hyman drive, meant for storing short term memory on an external device.{/i}"
+        chrome "{i}The android santa pulls something small and thin out of his neck. A Hyman drive, meant for storing short term memory on an external device.{/i}"
 
         show dialogue_box
 

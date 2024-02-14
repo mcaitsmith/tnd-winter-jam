@@ -46,7 +46,7 @@ label scene9:
             show dialogue_box at center 
             nvl show 
 
-            show chrome thinking left
+            show chrome logical
 
             chrome_nvl_left "My dear, you still operate under the assumption that I am indeed searching."
             
@@ -61,7 +61,7 @@ label scene9:
 
             chrome_nvl_left neutral "This is no longer a search, but a hunt." 
 
-            chrome_nvl_left neutral "Your father is not missing. He is hiding!" 
+            chrome_nvl_left logical "Your father is not missing. He is hiding!" 
 
             bianca_nvl_right shocked "That’s bullshit!" 
 
@@ -70,8 +70,6 @@ label scene9:
             bianca_nvl_right angry "I don’t know what kind of lies you’ve been feasting on..."
 
             bianca_nvl_right angry "...but if my dad’s hiding, he’s got a good reason to."
-
-            show chrome thinking left
 
             chrome_nvl_left "One would argue that anyone who hides has a good reason to."
 
@@ -103,24 +101,21 @@ label scene9:
 
             chrome_nvl_left "Never hurt nobody is a double negative. Meaning he always hurts somebody."
 
-            bianca_nvl_right angry "¡Ay dios mío! You know what I’m trying to say."
+            bianca_nvl_right angry "¡Ay Dios mío! You know what I’m trying to say."
 
             chrome_nvl_left "Fascinating. Innocent until proven guilty, even in the wake of guilt."
 
             bianca_nvl_right neutral "It’s called giving him another chance, Mr. Steele."
 
-            show chrome neutral:
-                xzoom -1.0
+            chrome_nvl_left "Right."
 
-            chrome_nvl_left neutral "Right."
+            chrome_nvl_left "To prove or disprove one’s hypothesis requires a conclusive experiment."
 
-            chrome_nvl_left neutral "To prove or disprove one’s hypothesis requires a conclusive experiment."
-
-            chrome_nvl_left neutral "Bianca, I will continue the case."
+            chrome_nvl_left "Bianca, I will continue the case."
             
-            chrome_nvl_left neutral "I’ve already noticed several potential clues in this room alone."
+            chrome_nvl_left "I’ve already noticed several potential clues in this room alone."
 
-            chrome_nvl_left neutral "At this point, our conversation is detracting from my work."
+            chrome_nvl_left "At this point, our conversation is detracting from my work."
 
             hide dialogue_box
             nvl clear 
@@ -144,7 +139,7 @@ label scene9:
 
             bianca_nvl_right sad "You know how much harder he has to try because of it?"
 
-            chrome_nvl_left timid "Too much, I take it?"
+            chrome_nvl_left unassuming "Too much, I take it?"
 
             bianca_nvl_right sad "Way too much. Look, my dad’s no killer - he’s just missing, that’s all!"
 
@@ -154,29 +149,29 @@ label scene9:
 
             chrome_nvl_left neutral "Strangely, it would make for a stronger alibi."
 
-            chrome_nvl_left timid "Think of a bird migrating for the winter."
+            chrome_nvl_left unassuming "Think of a bird migrating for the winter."
 
-            chrome_nvl_left timid "If this migration were to only happen once in a lifetime, it would be very curious."
+            chrome_nvl_left unassuming "If this migration were to only happen once in a lifetime, it would be very curious."
 
-            chrome_nvl_left timid "But as it occurs in pattern, we accept it as a common behavior."
+            chrome_nvl_left unassuming "But as it occurs in pattern, we accept it as a common behavior."
 
-            chrome_nvl_left timid "Disappearing for the first time, just as he’s implicated for murder - I could understand the curiosity surrounding your father…"
+            chrome_nvl_left unassuming "Disappearing for the first time, just as he’s implicated for murder - I could understand the curiosity surrounding your father…"
 
             bianca_nvl_right neutral "So you’re saying it would help if..."
 
             bianca_nvl_right sad "...if this wasn’t the first time he’d gone missing?"
 
-            chrome_nvl_left timid "Certainly. But isn’t it?"
+            chrome_nvl_left unassuming "Certainly. But isn’t it?"
 
             bianca_nvl_right sad "Mr. Steele, you ever just want to forget something? Leave it in the past?"
 
-            chrome_nvl_left timid "Of course. Luckily, I can simply encrypt my memory files."
+            chrome_nvl_left unassuming "Of course. Luckily, I can simply encrypt my memory files."
 
-            chrome_nvl_left timid "Though that is proving faulty these days..."
+            chrome_nvl_left unassuming "Though that is proving faulty these days..."
 
             bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
  
-            chrome timid "{i}Without a father...{/i}"
+            chrome unassuming "{i}Without a father...{/i}"
 
             # bianca_nvl_right sad "Turns out, he did it for me. Moved us to keep me safe and left me the rest of his cash for food. If he had paid up, I would’ve starved. But a full belly didn’t stop me from feeling scared and empty."
 
@@ -263,11 +258,11 @@ label scene9:
         "Hardboiled":
             show dialogue_box at center
             nvl show
-            chrome_nvl_left angry "I’m not the only one looking, kiddo. But I just might be the first to jump ship."
+            chrome_nvl_left hardboiled "I’m not the only one looking, kiddo. But I just might be the first to jump ship."
 
             bianca_nvl_right angry "Why? Who else wants to find him?"
 
-            chrome_nvl_left angry "Oh little lady, who doesn’t? He’s more than missing. He’s the prime suspect in the murder of one Larry Moss. And I wasn’t hired for no murders."
+            chrome_nvl_left hardboiled "Oh little lady, who doesn’t? He’s more than missing. He’s the prime suspect in the murder of one Larry Moss. And I wasn’t hired for no murders."
 
             bianca_nvl_right shocked "No! ¡No te creo!"
 
@@ -279,7 +274,7 @@ label scene9:
 
             bianca_nvl_right sad "You know how much harder he has to try because of it?"
 
-            chrome_nvl_left angry "Well, being an android… I’ve got some idea."
+            chrome_nvl_left hardboiled "Well, being an android… I’ve got some idea."
 
             bianca_nvl_right neutral "Look, my dad’s no murderer."
 
@@ -287,11 +282,11 @@ label scene9:
 
             bianca_nvl_right neutral "Now, I paid you to find my dad. Are you gonna do that or not?"
 
-            chrome_nvl_left angry "You expect me to uphold my end of this deal, and all the while you’re hiding a cow in a chicken coop?"
+            chrome_nvl_left hardboiled "You expect me to uphold my end of this deal, and all the while you’re hiding a cow in a chicken coop?"
 
-            chrome_nvl_left angry "You can’t contain that cow, Miss Fontaine. The coop’s just not big enough."
+            chrome_nvl_left hardboiled "You can’t contain that cow, Miss Fontaine. The coop’s just not big enough."
 
-            chrome_nvl_left angry "So stop pretending like this is the first time daddy’s been in trouble."
+            chrome_nvl_left hardboiled "So stop pretending like this is the first time daddy’s been in trouble."
 
             bianca_nvl_right angry "Fine! He’s had his issues."
 
@@ -301,7 +296,7 @@ label scene9:
 
             bianca_nvl_right shocked "I swear, he never hurt nobody! Just fell into some debt, that’s all."
 
-            chrome_nvl_left angry "Didn’t think to mention this before I wasted my time?"
+            chrome_nvl_left hardboiled "Didn’t think to mention this before I wasted my time?"
 
             bianca_nvl_right sad "I don’t mention it to anyone, most of all, myself."
 
@@ -309,11 +304,11 @@ label scene9:
 
             bianca_nvl_right sad "It ain’t fair for people to taint who he is with the shadow of who he was."
 
-            chrome_nvl_left angry "Way I see it, you don’t step into a light without casting a shadow."
+            chrome_nvl_left hardboiled "Way I see it, you don’t step into a light without casting a shadow."
 
             bianca_nvl_right neutral "Well, it’s better to try, ain’t it?"
 
-            chrome_nvl_left angry "Sure, kid. So just to be certain, I’ll give it a try. But first, I oughta learn a bit more about ol’ Freddy Fontaine."
+            chrome_nvl_left hardboiled "Sure, kid. So just to be certain, I’ll give it a try. But first, I oughta learn a bit more about ol’ Freddy Fontaine."
 
             hide dialogue_box
             nvl clear 
@@ -323,6 +318,7 @@ label scene9:
 
 label lookaround:
     bianca neutral "Please, look around. See if there’s anything else here that’s helpful."
+    show chrome neutral
     hide bianca neutral with moveoutright
 
     $ scene9_choice1 = False
