@@ -134,7 +134,7 @@ label hardboiled12:
 
     freddy_nvl_right sad "I didn’t mean for any of this to happen."
 
-    chrome_nvl_left neutral "You’ll be OK, Freddy. The Secret Santas are being brought to justice."
+    chrome_nvl_left hardboiled "You’ll be OK, Freddy. The Secret Santas are being brought to justice."
 
     return
 
@@ -158,7 +158,7 @@ label logical12:
 
     chrome_nvl_left thinking left "Do you really want to run, Freddy? Let’s look at the facts."
 
-    chrome_nvl_left logical "Larry is dead. Pobre bastardo."
+    chrome_nvl_left logical "Larry is dead. Poor bastard."
 
     freddy_nvl_right sad "Yeah. No shit."
 
@@ -345,6 +345,8 @@ label unassuming12:
 
 label scene12_e:
 
+    show chrome neutral
+
     freddy_nvl_right neutral "*sigh* {i}Ay no me digas{/i}, just when I thought I could leave all of this behind me."
 
     freddy_nvl_right neutral "Can you believe I put in my resignation just a few days ago?"
@@ -361,7 +363,7 @@ label scene12_e:
 
     hide freddy with moveoutleft
     hide chrome
-    show chrome unassuming at left
+    show chrome neutral at left
     pause 0.2
     hide chrome with moveoutleft
 
@@ -420,7 +422,7 @@ label scene12_e:
 
     chrome_nvl_left "I know plenty."
 
-    show chrome unassuming
+    show chrome logical
 
     chrome_nvl_left "Madam, I'm programmed to take my work very seriously."
 
@@ -435,6 +437,8 @@ label scene12_e:
     show mariah neutral
 
     mariah_nvl_right "This idiot believes he's a detective. Spit it out."
+
+    show chrome hardboiled
 
     chrome_nvl_left "You caught him trying to download incriminating information."
 
@@ -453,6 +457,8 @@ label scene12_e:
     mariah_nvl_right "Shut up."
 
     chrome_nvl_left "No, no, please let it out."
+
+    show chrome logical
 
     chrome_nvl_left "Mr. Fontaine found a discrepancy in your sales."
 
@@ -504,7 +510,6 @@ label scene12_e:
 
     chrome_nvl_left "Too bad you did it all in a hurry."
 
-
     show mariah angry
 
     mariah_nvl_right "I swear to God, you talk too much."
@@ -512,6 +517,8 @@ label scene12_e:
     show mariah happy
 
     mariah_nvl_right "Nice guesses, Steele. I couldn't have completed this without you."
+
+    show chrome neutral
 
     mariah_nvl_right "Following your scent, I've got the right people in the place I want. My property, as you said, on my turf."
 
@@ -558,6 +565,8 @@ label scene12_e:
     show mariah neutral
 
     mariah_nvl_right "Santas - Clean this mess up."
+
+    show chrome shocked
 
     if glitch_counter >= 5:
         call scene12_f from _call_scene12_f # good ending

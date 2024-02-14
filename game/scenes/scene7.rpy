@@ -30,7 +30,7 @@ label scene7:
             show dialogue_box at center 
             nvl show # show NVL dialogue
 
-            chrome_nvl_right logical "Hello, sir. I’m looking for Freddy Fontaine–"
+            chrome_nvl_right logical "Hello, sir. I’m looking for Freddy Font–"
 
             cop_nvl_left neutral "You’re not the only one."
 
@@ -68,7 +68,7 @@ label scene7:
 
             chrome_nvl_right confused "Come again?"
 
-            cop_nvl_left neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction."
+            cop_nvl_left neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction. See for yourself."
 
             hide dialogue_box
             nvl clear 
@@ -158,21 +158,21 @@ label scene7:
 
             chrome_nvl_right thinking "..."
 
-            chrome_nvl_right hardboiled "Over there."
+            chrome_nvl_right unassuming "Over there."
 
             cop_nvl_left shocked "In that boarded up bail bonds office?"
 
             cop_nvl_left angry "This is an active crime scene. Get outta here!"
 
-            chrome_nvl_right angry "..."
+            chrome_nvl_right "Well, I hate to break it to ya, but..."
 
-            chrome_nvl_right logical "Under code 2034.44 You, sir, are interfering with the duties of a certified bail bonds agent…" 
+            chrome_nvl_right "...under code 2034.44, you'd be interfering with the duties of a certified bail bonds agent." 
 
             show cop angry
 
-            chrome_nvl_right unassuming "Would you like me to report THAT to your superior?"
+            chrome_nvl_right unassuming "I really don't want to have to report that to your superior..."
 
-            cop_nvl_left angry  "Fine. Go through."
+            cop_nvl_left neutral "Fine. Go through."
 
             hide dialogue_box
             nvl clear 
@@ -199,7 +199,9 @@ label scene7:
 
             chrome_nvl_right confused "Hm. Something seems fishy…"
 
-            cop_nvl_left angry "The only thing fishy ‘round here is you! Now giddy up Jingle Horse and get the fuck out of my active crime scene!"
+            show chrome shocked
+
+            cop_nvl_left angry "The only thing fishy ‘round here is you! Now giddy up Jingle Horse and quickly get the fuck out of my active crime scene!"
 
             hide dialogue_box
             nvl clear 

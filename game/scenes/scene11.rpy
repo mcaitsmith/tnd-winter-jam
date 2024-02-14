@@ -143,14 +143,14 @@ label books:
 
 label plant:
     $pickedFive = True
-    chrome logical "{i}I should get myself a bonsai tree.{/i}"
+    chrome unassuming "{i}I should get myself a bonsai tree.{/i}"
     if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
         jump finished_search
     else:
         jump searchMenu
 
 label deleteditems:
-    chrome confused left "{i}Hmm. Totally empty. And nothing hidden as far as I can tell.{/i}"
+    chrome sad "{i}Hmm. Totally empty. And nothing hidden as far as I can tell.{/i}"
     $computer_choice1 = True
     if computer_choice1 == True and computer_choice2 == True and computer_choice3 == True and computer_choice4 == True and computer_choice5 == True:
         if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:
