@@ -15,11 +15,11 @@ label scene8:
     #     xzoom -1.0 
     # with dissolve
 
-    chrome "{i}I make my way to the alley to inspect the scene.{/i}"
-
     show chrome neutral at left with moveinleft
     show chrome neutral at left:
         xzoom -1.0
+
+    chrome "{i}I make my way to the alley to inspect the scene.{/i}"
 
     show larry dead at right with dissolve
 
@@ -91,6 +91,11 @@ label cellcell:
     chrome shocked "{i}There's a message from Freddy. \"Leave me alone, Larry. After tonight, you're dead to me.\"{/i}"
     chrome neutral "{i}This looks bad for Freddy. How quickly a missing persons case can become murder. This is more than I bargained for. Better tell the kid in person.{/i}"
     
+    hide phone
+    show chrome at left:
+        xzoom 1.0
+    hide chrome with moveoutleft
+
     $ larry_santa_on = False
     $ update_layers() # turn off Larry layer
     

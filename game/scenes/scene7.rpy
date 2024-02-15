@@ -10,7 +10,7 @@ label scene7:
 
     play sound sfx_policechatter volume 0.5 loop
 
-    show chrome neutral at right with dissolve
+    show chrome neutral at right with moveinright
 
     # chrome "{i}I make my way to the alley to inspect the scene.{/i}"
 
@@ -18,7 +18,7 @@ label scene7:
 
     show cop neutral at left:
         xzoom -1.0  
-    with dissolve
+    with moveinleft
 
     menu:
         "Hmm. He seems like a \"no nonsense, just the facts ma’am\" kinda guy..."
@@ -125,7 +125,7 @@ label scene7:
 
             chrome "{i}I remember the reasons all too well.{/i}"
 
-            # scene bg alley with pixellate # unblur the background
+            scene bg alley with pixellate # unblur the background
             call end_glitch from _call_end_glitch_5 # return to normal Chrome and normal background
 
             # pause for transition
@@ -136,8 +136,12 @@ label scene7:
             # show dialogue_box at center # return to convo
             # nvl show # show NVL dialogue
 
-            # hide chrome
-            # show chrome angry at right
+            show chrome neutral at right
+            show cop neutral at left:
+                xzoom -1.0
+            with dissolve
+
+            pause 1.0
             
 
     #Option Three: (Unassuming)
@@ -205,6 +209,10 @@ label scene7:
 
             hide dialogue_box
             nvl clear 
+
+    show cop at left:
+        xzoom 1.0
+    hide cop with moveoutleft
 
     stop sound
 

@@ -27,7 +27,7 @@ label scene3:
     # VISUAL: fade-in chrome
     show chrome neutral at left:
         xzoom -1.0 # make him face right
-    with dissolve
+    with moveinleft
 
     # These display lines of dialogue.
 
@@ -39,16 +39,13 @@ label scene3:
 
     chrome "{i}After a quick scan of the joint, I spot a regular at the corner of the bar with a stack of empty glasses in front of him.{/i}"
 
+    show jack neutral at right with moveinright
+
     chrome "{i}Come to think of it, seems like he's always here.{/i}"
 
     chrome "{i}If anyone's seen Freddy, it's him.{/i}"
 
     show dialogue_box at center
-
-    hide chrome
-    show chrome neutral at left:
-        xzoom -1.0 # make him face right
-    show jack neutral at right
 
     # pause to show jack
     # pause 1.0
@@ -74,6 +71,8 @@ label scene3:
     show jack neutral
 
     jack_nvl_right "Hey, you look like the kind sort. Can I ask for a small loan? Something to get on my feet? I'm good for it..."
+
+    hide dialogue_box
 
     chrome "{i}Jack seemed like the friendly sort. Gregarious, but unfocused. Meandering. His attention wavering like a mercurial jazz riff.{/i}"
 
@@ -114,8 +113,9 @@ label scene3:
     nvl clear # clear NVL dialogue
 
     #VISUAL: fade-out. Jack leaves scene.
-    hide jack
-    with dissolve
+    show jack at right:
+        xzoom -1.0
+    hide jack with moveoutright
 
     # pause after Jack leaves
     # pause 1.0
@@ -128,6 +128,10 @@ label scene3:
 
     chrome "{i}For now.{/i}"
 
+    show chrome at left:
+        xzoom 1.0
+    hide chrome with moveoutleft
+
     # stop music
     stop music fadeout 3.0
 
@@ -138,6 +142,8 @@ label scene3:
     jump scene5
 
 label scene3_logical:
+
+    show dialogue_box at center
 
     show chrome logical
 
@@ -205,6 +211,8 @@ label scene3_logical:
 
 label scene3_unassuming:
 
+    show dialogue_box at center
+
     show chrome unassuming
 
     chrome_nvl_left "So, about Freddy. Nice guy, huh?"
@@ -260,6 +268,8 @@ label scene3_unassuming:
     return
 
 label scene3_hardboiled:
+
+    show dialogue_box at center
 
     show chrome hardboiled
 

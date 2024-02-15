@@ -12,7 +12,7 @@ label scene9:
 
     show chrome neutral at left:
         xzoom -1.0 
-    with dissolve
+    with moveinleft
     
     chrome "{i}The Fontaine digs. Three rooms and a toilet chamber. One of hundreds packing this block, nestled between an old-school bodega and a shabby, second-hand pawn shop.{/i}"
 
@@ -117,9 +117,6 @@ label scene9:
 
             chrome_nvl_left "At this point, our conversation is detracting from my work."
 
-            hide dialogue_box
-            nvl clear 
-
         "Unassuming":
 
             show dialogue_box at center
@@ -171,6 +168,8 @@ label scene9:
 
             bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
  
+            hide dialogue_box
+
             chrome unassuming "{i}Without a father...{/i}"
 
             # bianca_nvl_right sad "Turns out, he did it for me. Moved us to keep me safe and left me the rest of his cash for food. If he had paid up, I would’ve starved. But a full belly didn’t stop me from feeling scared and empty."
@@ -178,7 +177,6 @@ label scene9:
             # bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
 
             # hide dialogue_box
-            nvl clear
             ######### SCENE 2A: GLITCH 000 (flashback with glitching animation on Steele & bg grayed out)
 
             # hide bianca # hide Bianca for glitch
@@ -253,6 +251,8 @@ label scene9:
             # pause for transition
             pause 1.0
 
+            show dialogue_box at center
+
             ######### back to SCENE 9
 
         "Hardboiled":
@@ -310,14 +310,13 @@ label scene9:
 
             chrome_nvl_left hardboiled "Sure, kid. So just to be certain, I’ll give it a try. But first, I oughta learn a bit more about ol’ Freddy Fontaine."
 
-            hide dialogue_box
-            nvl clear 
-
     jump lookaround
     # return
 
 label lookaround:
-    bianca neutral "Please, look around. See if there’s anything else here that’s helpful."
+    bianca_nvl_right neutral "Please, look around. See if there’s anything else here that’s helpful."
+    hide dialogue_box
+    nvl clear
     show chrome neutral
     hide bianca neutral with moveoutright
 
@@ -492,6 +491,10 @@ label memorystick:
 
     hide dialogue_box
     nvl clear
+
+    show chrome at left:
+        xzoom 1.0
+    hide chrome with moveoutleft
 
     $ bianca_on = False
     $ update_layers() # turn off Larry layer
