@@ -23,7 +23,7 @@ label scene11:
     scene bg mariahoffice with fade
 
 
-    show chrome neutral at left:
+    show chrome neutral at left with moveinleft:
         xzoom -1.0
 
     chrome "{i}Mariah’s office. It’s clean- meticulously so. Funny how the messiest people can also be the most fastidious.{/i}"
@@ -226,6 +226,8 @@ label finished_search:
     chrome "{i}Who knew the search for a two-bit Santa would lead to all this.{/i}"
     chrome "{i}But first things first. Bianca’s hunch was right all along. Freddy was clean.{/i}"
     chrome "{i}And the fire escape beckoned. I'll deal with Mariah later.{/i}"
+
+    hide chrome with moveoutright
 
     #options 1 2 and 3 are "critical path" clues- options 4 and 5 are just flavor text
 

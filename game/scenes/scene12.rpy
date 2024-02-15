@@ -10,7 +10,7 @@ label scene12:
 
     show chrome sad at left:
         xzoom -1.0
-    with dissolve
+    with moveinleft
 
     chrome sad "{i}I feel like I should have pieced things together sooner.{/i}"
 
@@ -56,10 +56,14 @@ label scene12:
 
     freddy_nvl_right angry "One second I was telling Larry I was out - no more scams - the next he was coughing up blood! What the hell else was I supposed to do?"
 
+    hide dialogue_box
+
     #Narration
     chrome "{i}I size him up. He looks exhausted.{/i}"
 
     chrome "{i}The ground is littered with cigarette butts. Clove wafts through the air.{/i}"
+
+    show dialogue_box at center
 
     chrome_nvl_left neutral "You’re OK, Freddy. I just want to talk."
 
@@ -68,6 +72,8 @@ label scene12:
     freddy_nvl_right angry "Fuck, what am I doing? I got two rules..."
 
     freddy_nvl_right angry "Don't talk to cops, and don't talk to bots! And right now, I'm breaking both!"
+
+    hide dialogue_box
 
     chrome "{i}Uh oh…{/i}"
 
@@ -90,6 +96,8 @@ label scene12:
 
 # 012 ROO B
 label hardboiled12:
+
+    show dialogue_box at center
     chrome_nvl_left neutral "Freddy. You’re OK."
 
     freddy_nvl_right angry "I don’t know you. But I know cops. And {i}fuck cops. Todos ellos{/i}."
@@ -140,6 +148,7 @@ label hardboiled12:
 
 # 012 ROO C
 label logical12:
+    show dialogue_box at center
     chrome_nvl_left neutral "Freddy. No need to get worked up."
 
     freddy_nvl_right angry "Worked up? What’s that, buckethead?"
@@ -188,6 +197,7 @@ label logical12:
 
 # 012 ROO D
 label unassuming12:
+    show dialogue_box at center
     freddy_nvl_right angry "{i}En serio{/i} man. Don’t come any closer."
 
     chrome_nvl_left unassuming "Well, I actually came up here to ask a favor."
@@ -392,8 +402,13 @@ label scene12_e:
     show chrome neutral at left:
         xzoom -1.0 
     with moveinleft
+
+    nvl clear
+    show dialogue_box at center
     
-    chrome unassuming "How convenient for you, right?"
+    chrome_nvl_left unassuming "How convenient for you, right?"
+
+    hide dialogue_box
 
     show chrome thinking left at left
 
@@ -401,7 +416,6 @@ label scene12_e:
 
     #Swap to NVL mode. Steele and Mariah are getting their showdown now.
 
-    nvl clear
     show dialogue_box at center
 
     show chrome unassuming at left:
@@ -587,21 +601,21 @@ label scene12_e:
 
 label scene12_f: # good ending
 
-    #swap to ADV mode
-    hide dialogue_box # end convo
-    nvl clear # clear NVL dialogue
-
     show chrome thinking left
 
-    chrome "Not so fast! Haven't you heard?"
+    chrome_nvl_left "Not so fast! Haven't you heard?"
 
     show mariah angry
 
-    mariah "What now? I've had enough with your Sherlock BS."
+    mariah_nvl_right "What now? I've had enough with your Sherlock BS."
 
-    chrome "Use your ears, Ms. Fowler. Seems the cavalry has arrived."
+    chrome_nvl_left "Use your ears, Ms. Fowler. Seems the cavalry has arrived."
 
     play sound sfx_footsteps
+
+    #swap to ADV mode
+    hide dialogue_box # end convo
+    nvl clear # clear NVL dialogue
 
     hide chrome
     hide mariah
@@ -998,13 +1012,13 @@ label scene12_g: # average ending
 
 label scene12_h: # bad ending
 
+    play sound sfx_footsteps
+
+    mariah_nvl_right neutral "Wait. What now?"
+
     #swap to ADV mode
     hide dialogue_box # end convo
     nvl clear # clear NVL dialogue
-
-    play sound sfx_footsteps
-
-    mariah neutral "Wait. What now?"
 
     chrome "{i}She turns her gaze behind us.{/i}"
     chrome "{i}Damn it. Someone’s coming.{/i}"

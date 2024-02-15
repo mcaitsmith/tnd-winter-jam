@@ -10,7 +10,7 @@ label scene10:
 
     show chrome neutral at left:
         xzoom -1.0
-    with dissolve
+    with moveinleft
 
     chrome "{i}I make way back to Fowler's. Still a dump.{/i}"
 
@@ -20,7 +20,7 @@ label scene10:
     
     chrome "{i}This missing person’s case was just the shell of something far more sinister, and I knew the best way to crack it wide open.{/i}"
 
-    show cop angry at right with dissolve
+    show cop angry at right with moveinright
 
     chrome "{i}The cop was still around. I waved at him, getting a look of annoyance and a back turned as my response." 
 
@@ -37,7 +37,7 @@ label scene10:
     
     chrome "{i}One other person still remained, one I didn’t think much of earlier. Faded into the background, maybe by design.{/i}"
 
-    show santa at right with dissolve 
+    show santa at right with moveinright
     $ larry_santa_on = True
     $ update_layers() # turn on Santa layer
 
@@ -430,9 +430,9 @@ label scene10:
 
         show larry sad at left:
             xzoom -1.0
-        with dissolve
+        with moveinleft
 
-        show freddy sad at right with dissolve
+        show freddy sad at right with moveinright
 
         show cookietin at center with dissolve
 
@@ -442,6 +442,8 @@ label scene10:
 
         chrome "{i}Things seem tense between them, uncertain. Some words are exchanged, and Freddy hands the cookies to Larry with a stiff shrug. He walks off to sit down on the curb.{/i}"
 
+        show freddy at right:
+            xzoom -1.0
         hide freddy neutral with moveoutright
 
         show cookies at center with dissolve
@@ -484,6 +486,8 @@ label scene10:
 
         chrome "{i}He looks over Larry’s body again, before running down into the alleyway of the department store and disappearing.{/i}"
 
+        show freddy at right:
+            xzoom -1.0
         hide freddy neutral with moveoutright
 
         pause 1.0
@@ -549,6 +553,10 @@ label scene10:
         chrome "{i}With more answers came more questions. One thing was certain though, Ms. Fowler was looking more involved in this case than she let on.{/i}"
 
         chrome "{i}Some snooping around was in order, and what better place than the bigwig’s office? {/i}"
+
+        show chrome at left:
+            xzoom 1.0
+        hide chrome with moveoutleft
 
         $ larry_santa_on = False
         $ update_layers() # turn off Santa layer

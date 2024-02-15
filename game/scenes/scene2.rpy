@@ -57,7 +57,7 @@ label scene2:
     # pause 3.0
 
     # Do we want to say Unknown at first instead of bianca? The character art shouldn’t show yet.
-    "Detective Steele! You in there?! C'mon, lemme in!"
+    "???" "Detective Steele! You in there?! C'mon, lemme in!"
 
     show chrome neutral
 
@@ -77,11 +77,10 @@ label scene2:
     $ bianca_on = True # turn on Bianca layer
     $ update_layers(0) # update layers
 
-    show dialogue_box at center
-
-    hide chrome
     show chrome neutral at right
-    show bianca angry at left
+    show bianca angry at left with moveinleft
+
+    show dialogue_box at center
     
     bianca_nvl_left "Finally. What took you so long?"
     
@@ -99,6 +98,8 @@ label scene2:
 
     # pause to switch to narration
     # pause 1.0
+
+    hide dialogue_box
 
     chrome "{i}There she stood. Bianca Fontaine. Human girl, approximately 16, projecting confidence and determination. Clearly resourceful, yet clearly in need.{/i}"
 
@@ -124,6 +125,8 @@ label scene2:
 
     show bianca angry
     show chrome neutral # return to normal when Bianca talks
+
+    show dialogue_box at center
 
     bianca_nvl_left "Hey, you listening to me? It's... it's my dad, Freddy..."
 
@@ -273,7 +276,7 @@ label scene2:
     hide dialogue_box # end convo
     nvl clear # clear NVL dialogue
 
-    hide bianca # bianca leaves scene
+    hide bianca with moveoutleft # bianca leaves scene
     
     $ bianca_on = False # turn off Bianca layer
     $ update_layers(0) # update layers
@@ -289,6 +292,10 @@ label scene2:
     chrome "{i}The Silver Cat, huh? I know the joint.{/i}"
 
     chrome "{i}What the hell. I could use some jazz to clear my mind...{/i}"
+
+    show chrome at right:
+        xzoom -1.0
+    hide chrome with moveoutright
 
     $ stop_layers(3) # stop playing layers
 

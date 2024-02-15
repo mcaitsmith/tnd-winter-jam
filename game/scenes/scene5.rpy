@@ -8,7 +8,7 @@ label scene5:
 
     show chrome neutral at left:
         xzoom -1.0
-    with dissolve
+    with moveinleft
 
     chrome "{i}Fowler’s Department Store. Still surviving. Barely.{/i}"
 
@@ -24,7 +24,7 @@ label scene5:
 
     # SOUND- Crowds murmuring. 
 
-    hide chrome with dissolve
+    hide chrome with moveoutleft
 
     show mariah angry at left with moveinleft
 
@@ -32,7 +32,11 @@ label scene5:
 
     chrome "{i}I recognize her as Mariah Fowler, owner of the retail dinosaur. Grizzled by decades of holiday shoppers, she clears the crowd with practiced ease.{/i}"
 
+    show mariah angry at left:
+        xzoom -1.0
     show mariah angry at right with moveinleft
+    show mariah angry at right:
+        xzoom 1.0
 
     pause 0.5
 
@@ -43,6 +47,8 @@ label scene5:
 
     chrome "{i}Mariah trades some words with the cop before scaring him away for good.{/i}"
 
+    show cop neutral at left:
+        xzoom 1.0
     hide cop neutral with moveoutleft
 
     chrome "{i}Not done yet, she yells at a rickety Robot Santa stationed by the door.{/i}"

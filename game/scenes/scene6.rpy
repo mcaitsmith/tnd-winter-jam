@@ -172,7 +172,7 @@ label scene6:
 
         chrome_nvl_left "That’s a rather sudden jump in logic."
 
-        show chrom neutral
+        show chrome neutral
 
         mariah_nvl_right "Maybe for a tin can like you. But Freddy and Larry were thick as thieves."
 
@@ -185,14 +185,12 @@ label scene6:
         chrome_nvl_left "Well, I’ll look into it."
 
         hide dialogue_box
-        nvl clear
 
         chrome "{i}What a twist. This was supposed to be a simple missing person’s case, but now I have a murder intertwined to it.{/i}"
 
         chrome "{i}No, I shouldn’t make any judgments yet. I can judge Freddy once I have evidence that he’s a part of this. {/i}"
 
         chrome "{i}I should take another look around and see if I can’t find more information.{/i}"
-
 
         jump scene6_postchoice
 
@@ -416,7 +414,9 @@ label scene6:
 
         mariah_nvl_right "What? I mean, yes. Freddy did work here. He was one of my Santas."
 
-        mariah_nvl_right "In fact, he was Larry's Santa. They were paired together. But not anymore. Today was supposed to be his last day, but he’s gone now. Just left early."
+        mariah_nvl_right "In fact, he was Larry's Santa. They were paired together. But not anymore."
+
+        mariah_nvl_right "Today was supposed to be his last day, but he’s gone now. Just left early."
 
         chrome_nvl_left "Well, that’s not suspicious."
 
@@ -503,15 +503,21 @@ label scene6:
 
     label scene6_postchoice:
 
-        nvl clear
-
         show chrome neutral at left:
             xzoom -1.0
 
         show mariah angry at right
- 
-        mariah "So, are we done here, metalhead? Yeah?? Now go find my Santa!"
 
+        show dialogue_box at center
+ 
+        mariah_nvl_right "So, are we done here, metalhead? Yeah?? Now go find my Santa!"
+
+        hide dialogue_box
+
+        nvl clear
+
+        show mariah at right:
+            xzoom -1.0
         hide mariah neutral with moveoutright
 
         $ mariah_on = False
@@ -520,5 +526,9 @@ label scene6:
         chrome "{i}With that final suggestion, Mariah Fowler turned back to scowling at the cops. I knew a dismissal when I saw one.{/i}"
 
         chrome "{i}Well, this missing person’s case has suddenly taken an interesting twist. I should see what else I can learn about Larry and if it has anything to do with our missing father.{/i}"
+
+        show chrome at left:
+            xzoom 1.0
+        hide chrome with moveoutleft
 
         jump scene7
