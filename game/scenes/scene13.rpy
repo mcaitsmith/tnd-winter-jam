@@ -6,7 +6,7 @@
 
 label scene13:
 
-    scene bg office with fade
+    scene bg office with Fade(0.5, 2.0, 0.5) # longer transition to show time passing
 
     show chrome neutral at right with dissolve
 
