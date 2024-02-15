@@ -142,7 +142,7 @@ label scene6:
 
         show mariah confused 
 
-        mariah_nvl_right "Freddy?"
+        mariah_nvl_right "Freddy?!"
 
         show mariah angry 
 
@@ -266,11 +266,11 @@ label scene6:
 
         chrome_nvl_left "Well, then I would like to expand my questioning to a person of interest."
 
-        chrome_nvl_left "What can you tell me about Freddy?"
+        chrome_nvl_left "What can you tell me about Freddy Fontaine?"
 
         show mariah confused
 
-        mariah_nvl_right "Freddy?"
+        mariah_nvl_right "Freddy?!"
 
         show mariah angry 
 

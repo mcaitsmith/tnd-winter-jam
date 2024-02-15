@@ -127,7 +127,7 @@ label scene9:
 
             chrome_nvl_left unassuming "Unfortunately, I haven’t. But I do have a rather distressing lead…"
 
-            chrome_nvl_left unassuming "The police want him for murder. A man named Larry Moss is dead."
+            chrome_nvl_left unassuming "A man named Larry Moss is dead. And the police have reason to suspect your father for murder."
 
             bianca_nvl_right shocked "No! ¡No te creo!"
 

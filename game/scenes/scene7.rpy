@@ -40,9 +40,9 @@ label scene7:
 
             cop_nvl_left neutral "Larry the Elf here... he worked with Freddy the Santa."
             
-            cop_nvl_left neutral "Looks to me like a simple heart attack."
+            cop_nvl_left neutral "But if you ask me, it's probably a simple heart attack."
 
-            cop_nvl_left neutral "Open and shut case."
+            cop_nvl_left neutral "Open and shut case. Everyone can just go home for the holidays already."
 
             chrome_nvl_right logical "You don't say? As I can see..."
 
@@ -50,11 +50,11 @@ label scene7:
 
             chrome_nvl_right logical "A heart attack is a natural cause of death, sure it can be induced in the victim by an outside force but not easily." 
 
-            chrome_nvl_right logical "Body is cold and already undergone rigor mortis, suggesting a time of death in the dead of night." 
+            chrome_nvl_right logical "Blood from the mouth. Body cold and already undergone rigor mortis, suggesting a time of death in the dead of night." 
 
             chrome_nvl_right logical "Freddy has a relationship with the victim, perhaps there’s a personal motive?"
         
-            chrome_nvl_right logical "And why here at their place of work?"
+            chrome_nvl_right logical "And why {i}here{/i} at their place of work?"
 
             chrome_nvl_right logical "Certainly he knew this would paint him as a suspect?"
 
@@ -68,7 +68,7 @@ label scene7:
 
             chrome_nvl_right confused "Come again?"
 
-            cop_nvl_left neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction. See for yourself."
+            cop_nvl_left neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction. Why don't you just see for yourself."
 
             hide dialogue_box
             nvl clear 
