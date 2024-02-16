@@ -210,6 +210,8 @@ label end_glitch:
 
 label start:
 
+    $ _game_menu_screen = None
+
     # fadeout intro music
     stop music fadeout 3.0
 
