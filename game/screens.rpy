@@ -262,6 +262,9 @@ screen quick_menu():
             textbutton _("Quickload") action QuickLoad()
             textbutton _("Options") action ShowMenu('preferences')
 
+        ## Show quit menu when pressed ESC.
+    key "K_ESCAPE" action Quit(confirm=True)
+
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
@@ -339,6 +342,8 @@ screen navigation():
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
             textbutton _("Quit") action Quit(confirm=not main_menu)
+
+    key "K_ESCAPE" action Quit(confirm=True)
 
 
 style navigation_button is gui_button
@@ -498,6 +503,8 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
+
+    key "K_ESCAPE" action Quit(confirm=True)
 
 
 style game_menu_outer_frame is empty
