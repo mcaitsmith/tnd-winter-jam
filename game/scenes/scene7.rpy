@@ -48,7 +48,9 @@ label scene7:
 
             chrome_nvl_right logical "Freddy’s clearly a suspect, but why?" 
 
-            chrome_nvl_right logical "A heart attack is a natural cause of death, sure it can be induced in the victim by an outside force but not easily." 
+            chrome_nvl_right logical "A heart attack is a natural cause of death." 
+
+            chrome_nvl_right logical "Sure it can be induced in the victim by an outside force but not easily." 
 
             chrome_nvl_right logical "Blood from the mouth. Body cold and already undergone rigor mortis, suggesting a time of death in the dead of night." 
 

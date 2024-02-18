@@ -582,7 +582,7 @@ label scene12_e:
 
     show chrome shocked
 
-    if glitch_counter >= 5:
+    if glitch_counter >= 6:
         call scene12_f from _call_scene12_f # good ending
     elif glitch_counter >= 3:
         call scene12_g from _call_scene12_g # average ending

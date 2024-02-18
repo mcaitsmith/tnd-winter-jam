@@ -27,6 +27,7 @@ screen credits():
         xalign 0.5
 
         vbox:
+
             label "Credits"
 
             null height 20

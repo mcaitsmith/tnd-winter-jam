@@ -86,6 +86,8 @@ label scene13:
     scene black # fade to black
     with fade
 
+    centered "{b}[glitch_counter] / 7 glitches unlocked{/b}" # FINAL SCORECARD
+
     # CALL CREDITS
     $ quick_menu = False # hide quick menu
     $ renpy.transition(dissolve)
