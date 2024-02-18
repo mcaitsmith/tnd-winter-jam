@@ -128,6 +128,17 @@ image bg freddyoffice blur = im.Blur("backgrounds/bg freddyoffice.png", 1.5) # b
 image bg mariahoffice = "backgrounds/bg mariahoffice.png"
 image bg glitchvoid = "backgrounds/bg glitchvoid.png"
 
+image policelights:
+    "#f00"
+    alpha 0.0
+    linear .45 alpha 0.2    
+    linear .45 alpha 0.0
+    "#00f"
+    alpha 0.0
+    linear .45 alpha 0.2    
+    linear .45 alpha 0.0
+    repeat
+
 # define sound effects & music
 define sfx_clatter = "audio/sfx/Clatter_SantaSecret_SFX.wav"
 define sfx_door = "audio/sfx/Door_SantaSecret_SFX.wav"

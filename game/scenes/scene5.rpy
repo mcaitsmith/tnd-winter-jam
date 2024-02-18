@@ -6,6 +6,8 @@ label scene5:
 
     scene bg extstore night with fade
 
+    show policelights with dissolve
+
     show chrome neutral at left:
         xzoom -1.0
     with moveinleft
@@ -54,6 +56,8 @@ label scene5:
     chrome "{i}Not done yet, she yells at a rickety Robot Santa stationed by the door.{/i}"
 
     mariah "And ring that bell louder! Now that the lookie loos are gone, I expect you to hit your quota, you hear me!"
+
+    hide policelights with dissolve
 
     show chrome thinking left at left:
         xzoom -1.0

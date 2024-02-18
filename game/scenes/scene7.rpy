@@ -10,6 +10,8 @@ label scene7:
 
     play sound sfx_policechatter volume 0.5 loop
 
+    show policelights with dissolve
+
     show chrome neutral at right with moveinright
 
     # chrome "{i}I make my way to the alley to inspect the scene.{/i}"
@@ -215,6 +217,8 @@ label scene7:
     show cop at left:
         xzoom 1.0
     hide cop with moveoutleft
+
+    hide policelights with dissolve
 
     stop sound
 
