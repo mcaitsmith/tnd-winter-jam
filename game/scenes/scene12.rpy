@@ -636,7 +636,7 @@ label scene12_f: # good ending
     $ bianca_on = True
     $ update_layers() # now all 5 are playing
 
-    freddy shocked "Hmph."
+    freddy shocked "Jack!"
 
     jack happy "Can't believe the tin detective got it right."
 
@@ -743,7 +743,7 @@ label scene12_f: # good ending
 
     chrome "{i}She draws a pocket repeating pistol. Premium. Chevalier brand. 0.2 seconds are enough for 6 shots in a 75º angle barrage.{/i}"
 
-    chrome "{i}Enough to kill a functioning alcoholic and a lousy cop.{/i}"
+    chrome "{i}More than enough to kill a functioning alcoholic and a lousy cop.{/i}"
 
     chrome "{i}I can't let that happen.{/i}"
 
@@ -844,17 +844,39 @@ label scene12_f: # good ending
 
     cop angry "Ma'am, you have the right to remain silent."
 
-    mariah angry "You have no idea what you're dealing with. Don't you know who I am?"
+    mariah angry "You have no idea what you're dealing with. Don't you know who I am?!"
+
+    hide cop
+    hide mariah
+    with dissolve
+
+    show chrome neutral at center with moveinleft
+
+    chrome "{i}By tomorrow everyone will know who Mariah is. A crook. And a murderer.{/i}"
+
+    chrome "{i}My job here is done. Time to get Freddy to safety.{/i}"
+
+    chrome "{i}I know someone who'll be glad to see him.{/i}"
 
     return
 
 label scene12_g: # average ending
 
+    show chrome thinking left
+
+    chrome_nvl_left "Not so fast! Haven't you heard?"
+
+    show mariah angry
+
+    mariah_nvl_right "What now? I've had enough with your Sherlock BS."
+
+    chrome_nvl_left "Use your ears, Ms. Fowler. Seems the cavalry has arrived."
+
+    play sound sfx_footsteps
+
     #swap to ADV mode
     hide dialogue_box # end convo
     nvl clear # clear NVL dialogue
-
-    play sound sfx_footsteps
 
     hide chrome
     hide mariah
@@ -872,7 +894,7 @@ label scene12_g: # average ending
         xzoom -1.0
     with moveinleft
 
-    freddy shocked "Hmph."
+    freddy shocked "Jack!"
 
     jack happy "Can't believe the tin detective got it right."
 
@@ -959,9 +981,9 @@ label scene12_g: # average ending
 
     chrome "{i}I have to stop her.{/i}"
 
-    chrome "{i}The cop is holding a gun in his hands. Standard electric discharge pistol. One round can knock any person of standard complexion. Unreliable against androids. Its aiming systems are mishandled.{/i}"
+    chrome "{i}The cop is holding a gun in his hands. Standard electric discharge pistol. One round can knock out any average-sized person. Unreliable against androids. Its aiming systems are faulty.{/i}"
 
-    chrome "{i}I rush. She's about to...{/i}"
+    chrome "{i}I rush. She's about to fire.{/i}"
 
     cop "I said stand-!"
 
@@ -974,7 +996,7 @@ label scene12_g: # average ending
 
     chrome "{i}She draws a pocket repeating pistol. Premium. Chevalier brand. 0.2 seconds are enough for 6 shots in a 75º angle barrage.{/i}"
 
-    chrome "{i}Enough to kill a functioning alcoholic and a lousy cop.{/i}"
+    chrome "{i}More than enough to kill a functioning alcoholic and a lousy cop.{/i}"
 
     chrome "{i}I can't let that happen.{/i}"
 
@@ -1006,25 +1028,38 @@ label scene12_g: # average ending
     chrome "{i}...{/i}"
 
     play sound sfx_footsteps
-    chrome "{i}She escaped.{/i}"
+
+    chrome "{i}In all the commotion, Mariah escaped.{/i}"
+
+    chrome "{i}The cops can deal with her. There's more than enough evidence to put her away when they do.{/i}"
+
+    chrome "{i}My job here is done. Time to get Freddy to safety.{/i}"
+
+    chrome "{i}I know someone who'll be glad to see him.{/i}"
 
     return
 
 label scene12_h: # bad ending
 
-    play sound sfx_footsteps
+    show chrome thinking left
 
-    mariah_nvl_right neutral "Wait. What now?"
+    chrome_nvl_left "Not so fast! Haven't you heard?"
+
+    show mariah angry
+
+    mariah_nvl_right "What now? I've had enough with your Sherlock BS."
+
+    chrome_nvl_left "Use your ears, Ms. Fowler. Seems the cavalry has arrived."
+
+    play sound sfx_footsteps
 
     #swap to ADV mode
     hide dialogue_box # end convo
     nvl clear # clear NVL dialogue
 
-    chrome "{i}She turns her gaze behind us.{/i}"
-    chrome "{i}Damn it. Someone’s coming.{/i}"
-
-    hide chrome with dissolve
-    hide mariah with dissolve
+    hide chrome
+    hide mariah
+    with dissolve
 
     show cop shocked at center with moveinright
 
@@ -1038,7 +1073,7 @@ label scene12_h: # bad ending
         xzoom -1.0
     with moveinleft
 
-    freddy shocked "Hmph."
+    freddy shocked "Jack!"
 
     jack happy "Can't believe the tin detective got it right."
 
@@ -1185,7 +1220,7 @@ label scene12_h: # bad ending
 
     show freddy at right
     freddy shocked "Jack!"
-    freddy shocked "Come on, get up, buddy"
+    freddy shocked "Come on, get up, buddy!"
 
     chrome "{i}Blood on the ground. He’s grown cold already. His spark… extinguished.{/i}"
     chrome "{i}I don’t have the courage to assess the damage. There’s no heartbeat.{/i}"
@@ -1197,6 +1232,15 @@ label scene12_h: # bad ending
     chrome "{i}...{/i}"
 
     play sound sfx_footsteps
-    chrome "{i}She escaped.{/i}"
+
+    chrome "{i}In all the commotion, Mariah escaped.{/i}"
+
+    chrome "{i}The cops can deal with her. There's more than enough evidence to put her away when they do.{/i}"
+
+    chrome "{i}Not to mention Jack's sacrifice...{/i}"
+
+    chrome "{i}My job here is done. Time to get Freddy to safety.{/i}"
+
+    chrome "{i}I know someone who'll be glad to see him.{/i}"
 
     return
