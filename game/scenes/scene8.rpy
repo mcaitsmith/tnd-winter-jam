@@ -2,6 +2,8 @@
 
 ######### SCENE 8: FOWLER'S DEPARTMENT STORE (Alley)
 
+$ scene5_choice3 == True
+
 label scene8:
 
     scene bg alley
