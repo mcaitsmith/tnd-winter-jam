@@ -4,6 +4,8 @@
 
 # The scene starts here.
 
+$ scene5_choice2 == True
+
 label scene7:
 
     scene bg alley with fade

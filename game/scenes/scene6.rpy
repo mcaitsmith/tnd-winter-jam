@@ -4,6 +4,8 @@
 
 # The scene starts here.
 
+$ scene5_choice 1 == True
+
 label scene6:
 
     scene bg extstore night
