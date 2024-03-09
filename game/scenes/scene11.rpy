@@ -20,7 +20,8 @@ default computer_choice5 = False
 label scene11:
 
 
-    scene bg mariahoffice with fade
+    scene bg mariahoffice with fade:
+        xzoom -1.0
 
 
     show chrome neutral at left with moveinleft:
