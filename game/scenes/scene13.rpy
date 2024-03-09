@@ -8,6 +8,8 @@ label scene13:
 
     scene bg office with Fade(0.5, 2.0, 0.5) # longer transition to show time passing
 
+    play music bar_music fadeout 3.0
+
     show chrome neutral at right with dissolve
 
     if glitch_counter < 3: # bad ending
@@ -57,6 +59,8 @@ label scene13:
     # hide bianca with moveoutleft
     # show freddy neutral at left with moveinleft:
     #     xzoom -1.0
+
+    stop music fadeout 3.0
     freddy neutral "Speaking of which, what’s next for ya, Steele?"
     chrome neutral "I... may have a case in mind."
     chrome neutral "Either way, it’s time I stepped out of the shadows."
