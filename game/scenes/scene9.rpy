@@ -324,7 +324,7 @@ label lookaround:
     $ scene9_choice2 = False
     $ scene9_choice3 = False
 
-    menu helpful:
+    menu itemchoice:
         chrome "Let's see..."
         "Cigarettes" if scene9_choice1 == False:
             jump cigarettes
@@ -349,7 +349,7 @@ label cigarettes:
     if scene9_choice1 == True and scene9_choice2 == True and scene9_choice3 == True:
         jump memorystick
     else:
-        jump helpful
+        jump itemchoice
 
 label boxing_gloves:
     show chrome neutral at left
@@ -399,7 +399,7 @@ label boxing_gloves:
     if scene9_choice1 == True and scene9_choice2 == True and scene9_choice3 == True:
         jump memorystick
     else:
-        jump helpful
+        jump itemchoice
 
 label santatoy:
     show chrome thinking left
@@ -417,7 +417,7 @@ label santatoy:
     if scene9_choice1 == True and scene9_choice2 == True and scene9_choice3 == True:
         jump memorystick
     else:
-        jump helpful
+        jump itemchoice
 
 label memorystick:
     show bianca neutral at right with moveinright

@@ -4,8 +4,6 @@
 
 # The scene starts here.
 
-$ scene5_choice2 == True
-
 label scene7:
 
     scene bg alley with fade
@@ -139,6 +137,9 @@ label scene7:
 
             $ glitch_counter +=1 # increment glitch counter
 
+            $ chrome_on = True # turn off Chrome layer for glitch
+            $ update_layers(0) # update layers
+
             # show dialogue_box at center # return to convo
             # nvl show # show NVL dialogue
 
@@ -224,4 +225,21 @@ label scene7:
 
     stop sound
 
-    jump scene8
+    $ scene5_choice2 = True
+
+    if scene5_choice1 == True and scene5_choice2 == True and scene5_choice3 == True:
+        chrome "{i}I've investigated enough here. Time to talk to Bianca.{/i}"
+        show chrome at right:
+            xzoom -1.0
+        hide chrome with moveoutright
+        jump scene9
+    else:
+        show chrome at right:
+            xzoom -1.0
+        hide chrome with moveoutright
+        scene bg extstore night with fade
+
+        show chrome neutral at left:
+            xzoom -1.0
+        with moveinleft
+        jump investigate

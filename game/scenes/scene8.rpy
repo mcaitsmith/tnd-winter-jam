@@ -2,16 +2,14 @@
 
 ######### SCENE 8: FOWLER'S DEPARTMENT STORE (Alley)
 
-$ scene5_choice3 == True
-
 label scene8:
 
-    scene bg alley
+    scene bg alley with fade
 
     $ chrome_on = True # turn on Chrome layer
     $ update_layers(0) # update layers
 
-    show chrome neutral at right
+    show chrome neutral at right with moveinright
 
     # show chrome neutral at left:
     #     xzoom -1.0 
@@ -94,12 +92,28 @@ label cellcell:
     chrome neutral "{i}This looks bad for Freddy. How quickly a missing persons case can become murder. This is more than I bargained for. Better tell the kid in person.{/i}"
     
     hide phone
-    show chrome at left:
-        xzoom 1.0
-    hide chrome with moveoutleft
 
     $ larry_santa_on = False
     $ update_layers() # turn off Larry layer
+
+    $ scene5_choice3 = True
+
+    if scene5_choice1 == True and scene5_choice2 == True and scene5_choice3 == True:
+        chrome "{i}I've investigated enough here. Time to talk to Bianca.{/i}"
+        show chrome at left:
+            xzoom 1.0
+        hide chrome with moveoutleft
+        jump scene9
+    else:
+        show chrome at left:
+            xzoom 1.0
+        hide chrome with moveoutleft
+        scene bg extstore night with fade
+
+        show chrome neutral at left:
+            xzoom -1.0
+        with moveinleft
+        jump investigate
     
-    jump scene9
+    jump investigate
     

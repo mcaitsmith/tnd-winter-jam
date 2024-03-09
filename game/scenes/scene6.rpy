@@ -4,16 +4,14 @@
 
 # The scene starts here.
 
-$ scene5_choice 1 == True
-
 label scene6:
 
-    scene bg extstore night
+    # scene bg extstore night with fade
 
-    show chrome neutral at left:
-        xzoom -1.0
+    # show chrome neutral at left with moveinleft:
+    #     xzoom -1.0
 
-    show mariah neutral at right
+    show mariah neutral at right with moveinright
 
     $ mariah_on = True
     $ update_layers() # start Mariah layer
@@ -529,8 +527,14 @@ label scene6:
 
         chrome "{i}Well, this missing person’s case has suddenly taken an interesting twist. I should see what else I can learn about Larry and if it has anything to do with our missing father.{/i}"
 
-        show chrome at left:
-            xzoom 1.0
-        hide chrome with moveoutleft
+        # show chrome at left:
+        #     xzoom 1.0
+        # hide chrome with moveoutleft
 
-        jump scene7
+        $ scene5_choice1 = True
+
+        if scene5_choice1 == True and scene5_choice2 == True and scene5_choice3 == True:
+            chrome "{i}I've investigated enough here. Time to talk to Bianca.{/i}"
+            jump scene9
+        else:
+            jump investigate
