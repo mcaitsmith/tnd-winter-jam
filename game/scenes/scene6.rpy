@@ -16,9 +16,9 @@ label scene6:
     $ mariah_on = True
     $ update_layers() # start Mariah layer
 
-    chrome "{i}Mariah Fowler. Human female, she’s reaching the tail end of middle aged, looks visibly annoyed with everyone at the moment.{/i}"
+    chrome "{i}Mariah Fowler. She must be reaching the tail end of middle aged. Looks visibly annoyed with everyone at the moment.{/i}"
 
-    chrome "{i}There is an air of tension thrumming around her. She has the eyes of a predator, sharp and clear and ready to deliver violence if she sees any weakness.{/i}"
+    chrome "{i}There is an air of tension thrumming around her. She has the sharp eyes of a predator, ready to pounce if she sees any weakness.{/i}"
 
     # show chrome neutral at left with moveinleft:
     #     xzoom -1.0
@@ -132,7 +132,7 @@ label scene6:
 
         show chrome neutral
 
-        chrome "{i} Well, it looks like Larry is a dead-end. Maybe. I’ll move on to the reason I'm here.{/i}"
+        chrome "{i}It looks like Larry is a dead-end. Maybe. I’ll move on to the reason I'm here.{/i}"
 
         show dialogue_box
 
@@ -158,7 +158,7 @@ label scene6:
 
         show chrome neutral 
 
-        chrome "{i}A mall Santa. That’s Freddy’s secret. Well, that’s disappointing.{/i}"
+        chrome "{i}A mall Santa. That’s Freddy’s secret. That’s... disappointing.{/i}"
 
         chrome "{i}All of this work, all of Bianca’s worry, all because Freddy was too prideful to tell his daughter he was working a dead-end job.{/i}"
 
@@ -182,15 +182,11 @@ label scene6:
 
         show chrome neutral 
 
-        chrome_nvl_left "Well, I’ll look into it."
+        chrome_nvl_left "Is that right? I’ll look into it."
 
         hide dialogue_box
 
-        chrome "{i}What a twist. This was supposed to be a simple missing person’s case, but now I have a murder intertwined to it.{/i}"
-
-        chrome "{i}No, I shouldn’t make any judgments yet. I can judge Freddy once I have evidence that he’s a part of this. {/i}"
-
-        chrome "{i}I should take another look around and see if I can’t find more information.{/i}"
+        chrome "{i}Hmm. This mystery has become a lot more complicated. No, I need more information before I make any conclusions.{/i}"
 
         jump scene6_postchoice
 
@@ -248,7 +244,7 @@ label scene6:
 
         mariah_nvl_right "All I know was that I heard shouting and when I came out here, Larry was lying dead on the ground."
 
-        mariah_nvl_right "If you want to know more, just ask the other Rent-a-Bot cops."
+        mariah_nvl_right "If you want to know more, just ask the lazy cops."
 
         mariah_nvl_right "I’m done with this."
 
@@ -256,13 +252,13 @@ label scene6:
 
         hide dialogue_box
 
-        chrome "{i}Well, looks like if I want to know more I’ll need to ask one of the cops. Fine with me. I’ll move on to the reason I'm here.{/i}"
+        chrome "{i}Fine with me. I’ll move on to the reason I'm here.{/i}"
 
         show dialogue_box
 
         show chrome logical
 
-        chrome_nvl_left "Well, then I would like to expand my questioning to a person of interest."
+        chrome_nvl_left "Well then, I would like to expand my questioning to a person of interest."
 
         chrome_nvl_left "What can you tell me about Freddy Fontaine?"
 
@@ -276,7 +272,7 @@ label scene6:
 
         hide dialogue_box
 
-        chrome "{i}Well, looks like I found Freddy’s secret destination. He was working as a Mall Santa. Demeaning job. Probably kept a secret from Bianca due to embarrassment. {/i}"
+        chrome "{i}Looks like I found Freddy’s secret destination. He was working as a Mall Santa. Demeaning job. Probably kept it a secret from Bianca due to embarrassment. {/i}"
 
         show dialogue_box
        
@@ -320,7 +316,7 @@ label scene6:
 
         hide dialogue_box
 
-        chrome "{i}Well, this mystery has become a lot more complicated. No, I need more information before I make any conclusions.{/i}"
+        chrome "{i}Hmm. This mystery has become a lot more complicated. No, I need more information before I make any conclusions.{/i}"
 
         jump scene6_postchoice
 
@@ -377,7 +373,7 @@ label scene6:
 
         #show dialogue_box
 
-        chrome_nvl_left "Geez, I knew that Santa ran a tight ship, but I didn’t think he ran it so tight that he’d off one of his elves."
+        chrome_nvl_left "Jeez, I knew that Santa ran a tight ship, but I didn’t think he ran it so tight that he’d off one of his elves."
 
         show mariah confused
 
@@ -525,7 +521,7 @@ label scene6:
 
         chrome "{i}With that final suggestion, Mariah Fowler turned back to scowling at the cops. I knew a dismissal when I saw one.{/i}"
 
-        chrome "{i}Well, this missing person’s case has suddenly taken an interesting twist. I should see what else I can learn about Larry and if it has anything to do with our missing father.{/i}"
+        chrome "{i}This missing person case has taken an interesting twist.{/i}"
 
         # show chrome at left:
         #     xzoom 1.0
@@ -537,4 +533,5 @@ label scene6:
             chrome "{i}I've investigated enough here. Time to talk to Bianca.{/i}"
             jump scene9
         else:
+            chrome "{i}I should see what else I can learn about Larry and if it has anything to do with Freddy.{/i}"
             jump investigate
