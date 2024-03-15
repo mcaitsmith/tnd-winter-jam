@@ -13,7 +13,7 @@ label scene3:
     scene bg bar with fade
 
     # play music
-    play music bar_music fadeout 3.0
+    play music bar_music fadeout 3.0 fadein 3.0
 
     play sound sfx_door
 

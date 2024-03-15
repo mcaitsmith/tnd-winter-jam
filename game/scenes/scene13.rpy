@@ -8,7 +8,7 @@ label scene13:
 
     scene bg office with Fade(0.5, 2.0, 0.5) # longer transition to show time passing
 
-    play music bar_music fadeout 3.0
+    play music bar_music fadeout 3.0 fadein 3.0
 
     show chrome neutral at right with dissolve
 
