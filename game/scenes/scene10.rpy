@@ -18,7 +18,7 @@ label scene10:
 
     chrome "{i}Credit card scanner schematics? Sales being redirected? And something called Secret Santas?{/i}"
     
-    chrome "{i}This missing person’s case was just the shell of something far more sinister, and I knew the best way to crack it wide open.{/i}"
+    chrome "{i}This missing person case was just the shell of something far more sinister, and I think I know a way to crack it wide open.{/i}"
 
     show cop angry at right with moveinright
 

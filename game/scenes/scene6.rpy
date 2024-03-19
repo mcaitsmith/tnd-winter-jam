@@ -44,19 +44,21 @@ label scene6:
 
     mariah_nvl_right "It's a Christmas miracle! A Tin Man detective. Even better."
     
-    hide dialogue_box
+    if scene5_choice2 == False and scene5_choice3 == False:
 
-    show chrome neutral 
+        hide dialogue_box
 
-    chrome "{i}My initial plan had been to ask about Freddy. However, I couldn’t help my curiosity from getting to me.{/i}"
+        show chrome neutral 
 
-    chrome "{i}I was designed for solving crimes and one had dropped into my lap. I could always fit some questions about Freddy at the end.{/i}"
+        chrome "{i}My initial plan had been to ask about Freddy. However, I couldn’t help my curiosity from getting to me.{/i}"
 
-    show chrome thinking left at left
+        chrome "{i}I was designed for solving crimes and one had dropped into my lap. I could always fit some questions about Freddy at the end.{/i}"
 
-    show dialogue_box
+        show chrome thinking left at left
 
-    chrome_nvl_left "Would you mind answering a few of my questions about what happened over here?"
+        show dialogue_box
+
+    chrome_nvl_left "Would you mind answering a few questions about what happened over here?"
 
     # show visual chalk outline of the body 
 
@@ -70,7 +72,7 @@ label scene6:
 
     chrome "{i}The air around Mariah Fowler rises in tension. She’s clearly looking for a fight, ready to defend herself.{/i}"
 
-    chrome "{i}The police’s questioning was probably long and arduous. If I press too hard, she’ll clam up.{/i}"
+    chrome "{i}The police questioning was probably long and arduous. If I press too hard, she’ll clam up.{/i}"
 
     menu: 
         chrome "{i}Now… how should I go about this? {/i}"
@@ -122,21 +124,27 @@ label scene6:
         
         mariah_nvl_right "When I ran out here, I found Larry dead on the ground."
 
+        if scene5_choice2 == True:
+
+            chrome_nvl_left "Just like that, huh?"
+
         mariah_nvl_right "You’d know all of this if you just asked one of the cops over there."
 
         show mariah angry
 
         mariah_nvl_right "Now stop wasting my time."
 
-        hide dialogue_box
+        if scene5_choice2 == False and scene5_choice3 == False:
 
-        show chrome neutral
+            hide dialogue_box
 
-        chrome "{i}It looks like Larry is a dead-end. Maybe. I’ll move on to the reason I'm here.{/i}"
+            show chrome neutral
 
-        show dialogue_box
+            chrome "{i}It looks like Larry is a dead-end. Maybe. I’ll move on to the reason I'm here.{/i}"
 
-        show chrome hardboiled
+            show dialogue_box
+
+            show chrome hardboiled
 
         chrome_nvl_left "Then let me ask you about someone else. What do you know about a Freddy Fontaine."
 
@@ -146,9 +154,7 @@ label scene6:
 
         show mariah angry 
 
-        mariah_nvl_right "I can tell you that he’s a no show."
-        
-        mariah_nvl_right "Today was supposed to be his last day, but he hasn’t shown up for his shift."
+        mariah_nvl_right "Pfft. Today was supposed to be his last day, but he’s gone now. Just left early."
 
         chrome_nvl_left "And what does Freddy do at Fowler’s?"
 
@@ -156,17 +162,25 @@ label scene6:
 
         hide dialogue_box
 
-        show chrome neutral 
+        show chrome neutral
 
-        chrome "{i}A mall Santa. That’s Freddy’s secret. That’s... disappointing.{/i}"
+        chrome "{i}Looks like I found Freddy’s secret destination. He was working as a Mall Santa.{/i}"
 
-        chrome "{i}All of this work, all of Bianca’s worry, all because Freddy was too prideful to tell his daughter he was working a dead-end job.{/i}"
+        chrome "{i}Probably kept it a secret from Bianca due to the embarrassment.{/i}"
+
+        #chrome "{i}A mall Santa. That’s Freddy’s secret. That’s... disappointing.{/i}"
+
+        #chrome "{i}All of this work, all of Bianca’s worry, all because Freddy was too prideful to tell his daughter he was working a dead-end job.{/i}"
 
         show mariah neutral 
         
         show dialogue_box
 
-        mariah_nvl_right "Actually, now that you bring him up. You should probably look for Freddy. Yeah, he’s probably the one that did this."
+        show chrome hardboiled
+
+        mariah_nvl_right "Actually, now that you bring him up. You should probably look for Freddy."
+
+        mariah_nvl_right "Yeah, he’s probably the one that did this."
 
         show chrome thinking left at left
 
@@ -242,21 +256,31 @@ label scene6:
 
         show mariah neutral
 
-        mariah_nvl_right "All I know was that I heard shouting and when I came out here, Larry was lying dead on the ground."
+        mariah_nvl_right "All I know was that I heard shouting."
 
+        mariah_nvl_right "When I came out here, Larry was lying dead on the ground."
+
+        if scene5_choice2 == True:
+
+            chrome_nvl_left "Is there anything else, perhaps? Can you spare more details?"
+
+        show mariah angry    
+       
         mariah_nvl_right "If you want to know more, just ask the lazy cops."
 
         mariah_nvl_right "I’m done with this."
 
-        show chrome neutral
+        if scene5_choice2 == False and scene5_choice3 == False:
 
-        hide dialogue_box
+            show chrome neutral
 
-        chrome "{i}Fine with me. I’ll move on to the reason I'm here.{/i}"
+            hide dialogue_box
 
-        show dialogue_box
+            chrome "{i}Fine with me. I’ll move on to the reason I'm here.{/i}"
 
-        show chrome logical
+            show dialogue_box
+
+            show chrome logical
 
         chrome_nvl_left "Well then, I would like to expand my questioning to a person of interest."
 
@@ -268,11 +292,13 @@ label scene6:
 
         show mariah angry 
 
-        mariah_nvl_right "That idiot was a no show. He’s supposed to be the Santa that works with Larry."
+        mariah_nvl_right "Pfft. That idiot? He’s supposed to be the Santa that works with Larry."
 
         hide dialogue_box
 
-        chrome "{i}Looks like I found Freddy’s secret destination. He was working as a Mall Santa. Demeaning job. Probably kept it a secret from Bianca due to embarrassment. {/i}"
+        chrome "{i}Looks like I found Freddy’s secret destination. He was working as a Mall Santa.{/i}"
+
+        chrome "{i}Probably kept it a secret from Bianca due to the embarrassment.{/i}"
 
         show dialogue_box
        
@@ -283,9 +309,11 @@ label scene6:
 
         show mariah neutral
 
-        mariah_nvl_right "However, he’s been talking about quitting."
+        mariah_nvl_right "But he’s been talking about quitting. Said that he couldn’t handle the job anymore."
 
-        mariah_nvl_right "Said that he couldn’t handle the job anymore. I thought he just flaked out."
+        mariah_nvl_right "He flaked out - you know the kind."
+
+        mariah_nvl_right "Today was supposed to be his last day, but he’s gone now. Just left early."
 
         show chrome thinking left at left
 
@@ -307,7 +335,7 @@ label scene6:
 
         show chrome shocked
 
-        mariah_nvl_right "Now get out of my face. I’ve had enough of you Rent-a-Bots."
+        mariah_nvl_right "Now get out of my face. I’ve answered enough questions for one day."
 
         show chrome neutral:
             xzoom -1.0
@@ -329,7 +357,7 @@ label scene6:
 
         chrome_nvl_left "Sorry, sorry."
 
-        chrome_nvl_left "This entire thing has probably been an unpleasant surprise, like actually getting coal in the stocking, you know."
+        chrome_nvl_left "This entire thing has probably been an unpleasant surprise, like getting coal in the stocking, you know."
 
         chrome_nvl_left "Just… do you think you could run me through what happened, one last time."
 
@@ -337,7 +365,9 @@ label scene6:
 
         mariah_nvl_right "It’s been a shitshow."
 
-        mariah_nvl_right "Not only do I have to deal with the falling sales, but now I have to deal with all of these jokers gawking instead of shopping."
+        mariah_nvl_right "Not only do I have to deal with falling sales..."
+
+        mariah_nvl_right "...but now I have to deal with all these jokers gawking instead of shopping!"
 
         chrome_nvl_left "It’s like a car crash."
 
@@ -347,9 +377,9 @@ label scene6:
 
         chrome_nvl_left "They’re just slowing down traffic to see what happened."
 
-        mariah_nvl_right "Exactly!"
+        mariah_nvl_right "Exactly! It doesn’t matter if they’re inconveniencing me."
         
-        mariah_nvl_right "It doesn’t matter if they’re inconveniencing a bunch of people, it’s more important that they get a glimpse of a tragedy."
+        mariah_nvl_right "It’s more important that they get a glimpse of a tragedy."
 
         mariah_nvl_right "Tch, the real tragedy is going to happen in a few months when I need to close."
 
@@ -361,7 +391,9 @@ label scene6:
 
         mariah_nvl_right "He’s a seasonal hire. Little guy, kind of a sad sack."
 
-        mariah_nvl_right "We threw him in one of the elf costumes and put him in one of the Santa’s workshops."
+        mariah_nvl_right "When he first showed up, we immediately threw him in an elf costume."
+
+        mariah_nvl_right "I mean, he was built for the part."
 
         #hide dialogue_box
 
@@ -373,7 +405,29 @@ label scene6:
 
         #show dialogue_box
 
-        chrome_nvl_left "Jeez, I knew that Santa ran a tight ship, but I didn’t think he ran it so tight that he’d off one of his elves."
+        mariah_nvl_right "Earlier today I heard some arguing from my office."
+
+        mariah_nvl_right "I came out and saw the poor bastard sprawled out on the concrete."
+
+        chrome_nvl_right "Man. Can’t imagine what that must’ve been like for you."
+
+        mariah_nvl_right "Yeah. No one cares about management y'know?"
+
+        mariah_nvl_right "I’m expected to just run the store by myself and deal with this crap at the same time."
+
+        if scene5_choice2 == True:
+
+            chrome_nvl_left "So you're saying you heard a commotion and came out to find Larry dead on the ground?"
+
+            chrome_nvl_left "Did I get that right?"
+
+            show mariah angry
+
+            mariah_nvl_right "Did one of your capacitors blow or something? Yeah, that’s what I said."
+
+        chrome_nvl_left "Jeez, I knew that Santa ran a tight ship in his workshop."
+
+        chrome_nvl_left "But I didn’t think he ran it so tight that he’d off one of his elves!"
 
         show mariah confused
 
@@ -396,19 +450,35 @@ label scene6:
 
         mariah_nvl_right "Well, I guess he had to talk to Freddy."
 
-        show chrome neutral
+        if scene5_choice2 == False and scene5_choice3 == False:
 
-        hide dialogue_box
+            show chrome neutral
 
-        chrome "{i}I was suddenly reminded of what brought me here.{/i}"
+            hide dialogue_box
 
-        show dialogue_box
+            chrome "{i}I was suddenly reminded of what brought me here.{/i}"
 
-        show chrome unassuming
+            show dialogue_box
+
+            show chrome unassuming
 
         chrome_nvl_left "Freddy? You mean Freddy Fontaine? Doesn't he work here?"
 
         mariah_nvl_right "What? I mean, yes. Freddy did work here. He was one of my Santas."
+
+        hide dialogue_box
+
+        show chrome neutral
+
+        chrome "{i}Looks like I found Freddy’s secret destination. He was working as a Mall Santa.{/i}"
+
+        chrome "{i}Probably kept it a secret from Bianca due to the embarrassment.{/i}"
+
+        show mariah neutral 
+        
+        show dialogue_box
+
+        show chrome unassuming
 
         mariah_nvl_right "In fact, he was Larry's Santa. They were paired together. But not anymore."
 
@@ -506,7 +576,7 @@ label scene6:
 
         show dialogue_box at center
  
-        mariah_nvl_right "So, are we done here, metalhead? Yeah?? Now go find my Santa!"
+        mariah_nvl_right "So, are we done here, metalhead? Yeah??"
 
         hide dialogue_box
 
@@ -530,7 +600,12 @@ label scene6:
         $ scene5_choice1 = True
 
         if scene5_choice1 == True and scene5_choice2 == True and scene5_choice3 == True:
-            chrome "{i}I've investigated enough here. Time to talk to Bianca.{/i}"
+            chrome "{i}I think I've investigated enough here.{/i}"
+            chrome "{i}There's some evidence to work with - none of it great for Freddy.{/i}"
+            chrome "{i}And some testimony that doesn't quite jibe, but humans are nothing if not... inconsistent.{/i}"
+            chrome "{i}It's time I had a heart-to-heart with Bianca. Ask her a few hanging questions.{/i}"
+            chrome "{i}Besides, better to tell the kid in person what I found out.{/i}"
+            chrome "{i}There's more to this story. I know it.{/i}"
             jump scene9
         else:
             chrome "{i}I should see what else I can learn about Larry and if it has anything to do with Freddy.{/i}"

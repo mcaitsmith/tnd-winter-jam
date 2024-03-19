@@ -40,7 +40,7 @@ label scene7:
 
             cop_nvl_left neutral "That’s the funny thing."
 
-            cop_nvl_left neutral "Larry the Elf here... he worked with Freddy the Santa."
+            cop_nvl_left neutral "Larry the Elf here... he worked closely with Freddy."
             
             cop_nvl_left neutral "But if you ask me, it's probably a simple heart attack."
 
@@ -54,7 +54,9 @@ label scene7:
 
             chrome_nvl_right logical "Sure it can be induced in the victim by an outside force but not easily." 
 
-            chrome_nvl_right logical "Blood from the mouth. Body cold and already undergone rigor mortis, suggesting a time of death in the dead of night." 
+            chrome_nvl_right logical "Blood from the mouth."
+
+            chrome_nvl_right logical "Body cold and already undergone rigor mortis, suggesting a time of death in the dead of night." 
 
             chrome_nvl_right logical "Freddy has a relationship with the victim, perhaps there’s a personal motive?"
         
@@ -72,12 +74,12 @@ label scene7:
 
             chrome_nvl_right confused "Come again?"
 
-            cop_nvl_left neutral "Mariah Fowler. Saw this poor sucker collapse on the ground, and Freddy running the other direction. Why don't you just see for yourself."
+            cop_nvl_left neutral "Mariah Fowler. Says she saw this poor sucker collapse on the ground, and Freddy running in the other direction."
+
+            cop_nvl_left neutral "Now why don't you go see for yourself or just {i}leave{/i}?"
 
             hide dialogue_box
             nvl clear 
-
-            chrome "{i}Seems like Mariah didn't tell me the whole story - {/i}"
 
             ######### GLITCH 3 (flashback with glitching animation on Steele & bg grayed out)
 
@@ -101,7 +103,7 @@ label scene7:
 
             chrome "{i}I was the one who reported Cane's disappearance. I had been moved into the Android Barracks permanently at the start of training, but I still stopped by Cane's house from time to time.{/i}"
 
-            chrome "{i}This visit was different. Cane had asked me there himself. He welcomed me in, sat me down and the next thing I knew-he was gone.{/i}"
+            chrome "{i}This visit was different. Cane had asked me there himself. He welcomed me in, sat me down and the next thing I knew - he was gone.{/i}"
 
             chrome "{i}The Bureau concluded that my system had rebooted itself in the moments between. Routine maintenance at an inconvenient time.{/i}"
 
@@ -111,7 +113,7 @@ label scene7:
 
             chrome "{i}It's easy to acknowledge guilt when you've done something. It sits at the surface, present and accessible. It's harder to perceive such guilt when you haven't done something.{/i}"
 
-            chrome "{i}When you haven't done something-and perhaps you could have-the guilt roots itself deeply. An internal bleed. A self-inflicted wound that pangs with every thought.{/i}"
+            chrome "{i}When you haven't done something - and perhaps you could have - the guilt roots itself deeply. An internal bleed. A self-inflicted wound that pangs with every thought.{/i}"
 
             show chrome sad glitch
 
@@ -175,15 +177,23 @@ label scene7:
 
             cop_nvl_left angry "This is an active crime scene. Get outta here!"
 
-            chrome_nvl_right "Well, I hate to break it to ya, but..."
+            chrome_nvl_right unassuming "Well, I hate to break it to ya, but..."
 
-            chrome_nvl_right "...under code 2034.44, you'd be interfering with the duties of a certified bail bonds agent." 
+            chrome_nvl_right unassuming "...under code 2034.44, you'd be interfering with the duties of a certified bail bonds agent." 
 
             show cop angry
 
             chrome_nvl_right unassuming "I really don't want to have to report that to your superior..."
 
-            cop_nvl_left neutral "Fine. Go through."
+            cop_nvl_left neutral "Fine. Do what you want."
+
+            chrome_nvl_right unassuming "By any chance, is there anything else you can tell me? I'd be much obliged."
+
+            cop_nvl_left neutral "Hmph. Larry the elf collapsed. Freddy ran away."
+
+            cop_nvl_left neutral "All according to eagle-eyed Mariah Fowler over there."       
+
+            cop_nvl_left neutral "S'all I know. And all I care to find out. Happy Holidays."       
 
             hide dialogue_box
             nvl clear 
@@ -200,19 +210,21 @@ label scene7:
 
             chrome_nvl_right shocked "Excuse me?"
 
-            cop_nvl_left angry "He’s a person of interest- might even say a suspect."
+            cop_nvl_left angry "He’s a person of interest - might even say a suspect."
 
-            chrome_nvl_right angry "Really?"
+            chrome_nvl_right confused "Really?"
 
             cop_nvl_left angry "That woman right over there, found this poor schmuck dead as a doornail."
 
-            cop_nvl_left angry "Combine that with the fact Freddy didn’t show up today, his last day…"
+            cop_nvl_left angry "Says she saw him keel over and Freddy running the other way."
 
-            chrome_nvl_right confused "Hm. Something seems fishy…"
+            chrome_nvl_right hardboiled "Hmm. Something seems fishy…"
 
-            show chrome shocked
+            cop_nvl_left angry "The only thing fishy ‘round here is you."
 
-            cop_nvl_left angry "The only thing fishy ‘round here is you! Now giddy up Jingle Horse and quickly get the fuck out of my active crime scene!"
+            cop_nvl_left angry "Now giddy up Jingle Horse and quickly get the fuck out of my crime scene!"
+
+            cop_nvl_left angry "Do what you gotta do and leave. You might not have better places to be for the holidays, but I do!"
 
             hide dialogue_box
             nvl clear 
@@ -228,7 +240,12 @@ label scene7:
     $ scene5_choice2 = True
 
     if scene5_choice1 == True and scene5_choice2 == True and scene5_choice3 == True:
-        chrome "{i}I've investigated enough here. Time to talk to Bianca.{/i}"
+        chrome "{i}I think I've investigated enough here.{/i}"
+        chrome "{i}There's some evidence to work with - none of it great for Freddy.{/i}"
+        chrome "{i}And some testimony that doesn't quite jibe, but humans are nothing if not... inconsistent.{/i}"
+        chrome "{i}It's time I had a heart-to-heart with Bianca. Ask her a few hanging questions.{/i}"
+        chrome "{i}Besides, better to tell the kid in person what I found out.{/i}"
+        chrome "{i}There's more to this story. I know it.{/i}"
         show chrome at right:
             xzoom -1.0
         hide chrome with moveoutright

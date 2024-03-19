@@ -100,6 +100,18 @@ menu investigate:
 
 label fowler:
 
+    if scene5_choice2 and scene5_choice3 == True:
+
+        show chrome neutral
+
+        chrome neutral "{i}If it wasn’t clear before then it is now: Freddy and Larry were friends. Seems like that relationship went sour recently.{/i}"
+
+        chrome neutral "{i}What were they arguing about? Could it have driven Freddy to murder somehow?{/i}"
+
+        chrome neutral "{i}No, murder is too far a leap to take so early in this investigation. I should speak to Fowler, get a better idea of the relationship between these two.{/i}" 
+
+        jump scene6
+
     if scene5_choice2 == True:
 
         show chrome neutral
@@ -120,18 +132,6 @@ label fowler:
 
         jump scene6
 
-    if scene5_choice2 and scene5_choice3 == True:
-
-        show chrome neutral
-
-        chrome neutral "{i}If it wasn’t clear before then it is now: Freddy and Larry were friends. Seems like that relationship went sour recently.{/i}"
-
-        chrome neutral "{i}What were they arguing about? Could it have driven Freddy to murder somehow?{/i}"
-
-        chrome neutral "{i}No, murder is too far a leap to take so early in this investigation. I should speak to Fowler, get a better idea of the relationship between these two.{/i}" 
-
-        jump scene6
-
     else:
 
         show chrome neutral
@@ -140,6 +140,20 @@ label fowler:
         jump scene6
 
 label cop:
+
+    if scene5_choice1 and scene5_choice3 == True:
+
+        show chrome neutral
+
+        chrome "{i}Well Mariah wasn’t wrong, these two definitely had a pretty bad falling out. But could it lead to murder?{/i}"
+
+        chrome "{i}I should speak with the boys in blue, see what they’ve figured out.{/i}"
+
+        chrome sad "{i}Although knowing the cops in this city… it probably isn’t much.{/i}"
+        show chrome at left:
+            xzoom 1.0
+        hide chrome with moveoutleft
+        jump scene7
 
     if scene5_choice1 == True:
 
@@ -171,20 +185,6 @@ label cop:
         hide chrome with moveoutleft
         jump scene7
 
-    if scene5_choice1 and scene5_choice3 == True:
-
-        show chrome neutral
-
-        chrome "{i}Well Mariah wasn’t wrong, these two definitely had a pretty bad falling out. But could it lead to murder?{/i}"
-
-        chrome "{i}I should speak with the boys in blue, see what they’ve figured out.{/i}"
-
-        chrome sad "{i}Although knowing the cops in this city… it probably isn’t much.{/i}"
-        show chrome at left:
-            xzoom 1.0
-        hide chrome with moveoutleft
-        jump scene7
-
     else:
     
         show chrome neutral
@@ -195,6 +195,21 @@ label cop:
         jump scene7
 
 label alley:
+
+    if scene5_choice1 and scene5_choice2 == True:
+
+        show chrome neutral
+
+        chrome "{i}The more I learn about this, the more things look worse for Freddy.{/i}"
+
+        chrome "{i}Something’s gnawing at me though. It’s never that simple. He clearly ran, but why? And why was Mariah so insistent on Freddy’s guilt?{/i}"
+
+        chrome "{i}I’ve put it off long enough. I should look at the actual crime scene, see if Freddy left any clues in his rush out of here.{/i}"
+
+        show chrome at left:
+            xzoom 1.0
+        hide chrome with moveoutleft
+        jump scene8
 
     if scene5_choice1 == True:
 
@@ -217,22 +232,6 @@ label alley:
         show chrome at left:
             xzoom 1.0
         hide chrome with moveoutleft
-        jump scene8
-
-    if scene5_choice1 and scene5_choice2 == True:
-
-        show chrome neutral
-
-        chrome "{i}The more I learn about this, the more things look worse for Freddy.{/i}"
-
-        chrome "{i}Something’s gnawing at me though. It’s never that simple. He clearly ran, but why? And why was Mariah so insistent on Freddy’s guilt?{/i}"
-
-        chrome "{i}I’ve put it off long enough. I should look at the actual crime scene, see if Freddy left any clues in his rush out of here.{/i}"
-
-        show chrome at left:
-            xzoom 1.0
-        hide chrome with moveoutleft
-        
         jump scene8
 
     else: 
