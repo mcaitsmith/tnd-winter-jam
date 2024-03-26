@@ -39,7 +39,7 @@ label scene9:
     chrome "{i}She’s hurting. Damn it. It’s hard enough to quit on the case. But it’s harder to quit on the girl.{/i}"
 
     menu detective_choices9:
-        bianca "Did you find my dad yet?"
+        bianca "I wasn't expecting you so soon! Did you find my dad?!"
 
         "Logical":
             
@@ -52,7 +52,9 @@ label scene9:
             
             chrome_nvl_left "Which is what I was hired for, true, but is no longer indicative of the job."
 
-            chrome_nvl_left "Thanks to new evidence suggesting your father’s involvement in the murder of Larry Moss, this case is no longer that of a missing person, but that of a murder."
+            chrome_nvl_left "Thanks to new evidence suggesting your father’s involvement in the murder of Larry Moss..."
+
+            chrome_nvl_left "...this case is no longer that of a missing person, but that of a murder."
 
             show chrome neutral:
                 xzoom -1.0
@@ -126,13 +128,11 @@ label scene9:
 
             chrome_nvl_left unassuming "A man named Larry Moss is dead. And the police have reason to suspect your father for murder."
 
-            bianca_nvl_right shocked "No! ¡No te creo!"
+            bianca_nvl_right shocked "No! ¡No te creo! Larry was dad’s friend!!"
 
-            bianca_nvl_right shocked "Larry was dad’s friend. He may not have a shiny reputation, but my dad wouldn’t hurt a fly."
+            bianca_nvl_right shocked "He may not have a shiny reputation, but my dad wouldn’t hurt a fly."
 
-            bianca_nvl_right sad "Everyone’s judging him, all the time."
-
-            bianca_nvl_right sad "Turning him into something he ain’t."
+            bianca_nvl_right angry "Everyone’s judging him, all the time. Turning him into something he ain’t."
 
             bianca_nvl_right sad "You know how much harder he has to try because of it?"
 
@@ -148,11 +148,13 @@ label scene9:
 
             chrome_nvl_left unassuming "Think of a bird migrating for the winter."
 
-            chrome_nvl_left unassuming "If this migration were to only happen once in a lifetime, it would be very curious."
+            chrome_nvl_left unassuming "If this migration were to only happen once in a lifetime, it would be curious."
 
             chrome_nvl_left unassuming "But as it occurs in pattern, we accept it as a common behavior."
 
-            chrome_nvl_left unassuming "Disappearing for the first time, just as he’s implicated for murder - I could understand the curiosity surrounding your father…"
+            chrome_nvl_left unassuming "Disappearing for the first time, just as he’s implicated for murder..."
+
+            chrome_nvl_left unassuming "...I could understand the curiosity surrounding your father."
 
             bianca_nvl_right neutral "So you’re saying it would help if..."
 
@@ -166,7 +168,17 @@ label scene9:
 
             chrome_nvl_left unassuming "Though that is proving faulty these days..."
 
-            bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that. But I can’t go without a father again."
+            bianca_nvl_right sad "Truth is, my dad skipped town once before. A year or so ago."
+
+            bianca_nvl_right sad "He was gone for about a month. Did what he needed to do to pay off some old debts."
+
+            bianca_nvl_right sad "He felt so bad about it. Sweared to never let something like that happen again."
+
+            bianca_nvl_right neutral "We've been a team ever since. You gotta believe me, Steele."
+
+            bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that."
+
+            bianca_nvl_right sad "I... I can’t go without a father again..."
  
             hide dialogue_box
 
@@ -184,7 +196,6 @@ label scene9:
             $ chrome_on = False # turn off Chrome layer for glitch
             $ update_layers(0) # update layers
             call start_glitch from _call_start_glitch_7 # shows Chrome glitching and grays out the background
-
 
 
             ### GLITCH SCENE #004
@@ -262,7 +273,9 @@ label scene9:
 
             bianca_nvl_right angry "Why? Who else wants to find him?"
 
-            chrome_nvl_left hardboiled "Oh little lady, who doesn’t? He’s more than missing. He’s the prime suspect in the murder of one Larry Moss. And I wasn’t hired for no murders."
+            chrome_nvl_left hardboiled "Oh little lady, who doesn’t? He’s more than missing. He’s the prime suspect in the murder of one Larry Moss."
+
+            chrome_nvl_left hardboiled "And I wasn’t hired for no murders."
 
             bianca_nvl_right shocked "No! ¡No te creo!"
 
@@ -308,13 +321,15 @@ label scene9:
 
             bianca_nvl_right neutral "Well, it’s better to try, ain’t it?"
 
-            chrome_nvl_left hardboiled "Sure, kid. So just to be certain, I’ll give it a try. But first, I oughta learn a bit more about ol’ Freddy Fontaine."
+            chrome_nvl_left hardboiled "Sure, kid. So just to be certain, I’ll give it a try."
+
+            chrome_nvl_left hardboiled "But first, I oughta learn a bit more about ol’ Freddy Fontaine."
 
     jump lookaround
     # return
 
 label lookaround:
-    bianca_nvl_right neutral "Please, look around. See if there’s anything else here that’s helpful."
+    bianca_nvl_right neutral "Please, take a look around. See if there’s anything here that’s helpful."
     hide dialogue_box
     nvl clear
     show chrome neutral
@@ -413,13 +428,7 @@ label santatoy:
     chrome "{i}Wait a second - is this Santa droid hiding something?{/i}"
 
     hide santa toy
-    $ scene9_choice3 = True
-    if scene9_choice1 == True and scene9_choice2 == True and scene9_choice3 == True:
-        jump memorystick
-    else:
-        jump itemchoice
 
-label memorystick:
     show bianca neutral at right with moveinright
 
     show dialogue_box at center
@@ -463,31 +472,38 @@ label memorystick:
     show chrome neutral:
         xzoom -1.0
 
-    chrome "{i}I wanted to believe Bianca. But it looks like I’ve discovered Santa’s secret - Freddy’s been embezzling cash over at the department store.{/i}" 
+    chrome "{i}I want to believe Bianca, but it looks like I might have discovered Santa’s secret - Freddy’s been embezzling cash at the department store.{/i}" 
 
     show chrome confused left
 
-    chrome "{i}Was Larry in on it? Is that why he’s dead? I must be missing something over at Fowler’s. One stone left unturned…{/i}"
+    chrome "{i}Was Larry in on it? Is that why he’s dead? I must be missing something important over at Fowler’s. One stone left unturned…{/i}"
 
     show chrome neutral:
         xzoom -1.0
 
     hide creditcard 
 
+    $ scene9_choice3 = True
+    if scene9_choice1 == True and scene9_choice2 == True and scene9_choice3 == True:
+        jump memorystick
+    else:
+        jump itemchoice
+
+label memorystick:
+
     show bianca neutral at right with moveinright
 
     show dialogue_box at center
     nvl show
 
-    bianca_nvl_right neutral "Share with the class, Mr. Steele!"
+    bianca_nvl_right neutral "Share with the class, Mr. Steele! Did you find anything useful?"
 
     bianca_nvl_right neutral "Did that Santa droid give you everything you asked for this year?"
 
     show chrome thinking left
     chrome_nvl_left "Not everything. Not yet."
 
-    chrome_nvl_left "But there’s another Santa out there who may just do exactly that…"
-
+    chrome_nvl_left "But come to think of it, there’s another Santa out there who may just do exactly that…"
 
     hide dialogue_box
     nvl clear
