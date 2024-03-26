@@ -51,7 +51,7 @@ label scene8:
 label snowbank:
     hide larry dead with moveoutright
     show cookietin at right
-    chrome "{i}Hmm. A cookie tin filled with freshly baked Christmas cookies. How did this get here?{/i}"
+    chrome "{i}Hmm. It's a tin filled with Christmas cookies. They seem freshly baked.{/i}"
     hide cookietin
     $ scene8_choice1 = True
     if scene8_choice1 == True and scene8_choice2 == True and scene8_choice3 == True:

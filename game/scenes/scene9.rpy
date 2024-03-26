@@ -39,7 +39,7 @@ label scene9:
     chrome "{i}She’s hurting. Damn it. It’s hard enough to quit on the case. But it’s harder to quit on the girl.{/i}"
 
     menu detective_choices9:
-        bianca "Did you find my dad yet?"
+        bianca "I wasn't expecting you so soon! Did you find my dad?!"
 
         "Logical":
             
@@ -128,13 +128,11 @@ label scene9:
 
             chrome_nvl_left unassuming "A man named Larry Moss is dead. And the police have reason to suspect your father for murder."
 
-            bianca_nvl_right shocked "No! ¡No te creo!"
+            bianca_nvl_right shocked "No! ¡No te creo! Larry was dad’s friend!!"
 
-            bianca_nvl_right shocked "Larry was dad’s friend. He may not have a shiny reputation, but my dad wouldn’t hurt a fly."
+            bianca_nvl_right shocked "He may not have a shiny reputation, but my dad wouldn’t hurt a fly."
 
-            bianca_nvl_right sad "Everyone’s judging him, all the time."
-
-            bianca_nvl_right sad "Turning him into something he ain’t."
+            bianca_nvl_right angry "Everyone’s judging him, all the time. Turning him into something he ain’t."
 
             bianca_nvl_right sad "You know how much harder he has to try because of it?"
 
@@ -150,7 +148,7 @@ label scene9:
 
             chrome_nvl_left unassuming "Think of a bird migrating for the winter."
 
-            chrome_nvl_left unassuming "If this migration were to only happen once in a lifetime, it would be very curious."
+            chrome_nvl_left unassuming "If this migration were to only happen once in a lifetime, it would be curious."
 
             chrome_nvl_left unassuming "But as it occurs in pattern, we accept it as a common behavior."
 
@@ -170,9 +168,17 @@ label scene9:
 
             chrome_nvl_left unassuming "Though that is proving faulty these days..."
 
+            bianca_nvl_right sad "Truth is, my dad skipped town once before. A year or so ago."
+
+            bianca_nvl_right sad "He was gone for about a month. Did what he needed to do to pay off some old debts."
+
+            bianca_nvl_right sad "He felt so bad about it. Sweared to never let something like that happen again."
+
+            bianca_nvl_right neutral "We've been a team ever since. You gotta believe me, Steele."
+
             bianca_nvl_right neutral "Dad’s always been a good man with a bad shake. It ain’t fair to blame him for that."
 
-            bianca_nvl_right neutral "But I can’t go without a father again..."
+            bianca_nvl_right sad "I... I can’t go without a father again..."
  
             hide dialogue_box
 
@@ -323,7 +329,7 @@ label scene9:
     # return
 
 label lookaround:
-    bianca_nvl_right neutral "Please, look around. See if there’s anything else here that’s helpful."
+    bianca_nvl_right neutral "Please, take a look around. See if there’s anything here that’s helpful."
     hide dialogue_box
     nvl clear
     show chrome neutral
