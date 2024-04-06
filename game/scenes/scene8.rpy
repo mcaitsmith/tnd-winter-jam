@@ -34,7 +34,7 @@ label scene8:
     $ scene8_choice3 = False
 
     menu scene8_choices:
-        chrome "Strange, I wonder if this has something to do with Freddy? There's got to be some evidence lurking around here somewhere." 
+        chrome "Strange, I wonder if this really has something to do with Freddy? There's got to be some evidence lurking around here somewhere." 
         "What's that in the snow bank?" if scene8_choice1 == False:
             jump snowbank
         "{s}What's that in the snow bank?{/s}" if scene8_choice1 == True:
@@ -51,7 +51,7 @@ label scene8:
 label snowbank:
     hide larry dead with moveoutright
     show cookietin at right
-    chrome "{i}Hm. A cookie tin filled with freshly baked Christmas cookies. Is this involved somehow?{/i}"
+    chrome "{i}Hmm. It's a tin filled with Christmas cookies. They seem freshly baked.{/i}"
     hide cookietin
     $ scene8_choice1 = True
     if scene8_choice1 == True and scene8_choice2 == True and scene8_choice3 == True:
@@ -62,7 +62,7 @@ label snowbank:
 label footprints:
     hide larry dead with moveoutright
     show santaboots at right
-    chrome "{i}These look like Santa boots.{/i}"
+    chrome "{i}These look like old Santa boots. Cheap ones too. The footprints are half-melted and inconclusive.{/i}"
     hide santaboots
     $ scene8_choice2 = True
     if scene8_choice1 == True and scene8_choice2 == True and scene8_choice3 == True:
@@ -89,7 +89,8 @@ label cellcell:
     show phone at center
     show chrome shocked
     chrome shocked "{i}There's a message from Freddy. \"Leave me alone, Larry. After tonight, you're dead to me.\"{/i}"
-    chrome neutral "{i}This looks bad for Freddy. How quickly a missing persons case can become murder. This is more than I bargained for. Better tell the kid in person.{/i}"
+    chrome neutral "{i}This looks bad for Freddy. I know how quickly a missing person case can become suspected murder...{/i}"
+    chrome neutral "{i}This is more than I bargained for. I better keep this bit of intel to myself for now, until there's more proof.{/i}"
     
     hide phone
 
@@ -99,7 +100,12 @@ label cellcell:
     $ scene5_choice3 = True
 
     if scene5_choice1 == True and scene5_choice2 == True and scene5_choice3 == True:
-        chrome "{i}I've investigated enough here. Time to talk to Bianca.{/i}"
+        chrome "{i}I think I've investigated enough here.{/i}"
+        chrome "{i}There's some evidence to work with - none of it great for Freddy.{/i}"
+        chrome "{i}And some testimony that doesn't quite jibe, but humans are nothing if not... inconsistent.{/i}"
+        chrome "{i}It's time I had a heart-to-heart with Bianca. Ask her a few hanging questions.{/i}"
+        chrome "{i}Besides, better to tell the kid in person what I found out.{/i}"
+        chrome "{i}There's more to this story. I know it.{/i}"
         show chrome at left:
             xzoom 1.0
         hide chrome with moveoutleft

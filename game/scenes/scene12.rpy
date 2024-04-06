@@ -38,7 +38,7 @@ label scene12:
 
     chrome_nvl_left unassuming "Hey Freddy. Thought I might find you up here."
 
-    freddy_nvl_right neutral "Wait- a robot cop?! Of all things..."
+    freddy_nvl_right neutral "Wait - a robot cop?! Of all things..."
 
     freddy_nvl_right angry "Whaddya want, metalhead?"
 
@@ -132,7 +132,7 @@ label hardboiled12:
 
     chrome_nvl_left hardboiled "Testify."
 
-    freddy_nvl_right sad "They won’t believe me, Mariah’s protected-"
+    freddy_nvl_right sad "They won’t believe me, Mariah’s protected -"
 
     chrome_nvl_left hardboiled "I’ve got all the evidence we need to clear your name."
 
@@ -708,7 +708,7 @@ label scene12_f: # good ending
         xzoom -1.0
     with moveinleft
     
-    freddy happy "Over here, ugly tinfoil beardie."
+    freddy happy "Over here, ugly tinfoil beardie. Eat some fist!"
 
     play sound sfx_punch
     with hpunch
@@ -731,7 +731,7 @@ label scene12_f: # good ending
 
     chrome "{i}I rush. She's about to fire.{/i}"
 
-    cop "I said stand-!"
+    cop "I said stand -!"
 
     hide cop
     show jack angry at left:
@@ -966,7 +966,7 @@ label scene12_g: # average ending
     with moveinleft
 
     
-    freddy happy "Over here, ugly tinfoil beardie."
+    freddy happy "Over here, ugly tinfoil beardie. Eat some fist!"
 
     play sound sfx_punch
     with hpunch
@@ -985,7 +985,7 @@ label scene12_g: # average ending
 
     chrome "{i}I rush. She's about to fire.{/i}"
 
-    cop "I said stand-!"
+    cop "I said stand -!"
 
     hide cop
     show jack angry at left:
@@ -1162,7 +1162,7 @@ label scene12_h: # bad ending
         xzoom -1.0
     with moveinleft
     
-    freddy happy "Over here, ugly tinfoil beardie."
+    freddy happy "Over here, ugly tinfoil beardie. Eat some fist!"
 
     play sound sfx_punch
     with hpunch
@@ -1181,7 +1181,7 @@ label scene12_h: # bad ending
 
     chrome "{i}Has this lousy pisspants ever even held one before?{/i}"
 
-    cop "I said stand-!"
+    cop "I said stand -!"
 
     hide cop
     show jack angry at left:
