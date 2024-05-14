@@ -41,20 +41,20 @@ label scene2:
     chrome "{i}Nothing for an android detective. The one and only. In more ways than one...{/i}"
 
     # placeholder until we get asset
-    # play sound knocking volume 0.5 # more like banging, when you use the side of your fist instead of your knuckles
+    play sound sfx_knocking volume 0.5 # more like banging, when you use the side of your fist instead of your knuckles
 
     # add pause to let sound effect play
-    # pause 3.0
+    pause 2.0
 
     show chrome shocked
 
     chrome "..."
 
     # placeholder until we get asset
-    # play sound knocking volume 1.0 # same banging, maybe even a bit louder
+    play sound sfx_knocking volume 1.0 # same banging, maybe even a bit louder
 
     # add pause to let sound effect play
-    # pause 3.0
+    pause 2.0
 
     # Do we want to say Unknown at first instead of bianca? The character art shouldn’t show yet.
     "???" "Detective Steele! You in there?! C'mon, lemme in!"
@@ -282,10 +282,10 @@ label scene2:
     $ update_layers(0) # update layers
 
     # placeholder until we get asset
-    # play sound door_slam
+    play sound sfx_doorslam
 
     # add pause to let sound effect play
-    # pause 1.0
+    pause 1.0
 
     chrome "{i}I try to ease back into the old routine, but Bianca's words keep percolating to the top of my stack.{/i}"
 
