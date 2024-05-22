@@ -193,7 +193,7 @@ label scene3_logical:
 
     show jack happy
 
-    jack_nvl_right "Oh yeah!! He mentioned something about a gig at the Department Store."
+    jack_nvl_right "I remember now! He mentioned something about a gig at the Department Store."
 
     chrome_nvl_left "Fowler's?"
 
@@ -217,7 +217,7 @@ label scene3_unassuming:
 
     chrome_nvl_left "So, about Freddy. Nice guy, huh?"
 
-    jack_nvl_right "Oh, me and Freddy? We go waaay back."
+    jack_nvl_right "Oh, Freddy? Yeah. We go waaay back."
 
     jack_nvl_right "We used to work together at the docks - after his boxing career fizzled."
 
@@ -251,7 +251,7 @@ label scene3_unassuming:
 
     show jack happy
     
-    jack_nvl_right "Oh, yeah! He mentioned something about a gig at the Department Store."
+    jack_nvl_right "I remember now! He mentioned something about a gig at the Department Store."
 
     chrome_nvl_left "Fowler's?"
 
@@ -419,7 +419,7 @@ label scene3_hardboiled:
 
     show jack happy
 
-    jack_nvl_right "Oh yeah!! He mentioned something about a gig at the Department Store."
+    jack_nvl_right "I remember now! He mentioned something about a gig at the Department Store."
 
     chrome_nvl_left "Fowler's?"
 

@@ -83,7 +83,7 @@ label scene5:
 
 # if intro_text >= 1:
 menu investigate:
-    chrome neutral "What should I investigate now?"
+    chrome neutral "{i}What should I investigate now?{/i}"
     "Mariah Fowler" if scene5_choice1 == False:
         jump fowler
     "{s}Mariah Fowler{/s}" if scene5_choice1 == True:

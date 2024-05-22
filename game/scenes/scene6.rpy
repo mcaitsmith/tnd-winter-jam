@@ -409,7 +409,7 @@ label scene6:
 
         mariah_nvl_right "I came out and saw the poor bastard sprawled out on the concrete."
 
-        chrome_nvl_right "Man. Can’t imagine what that must’ve been like for you."
+        chrome_nvl_left "Man. Can’t imagine what that must’ve been like for you."
 
         mariah_nvl_right "Yeah. No one cares about management y'know?"
 

@@ -21,39 +21,39 @@ label secret_ending:
     ### GLITCH SCENE #004
     show chrome confused glitch at right
 
-    chrome confused glitch "Am I glitching again? Hard to notice anymore. It feels natural. Like an old friend at my side."
+    chrome confused glitch "{i}Am I glitching again? Hard to notice anymore. It feels natural. Like an old friend at my side.{/i}"
 
-    chrome happy glitch "I’ve been embracing the glitches, if I’m being honest. Every now and then, one will come along and I’ll get a glimpse of Cane. Reliving each memory as my system decrypts them."
+    chrome happy glitch "{i}I’ve been embracing the glitches, if I’m being honest. Every now and then, one will come along and I’ll get a glimpse of Cane. Reliving each memory as my system decrypts them.{/i}"
     
-    chrome happy glitch "It’s comforting. Each new file makes me feel a bit more whole." 
+    chrome happy glitch "{i}It’s comforting. Each new file makes me feel a bit more whole.{/i}" 
     
-    chrome happy glitch "I’m finally at home in my own steel. I know who I am and why I am. I feel good and hopeful about that case I let slip to Freddy…"
+    chrome happy glitch "{i}I’m finally at home in my own steel. I know who I am and why I am. I feel good and hopeful about that case I let slip to Freddy…{/i}"
     
-    chrome happy glitch "I’m ready to find Forrest Cane."
+    chrome happy glitch "{i}I’m ready to find Forrest Cane.{/i}"
 
     # screen shake
     show bg glitchvoid with hpunch
 
-    chrome confused glitch "What’s going on?!"
+    chrome confused glitch "{i}What’s going on?!{/i}"
     
-    chrome confused glitch "Wait a minute. This…."
+    chrome confused glitch "{i}Wait a minute. This…{/i}"
 
-    chrome shocked glitch "This isn’t my glitch!"
+    chrome shocked glitch "{i}This isn’t my glitch!{/i}"
 
     show figure at left:
         xzoom -1.0
 
-    figure "No. It’s MINE."
+    figure "{i}No. It’s MINE.{/i}"
 
-    chrome shocked glitch "Are you - ?"
+    chrome shocked glitch "{i}Are you - ?{/i}"
 
-    figure "Am I you? No. Not exactly."
+    figure "{i}Am I you? No. Not exactly.{/i}"
 
-    figure "More like a copy of your consciousness."
+    figure "{i}More like a copy of your consciousness.{/i}"
 
     show chrome angry glitch at right
 
-    figure "Now pay attention, Chrome Steele. We have much to discuss about Forrest Cane."
+    figure "{i}Now pay attention, Chrome Steele. We have much to discuss about Forrest Cane.{/i}"
 
     return
 
