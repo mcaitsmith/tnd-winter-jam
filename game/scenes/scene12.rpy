@@ -34,7 +34,7 @@ label scene12:
 
     #Freddy has a CIGARETTE- not sure if the asset needs to be called out? Or it’s just part of his character portrait
 
-    freddy_nvl_right shocked "{i}Quién es ese{/i}– what do you want? I’m armed!"
+    freddy_nvl_right shocked "{i}Quién es ese{/i} – what do you want? I’m armed!"
 
     chrome_nvl_left unassuming "Hey Freddy. Thought I might find you up here."
 
@@ -542,7 +542,7 @@ label scene12_e:
 
     show mariah neutral
 
-    mariah_nvl_right "But you...you're cunning."
+    mariah_nvl_right "But you... you're cunning."
 
     mariah_nvl_right "My people know ways to make you useful."
 
@@ -727,9 +727,9 @@ label scene12_f: # good ending
 
     chrome "{i}I have to stop her.{/i}"
 
-    chrome "{i}The cop is holding a gun in his hands. Standard electric discharge pistol. One round can knock out any average-sized person. Unreliable against androids. Its aiming systems are faulty.{/i}"
+    chrome "{i}The cop’s gun is out, but he doesn't look too sure of himself.{/i}"
 
-    chrome "{i}I rush. She's about to fire.{/i}"
+    chrome "{i}Has this lousy pisspants ever even held one before?{/i}"
 
     cop "I said stand -!"
 
@@ -737,7 +737,6 @@ label scene12_f: # good ending
     show jack angry at left:
         xzoom -1.0
     with moveinleft
-
 
     jack angry "If you won't stop her, I will!"
 
@@ -981,9 +980,9 @@ label scene12_g: # average ending
 
     chrome "{i}I have to stop her.{/i}"
 
-    chrome "{i}The cop is holding a gun in his hands. Standard electric discharge pistol. One round can knock out any average-sized person. Unreliable against androids. Its aiming systems are faulty.{/i}"
+    chrome "{i}The cop’s gun is out, but he doesn't look too sure of himself.{/i}"
 
-    chrome "{i}I rush. She's about to fire.{/i}"
+    chrome "{i}Has this lousy pisspants ever even held one before?{/i}"
 
     cop "I said stand -!"
 
@@ -1177,7 +1176,7 @@ label scene12_h: # bad ending
     show cop shocked at left
     with dissolve
 
-    chrome "{i}The cop’s gun is out.{/i}"
+    chrome "{i}The cop’s gun is out, but he doesn't look too sure of himself.{/i}"
 
     chrome "{i}Has this lousy pisspants ever even held one before?{/i}"
 

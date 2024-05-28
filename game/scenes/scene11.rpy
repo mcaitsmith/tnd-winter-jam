@@ -162,7 +162,8 @@ label deleteditems:
         jump scene11comp
 
 label games:
-    chrome happy "{i}She’s got cyber solitaire on here?? Ooh, and pinball!{/i}"
+    chrome sad "{i}She’s got cyber solitaire on here?? How boring.{/i}"
+    chrome happy "{i}Oh wait, and The Ouroboros Express! Good taste...{/i}"
     $computer_choice2 = True
     if computer_choice1 == True and computer_choice2 == True and computer_choice3 == True and computer_choice4 == True and computer_choice5 == True:
         if pickedOne == True and pickedTwo == True and pickedThree == True and pickedFour == True and pickedFive == True:

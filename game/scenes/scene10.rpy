@@ -436,11 +436,11 @@ label scene10:
 
         show cookietin at center with dissolve
 
-        chrome "{i}Freddy and Larry walk out of the Department store, Freddy carrying a tin of what appears to be cookies between his arm and side.{/i}"
+        chrome "{i}I see Freddy and Larry walk out of the department store, Freddy carrying a tin of what appears to be cookies between his arm and his side.{/i}"
 
         hide cookietin in center with dissolve
 
-        chrome "{i}Things seem tense between them, uncertain. Some words are exchanged, and Freddy hands the cookies to Larry with a stiff shrug. He walks off to sit down on the curb.{/i}"
+        chrome "{i}Things seem tense between them, uncertain. Some words are exchanged, and then Freddy hands the cookies to Larry with a stiff shrug. Freddy walks off to sit down on the curb.{/i}"
 
         show freddy at right:
             xzoom -1.0
@@ -456,7 +456,7 @@ label scene10:
 
         show eatencookie at center with dissolve 
 
-        chrome "Larry moves to follow him, first taking out a cookie and taking a big bite before walking over."
+        chrome "{i}Larry moves to follow him, first taking out a cookie and then taking a big bite before walking over.{/i}"
 
         pause 0.5
 
@@ -466,7 +466,7 @@ label scene10:
 
         show freddy shocked at right with moveinright
 
-        chrome "{i}Before he can make it however, his eyes practically bulge out of his skull. He begins coughing like mad, choking on his own spit as Freddy watches in horror. {/i}"
+        chrome "{i}Before he can make it, his eyes practically bulge out of his skull. He begins coughing like mad, choking on his own spit as Freddy watches in horror.{/i}"
 
         #VISUAL SCREEN SHAKE + AUDIO
 
@@ -478,7 +478,7 @@ label scene10:
 
         chrome "{i}He falls to the ground, the tin slamming to the cold pavement.{/i}"
 
-        chrome "{i}Larry convulses for a minute, one arm clutching at his throat, the other desperately flailing for Freddy. It isn’t long before he goes limp, the life slowly fading from his eyes. {/i}"
+        chrome "{i}Larry convulses for a minute, one arm clutching at his throat, the other desperately flailing for Freddy. It isn’t long before he goes limp, the life slowly fading from his eyes.{/i}"
 
         show freddy angry
 
@@ -494,17 +494,19 @@ label scene10:
 
         show mariah neutral at right with moveinright 
 
-        chrome "{i}Just as it seems there’s nothing left to see, Mariah comes out of the department store.{/i}"
+        chrome "{i}Just as it seems like there’s nothing left to see, Mariah comes out of the department store.{/i}"
 
         show cookietin at center with dissolve
 
         show mariah confused
 
-        chrome "{i}She seems surprised at Larry’s body but not horrified, looking around quickly before taking the cookie tin and hiding it deep within a thick snowbank.{/i}"
+        chrome "{i}She seems surprised at Larry’s body, but not horrified. She looks around quickly before grabbing the cookie tin and chucking it deep within a thick snowbank.{/i}"
 
         hide cookietin at center with dissolve
 
-        chrome "{i}She then walks slowly over to the body, examining it. She pulls out her phone and begins to call someone before the video ends. {/i}"
+        chrome "{i}She then slowly walks over to the body, curiously eyeballing it with an angry look on her face.{/i}"
+
+        chrome "{i}As other people start to notice that something has happened, she steps back and pulls out her phone. She begins to call someone just as the video ends.{/i}"
 
         #VISUAL GRAYSCALE END
 

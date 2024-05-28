@@ -76,7 +76,7 @@ label scene3:
 
     chrome "{i}Jack seemed like the friendly sort. Gregarious, but unfocused. Meandering. His attention wavering like a mercurial jazz riff.{/i}"
 
-    chrome "{i}I'm sure it had nothing to do with the synthahol on his breath bombarding my aromatic sensors.{/i}"
+    chrome "{i}I'm sure it had nothing to do with the alcohol on his breath bombarding my aromatic sensors.{/i}"
 
     # CHOICE
 
