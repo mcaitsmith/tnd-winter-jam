@@ -780,10 +780,10 @@ screen preferences():
 
                 vbox:
                     style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    label _("Skip Preferences")
+                    textbutton _("Stop Skipping at Unseen Text") action Preference("skip", "toggle")
+                    textbutton _("Stop Skipping After Choices") action Preference("after choices", "toggle")
+                    textbutton _("Stop Skipping at Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
@@ -876,7 +876,7 @@ style pref_label_text:
     yalign 1.0
 
 style pref_vbox:
-    xsize 338
+    xsize 678
 
 style radio_vbox:
     spacing gui.pref_button_spacing
