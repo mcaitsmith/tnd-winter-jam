@@ -494,6 +494,7 @@ label memorystick:
     show bianca neutral at right with moveinright
 
     show dialogue_box at center
+    nvl clear
     nvl show
 
     bianca_nvl_right neutral "Share with the class, Mr. Steele! Did you find anything useful?"

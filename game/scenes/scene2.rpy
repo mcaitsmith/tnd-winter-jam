@@ -148,7 +148,7 @@ label scene2:
 
     show bianca angry
 
-    bianca_nvl_left "Look, my dad's been down on his luck since his boxer days, but he's no drunk."
+    bianca_nvl_left "Look, my dad's been down on his luck since his boxing days, but he's no drunk."
 
     show bianca neutral
 
@@ -249,7 +249,7 @@ label scene2:
 
     show bianca sad
 
-    bianca_nvl_left "Imbécil. Please. I don't know where else to turn..."
+    bianca_nvl_left "{i}Imbécil.{/i} Please. I don't know where else to turn..."
 
     show chrome neutral
 
@@ -257,7 +257,7 @@ label scene2:
 
     show bianca angry
 
-    bianca_nvl_left "You saying the rumors are true? That you're just deprecated goods?! Metal inútil?!"
+    bianca_nvl_left "You saying the rumors are true? That you're just deprecated goods?! {i}Metal inútil?!{/i}"
 
     bianca_nvl_left "Yeah, well - they say the same stuff about my dad."
 
