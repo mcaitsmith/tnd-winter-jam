@@ -87,6 +87,8 @@ label scene13:
         $ stop_layers(3) # stop playing layers
         play music bar_music fadein 1
 
+    $ _skipping = False # stop skipping
+
     scene black # fade to black
     with fade
 

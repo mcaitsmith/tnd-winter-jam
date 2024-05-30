@@ -780,10 +780,10 @@ screen preferences():
 
                 vbox:
                     style_prefix "check"
-                    label _("Skip Preferences")
-                    textbutton _("Stop Skipping at Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("Stop Skipping After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Stop Skipping at Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    label _("Skip Options (in-game menu)")
+                    textbutton _("Skip Past Unseen Text") action Preference("skip", "toggle")
+                    textbutton _("Skip After Choices") action Preference("after choices", "toggle")
+                    textbutton _("Skip Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
