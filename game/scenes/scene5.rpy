@@ -57,9 +57,13 @@ label scene5:
         xzoom 1.0
     hide cop neutral with moveoutleft
 
+    play sound sfx_bellring fadein 1.0 volume 0.2 loop
+
     chrome "{i}Not satisfied with just one rough conversation, Mariah yells at a rickety Robot Santa stationed by the door.{/i}"
 
     mariah "And ring that bell louder! Now that the lookie loos are gone, I expect you to hit your quota, you hear me!"
+
+    play sound sfx_bellring volume 1.0 loop
 
     hide policelights with dissolve
 
@@ -70,6 +74,8 @@ label scene5:
     show chrome thinking left at left:
         xzoom -1.0
     with moveinleft
+
+    stop sound fadeout 1.0
 
     chrome "{i}Having seen enough, I consider my next steps.{/i}"
 

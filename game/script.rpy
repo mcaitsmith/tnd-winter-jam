@@ -155,6 +155,7 @@ define sfx_glitchout = "audio/sfx/Glitch_SantaSecret_SFX.wav"
 define sfx_policechatter = "audio/sfx/PoliceChatter_SantaSecret_SFX.wav"
 define sfx_knocking = "audio/sfx/knock.ogg"
 define sfx_doorslam = "audio/sfx/doorslam.ogg"
+define sfx_bellring = "audio/sfx/461394__15f_panska_svobodaboleslav__10-1-jingle-bell.ogg"
 define title_music = "audio/Prueba_Jazz_investigador.mp3"
 define bar_music = "audio/jazz_for_andrea_fade.wav"
 
