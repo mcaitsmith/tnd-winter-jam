@@ -9,7 +9,7 @@
 
 transform credits_scroll(speed):
     ypos 1080
-    linear speed ypos -4350
+    linear speed ypos -4400
 
 ## Credits screen.
 
@@ -92,7 +92,7 @@ screen credits():
             hbox:
                 add "images/cigarettes_mini.png"
                 text "{b}PLAYTESTERS{/b}"
-                text "Max Lincoln\nGideon Devendra\nLina Caro\nRafael Campbell\nCrowe Whitney"
+                text "Max Lincoln\nGideon Devendra\nLina Caro\nRafael Campbell\nCrowe Whitney\nRachel Lee\nPatrick Christell\nAlice\nKyle Smith-Laird"
 
             hbox:
                 add "images/larry_mini.png" 
