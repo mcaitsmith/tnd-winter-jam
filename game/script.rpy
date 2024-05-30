@@ -156,7 +156,7 @@ define sfx_policechatter = "audio/sfx/PoliceChatter_SantaSecret_SFX.wav"
 define sfx_knocking = "audio/sfx/knock.ogg"
 define sfx_doorslam = "audio/sfx/doorslam.ogg"
 define title_music = "audio/Prueba_Jazz_investigador.mp3"
-define bar_music = "audio/jazz_for_andrea.wav"
+define bar_music = "audio/jazz_for_andrea_fade.wav"
 
 init python:
     # define music channels
