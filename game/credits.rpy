@@ -9,7 +9,7 @@
 
 transform credits_scroll(speed):
     ypos 1080
-    linear speed ypos -4400
+    linear speed ypos -4500
 
 ## Credits screen.
 
@@ -50,8 +50,8 @@ screen credits():
 
             hbox:
                 add "images/cookietin_mini.png" 
-                text "{b}NARRATIVE\nDESIGNERS    {/b}"
-                text "Lily Gwyer-Miller\nRobert Corra (Lead)"
+                text "{b}NARRATIVE\nDESIGN         {/b}"
+                text "Robert Corra (Lead)\nLily Gwyer-Miller"
 
             hbox:
                 add "images/freddy_mini.png"
@@ -72,7 +72,7 @@ screen credits():
             hbox:
                 add "images/gloves_mini.png"
                 text "{b}PRODUCTION  {/b}"
-                text "Salvador Bas Folch (Lead)\nTiago Da Cunha\nCameron Daxon\nAnivette Wong"
+                text "Salvador Bas Folch (Lead)\nTiago Da Cunha\nCameron Daxon\nAnivette Wong\nNajmah Salam"
 
             hbox:
                 add "images/mariah_mini.png" 
@@ -82,12 +82,12 @@ screen credits():
             hbox:
                 add "images/santaclothes_mini.png"
                 text "{b}MARKETING    {/b}"
-                text "Najmah Salam (Lead)\nAndrea Saravia Pérez"
+                text "Najmah Salam (Lead)\nAndrea Saravia Pérez\nDylan Sands\nKyle Smith-Laird"
 
             hbox:
                 add "images/santa_mini.png" 
                 text "{b}QUALITY\nASSURANCE    {/b}"
-                text "Sangita Nuli (Lead)\nMax Lincoln\nGideon Devendra\nLina Caro\nRafael Campbell\nCrowe Whitney"
+                text "Sangita Nuli (Lead)\nMax Lincoln\nGideon Devendra\nLina Caro\nRafael Campbell\nCrowe Whitney\nRachel Lee\nLina Caro\nPatrick Christell"
 
             hbox:
                 add "images/cigarettes_mini.png"
