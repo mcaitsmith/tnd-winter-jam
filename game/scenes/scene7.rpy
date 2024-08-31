@@ -10,7 +10,7 @@ label scene7:
 
     play sound sfx_policechatter volume 0.5 loop
 
-    show policelights with dissolve
+    # show policelights with dissolve
 
     show chrome neutral at right with moveinright
 
@@ -21,6 +21,8 @@ label scene7:
     show cop neutral at left:
         xzoom -1.0  
     with moveinleft
+
+    # hide policelights with dissolve
 
     menu:
         "Hmm. He seems like a \"no nonsense, just the facts ma’am\" kinda guy..."
@@ -33,6 +35,8 @@ label scene7:
             nvl show # show NVL dialogue
 
             chrome_nvl_right logical "Hello, sir. I’m looking for Freddy Font–"
+
+            stop sound fadeout 6.0
 
             cop_nvl_left neutral "You’re not the only one."
 
@@ -159,6 +163,8 @@ label scene7:
             show dialogue_box at center 
             nvl show # show NVL dialogue
 
+            stop sound fadeout 6.0
+
             cop_nvl_left neutral "Alley’s closed."
 
             chrome_nvl_right unassuming "Oh, I work across the street."
@@ -206,6 +212,8 @@ label scene7:
 
             chrome_nvl_right hardboiled "Heyo, buddy boy! I’m looking for Freddy Font–"
 
+            stop sound fadeout 6.0
+
             cop_nvl_left angry "Yeah? You and me both."
 
             chrome_nvl_right shocked "Excuse me?"
@@ -233,9 +241,9 @@ label scene7:
         xzoom 1.0
     hide cop with moveoutleft
 
-    hide policelights with dissolve
+    # hide policelights with dissolve
 
-    stop sound
+    # stop sound
 
     $ scene5_choice2 = True
 
